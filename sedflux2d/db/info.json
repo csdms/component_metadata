@@ -1,7 +1,7 @@
 {
   "id":"sedflux2d",
   "name":"Sedflux2D",
-  "summary": "Basin filling stratigraphic model.",
+  "summary": "Basin filling stratigraphic model.Sedflux2d simulates longterm marine sediment transport and accumulation into a 2D longitudinal basin over time scales of tens of thousands of years. It simulates the dynamics of strata formation of continental margins and includes turbidity currents and debris flows.",
   "url":"http://csdms.colorado.edu/wiki/Model_help:Sedflux",
   "author": "Eric Hutton",
   "version": "2.1",
