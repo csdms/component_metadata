@@ -1,6 +1,6 @@
 {
   "id":"coastal_environment",
   "name":"coastal_environment",
-  "summary":"The coastal environment component provides grid merging and regridding capabilities which are needed for coupled model runs. It takes inital user or model provided grid files of other components and merges and regrids them into a common grid accessible to all components.
+  "summary":"The coastal environment component provides grid merging and regridding capabilities which are needed for coupled model runs. It takes inital user or model provided grid files of other components and merges and regrids them into a common grid accessible to all components.",
   "url":"http://csdms.colorado.edu/wiki/Category:Modules"
 }
