@@ -1,6 +1,6 @@
 {
   "id":"waves",
   "name":"Waves",
-  "summary": "Generate a wave climate for a longshore transport module.",
+  "summary": "Generates a shallow-water wave climate for a longshore transport module based on a user-defined distribution.",
   "url":"http://csdms.colorado.edu/wiki/Model_help:Waves"
 }
