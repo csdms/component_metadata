@@ -656,8 +656,8 @@
   },
   {
     "key":"january_precipitation_standard_deviation",
-    "name":"Standard deviation of January precipitations",
-    "description":"Standard deviation of January precipitations",
+    "name":"Standard deviation of January precipitation",
+    "description":"Standard deviation of January precipitation",
     "value":{
       "type":"float",
       "default":62.07,
@@ -670,8 +670,8 @@
   },
   {
     "key":"february_precipitation_standard_deviation",
-    "name":"Standard deviation of February precipitations",
-    "description":"Standard deviation of February precipitations",
+    "name":"Standard deviation of February precipitation",
+    "description":"Standard deviation of February precipitation",
     "value":{
       "type":"float",
       "default":69.9,
@@ -684,8 +684,8 @@
   },
   {
     "key":"march_precipitation_standard_deviation",
-    "name":"Standard deviation of March precipitations",
-    "description":"Standard deviation of March precipitations",
+    "name":"Standard deviation of March precipitation",
+    "description":"Standard deviation of March precipitation",
     "value":{
       "type":"float",
       "default":71.12,
@@ -698,8 +698,8 @@
   },
   {
     "key":"april_precipitation_standard_deviation",
-    "name":"Standard deviation of April precipitations",
-    "description":"Standard deviation of April precipitations",
+    "name":"Standard deviation of April precipitation",
+    "description":"Standard deviation of April precipitation",
     "value":{
       "type":"float",
       "default":56.59,
@@ -712,8 +712,8 @@
   },
   {
     "key":"may_precipitation_standard_deviation",
-    "name":"Standard deviation of May precipitations",
-    "description":"Standard deviation of May precipitations",
+    "name":"Standard deviation of May precipitation",
+    "description":"Standard deviation of May precipitation",
     "value":{
       "type":"float",
       "default":71.91,
@@ -726,8 +726,8 @@
   },
   {
     "key":"june_precipitation_standard_deviation",
-    "name":"Standard deviation of June precipitations",
-    "description":"Standard deviation of June precipitations",
+    "name":"Standard deviation of June precipitation",
+    "description":"Standard deviation of June precipitation",
     "value":{
       "type":"float",
       "default":67.80,
@@ -740,8 +740,8 @@
   },
   {
     "key":"july_precipitation_standard_deviation",
-    "name":"Standard deviation of July precipitations",
-    "description":"Standard deviation of July precipitations",
+    "name":"Standard deviation of July precipitation",
+    "description":"Standard deviation of July precipitation",
     "value":{
       "type":"float",
       "default":63.04,
@@ -754,8 +754,8 @@
   },
   {
     "key":"august_precipitation_standard_deviation",
-    "name":"Standard deviation of August precipitations",
-    "description":"Standard deviation of August precipitations",
+    "name":"Standard deviation of August precipitation",
+    "description":"Standard deviation of August precipitation",
     "value":{
       "type":"float",
       "default":49.38,
@@ -768,8 +768,8 @@
   },
   {
     "key":"september_precipitation_standard_deviation",
-    "name":"Standard deviation of September precipitations",
-    "description":"Standard deviation of September precipitations",
+    "name":"Standard deviation of September precipitation",
+    "description":"Standard deviation of September precipitation",
     "value":{
       "type":"float",
       "default":64.54,
@@ -782,8 +782,8 @@
   },
   {
     "key":"october_precipitation_standard_deviation",
-    "name":"Standard deviation of October precipitations",
-    "description":"Standard deviation of October precipitations",
+    "name":"Standard deviation of October precipitation",
+    "description":"Standard deviation of October precipitation",
     "value":{
       "type":"float",
       "default":60.39,
@@ -796,8 +796,8 @@
   },
   {
     "key":"november_precipitation_standard_deviation",
-    "name":"Standard deviation of November precipitations",
-    "description":"Standard deviation of November precipitations",
+    "name":"Standard deviation of November precipitation",
+    "description":"Standard deviation of November precipitation",
     "value":{
       "type":"float",
       "default":60.34,
@@ -810,8 +810,8 @@
   },
   {
     "key":"december_precipitation_standard_deviation",
-    "name":"Standard deviation of December precipitations",
-    "description":"Standard deviation of December precipitations",
+    "name":"Standard deviation of December precipitation",
+    "description":"Standard deviation of December precipitation",
     "value":{
       "type":"float",
       "default":70.08,
