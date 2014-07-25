@@ -1,9 +1,9 @@
 {
   "id":"child",
   "name":"CHILD",
-  "summary": "CHILD simulates longterm landscape evolution due to hillslope processes and river transport. It computes the time evolution of a topographic surface z(x,y,t) by fluvial and hillslope erosion and sediment transport.Basic processes include runoff generation, water erosion and sediment transport, and gravitational erosion and sediment transport. Depending on the application, the user can apply a vegetation-growth module, various tectonic functions, and couple to Sedflux3D.",
+  "summary":"CHILD simulates longterm landscape evolution due to hillslope processes and river transport. It computes the time evolution of a topographic surface z(x,y,t) by fluvial and hillslope erosion and sediment transport. Basic processes include runoff generation, water erosion and sediment transport, and gravitational erosion and sediment transport. Depending on the application, the user can apply a vegetation-growth module, various tectonic functions, and coupling with Sedflux3D.",
   "url":"http://csdms.colorado.edu/wiki/Model_help:CHILD",
-  "author": "Greg Tucker",
-  "version": "2010.07.06",
-  "doi": "10.1594/IEDA/100102"
+  "author":"Greg Tucker",
+  "version":"2010.07.06",
+  "doi":"10.1594/IEDA/100102"
 }

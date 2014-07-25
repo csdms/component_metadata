@@ -1,9 +1,9 @@
 {
   "id":"sedflux3d",
   "name":"Sedflux3D",
-  "summary": "Basin filling stratigraphic model.Sedflux3d simulates longterm marine sediment transport and accumulation into a three-dimensional basin over time scales of tens of thousands of years. It simulates the dynamics of strata formation of continental margins based on distribution of river plumes and tectonics.",
+  "summary":"Sedflux3D is a basin-filling stratigraphic model. Sedflux3D simulates longterm marine sediment transport and accumulation into a three-dimensional basin over time scales of tens of thousands of years. It simulates the dynamics of strata formation of continental margins based on distribution of river plumes and tectonics.",
   "url":"http://csdms.colorado.edu/wiki/Model_help:Sedflux",
-  "author": "Eric Hutton",
-  "version": "2.1",
-  "doi": "10.1594/IEDA/100161"
+  "author":"Eric Hutton",
+  "version":"2.1",
+  "doi":"10.1594/IEDA/100161"
 }
