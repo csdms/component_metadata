@@ -34,11 +34,11 @@
   {
     "key":"bathymetry_file",
     "name":"Bathymetry file",
-    "description":"sedflux3d bathymetry file",
+    "description":"CSV-formatted bathymetry file",
     "value":{
       "type":"file",
-      "default":"sedflux3d_bathy.csv",
-      "files": [ "sedflux3d_bathy_adriatic.csv", "sedflux3d_bathy.csv" ]
+      "default":"bathy_dipping_westward.csv",
+      "files": [ "bathy_dipping_westward.csv", "bathymetry.csv", "bathy_step_func_1.csv", "bathy_step_func_2.csv" ]
     }
   },
   {
@@ -254,7 +254,7 @@
     "description":"Standard deviation for random walk",
     "value":{
       "type":"float",
-      "default": 1.0,
+      "default": 10.0,
       "range":{
         "min": 0.0,
         "max": 10.0
@@ -268,7 +268,7 @@
     "description":"Minimum angle for avulsion",
     "value":{
       "type":"float",
-      "default": -90.0,
+      "default": -180.0,
       "range":{
         "min": -180.0,
         "max": 180.0
@@ -282,7 +282,7 @@
     "description":"Maximum angle for avulsion",
     "value":{
       "type":"float",
-      "default": 90.0,
+      "default": 0.0,
       "range":{
         "min": -180.0,
         "max": 180.0
@@ -296,7 +296,7 @@
     "description":"Row location of river hinge point for avulsion",
     "value":{
       "type":"int",
-      "default": 20,
+      "default": 55,
       "range":{
         "min": 0,
         "max": 10000
@@ -310,7 +310,7 @@
     "description":"Column location of river hinge point for avulsion",
     "value":{
       "type":"int",
-      "default": 0,
+      "default": 109,
       "range":{
         "min": 0,
         "max": 10000
