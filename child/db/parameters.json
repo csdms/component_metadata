@@ -928,8 +928,8 @@
   },
   {
     "key":"hydraulic_depth_exp_station",
-    "name":"Downstream hydraulic roughness coefficient",
-    "description":"Coefficient on downstream hydraulic roughness (Manning n)",
+    "name":"Exponent on at-a-station hydraulic depth relation",
+    "description":"Exponent on at-a-station hydraulic depth relation",
     "value":{
       "type":"float",
       "default":0.03,
