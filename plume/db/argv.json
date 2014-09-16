@@ -1,1 +1,1 @@
-[ "plume", "plume_params.cfg", "plume_flood.cfg" ]
+[ "plume", "--in-file=plume_params.cfg", "--flood-file=plume_flood.cfg", "-D 2" ]
