@@ -1,1 +1,19 @@
-[ { "id":"river" } ]
+[
+  {
+    "id":"river",
+    "exchange_items": [
+      "avulsion_model__random_walk_variance_constant",
+      "avulsion_model__sediment_bed_load_exponent",
+      "avulsion_model__water_discharge_exponent",
+      "channel_inflow_end_water__discharge",
+      "channel_inflow_end_bed_load_sediment__mass_flow_rate",
+      "channel_outflow_end_bed_load_sediment__mass_flow_rate",
+      "channel_outflow_end_water__discharge",
+      "channel_outflow_end__location_model_x_component",
+      "channel_outflow_end__location_model_y_component",
+      "channel_inflow_end_to_channel_outflow_end__angle",
+      "surface__elevation",
+      "surface_bed_load_sediment__mass_flow_rate"
+    ]
+  }
+]

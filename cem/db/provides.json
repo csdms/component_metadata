@@ -1,1 +1,10 @@
-[ { "id":"elevation" } ]
+[
+  {
+    "id":"elevation",
+    "exchange_items": [
+      "sea_water__depth",
+      "sea_water_to_sediment__depth_ratio",
+      "surface__elevation"
+    ]
+  }
+]

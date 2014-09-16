@@ -1,9 +1,17 @@
 [
   {
     "id":"river",
-    "required":false
+    "required":false,
+    "exchange_items":[
+      "surface_bed_load_sediment__mass_flow_rate"
+    ]
   },
   { "id":"waves",
-    "required":false
+    "required":false,
+    "exchange_items":[
+      "sea_water_surface_wave__height",
+      "sea_water_surface_wave__from_direction",
+      "sea_water_surface_wave__period"
+    ]
   }
 ]

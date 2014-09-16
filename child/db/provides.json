@@ -1,1 +1,13 @@
-[ { "id":"subaerial_delta" } ]
+[
+  {
+    "id":"subaerial_delta",
+    "exchange_items": [
+      "surface__elevation",
+      "sea_floor__elevation",
+      "surface__elevation_increment",
+      "sediment__erosion_rate",
+      "channel_water__discharge",
+      "bed_load__mass_flow_rate"
+    ]
+  }
+]

@@ -1,14 +1,23 @@
 [
   {
     "id":"coastal_environment",
-    "required":false
+    "required":false,
+    "exchange_items": [
+       "bedrock_surface__elevation"
+    ]
   },
   {
     "id":"subaqueous_delta",
-    "required":false
+    "required":false,
+    "exchange_items": [
+      "sea_floor__elevation"
+    ]
   },
   {
     "id":"baselevel",
-    "required":false
+    "required":false,
+    "exchange_items": [
+      "bedrock_surface__elevation_increment"
+    ]
   }
 ]

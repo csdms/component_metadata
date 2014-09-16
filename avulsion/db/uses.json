@@ -1,10 +1,17 @@
 [
   {
     "id":"discharge",
-    "required":false
+    "required":false,
+    "exchange_items": [
+      "channel_inflow_end_bed_load_sediment__mass_flow_rate",
+      "channel_inflow_end_water__discharge"
+    ]
   },
   {
     "id":"elevation",
-    "required":false
+    "required":false,
+    "exchange_items": [
+      "surface__elevation"
+    ]
   }
 ]
