@@ -14,7 +14,7 @@
     "description":"Simulation run time",
     "value":{
       "type":"int",
-      "default":365000,
+      "default":1825000,
       "range":{
         "min":0,
         "max":1.79769313486e+308
@@ -38,10 +38,7 @@
     "value":{
       "type":"choice",
       "default":"linear",
-      "choices":[
-        "linear",
-        "user"
-      ]
+      "choices": ["linear", "user"]
     }
   },
   {
@@ -51,10 +48,7 @@
     "value":{
       "type":"file",
       "default":"sedflux2d_bathy.csv",
-      "files":[
-        "sedflux2d_bathy_adriatic.csv",
-        "sedflux2d_bathy.csv"
-      ]
+      "files": [ "sedflux2d_bathy_adriatic.csv", "sedflux2d_bathy.csv" ]
     }
   },
   {
@@ -63,10 +57,10 @@
     "description":"Gradient of shelf",
     "value":{
       "type":"float",
-      "default":0.001,
+      "default": 0.001,
       "range":{
-        "min":0.0,
-        "max":0.01
+        "min": 0.0,
+        "max": 0.01
       },
       "units":"m"
     }
@@ -77,10 +71,10 @@
     "description":"Gradient of slope",
     "value":{
       "type":"float",
-      "default":0.004,
+      "default": 0.01,
       "range":{
-        "min":0.0,
-        "max":0.1
+        "min": 0.0,
+        "max": 0.1
       },
       "units":"m"
     }
@@ -91,10 +85,10 @@
     "description":"Width of shelf",
     "value":{
       "type":"float",
-      "default":20000.0,
+      "default": 100000.0,
       "range":{
-        "min":1000.0,
-        "max":1000000.0
+        "min": 1000.0,
+        "max": 1000000.0
       },
       "units":"m"
     }
@@ -105,10 +99,10 @@
     "description":"Width of model domain",
     "value":{
       "type":"float",
-      "default":60000.0,
+      "default": 200000.0,
       "range":{
-        "min":0.0,
-        "max":10000000.0
+        "min": 0.0,
+        "max": 10000000.0
       },
       "units":"m"
     }
@@ -129,10 +123,7 @@
     "value":{
       "type":"choice",
       "default":"linear",
-      "choices":[
-        "linear",
-        "user"
-      ]
+      "choices": ["linear", "user"]
     }
   },
   {
@@ -142,7 +133,7 @@
     "value":{
       "type":"file",
       "default":"sedflux2d_sea_level_constant.csv",
-      "files":[
+      "files": [
         "sedflux2d_sea_level_constant.csv",
         "sedflux2d_sea_level_falling.csv",
         "sedflux2d_sea_level_rising.csv"
@@ -155,10 +146,10 @@
     "description":"Sea level at simulation start",
     "value":{
       "type":"float",
-      "default":0.0,
+      "default": 0.0,
       "range":{
-        "min":-1000.0,
-        "max":1000.0
+        "min": -1000.0,
+        "max": 1000.0
       },
       "units":"m"
     }
@@ -169,10 +160,10 @@
     "description":"Sea level at simulation end",
     "value":{
       "type":"float",
-      "default":-5.0,
+      "default": 0.0,
       "range":{
-        "min":-1000.0,
-        "max":1000.0
+        "min": -1000.0,
+        "max": 1000.0
       },
       "units":"m"
     }
@@ -192,10 +183,10 @@
     "description":"Resolution in the vertical direction",
     "value":{
       "type":"float",
-      "default":0.02,
+      "default": 0.01,
       "range":{
-        "min":0,
-        "max":10.0
+        "min": 0,
+        "max": 10.0
       },
       "units":"m"
     }
@@ -206,10 +197,10 @@
     "description":"Width of the coastline",
     "value":{
       "type":"float",
-      "default":25000.0,
+      "default": 50000.0,
       "range":{
-        "min":0,
-        "max":1.79769313486e+308
+        "min": 0,
+        "max": 1.79769313486e+308
       },
       "units":"m"
     }
@@ -220,10 +211,10 @@
     "description":"Spatial resolution in the cross-shore direction",
     "value":{
       "type":"float",
-      "default":500.0,
+      "default": 250.0,
       "range":{
-        "min":0.0,
-        "max":10000.0
+        "min": 0.0,
+        "max": 10000.0
       },
       "units":"m"
     }
@@ -278,10 +269,10 @@
     "description":"Effective elastic thickness of crust",
     "value":{
       "type":"float",
-      "default":65000.0,
+      "default": 65000.0,
       "range":{
-        "min":1000.0,
-        "max":1.79769313486e+308
+        "min": 1000.0,
+        "max": 1.79769313486e+308
       },
       "units":"m"
     }
@@ -292,10 +283,10 @@
     "description":"Young's modulus",
     "value":{
       "type":"float",
-      "default":7e10,
+      "default": 7e10,
       "range":{
-        "min":1e9,
-        "max":1e12
+        "min": 1e9,
+        "max": 1e12
       },
       "units":"Pa"
     }
@@ -306,10 +297,10 @@
     "description":"Relaxation time of crust",
     "value":{
       "type":"float",
-      "default":5000.0,
+      "default": 5000.0,
       "range":{
-        "min":0.0,
-        "max":100000.0
+        "min": 0.0,
+        "max": 100000.0
       },
       "units":"Pa"
     }
@@ -329,10 +320,10 @@
     "description":"Bed-load flux at river mouth",
     "value":{
       "type":"float",
-      "default":110.0,
+      "default": 70.0,
       "range":{
-        "min":0.01,
-        "max":1000.0
+        "min": 0.01,
+        "max": 1000.0
       },
       "units":"kg/s"
     }
@@ -343,10 +334,10 @@
     "description":"Suspended load concentration of grain class 0",
     "value":{
       "type":"float",
-      "default":0.1,
+      "default": 0.1,
       "range":{
-        "min":0.01,
-        "max":1.0
+        "min": 0.01,
+        "max": 1.0
       },
       "units":"kg/m^3"
     }
@@ -357,10 +348,10 @@
     "description":"Suspended load concentration of grain class 1",
     "value":{
       "type":"float",
-      "default":0.2,
+      "default": 0.1,
       "range":{
-        "min":0.01,
-        "max":1.0
+        "min": 0.01,
+        "max": 1.0
       },
       "units":"kg/m^3"
     }
@@ -371,10 +362,10 @@
     "description":"Flow velocity at river mouth",
     "value":{
       "type":"float",
-      "default":1.2,
+      "default": 1.2,
       "range":{
-        "min":0.5,
-        "max":5.0
+        "min": 0.5,
+        "max": 5.0
       },
       "units":"m/s"
     }
@@ -385,10 +376,10 @@
     "description":"Width of river at river mouth",
     "value":{
       "type":"float",
-      "default":400.0,
+      "default": 400.0,
       "range":{
-        "min":10.0,
-        "max":5000.0
+        "min": 10.0,
+        "max": 5000.0
       },
       "units":"m"
     }
@@ -399,10 +390,10 @@
     "description":"Depth of river at river mouth",
     "value":{
       "type":"float",
-      "default":4.0,
+      "default": 4.0,
       "range":{
-        "min":1.0,
-        "max":50.0
+        "min": 1.0,
+        "max": 50.0
       },
       "units":"m"
     }
@@ -413,10 +404,10 @@
     "description":"Distance from the river mouth over which to dump bed load",
     "value":{
       "type":"float",
-      "default":2000.0,
+      "default": 2000.0,
       "range":{
-        "min":10.0,
-        "max":10000.0
+        "min": 10.0,
+        "max": 10000.0
       },
       "units":"m"
     }
@@ -436,10 +427,10 @@
     "description":"Maximum width of the river plume",
     "value":{
       "type":"float",
-      "default":15.0,
+      "default": 15.0,
       "range":{
-        "min":1.0,
-        "max":100.0
+        "min": 1.0,
+        "max": 100.0
       },
       "units":"km"
     }
@@ -450,10 +441,10 @@
     "description":"Number of nodes in the cross-shore direction of the plume solution grid (must be odd)",
     "value":{
       "type":"int",
-      "default":21,
+      "default": 21,
       "range":{
-        "min":3,
-        "max":21
+        "min": 3,
+        "max": 21
       },
       "units":"-"
     }
@@ -464,10 +455,10 @@
     "description":"Number of nodes within the river mouth of the plume solution grid (must be odd)",
     "value":{
       "type":"int",
-      "default":3,
+      "default": 3,
       "range":{
-        "min":3,
-        "max":21
+        "min": 3,
+        "max": 21
       },
       "units":"-"
     }
@@ -501,7 +492,7 @@
     "description":"Grain density of bed-load sediment",
     "value":{
       "type":"float",
-      "default":2625.0,
+      "default": 2625.0,
       "range":{
         "min":1000.0,
         "max":2650.0
@@ -515,7 +506,7 @@
     "description":"Saturated bulk-density of bed-load sediment",
     "value":{
       "type":"float",
-      "default":1850.0,
+      "default": 1850.0,
       "range":{
         "min":1000.0,
         "max":2650.0
@@ -529,7 +520,7 @@
     "description":"Void ratio of bed-load sediment in closest-packed state",
     "value":{
       "type":"float",
-      "default":0.3,
+      "default": 0.3,
       "range":{
         "min":0.0,
         "max":1.0
@@ -543,7 +534,7 @@
     "description":"Diffusion coefficient of bed-load sediment",
     "value":{
       "type":"float",
-      "default":0.25,
+      "default": 0.25,
       "range":{
         "min":0.0,
         "max":1.0
@@ -594,7 +585,7 @@
     "description":"Grain density of suspended-load sediment class 1",
     "value":{
       "type":"float",
-      "default":2600.0,
+      "default": 2600.0,
       "range":{
         "min":1000.0,
         "max":2650.0
@@ -608,7 +599,7 @@
     "description":"Grain density of suspended-load sediment class 2",
     "value":{
       "type":"float",
-      "default":2400.0,
+      "default": 2400.0,
       "range":{
         "min":1000.0,
         "max":2650.0
@@ -622,7 +613,7 @@
     "description":"Saturated bulk-density of suspended-load sediment class 1",
     "value":{
       "type":"float",
-      "default":1800.0,
+      "default": 1800.0,
       "range":{
         "min":1000.0,
         "max":2650.0
@@ -636,7 +627,7 @@
     "description":"Saturated bulk-density of suspended-load sediment class 2",
     "value":{
       "type":"float",
-      "default":1600.0,
+      "default": 1600.0,
       "range":{
         "min":1000.0,
         "max":2650.0
@@ -650,7 +641,7 @@
     "description":"Void ratio of suspended-load sediment class 1 in closest-packed state",
     "value":{
       "type":"float",
-      "default":0.2,
+      "default": 0.2,
       "range":{
         "min":0.0,
         "max":1.0
@@ -664,7 +655,7 @@
     "description":"Void ratio of suspended-load sediment class 2 in closest-packed state",
     "value":{
       "type":"float",
-      "default":0.1,
+      "default": 0.1,
       "range":{
         "min":0.0,
         "max":1.0
@@ -678,7 +669,7 @@
     "description":"Diffusion coefficient of suspended-load sediment class 1",
     "value":{
       "type":"float",
-      "default":0.25,
+      "default": 0.25,
       "range":{
         "min":0.0,
         "max":1.0
@@ -692,7 +683,7 @@
     "description":"Diffusion coefficient of suspended-load sediment class 2",
     "value":{
       "type":"float",
-      "default":0.25,
+      "default": 0.25,
       "range":{
         "min":0.0,
         "max":1.0
@@ -706,7 +697,7 @@
     "description":"Removal rate of suspended-load sediment class 1",
     "value":{
       "type":"float",
-      "default":16.8,
+      "default": 16.8,
       "range":{
         "min":0.1,
         "max":100.0
@@ -720,7 +711,7 @@
     "description":"Removal rate of suspended-load sediment class 2",
     "value":{
       "type":"float",
-      "default":1.0,
+      "default": 1.0,
       "range":{
         "min":0.1,
         "max":100.0

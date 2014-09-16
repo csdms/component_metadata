@@ -9,26 +9,26 @@
     }
   },
   {
-    "key":"simulation_name",
-    "name":"Simulation name",
-    "description":"Name of the simulation",
+    "key":"run_duration",
+    "name":"Run duration",
+    "description":"Simulation run time",
     "value":{
-      "type":"string",
-      "default":"Waves"
+      "type":"float",
+      "default":3650.0,
+      "range":{
+        "min":1.0,
+        "max":1.79769313486e+308
+      },
+      "units":"d"
     }
   },
   {
-    "key":"model_end_time",
-    "name":"Model end time",
-    "description":"Number of days over which simulation occurs",
+    "key":"separator",
+    "name":"Wave Parameters",
+    "description":"Waves",
     "value":{
-      "type":"int",
-      "default":10,
-      "range":{
-        "min":0,
-        "max":2147483647
-      },
-      "units":"days"
+      "type":"string",
+      "default":""
     }
   },
   {

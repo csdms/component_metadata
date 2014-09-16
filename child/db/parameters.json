@@ -9,15 +9,6 @@
     }
   },
   {
-    "key":"simulation_name",
-    "name":"Simulation name",
-    "description":"Simulation name",
-    "value":{
-      "type":"string",
-      "default":"Child"
-    }
-  },
-  {
     "key":"run_duration",
     "name":"Run duration",
     "description":"Simulation run time",
@@ -583,7 +574,7 @@
       "default":2270.0,
       "range":{
         "min":0.0,
-        "max":1000.0
+        "max":2650.0
       },
       "units":"kg m^-3"
     }
