@@ -1,6 +1,6 @@
 {
   "id":"baselevel",
   "name":"base_level",
-  "summary":"Base level prescribes the elevation of the sea level (or lake level) over the simulation time. This elevation can be used by several components to determine the changes in coastline position or river mouth locations over the simulation time.",
+  "summary": "Base level prescribes the elevation of the sea level (or lake level) over the simulation time. Then this elevation can be used by several components to determine the changes in coastline position or river mouth locations over the simulations time",
   "url":"http://csdms.colorado.edu/wiki/Category:Modules"
 }
