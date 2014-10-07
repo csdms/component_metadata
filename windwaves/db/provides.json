@@ -1,0 +1,9 @@
+[
+  {
+    "id":"waves",
+    "exchange_items": [
+      "sea_surface_water_wave__height",
+      "sea_surface_water_wave__period"
+    ]
+  }
+]
