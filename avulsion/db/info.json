@@ -4,9 +4,10 @@
   "class":"Avulsion",
   "initialize_args":"avulsion.txt",
   "time_step":1.0,
-  "summary": "Avulsion dictates the movement of rivermouths along a coastline by modeling the changes of river channel angles through the floodplain as a stochastic random walk process",
+  "summary": "Avulsion dictates the movement of rivermouths along a coastline by modeling the changes of river channel angles through the floodplain as a stochastic random walk process.",
   "url":"http://csdms.colorado.edu/wiki/Model_help:Avulsion",
   "author": "Eric Hutton",
+  "email": "eric.hutton@colorado.edu",
   "version": "0.1",
   "doi": "10.1594/IEDA/100091",
   "license": "MIT"
