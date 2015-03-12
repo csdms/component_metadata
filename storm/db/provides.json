@@ -1,0 +1,9 @@
+[
+  {
+    "id":"wind",
+    "exchange_items":[
+      "atmosphere_air_flow__east_component_of_velocity",
+      "atmosphere_air_flow__north_component_of_velocity"
+    ]
+  }
+]
