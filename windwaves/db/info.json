@@ -4,7 +4,7 @@
   "class":"WindWaves",
   "initialize_args":"windwaves.txt",
   "time_step":1.0,
-  "summary": "Calculate wave-generated bottom orbital velocities from surface wave parameters",
+  "summary": "WindWaves calculates wave-generated bottom orbital velocities from surface wave parameters.",
   "url":"http://csdms.colorado.edu/wiki/Model_help:WindWaves",
   "author": "Patricia L. Wiberg",
   "version": "0.1"

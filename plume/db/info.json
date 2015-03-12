@@ -3,7 +3,7 @@
   "name":"Plume",
   "class":"Plume",
   "initialize_args":"_plume_bmi_initialize.txt",
-  "summary": "Plume simulates the sediment transport and deposition of several grainsize classes from a river mouth entering into a marine basin by creating a turbulent jet. The model forms a hypopycnal plume. The model allows for plume deflection due to systematic currents or Coriolis force",
+  "summary": "Plume simulates the sediment transport and deposition of several grainsize classes from a river mouth entering into a marine basin by creating a turbulent jet. The model forms a hypopycnal plume. The model allows for plume deflection due to systematic currents or Coriolis force.",
   "url":"http://csdms.colorado.edu/wiki/Model:Plume",
   "author": "Eric Hutton",
   "doi": "10.1594/IEDA/100152"
