@@ -14,7 +14,7 @@
 	"description":"Simulation run time",
 	"value":{
 	    "type":"float",
-	    "default":3650.0,
+	    "default":30.0,
 	    "range":{
 		"min":1.0,
 		"max":1.79769313486e+308
@@ -97,10 +97,10 @@
     {
 	"key":"storm_speed",
 	"name":"Storm speed",
-	"description":"Propagation speed of cyclone",
+	"description":"Propagation speed",
 	"value":{
 	    "type":"float",
-	    "default":1.0,
+	    "default":5.0,
 	    "range":{
 		"min":0.0,
 		"max":1.79769313486e+308
@@ -111,7 +111,7 @@
     {
 	"key":"storm_direction",
 	"name":"Storm direction",
-	"description":"Direction of cyclone propagation (CCW from east)",
+	"description":"Direction of propagation (CCW from east)",
 	"value":{
 	    "type":"float",
 	    "default":180.0,
@@ -125,7 +125,7 @@
     {
 	"key":"pressure_center",
 	"name":"Central pressure",
-	"description":"Atmospheric pressure at cyclone center",
+	"description":"Atmospheric pressure at center",
 	"value":{
 	    "type":"float",
 	    "default":99800.0,
@@ -139,7 +139,7 @@
     {
 	"key":"pressure_edge",
 	"name":"Edge pressure",
-	"description":"Atmospheric pressure at edge of cyclone",
+	"description":"Atmospheric pressure at edge",
 	"value":{
 	    "type":"float",
 	    "default":101300.0,
@@ -153,7 +153,7 @@
     {
 	"key":"storm_radius",
 	"name":"Storm radius",
-	"description":"Radius of cyclone",
+	"description":"Radius",
 	"value":{
 	    "type":"float",
 	    "default":1.0e+6,
@@ -167,7 +167,7 @@
     {
 	"key":"radius_of_maximum_winds",
 	"name":"Radius of maximum winds",
-	"description":"Radius of maximum winds in cyclone",
+	"description":"Radius of maximum winds",
 	"value":{
 	    "type":"float",
 	    "default":24400.0,
@@ -181,7 +181,7 @@
     {
 	"key":"center_row_node",
 	"name":"Row node of center",
-	"description":"Grid row of cyclone center",
+	"description":"Grid row of storm center",
 	"value":{
             "type":"int",
             "default":25,
@@ -194,7 +194,7 @@
     {
 	"key":"center_col_node",
 	"name":"Column node of center",
-	"description":"Grid column of cyclone center",
+	"description":"Grid column of storm center",
 	"value":{
             "type":"int",
             "default":25,
