@@ -1,0 +1,5 @@
+[
+    "python",
+    "-c",
+    "from dakota.core import Dakota;d = Dakota();d.write_input_file();d.run()"
+]

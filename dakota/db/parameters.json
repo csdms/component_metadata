@@ -1,0 +1,23 @@
+[
+    {
+	"key":"separator",
+	"name":"Method",
+	"description":"Analysis Method",
+	"value":{
+	    "type":"string",
+	    "default":""
+	}
+    },
+    {
+	"key":"method",
+	"name":"Dakota analysis method",
+	"description":"Dakota analysis method",
+	"value":{
+	    "type":"choice",
+	    "default":"vector parameter study",
+	    "choices":[
+		"vector parameter study"
+	    ]
+	}
+    }
+]
