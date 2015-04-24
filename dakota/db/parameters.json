@@ -14,9 +14,9 @@
 	"description":"Dakota analysis method",
 	"value":{
 	    "type":"choice",
-	    "default":"vector parameter study",
+	    "default":"vector_parameter_study",
 	    "choices":[
-		"vector parameter study"
+		"vector_parameter_study"
 	    ]
 	}
     }
