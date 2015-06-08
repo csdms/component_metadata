@@ -1,0 +1,209 @@
+G_0:
+  default: '0.72400000'
+  description: capillary length scale [m]
+  name: G
+  range:
+    max: 1e2
+    min: '0.0'
+  type: float
+G_type_0:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: G type
+  type: string
+HTML_HELP_FILE:
+  default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Smith-Parlange
+  description: URL for HTML help file
+  name: HTML help file
+  type: String
+I_gs_file:
+  default: '[case_prefix]_2D-I.nc'
+  description: filename for grid stack of I [m]
+  name: Save I  grids file
+  type: string
+I_ts_file:
+  default: '[case_prefix]_0D-I.txt'
+  description: filename for time series of I [m]
+  name: Save I  pixels file
+  type: string
+Ki_0:
+  default: '0.00000010'
+  description: init. hydraulic conductivity [m/s] (< K_sat)
+  name: K_init
+  range:
+    max: 1e-2
+    min: '0.0'
+  type: float
+Ki_type_0:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: K_init type
+  type: string
+Ks_0:
+  default: '0.00000720'
+  description: sat. hydraulic conductivity [m/s]
+  name: K_sat
+  range:
+    max: 1e-2
+    min: '0.0'
+  type: float
+Ks_type_0:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: K_sat type
+  type: string
+ModelAuthor:
+  default: 'Scott D. Peckham '
+  description: Name of the model author
+  name: Author name
+  type: String
+ModelName:
+  default: InfilSmithParlange
+  description: Name of the model
+  name: Model name
+  type: String
+SAVE_I_GRIDS:
+  default: 'No'
+  description: option to save grids of cumul. infil. depth {Yes; No}
+  name: Save I  grids toggle
+  type: string
+SAVE_I_PIXELS:
+  default: 'No'
+  description: option to save time series of cumul. infil. depth {Yes; No}
+  name: Save I  pixels toggle
+  type: string
+SAVE_V0_GRIDS:
+  default: 'No'
+  description: option to save grids of infil. rate (at surf)  {Yes; No}
+  name: Save v0 grids toggle
+  type: string
+SAVE_V0_PIXELS:
+  default: 'No'
+  description: option to save time series of infil. rate (at surf) {Yes; No}
+  name: Save v0 pixels toggle
+  type: string
+case_prefix:
+  default: Case5
+  description: file prefix for the model scenario
+  name: Case prefix
+  type: string
+comp_status:
+  default: Enabled
+  description: component status {Enabled; Disabled}
+  name: Component status
+  type: string
+dt:
+  default: '60.000'
+  description: timestep for infiltration process [sec]
+  name: Time step
+  range:
+    max: 1e3
+    min: '0'
+  type: float
+gam_0:
+  default: '0.82000000'
+  description: Smith-Parlange parameter [none]
+  name: gamma
+  range:
+    max: '1.0'
+    min: '0.0'
+  type: float
+gam_type_0:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: gamma type
+  type: string
+in_directory:
+  default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+  description: input directory
+  name: Input directory
+  type: string
+n_layers:
+  default: '1'
+  description: number of soil layers
+  name: Number of soil layers
+  range:
+    max: '3'
+    min: '1'
+  type: int
+n_steps:
+  default: '10'
+  description: number of time steps
+  name: Number of steps
+  range:
+    max: 1e7
+    min: '1'
+  type: long
+out_directory:
+  default: ~/CMT_Output/
+  description: output directory
+  name: Output directory
+  type: string
+pixel_file:
+  default: '[case_prefix]_outlets.txt'
+  description: filename for monitored pixel file
+  name: Monitored pixel file
+  type: string
+qi_0:
+  default: '0.37580763'
+  description: init. soil water content [none] (< theta_sat)
+  name: theta_init
+  range:
+    max: '1.0'
+    min: '0.0'
+  type: float
+qi_type_0:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: theta_init type
+  type: string
+qs_0:
+  default: '0.48500000'
+  description: sat. soil water content [none]
+  name: theta_sat
+  range:
+    max: '1.0'
+    min: '0.0'
+  type: float
+qs_type_0:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: theta_sat type
+  type: string
+save_grid_dt:
+  default: '60.000'
+  description: time interval between saved grids [sec]
+  name: Save grid timestep
+  range:
+    max: 1e6
+    min: '0.0'
+  type: float
+save_pixels_dt:
+  default: '60.000'
+  description: time interval between time series values [sec]
+  name: Save pixels timestep
+  range:
+    max: 1e6
+    min: '0.0'
+  type: float
+site_prefix:
+  default: Treynor
+  description: file prefix for the study site
+  name: Site prefix
+  type: string
+soil_type_0:
+  default: silty_loam
+  description: closest standard soil type {sand; loamy_sand; sandy_loam; silty_loam;
+    loam; sandy_clay_loam; silty_clay_loam; clay_loam; sandy_clay; silty_clay; clay}
+  name: Closest soil_type
+  type: string
+v0_gs_file:
+  default: '[case_prefix]_2D-v0.nc'
+  description: filename for grid stack of v0 [m/s]
+  name: Save v0 grids file
+  type: string
+v0_ts_file:
+  default: '[case_prefix]_0D-v0.txt'
+  description: filename for time series of v0 [m/s]
+  name: Save v0 pixels file
+  type: string

@@ -1,0 +1,70 @@
+HTML_HELP_FILE:
+  default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Diversions
+  description: URL for HTML help file
+  name: HTML help file
+  type: String
+ModelAuthor:
+  default: 'Scott D. Peckham '
+  description: Name of the model author
+  name: Author name
+  type: String
+ModelName:
+  default: DiversionsFraction
+  description: Name of the model
+  name: Model name
+  type: String
+canal_file:
+  default: '[site_prefix]_canals.txt'
+  description: canal information file
+  name: Canal file
+  type: string
+case_prefix:
+  default: Case5
+  description: file prefix for the model scenario
+  name: Case prefix
+  type: string
+comp_status:
+  default: Enabled
+  description: component status {Enabled; Disabled}
+  name: Component status
+  type: string
+in_directory:
+  default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+  description: input directory
+  name: Input directory
+  type: string
+out_directory:
+  default: ~/CMT_Output/
+  description: output directory
+  name: Output directory
+  type: string
+sink_file:
+  default: '[site_prefix]_sinks.txt'
+  description: sink information file
+  name: Sinks file
+  type: string
+site_prefix:
+  default: Treynor
+  description: file prefix for the study site
+  name: Site prefix
+  type: string
+source_file:
+  default: '[site_prefix]_sources.txt'
+  description: source information file
+  name: Sources file
+  type: string
+use_canals:
+  default: 'No'
+  description: option to use canals {Yes; No}
+  name: Use canals toggle
+  type: string
+use_sinks:
+  default: 'No'
+  description: option to use sinks {Yes; No}
+  name: Use sinks toggle
+  type: string
+use_sources:
+  default: 'No'
+  description: option to use sources {Yes; No}
+  name: Use sources toggle
+  type: string

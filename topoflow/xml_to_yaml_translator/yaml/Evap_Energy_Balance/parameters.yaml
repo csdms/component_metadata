@@ -1,0 +1,136 @@
+HTML_HELP_FILE:
+  default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Evaporation-Energy_Balance
+  description: URL for HTML help file
+  name: HTML help file
+  type: String
+K_soil:
+  default: '0.450'
+  description: thermal conductivity of soil [W/m/deg_C]
+  name: K_soil
+  range:
+    max: 1e2
+    min: '0.0'
+  type: float
+K_soil_type:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: K_soil type
+  type: string
+ModelAuthor:
+  default: 'Scott D. Peckham '
+  description: Name of the model author
+  name: Author name
+  type: String
+ModelName:
+  default: EvapEnergyBalance
+  description: Name of the model
+  name: Model name
+  type: String
+SAVE_ER_GRIDS:
+  default: 'No'
+  description: option to save grids of evap. rate [mm/hr] {Yes; No}
+  name: Save er grids toggle
+  type: string
+SAVE_ER_PIXELS:
+  default: 'No'
+  description: option to save time series of evap. rate {Yes; No}
+  name: Save er pixels toggle
+  type: string
+T_soil_x:
+  default: '0.000'
+  description: temperature of soil at depth x [deg C]
+  name: T_soil_x
+  range:
+    max: '30.0'
+    min: '-100.0'
+  type: float
+T_soil_x_type:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: T_soil_x type
+  type: string
+case_prefix:
+  default: Case5
+  description: file prefix for the model scenario
+  name: Case prefix
+  type: string
+comp_status:
+  default: Enabled
+  description: component status {Enabled; Disabled}
+  name: Component status
+  type: string
+dt:
+  default: '3600.000'
+  description: evaporation process timestep [sec]
+  name: Time step
+  range:
+    max: 1e6
+    min: '0.0'
+  type: float
+er_gs_file:
+  default: '[case_prefix]_2D-ETrate.nc'
+  description: filename for grid stack of evap. rate [mm/hr]
+  name: Save er grids file
+  type: string
+er_ts_file:
+  default: '[case_prefix]_0D-ETrate.txt'
+  description: filename for time series of evap. rate [mm/hr]
+  name: Save er pixels file
+  type: string
+in_directory:
+  default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+  description: input directory
+  name: Input directory
+  type: string
+n_steps:
+  default: '10'
+  description: number of time steps
+  name: Number of steps
+  range:
+    max: 1e7
+    min: '1'
+  type: long
+out_directory:
+  default: ~/CMT_Output/
+  description: output directory
+  name: Output directory
+  type: string
+pixel_file:
+  default: '[case_prefix]_outlets.txt'
+  description: filename for monitored pixel file
+  name: Monitored pixel file
+  type: string
+save_grid_dt:
+  default: '60.000'
+  description: time interval between saved grids [sec]
+  name: Save grid timestep
+  range:
+    max: 1e6
+    min: '0.0'
+  type: float
+save_pixels_dt:
+  default: '60.000'
+  description: time interval between time series values [sec]
+  name: Save pixels timestep
+  range:
+    max: 1e6
+    min: '0.0'
+  type: float
+site_prefix:
+  default: Treynor
+  description: file prefix for the study site
+  name: Site prefix
+  type: string
+soil_x:
+  default: '0.050'
+  description: reference depth in soil [m]
+  name: soil_x
+  range:
+    max: '10.0'
+    min: '0.0'
+  type: float
+soil_x_type:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: soil_x type
+  type: string

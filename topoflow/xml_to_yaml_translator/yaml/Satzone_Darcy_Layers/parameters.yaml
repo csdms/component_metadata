@@ -1,0 +1,428 @@
+HTML_HELP_FILE:
+  default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Saturated_Zone-Darcy_Layers
+  description: URL for HTML help file
+  name: HTML help file
+  type: String
+Ks_0:
+  default: '0.000050'
+  description: sat. hydraulic conductivity [m/s]
+  name: K_sat
+  range:
+    max: 1e-2
+    min: '0.0'
+  type: float
+Ks_1:
+  default: '0.000050'
+  description: sat. hydraulic conductivity [m/s]
+  name: K_sat
+  range:
+    max: 1e-2
+    min: '0.0'
+  type: float
+Ks_2:
+  default: '0.000050'
+  description: sat. hydraulic conductivity [m/s]
+  name: K_sat
+  range:
+    max: 1e-2
+    min: '0.0'
+  type: float
+Ks_3:
+  default: '0.000050'
+  description: sat. hydraulic conductivity [m/s]
+  name: K_sat
+  range:
+    max: 1e-2
+    min: '0.0'
+  type: float
+Ks_4:
+  default: '0.000050'
+  description: sat. hydraulic conductivity [m/s]
+  name: K_sat
+  range:
+    max: 1e-2
+    min: '0.0'
+  type: float
+Ks_5:
+  default: '0.000050'
+  description: sat. hydraulic conductivity [m/s]
+  name: K_sat
+  range:
+    max: 1e-2
+    min: '0.0'
+  type: float
+Ks_type_0:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: K_sat type
+  type: string
+Ks_type_1:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: K_sat type
+  type: string
+Ks_type_2:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: K_sat type
+  type: string
+Ks_type_3:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: K_sat type
+  type: string
+Ks_type_4:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: K_sat type
+  type: string
+Ks_type_5:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: K_sat type
+  type: string
+ModelAuthor:
+  default: 'Scott D. Peckham '
+  description: Name of the model author
+  name: Author name
+  type: String
+ModelName:
+  default: SatZoneDarcyLayers
+  description: Name of the model
+  name: Model name
+  type: String
+SAVE_DF_GRIDS:
+  default: 'No'
+  description: option to save grids of freeze depth {Yes; No}
+  name: Save df grids toggle
+  type: string
+SAVE_DF_PIXELS:
+  default: 'No'
+  description: option to save time series of freeze depth {Yes; No}
+  name: Save df pixels toggle
+  type: string
+SAVE_DT_GRIDS:
+  default: 'No'
+  description: option to save grids of thaw depth {Yes; No}
+  name: Save dt grids toggle
+  type: string
+SAVE_DT_PIXELS:
+  default: 'No'
+  description: option to save time series of thaw depth {Yes; No}
+  name: Save dt pixels toggle
+  type: string
+SAVE_HT_GRIDS:
+  default: 'No'
+  description: option to save grids of water table height {Yes; No}
+  name: Save ht grids toggle
+  type: string
+SAVE_HT_PIXELS:
+  default: 'No'
+  description: option to save time series of water table height {Yes; No}
+  name: Save ht pixels toggle
+  type: string
+case_prefix:
+  default: Case5
+  description: file prefix for the model scenario
+  name: Case prefix
+  type: string
+comp_status:
+  default: Enabled
+  description: component status {Enabled; Disabled}
+  name: Component status
+  type: string
+d_freeze:
+  default: '0.000'
+  description: freeze depth below surface [m]
+  name: d_freeze
+  range:
+    max: 1e4
+    min: '0.0'
+  type: float
+d_freeze_type:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: d_freeze type
+  type: string
+d_thaw:
+  default: '9999.000'
+  description: thaw depth below surface [m]
+  name: d_thaw
+  range:
+    max: 1e4
+    min: '0.0'
+  type: float
+d_thaw_type:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: d_thaw type
+  type: string
+df_gs_file:
+  default: '[case_prefix]_2D-dfreeze.nc'
+  description: filename for grid stack of freeze depth [m]
+  name: Save df grids file
+  type: string
+df_ts_file:
+  default: '[case_prefix]_0D-dfreeze.txt'
+  description: filename for time series of freeze depth [m]
+  name: Save df pixels file
+  type: string
+dt:
+  default: '3600.000'
+  description: timestep for subsurface flow [sec]
+  name: Time step
+  range:
+    max: 1e6
+    min: '0.0'
+  type: float
+dt_gs_file:
+  default: '[case_prefix]_2D-dthaw.nc'
+  description: filename for grid stack of thaw depth [m]
+  name: Save dt grids file
+  type: string
+dt_ts_file:
+  default: '[case_prefix]_0D-dthaw.txt'
+  description: filename for time series of thaw depth [m]
+  name: Save dt pixels file
+  type: string
+elev:
+  default: '[site_prefix]_DEM.rtg'
+  description: land surface elevation [m]
+  name: DEM
+  type: string
+elev_type:
+  default: Grid
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: DEM type
+  type: string
+h0_table:
+  default: '0.000'
+  description: initial water table height [m]
+  name: h0_table
+  range:
+    max: 1e4
+    min: '0.0'
+  type: float
+h0_table_type:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: h0_table type
+  type: string
+ht_gs_file:
+  default: '[case_prefix]_2D-htable.nc'
+  description: filename for grid stack of water table height [m]
+  name: Save ht grids file
+  type: string
+ht_ts_file:
+  default: '[case_prefix]_0D-htable.txt'
+  description: filename for time series of water table height [m]
+  name: Save ht pixels file
+  type: string
+in_directory:
+  default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+  description: input directory
+  name: Input directory
+  type: string
+n_layers:
+  default: '6'
+  description: number of soil layers
+  name: Number of soil layers
+  range:
+    max: '6'
+    min: '1'
+  type: int
+n_steps:
+  default: '10'
+  description: number of time steps
+  name: Number of steps
+  range:
+    max: 1e7
+    min: '1'
+  type: long
+out_directory:
+  default: ~/CMT_Output/
+  description: output directory
+  name: Output directory
+  type: string
+pixel_file:
+  default: '[case_prefix]_outlets.txt'
+  description: filename for monitored pixel file
+  name: Monitored pixel file
+  type: string
+qs_0:
+  default: '0.500'
+  description: sat. soil water content [none]
+  name: theta_sat
+  range:
+    max: '1.0'
+    min: '0.0'
+  type: float
+qs_1:
+  default: '0.500'
+  description: sat. soil water content [none]
+  name: theta_sat
+  range:
+    max: '1.0'
+    min: '0.0'
+  type: float
+qs_2:
+  default: '0.500'
+  description: sat. soil water content [none]
+  name: theta_sat
+  range:
+    max: '1.0'
+    min: '0.0'
+  type: float
+qs_3:
+  default: '0.500'
+  description: sat. soil water content [none]
+  name: theta_sat
+  range:
+    max: '1.0'
+    min: '0.0'
+  type: float
+qs_4:
+  default: '0.500'
+  description: sat. soil water content [none]
+  name: theta_sat
+  range:
+    max: '1.0'
+    min: '0.0'
+  type: float
+qs_5:
+  default: '0.500'
+  description: sat. soil water content [none]
+  name: theta_sat
+  range:
+    max: '1.0'
+    min: '0.0'
+  type: float
+qs_type_0:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: theta_sat type
+  type: string
+qs_type_1:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: theta_sat type
+  type: string
+qs_type_2:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: theta_sat type
+  type: string
+qs_type_3:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: theta_sat type
+  type: string
+qs_type_4:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: theta_sat type
+  type: string
+qs_type_5:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: theta_sat type
+  type: string
+save_grid_dt:
+  default: '60.000'
+  description: time interval between saved grids [sec]
+  name: Save grid timestep
+  range:
+    max: 1e6
+    min: '0.0'
+  type: float
+save_pixels_dt:
+  default: '60.000'
+  description: time interval between time series values [sec]
+  name: Save pixels timestep
+  range:
+    max: 1e6
+    min: '0.0'
+  type: float
+site_prefix:
+  default: Treynor
+  description: file prefix for the study site
+  name: Site prefix
+  type: string
+th_0:
+  default: '0.100'
+  description: soil layer thickness [m]
+  name: thickness
+  range:
+    max: 1e3
+    min: '0.0'
+  type: float
+th_1:
+  default: '0.100'
+  description: soil layer thickness [m]
+  name: thickness
+  range:
+    max: 1e3
+    min: '0.0'
+  type: float
+th_2:
+  default: '0.100'
+  description: soil layer thickness [m]
+  name: thickness
+  range:
+    max: 1e3
+    min: '0.0'
+  type: float
+th_3:
+  default: '0.100'
+  description: soil layer thickness [m]
+  name: thickness
+  range:
+    max: 1e3
+    min: '0.0'
+  type: float
+th_4:
+  default: '0.100'
+  description: soil layer thickness [m]
+  name: thickness
+  range:
+    max: 1e3
+    min: '0.0'
+  type: float
+th_5:
+  default: '0.100'
+  description: soil layer thickness [m]
+  name: thickness
+  range:
+    max: 1e3
+    min: '0.0'
+  type: float
+th_type_0:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: thickness type
+  type: string
+th_type_1:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: thickness type
+  type: string
+th_type_2:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: thickness type
+  type: string
+th_type_3:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: thickness type
+  type: string
+th_type_4:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: thickness type
+  type: string
+th_type_5:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: thickness type
+  type: string

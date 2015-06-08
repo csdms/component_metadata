@@ -1,0 +1,249 @@
+HTML_HELP_FILE:
+  default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Channels-Kinematic_Wave
+  description: URL for HTML help file
+  name: HTML help file
+  type: String
+LAW_OF_WALL:
+  default: '0'
+  description: option to use Law of Wall for roughness
+  name: Law of Wall flag
+  range:
+    max: '1'
+    min: '0'
+  type: int
+MANNING:
+  default: '1'
+  description: option to use Manning's n for roughness
+  name: Manning flag
+  range:
+    max: '1'
+    min: '0'
+  type: int
+ModelAuthor:
+  default: 'Scott D. Peckham '
+  description: Name of the model author
+  name: Author name
+  type: String
+ModelName:
+  default: ChannelsKinWave
+  description: Name of the model
+  name: Model name
+  type: String
+Q_gs_file:
+  default: '[case_prefix]_2D-Q.nc'
+  description: filename for Q grid stack [m^3/s]
+  name: Save Q grids file
+  type: string
+Q_ts_file:
+  default: '[case_prefix]_0D-Q.txt'
+  description: filename for computed Q time series [m^3/s]
+  name: Save Q pixels file
+  type: string
+SAVE_D_GRIDS:
+  default: 'No'
+  description: option to save computed d grids {Yes; No}
+  name: Save d grids toggle
+  type: string
+SAVE_D_PIXELS:
+  default: 'No'
+  description: option to save computed d time series {Yes; No}
+  name: Save d pixels toggle
+  type: string
+SAVE_F_GRIDS:
+  default: 'No'
+  description: option to save computed f grids {Yes; No}
+  name: Save f grids toggle
+  type: string
+SAVE_F_PIXELS:
+  default: 'No'
+  description: option to save computed f time series {Yes; No}
+  name: Save f pixels toggle
+  type: string
+SAVE_Q_GRIDS:
+  default: 'Yes'
+  description: option to save computed Q grids {Yes; No}
+  name: Save Q grids toggle
+  type: string
+SAVE_Q_PIXELS:
+  default: 'Yes'
+  description: option to save computed Q time series {Yes; No}
+  name: Save Q pixels toggle
+  type: string
+SAVE_U_GRIDS:
+  default: 'No'
+  description: option to save computed u grids {Yes; No}
+  name: Save u grids toggle
+  type: string
+SAVE_U_PIXELS:
+  default: 'No'
+  description: option to save computed u time series {Yes; No}
+  name: Save u pixels toggle
+  type: string
+angle:
+  default: '[site_prefix]_chan-a.rtg'
+  description: bank angle of trapezoid cross-section [deg]
+  name: Bank angle
+  type: string
+angle_type:
+  default: Grid
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: Bank angle type
+  type: string
+case_prefix:
+  default: Case5
+  description: file prefix for the model scenario
+  name: Case prefix
+  type: string
+code_file:
+  default: '[site_prefix]_flow.rtg'
+  description: grid of D8 flow codes in binary file [Jenson 84]
+  name: D8 flow code file
+  type: string
+comp_status:
+  default: Enabled
+  description: component status {Enabled; Disabled}
+  name: Component status
+  type: string
+d0:
+  default: '0.00000000'
+  description: initial flow depth [m]  (if Scalar, use 0.0!)
+  name: Init. depth
+  range:
+    max: '0.1'
+    min: '0.0'
+  type: float
+d0_type:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: Init. depth type
+  type: string
+d_gs_file:
+  default: '[case_prefix]_2D-d.nc'
+  description: filename for d grid stack [m]
+  name: Save d grids file
+  type: string
+d_ts_file:
+  default: '[case_prefix]_0D-d.txt'
+  description: filename for computed d time series [m]
+  name: Save d pixels file
+  type: string
+dt:
+  default: '6.00000000'
+  description: channel process timestep [sec]
+  name: Time step
+  range:
+    max: '100'
+    min: '0'
+  type: float
+f_gs_file:
+  default: '[case_prefix]_2D-f.nc'
+  description: filename for f grid stack [none]
+  name: Save f grids file
+  type: string
+f_ts_file:
+  default: '[case_prefix]_0D-f.txt'
+  description: filename for computed f time series [none]
+  name: Save f pixels file
+  type: string
+in_directory:
+  default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+  description: input directory
+  name: Input directory
+  type: string
+n_steps:
+  default: '10'
+  description: number of time steps
+  name: Number of steps
+  range:
+    max: 1e7
+    min: '1'
+  type: long
+nval:
+  default: '[site_prefix]_chan-n.rtg'
+  description: Manning's N values [s/m^(1/3)]
+  name: Manning N
+  type: string
+nval_type:
+  default: Grid
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: Manning N type
+  type: string
+out_directory:
+  default: ~/CMT_Output/
+  description: output directory
+  name: Output directory
+  type: string
+pixel_file:
+  default: '[case_prefix]_outlets.txt'
+  description: filename for monitored pixel file
+  name: Monitored pixel file
+  type: string
+save_grid_dt:
+  default: '60.00000000'
+  description: time interval between saved grids [sec]
+  name: Save grid timestep
+  range:
+    max: 1e6
+    min: '0.0'
+  type: float
+save_pixels_dt:
+  default: '60.00000000'
+  description: time interval between time series values [sec]
+  name: Save pixels timestep
+  range:
+    max: 1e6
+    min: '0.0'
+  type: float
+sinu:
+  default: '1.00000000'
+  description: absolute channel sinuosity [m/m]
+  name: Sinuosity
+  range:
+    max: '3.0'
+    min: '0.0'
+  type: float
+sinu_type:
+  default: Scalar
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: Sinuosity type
+  type: string
+site_prefix:
+  default: Treynor
+  description: file prefix for the study site
+  name: Site prefix
+  type: string
+slope_file:
+  default: '[site_prefix]_slope.rtg'
+  description: grid of D8 slopes in binary file [m/m]
+  name: D8 slope file
+  type: string
+u_gs_file:
+  default: '[case_prefix]_2D-u.nc'
+  description: filename for u grid stack [m/s]
+  name: Save u grids file
+  type: string
+u_ts_file:
+  default: '[case_prefix]_0D-u.txt'
+  description: filename for computed u time series [m/s]
+  name: Save u pixels file
+  type: string
+width:
+  default: '[site_prefix]_chan-w.rtg'
+  description: bottom width of trapezoid cross-section [m]
+  name: Bed width
+  type: string
+width_type:
+  default: Grid
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: Bed width type
+  type: string
+z0val:
+  default: '[site_prefix]_chan-z0.rtg'
+  description: Law-of-wall roughness values [m]
+  name: Roughness z0
+  type: string
+z0val_type:
+  default: Grid
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  name: Roughness z0 type
+  type: string

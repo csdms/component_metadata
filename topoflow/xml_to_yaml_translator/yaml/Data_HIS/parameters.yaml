@@ -1,0 +1,155 @@
+HTML_HELP_FILE:
+  default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Data-HIS
+  description: URL for HTML help file
+  name: HTML help file
+  type: String
+ModelAuthor:
+  default: 'Scott D. Peckham '
+  description: Name of the model author
+  name: Author name
+  type: String
+ModelName:
+  default: DataHIS
+  description: Name of the model
+  name: Model name
+  type: String
+SAVE_DAT_PIXELS:
+  default: 'No'
+  description: option to save time series {Yes; No}
+  name: Save time series toggle
+  type: string
+case_prefix:
+  default: Case5
+  description: file prefix for the model scenario
+  name: Case prefix
+  type: string
+comp_status:
+  default: Enabled
+  description: component status {Enabled; Disabled}
+  name: Component status
+  type: string
+dat_ts_file:
+  default: '[case_prefix]_0D-data.txt'
+  description: filename for time series
+  name: Save time series file
+  type: string
+data_keyword:
+  default: Precipitation
+  description: HIS data keyword
+  name: Data keyword
+  type: string
+east_edge_lon:
+  default: '-110.0'
+  description: longitude of east edge of geographic region [dec. degrees]
+  name: East edge longitude
+  range:
+    max: '180.0'
+    min: '-180.0'
+  type: float
+in_directory:
+  default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+  description: input directory
+  name: Input directory
+  type: string
+max_n_series:
+  default: '100'
+  description: max number of time series allows in the report
+  name: Max number of series
+  range:
+    max: '100000'
+    min: '1'
+  type: int
+max_n_values:
+  default: '1000'
+  description: max number of values allowed in any time series
+  name: Max values per series
+  range:
+    max: '1000000'
+    min: '1'
+  type: int
+north_edge_lat:
+  default: '42.0'
+  description: latitude of north edge of geographic region [dec. degrees]
+  name: North edge latitude
+  range:
+    max: '90.0'
+    min: '-90.0'
+  type: float
+out_directory:
+  default: ~/CMT_Output/
+  description: output directory
+  name: Output directory
+  type: string
+save_pixels_dt:
+  default: '60.000'
+  description: time interval between time series values [sec]
+  name: Save time series timestep
+  range:
+    max: 1e6
+    min: '0.0'
+  type: float
+site_prefix:
+  default: Treynor
+  description: file prefix for the study site
+  name: Site prefix
+  type: string
+south_edge_lat:
+  default: '41.0'
+  description: latitude of south edge of geographic region [dec. degrees]
+  name: South edge latitude
+  range:
+    max: '90.0'
+    min: '-90.0'
+  type: float
+start_day:
+  default: '1'
+  description: start day
+  name: Start day
+  range:
+    max: '31'
+    min: '0'
+  type: int
+start_month:
+  default: January
+  description: start month {January; February; March; April; May; June; July; August;
+    September; October; November; December}
+  name: Start month
+  type: string
+start_year:
+  default: '1998'
+  description: start year
+  name: Start year
+  range:
+    max: '2020'
+    min: '1900'
+  type: int
+stop_day:
+  default: '1'
+  description: stop day
+  name: Stop day
+  range:
+    max: '31'
+    min: '0'
+  type: int
+stop_month:
+  default: January
+  description: stop month {January; February; March; April; May; June; July; August;
+    September; October; November; December}
+  name: Stop month
+  type: string
+stop_year:
+  default: '2010'
+  description: stop year
+  name: Stop year
+  range:
+    max: '2020'
+    min: '1900'
+  type: int
+west_edge_lon:
+  default: '-111.0'
+  description: longitude of west edge of geographic region [dec. degrees]
+  name: West edge longitude
+  range:
+    max: '180.0'
+    min: '-180.0'
+  type: float
