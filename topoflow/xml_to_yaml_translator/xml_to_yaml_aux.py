@@ -10,16 +10,29 @@ June 8, 2015
 """
 
 import yaml
-import sys, string, re
+import string, re
 from xml.dom import minidom
 from xml.dom import Node
 import numpy as np
+from collections import OrderedDict
+
+class UnsortableList(list):
+    def sort(self, *args, **kwargs):
+        pass
+    
+class UnsortableOrderedDict(OrderedDict):
+    def items(self, *args, **kwargs):
+        return UnsortableList(OrderedDict.items(self, *args, **kwargs))
+    
+yaml.add_representer(UnsortableOrderedDict, yaml.representer.SafeRepresenter.represent_dict)
+
 
 NonWhiteSpacePattern = re.compile('\S')
 def isAllWhiteSpace(text):
     if NonWhiteSpacePattern.search(text):
         return 0
     return 1
+
 
 def convertXml2Yaml(obj, objL):
     objDict = {}
@@ -52,57 +65,68 @@ def convertXml2Yaml(obj, objL):
     return objDict, objL
 
 
+
+def expand_list(obj):
+    obj[0] = [obj[0]]
+    ext_obj = []
+    extend = ext_obj.extend
+    for l in obj: extend(l)
+    vals = dict([(str(item.keys()[0]),str(item.values()[0])) for item in ext_obj])
+    
+    return vals
+
+
+
 def create_yaml_file(inFileName):
 
     doc = minidom.parse(inFileName)
     root = doc.childNodes[0]
     [objD, objL] = convertXml2Yaml(root,[])
-    
-    [objD, objL] = convertXml2Yaml(root,[])
 
     # remove the structures that are too broad and leave only the ones that relate specifically to parameters
-    
+
     flags = np.diff([len(item) for item in objL] + [1]) # the zeros are the bad entries
     objList = [objL[i] for i,j in enumerate(flags) if j != 0]
 
     # turn all lists in the list to individual dictionaries, clean the formatting
-    
-    allEntries = {}
-    flag = 0 # no in-progress parameter
 
-    for obj in objList:
+    ind_dict = [i for i,j in enumerate(objList) if type(j) is dict] + [len(objList) + 1]
 
-        if type(obj) is dict and len(obj) == 1:
+    allParams = []
+    for i,ind_list in enumerate(ind_dict[:-1]):
+        obj = objList[ind_list:ind_dict[i+1]]
 
-            if flag == 1: # reached a new parameter
-                allEntries[key] = param
-                flag = 0
+        objDict = expand_list(obj)
 
-            if flag == 0:
+        param = UnsortableOrderedDict()
+        vals = UnsortableOrderedDict()
+        range_vals = UnsortableOrderedDict()
 
-                param = {}
-                key = str(obj.values()[0])
-                key = string.rsplit(key,'/',1)[-1]
-                flag = 1 # parameter in progress
+        try: param['key'] = string.rsplit(objDict.pop('name'),'/')[-1]
+        except: pass
+        try: param['name'] = string.rsplit(objDict.pop('label'),':')[0]
+        except: pass
+        try: param['description'] = objDict.pop('help_brief')
+        except: pass
 
-        if type(obj) is list:
+        try: vals['type'] = objDict.pop('type')
+        except: pass
+        try: vals['default'] = objDict.pop('default')
+        except: pass
+        
+        try: range_vals['min'] = objDict.pop('min')
+        except: pass
+        try: range_vals['max'] = objDict.pop('max')
+        except: pass
+        if len(range_vals)>0:
+            vals['range'] = range_vals
+        param['value'] = vals
 
-            vals = dict([(str(item.keys()[0]),str(item.values()[0])) for item in obj])
+        try: param['units'] = objDict.pop('units')
+        except: pass
+        
+        assert len(objDict) == 0, "items left in the parameter entry definition!"
 
-            if vals.has_key('max'):
-                param['range'] = vals
-            else:
-                try:
-                    vals['name'] = vals.pop('label')[:-1]
-                except:
-                    pass
-                try:
-                    vals['description'] = vals.pop('help_brief')
-                except:
-                    pass
-
-                param.update(vals)
-
-    allEntries[key] = param
-    
-    return allEntries
+        allParams.append(param)
+        
+    return allParams

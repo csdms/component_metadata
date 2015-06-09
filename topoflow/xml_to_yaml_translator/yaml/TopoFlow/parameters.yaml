@@ -1,69 +1,81 @@
-HTML_HELP_FILE:
-  default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow
-  description: URL for HTML help file
-  name: HTML help file
-  type: String
-ModelAuthor:
-  default: 'Scott D. Peckham '
-  description: Name of the model author
-  name: Author name
-  type: String
-ModelName:
-  default: TopoFlow
-  description: Name of the model
-  name: Model name
-  type: String
-Qp_fraction:
-  default: '0.05'
-  description: Value for Q_peak_fraction method
-  name: Q_peak fraction
-  range:
-    max: '1.0'
-    min: '0.0'
-  type: Float
-T_stop_model:
-  default: '20.0'
-  description: Value for Until_model_time method [minutes]
-  name: Model stop time
-  range:
-    max: 1e9
-    min: '0.0'
-  type: Float
-case_prefix:
-  default: Case5
-  description: file prefix for the model scenario
-  name: Case prefix
-  type: String
-comp_status:
-  default: Enabled
-  description: component status {Enabled; Disabled}
+- key: comp_status
   name: Component status
-  type: String
-in_directory:
-  default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  description: input directory
+  description: component status {Enabled; Disabled}
+  value:
+    type: String
+    default: Enabled
+- key: in_directory
   name: Input directory
-  type: String
-n_steps:
-  default: '100'
-  description: Value for Until_n_steps method
-  name: Number of steps
-  range:
-    max: '1000000000'
-    min: '1'
-  type: Int
-out_directory:
-  default: ~/CMT_Output/
-  description: output directory
+  description: input directory
+  value:
+    type: String
+    default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+- key: out_directory
   name: Output directory
-  type: String
-site_prefix:
-  default: Treynor
-  description: file prefix for the study site
+  description: output directory
+  value:
+    type: String
+    default: ~/CMT_Output/
+- key: site_prefix
   name: Site prefix
-  type: String
-stop_method:
-  default: Q_peak_fraction
-  description: stopping method {Q_peak_fraction; Until_model_time; Until_n_steps}
+  description: file prefix for the study site
+  value:
+    type: String
+    default: Treynor
+- key: case_prefix
+  name: Case prefix
+  description: file prefix for the model scenario
+  value:
+    type: String
+    default: Case5
+- key: stop_method
   name: Stopping method
-  type: String
+  description: stopping method {Q_peak_fraction; Until_model_time; Until_n_steps}
+  value:
+    type: String
+    default: Q_peak_fraction
+- key: Qp_fraction
+  name: Q_peak fraction
+  description: Value for Q_peak_fraction method
+  value:
+    type: Float
+    default: '0.05'
+    range:
+      min: '0.0'
+      max: '1.0'
+- key: T_stop_model
+  name: Model stop time
+  description: Value for Until_model_time method [minutes]
+  value:
+    type: Float
+    default: '20.0'
+    range:
+      min: '0.0'
+      max: 1e9
+- key: n_steps
+  name: Number of steps
+  description: Value for Until_n_steps method
+  value:
+    type: Int
+    default: '100'
+    range:
+      min: '1'
+      max: '1000000000'
+- key: ModelName
+  name: Model name
+  description: Name of the model
+  value:
+    type: String
+    default: TopoFlow
+- key: ModelAuthor
+  name: Author name
+  description: Name of the model author
+  value:
+    type: String
+    default: 'Scott D. Peckham '
+- key: HTML_HELP_FILE
+  name: HTML help file
+  description: URL for HTML help file
+  value:
+    type: String
+    default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow

@@ -1,40 +1,48 @@
-HTML_HELP_FILE:
-  default: http://csdms.colorado.edu/help/models/topoflow/TF_tutorial.htm
-  description: URL for HTML help file
-  name: HTML help file
-  type: String
-ModelAuthor:
-  default: 'Scott D. Peckham '
-  description: Name of the model author
-  name: Author name
-  type: String
-ModelName:
-  default: TestService
-  description: Name of the model
-  name: Model name
-  type: String
-case_prefix:
-  default: Case5
-  description: file prefix for the model scenario
-  name: Case prefix
-  type: String
-comp_status:
-  default: Enabled
-  description: component status {Enabled; Disabled}
+- key: comp_status
   name: Component status
-  type: String
-in_directory:
-  default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  description: input directory
+  description: component status {Enabled; Disabled}
+  value:
+    type: String
+    default: Enabled
+- key: in_directory
   name: Input directory
-  type: String
-out_directory:
-  default: ~/CMT_Output/
-  description: output directory
+  description: input directory
+  value:
+    type: String
+    default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+- key: out_directory
   name: Output directory
-  type: String
-site_prefix:
-  default: Treynor
-  description: file prefix for the study site
+  description: output directory
+  value:
+    type: String
+    default: ~/CMT_Output/
+- key: site_prefix
   name: Site prefix
-  type: String
+  description: file prefix for the study site
+  value:
+    type: String
+    default: Treynor
+- key: case_prefix
+  name: Case prefix
+  description: file prefix for the model scenario
+  value:
+    type: String
+    default: Case5
+- key: ModelName
+  name: Model name
+  description: Name of the model
+  value:
+    type: String
+    default: TestService
+- key: ModelAuthor
+  name: Author name
+  description: Name of the model author
+  value:
+    type: String
+    default: 'Scott D. Peckham '
+- key: HTML_HELP_FILE
+  name: HTML help file
+  description: URL for HTML help file
+  value:
+    type: String
+    default: http://csdms.colorado.edu/help/models/topoflow/TF_tutorial.htm

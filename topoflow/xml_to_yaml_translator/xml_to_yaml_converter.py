@@ -9,7 +9,7 @@ June 8, 2015
 """
 
 import yaml
-import glob, os
+import glob, os, sys
 from xml_to_yaml_aux import create_yaml_file
 
 xml_dir = 'xml' # parent directory for xml files
@@ -19,7 +19,6 @@ if not os.path.exists(yaml_dir):
     os.makedirs(yaml_dir)
 
 files = glob.glob(xml_dir + '/*.xml') # xml files
-
 
 for f in files:
     
@@ -35,12 +34,12 @@ for f in files:
     
     outFileName = param_dir + '/parameters.yaml'
     
-    
 	# Translate
     allEntries = create_yaml_file(inFileName)
 
     # Save the file
     with open(outFileName, 'w') as outfile:
-        outStr = yaml.dump(allEntries, default_flow_style=False)
-        outfile.write(outStr)
+        outStr = yaml.dump(allEntries, default_flow_style=False, stream = outfile)
+
+
 

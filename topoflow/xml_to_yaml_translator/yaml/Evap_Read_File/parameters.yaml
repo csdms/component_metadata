@@ -1,102 +1,120 @@
-ET_rate:
-  default: '[case_prefix]_2D-ETrate-in.nc'
-  description: Grid Sequence [mm/hr]
-  name: ET rate
-  type: string
-HTML_HELP_FILE:
-  default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Evaporation-Read_File
-  description: URL for HTML help file
-  name: HTML help file
-  type: String
-ModelAuthor:
-  default: 'Scott D. Peckham '
-  description: Name of the model author
-  name: Author name
-  type: String
-ModelName:
-  default: EvapReadFile
-  description: Name of the model
-  name: Model name
-  type: String
-SAVE_ER_GRIDS:
-  default: 'No'
-  description: option to save grids of evap. rate [mm/hr] {Yes; No}
-  name: Save er grids toggle
-  type: string
-SAVE_ER_PIXELS:
-  default: 'No'
-  description: option to save time series of evap. rate {Yes; No}
-  name: Save er pixels toggle
-  type: string
-case_prefix:
-  default: Case5
-  description: file prefix for the model scenario
-  name: Case prefix
-  type: string
-comp_status:
-  default: Enabled
-  description: component status {Enabled; Disabled}
+- key: comp_status
   name: Component status
-  type: string
-dt:
-  default: '10800.000'
-  description: timestep for evaporation rate [sec]
-  name: Time step
-  range:
-    max: 1e4
-    min: '0.0'
-  type: float
-er_gs_file:
-  default: '[case_prefix]_2D-ETrate.nc'
-  description: filename for grid stack of evap. rate [mm/hr]
-  name: Save er grids file
-  type: string
-er_ts_file:
-  default: '[case_prefix]_0D-ETrate.txt'
-  description: filename for time series of evap. rate [mm/hr]
-  name: Save er pixels file
-  type: string
-in_directory:
-  default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  description: input directory
+  description: component status {Enabled; Disabled}
+  value:
+    type: string
+    default: Enabled
+- key: in_directory
   name: Input directory
-  type: string
-n_steps:
-  default: '10'
-  description: number of time steps
-  name: Number of steps
-  range:
-    max: 1e7
-    min: '1'
-  type: long
-out_directory:
-  default: ~/CMT_Output/
-  description: output directory
+  description: input directory
+  value:
+    type: string
+    default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+- key: out_directory
   name: Output directory
-  type: string
-pixel_file:
-  default: '[case_prefix]_outlets.txt'
-  description: filename for monitored pixel file
-  name: Monitored pixel file
-  type: string
-save_grid_dt:
-  default: '60.000'
-  description: time interval between saved grids [sec]
-  name: Save grid timestep
-  range:
-    max: 1e6
-    min: '0.0'
-  type: float
-save_pixels_dt:
-  default: '60.000'
-  description: time interval between time series values [sec]
-  name: Save pixels timestep
-  range:
-    max: 1e6
-    min: '0.0'
-  type: float
-site_prefix:
-  default: Treynor
-  description: file prefix for the study site
+  description: output directory
+  value:
+    type: string
+    default: ~/CMT_Output/
+- key: site_prefix
   name: Site prefix
-  type: string
+  description: file prefix for the study site
+  value:
+    type: string
+    default: Treynor
+- key: case_prefix
+  name: Case prefix
+  description: file prefix for the model scenario
+  value:
+    type: string
+    default: Case5
+- key: n_steps
+  name: Number of steps
+  description: number of time steps
+  value:
+    type: long
+    default: '10'
+    range:
+      min: '1'
+      max: 1e7
+- key: dt
+  name: Time step
+  description: timestep for evaporation rate [sec]
+  value:
+    type: float
+    default: '10800.000'
+    range:
+      min: '0.0'
+      max: 1e4
+- key: ET_rate
+  name: ET rate
+  description: Grid Sequence [mm/hr]
+  value:
+    type: string
+    default: '[case_prefix]_2D-ETrate-in.nc'
+- key: save_grid_dt
+  name: Save grid timestep
+  description: time interval between saved grids [sec]
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0.0'
+      max: 1e6
+- key: SAVE_ER_GRIDS
+  name: Save er grids toggle
+  description: option to save grids of evap. rate [mm/hr] {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: er_gs_file
+  name: Save er grids file
+  description: filename for grid stack of evap. rate [mm/hr]
+  value:
+    type: string
+    default: '[case_prefix]_2D-ETrate.nc'
+- key: save_pixels_dt
+  name: Save pixels timestep
+  description: time interval between time series values [sec]
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0.0'
+      max: 1e6
+- key: pixel_file
+  name: Monitored pixel file
+  description: filename for monitored pixel file
+  value:
+    type: string
+    default: '[case_prefix]_outlets.txt'
+- key: SAVE_ER_PIXELS
+  name: Save er pixels toggle
+  description: option to save time series of evap. rate {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: er_ts_file
+  name: Save er pixels file
+  description: filename for time series of evap. rate [mm/hr]
+  value:
+    type: string
+    default: '[case_prefix]_0D-ETrate.txt'
+- key: ModelName
+  name: Model name
+  description: Name of the model
+  value:
+    type: String
+    default: EvapReadFile
+- key: ModelAuthor
+  name: Author name
+  description: Name of the model author
+  value:
+    type: String
+    default: 'Scott D. Peckham '
+- key: HTML_HELP_FILE
+  name: HTML help file
+  description: URL for HTML help file
+  value:
+    type: String
+    default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Evaporation-Read_File

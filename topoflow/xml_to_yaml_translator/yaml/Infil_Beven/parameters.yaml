@@ -1,109 +1,129 @@
-HTML_HELP_FILE:
-  default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Beven
-  description: URL for HTML help file
-  name: HTML help file
-  type: String
-I_gs_file:
-  default: '[case_prefix]_2D-I.nc'
-  description: filename for grid stack of I [m]
-  name: Save I  grids file
-  type: string
-I_ts_file:
-  default: '[case_prefix]_0D-I.txt'
-  description: filename for time series of I [m]
-  name: Save I  pixels file
-  type: string
-ModelAuthor:
-  default: 'Scott D. Peckham '
-  description: Name of the model author
-  name: Author name
-  type: String
-ModelName:
-  default: InfilBeven
-  description: Name of the model
-  name: Model name
-  type: String
-SAVE_I_GRIDS:
-  default: 'No'
-  description: option to save grids of cumul. infil. depth {Yes; No}
-  name: Save I  grids toggle
-  type: string
-SAVE_I_PIXELS:
-  default: 'No'
-  description: option to save time series of cumul. infil. depth {Yes; No}
-  name: Save I  pixels toggle
-  type: string
-SAVE_V0_GRIDS:
-  default: 'No'
-  description: option to save grids of infil. rate (at surf)  {Yes; No}
-  name: Save v0 grids toggle
-  type: string
-SAVE_V0_PIXELS:
-  default: 'No'
-  description: option to save time series of infil. rate (at surf) {Yes; No}
-  name: Save v0 pixels toggle
-  type: string
-case_prefix:
-  default: Case5
-  description: file prefix for the model scenario
-  name: Case prefix
-  type: string
-comp_status:
-  default: Enabled
-  description: component status {Enabled; Disabled}
+- key: comp_status
   name: Component status
-  type: string
-in_directory:
-  default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  description: input directory
+  description: component status {Enabled; Disabled}
+  value:
+    type: string
+    default: Enabled
+- key: in_directory
   name: Input directory
-  type: string
-n_steps:
-  default: '10'
-  description: number of time steps
-  name: Number of steps
-  range:
-    max: 1e7
-    min: '1'
-  type: long
-out_directory:
-  default: ~/CMT_Output/
-  description: output directory
+  description: input directory
+  value:
+    type: string
+    default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+- key: out_directory
   name: Output directory
-  type: string
-pixel_file:
-  default: '[case_prefix]_outlets.txt'
-  description: filename for monitored pixel file
-  name: Monitored pixel file
-  type: string
-save_grid_dt:
-  default: '60.000'
-  description: time interval between saved grids [sec]
-  name: Save grid timestep
-  range:
-    max: 1e6
-    min: '0.0'
-  type: float
-save_pixels_dt:
-  default: '60.000'
-  description: time interval between time series values [sec]
-  name: Save pixels timestep
-  range:
-    max: 1e6
-    min: '0.0'
-  type: float
-site_prefix:
-  default: Treynor
-  description: file prefix for the study site
+  description: output directory
+  value:
+    type: string
+    default: ~/CMT_Output/
+- key: site_prefix
   name: Site prefix
-  type: string
-v0_gs_file:
-  default: '[case_prefix]_2D-v0.nc'
-  description: filename for grid stack of v0 [m/s]
+  description: file prefix for the study site
+  value:
+    type: string
+    default: Treynor
+- key: case_prefix
+  name: Case prefix
+  description: file prefix for the model scenario
+  value:
+    type: string
+    default: Case5
+- key: n_steps
+  name: Number of steps
+  description: number of time steps
+  value:
+    type: long
+    default: '10'
+    range:
+      min: '1'
+      max: 1e7
+- key: save_grid_dt
+  name: Save grid timestep
+  description: time interval between saved grids [sec]
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0.0'
+      max: 1e6
+- key: SAVE_V0_GRIDS
+  name: Save v0 grids toggle
+  description: option to save grids of infil. rate (at surf)  {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: v0_gs_file
   name: Save v0 grids file
-  type: string
-v0_ts_file:
-  default: '[case_prefix]_0D-v0.txt'
-  description: filename for time series of v0 [m/s]
+  description: filename for grid stack of v0 [m/s]
+  value:
+    type: string
+    default: '[case_prefix]_2D-v0.nc'
+- key: SAVE_I_GRIDS
+  name: Save I  grids toggle
+  description: option to save grids of cumul. infil. depth {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: I_gs_file
+  name: Save I  grids file
+  description: filename for grid stack of I [m]
+  value:
+    type: string
+    default: '[case_prefix]_2D-I.nc'
+- key: save_pixels_dt
+  name: Save pixels timestep
+  description: time interval between time series values [sec]
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0.0'
+      max: 1e6
+- key: pixel_file
+  name: Monitored pixel file
+  description: filename for monitored pixel file
+  value:
+    type: string
+    default: '[case_prefix]_outlets.txt'
+- key: SAVE_V0_PIXELS
+  name: Save v0 pixels toggle
+  description: option to save time series of infil. rate (at surf) {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: v0_ts_file
   name: Save v0 pixels file
-  type: string
+  description: filename for time series of v0 [m/s]
+  value:
+    type: string
+    default: '[case_prefix]_0D-v0.txt'
+- key: SAVE_I_PIXELS
+  name: Save I  pixels toggle
+  description: option to save time series of cumul. infil. depth {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: I_ts_file
+  name: Save I  pixels file
+  description: filename for time series of I [m]
+  value:
+    type: string
+    default: '[case_prefix]_0D-I.txt'
+- key: ModelName
+  name: Model name
+  description: Name of the model
+  value:
+    type: String
+    default: InfilBeven
+- key: ModelAuthor
+  name: Author name
+  description: Name of the model author
+  value:
+    type: String
+    default: 'Scott D. Peckham '
+- key: HTML_HELP_FILE
+  name: HTML help file
+  description: URL for HTML help file
+  value:
+    type: String
+    default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Beven

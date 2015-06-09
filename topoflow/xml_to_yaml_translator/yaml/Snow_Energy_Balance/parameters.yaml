@@ -1,235 +1,276 @@
-Cp_snow:
-  default: '2090.000'
-  description: heat capacity of snow [J/kg/K]
-  name: Cp_snow
-  range:
-    max: 3e3
-    min: '0.0'
-  type: float
-Cp_snow_type:
-  default: Scalar
-  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
-  name: Cp_snow type
-  type: string
-HTML_HELP_FILE:
-  default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Snowmelt-Energy_Balance
-  description: URL for HTML help file
-  name: HTML help file
-  type: String
-ModelAuthor:
-  default: 'Scott D. Peckham '
-  description: Name of the model author
-  name: Author name
-  type: String
-ModelName:
-  default: SnowEnergyBalance
-  description: Name of the model
-  name: Model name
-  type: String
-SAVE_CC_GRIDS:
-  default: 'No'
-  description: option to save grids of cold content {Yes; No}
-  name: Save cc grids toggle
-  type: string
-SAVE_CC_PIXELS:
-  default: 'No'
-  description: option to save time series of cold content {Yes; No}
-  name: Save cc pixels toggle
-  type: string
-SAVE_HS_GRIDS:
-  default: 'No'
-  description: option to save grids of snow depth {Yes; No}
-  name: Save hs grids toggle
-  type: string
-SAVE_HS_PIXELS:
-  default: 'No'
-  description: option to save time series of snow depth {Yes; No}
-  name: Save hs pixels toggle
-  type: string
-SAVE_MR_GRIDS:
-  default: 'No'
-  description: option to save grids of snow meltrate {Yes; No}
-  name: Save mr grids toggle
-  type: string
-SAVE_MR_PIXELS:
-  default: 'No'
-  description: option to save time series of snow meltrate {Yes; No}
-  name: Save mr pixels toggle
-  type: string
-SAVE_SW_GRIDS:
-  default: 'No'
-  description: option to save grids of snow water equivalent {Yes; No}
-  name: Save sw grids toggle
-  type: string
-SAVE_SW_PIXELS:
-  default: 'No'
-  description: option to save time series of snow water equivalent {Yes; No}
-  name: Save sw pixels toggle
-  type: string
-T0:
-  default: '-0.200'
-  description: reference temperature [deg C]
-  name: T0
-  range:
-    max: '100'
-    min: '-100'
-  type: float
-T0_type:
-  default: Scalar
-  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
-  name: T0 type
-  type: string
-c0:
-  default: '2.700'
-  description: degree-day coefficient [mm/day/deg C]
-  name: c0
-  range:
-    max: 1e2
-    min: '0.0'
-  type: float
-c0_type:
-  default: Scalar
-  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
-  name: c0 type
-  type: string
-case_prefix:
-  default: Case5
-  description: file prefix for the model scenario
-  name: Case prefix
-  type: string
-cc_gs_file:
-  default: '[case_prefix]_2D-Ecc.nc'
-  description: filename for grid stack of cold content [J/m^2]
-  name: Save cc grids file
-  type: string
-cc_ts_file:
-  default: '[case_prefix]_0D-Ecc.txt'
-  description: filename for time series of cold content [J/m^2]
-  name: Save cc pixels file
-  type: string
-comp_status:
-  default: Enabled
-  description: component status {Enabled; Disabled}
+- key: comp_status
   name: Component status
-  type: string
-dt:
-  default: '3600.000'
-  description: timestep for snowmelt process [sec]
-  name: Time step
-  range:
-    max: 1e6
-    min: '0.0'
-  type: float
-h0_snow:
-  default: '0.500'
-  description: depth of snow [m]
-  name: h0_snow
-  range:
-    max: '20.0'
-    min: '0.0'
-  type: float
-h0_snow_type:
-  default: Scalar
-  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
-  name: h0_snow type
-  type: string
-h0_swe:
-  default: '0.150'
-  description: depth of snow water equivalent (SWE) [m]
-  name: h0_swe
-  range:
-    max: '20.0'
-    min: '0.0'
-  type: float
-h0_swe_type:
-  default: Scalar
-  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
-  name: h0_swe type
-  type: string
-hs_gs_file:
-  default: '[case_prefix]_2D-hsnow.nc'
-  description: filename for grid stack of snow depth [m]
-  name: Save hs grids file
-  type: string
-hs_ts_file:
-  default: '[case_prefix]_0D-hsnow.txt'
-  description: filename for time series of snow depth [m]
-  name: Save hs pixels file
-  type: string
-in_directory:
-  default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  description: input directory
+  description: component status {Enabled; Disabled}
+  value:
+    type: string
+    default: Enabled
+- key: in_directory
   name: Input directory
-  type: string
-mr_gs_file:
-  default: '[case_prefix]_2D-SMrate.nc'
-  description: filename for grid stack of snow meltrate [m/s]
-  name: Save mr grids file
-  type: string
-mr_ts_file:
-  default: '[case_prefix]_0D-SMrate.txt'
-  description: filename for time series of  [m/s]
-  name: Save mr pixels file
-  type: string
-n_steps:
-  default: '10'
-  description: number of time steps
-  name: Number of steps
-  range:
-    max: 1e7
-    min: '1'
-  type: long
-out_directory:
-  default: ~/CMT_Output/
-  description: output directory
+  description: input directory
+  value:
+    type: string
+    default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+- key: out_directory
   name: Output directory
-  type: string
-pixel_file:
-  default: '[case_prefix]_outlets.txt'
-  description: filename for monitored pixel file
-  name: Monitored pixel file
-  type: string
-rho_snow:
-  default: '300.000'
-  description: density of snow [kg/m^3]
-  name: rho_snow
-  range:
-    max: 1e3
-    min: '0.0'
-  type: float
-rho_snow_type:
-  default: Scalar
-  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
-  name: rho_snow type
-  type: string
-save_grid_dt:
-  default: '60.000'
-  description: time interval between saved grids [sec]
-  name: Save grid timestep
-  range:
-    max: 1e6
-    min: '0'
-  type: float
-save_pixels_dt:
-  default: '60.000'
-  description: time interval between time series values [sec]
-  name: Save pixels timestep
-  range:
-    max: 1e6
-    min: '0.0'
-  type: float
-site_prefix:
-  default: Treynor
-  description: file prefix for the study site
+  description: output directory
+  value:
+    type: string
+    default: ~/CMT_Output/
+- key: site_prefix
   name: Site prefix
-  type: string
-sw_gs_file:
-  default: '[case_prefix]_2D-hswe.nc'
-  description: filename for grid stack of snow water equivalent [m]
+  description: file prefix for the study site
+  value:
+    type: string
+    default: Treynor
+- key: case_prefix
+  name: Case prefix
+  description: file prefix for the model scenario
+  value:
+    type: string
+    default: Case5
+- key: n_steps
+  name: Number of steps
+  description: number of time steps
+  value:
+    type: long
+    default: '10'
+    range:
+      min: '1'
+      max: 1e7
+- key: dt
+  name: Time step
+  description: timestep for snowmelt process [sec]
+  value:
+    type: float
+    default: '3600.000'
+    range:
+      min: '0.0'
+      max: 1e6
+- key: Cp_snow_type
+  name: Cp_snow type
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  value:
+    type: string
+    default: Scalar
+- key: Cp_snow
+  name: Cp_snow
+  description: heat capacity of snow [J/kg/K]
+  value:
+    type: float
+    default: '2090.000'
+    range:
+      min: '0.0'
+      max: 3e3
+- key: rho_snow_type
+  name: rho_snow type
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  value:
+    type: string
+    default: Scalar
+- key: rho_snow
+  name: rho_snow
+  description: density of snow [kg/m^3]
+  value:
+    type: float
+    default: '300.000'
+    range:
+      min: '0.0'
+      max: 1e3
+- key: c0_type
+  name: c0 type
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  value:
+    type: string
+    default: Scalar
+- key: c0
+  name: c0
+  description: degree-day coefficient [mm/day/deg C]
+  value:
+    type: float
+    default: '2.700'
+    range:
+      min: '0.0'
+      max: 1e2
+- key: T0_type
+  name: T0 type
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  value:
+    type: string
+    default: Scalar
+- key: T0
+  name: T0
+  description: reference temperature [deg C]
+  value:
+    type: float
+    default: '-0.200'
+    range:
+      min: '-100'
+      max: '100'
+- key: h0_snow_type
+  name: h0_snow type
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  value:
+    type: string
+    default: Scalar
+- key: h0_snow
+  name: h0_snow
+  description: depth of snow [m]
+  value:
+    type: float
+    default: '0.500'
+    range:
+      min: '0.0'
+      max: '20.0'
+- key: h0_swe_type
+  name: h0_swe type
+  description: allowed input types {Scalar; Grid; Time_Series; Grid_Sequence}
+  value:
+    type: string
+    default: Scalar
+- key: h0_swe
+  name: h0_swe
+  description: depth of snow water equivalent (SWE) [m]
+  value:
+    type: float
+    default: '0.150'
+    range:
+      min: '0.0'
+      max: '20.0'
+- key: save_grid_dt
+  name: Save grid timestep
+  description: time interval between saved grids [sec]
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0'
+      max: 1e6
+- key: SAVE_MR_GRIDS
+  name: Save mr grids toggle
+  description: option to save grids of snow meltrate {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: mr_gs_file
+  name: Save mr grids file
+  description: filename for grid stack of snow meltrate [m/s]
+  value:
+    type: string
+    default: '[case_prefix]_2D-SMrate.nc'
+- key: SAVE_HS_GRIDS
+  name: Save hs grids toggle
+  description: option to save grids of snow depth {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: hs_gs_file
+  name: Save hs grids file
+  description: filename for grid stack of snow depth [m]
+  value:
+    type: string
+    default: '[case_prefix]_2D-hsnow.nc'
+- key: SAVE_SW_GRIDS
+  name: Save sw grids toggle
+  description: option to save grids of snow water equivalent {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: sw_gs_file
   name: Save sw grids file
-  type: string
-sw_ts_file:
-  default: '[case_prefix]_0D-hswe.txt'
-  description: filename for time series of snow water equivalent [m]
+  description: filename for grid stack of snow water equivalent [m]
+  value:
+    type: string
+    default: '[case_prefix]_2D-hswe.nc'
+- key: SAVE_CC_GRIDS
+  name: Save cc grids toggle
+  description: option to save grids of cold content {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: cc_gs_file
+  name: Save cc grids file
+  description: filename for grid stack of cold content [J/m^2]
+  value:
+    type: string
+    default: '[case_prefix]_2D-Ecc.nc'
+- key: save_pixels_dt
+  name: Save pixels timestep
+  description: time interval between time series values [sec]
+  value:
+    type: float
+    default: '60.000'
+    range:
+      min: '0.0'
+      max: 1e6
+- key: pixel_file
+  name: Monitored pixel file
+  description: filename for monitored pixel file
+  value:
+    type: string
+    default: '[case_prefix]_outlets.txt'
+- key: SAVE_MR_PIXELS
+  name: Save mr pixels toggle
+  description: option to save time series of snow meltrate {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: mr_ts_file
+  name: Save mr pixels file
+  description: filename for time series of  [m/s]
+  value:
+    type: string
+    default: '[case_prefix]_0D-SMrate.txt'
+- key: SAVE_HS_PIXELS
+  name: Save hs pixels toggle
+  description: option to save time series of snow depth {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: hs_ts_file
+  name: Save hs pixels file
+  description: filename for time series of snow depth [m]
+  value:
+    type: string
+    default: '[case_prefix]_0D-hsnow.txt'
+- key: SAVE_SW_PIXELS
+  name: Save sw pixels toggle
+  description: option to save time series of snow water equivalent {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: sw_ts_file
   name: Save sw pixels file
-  type: string
+  description: filename for time series of snow water equivalent [m]
+  value:
+    type: string
+    default: '[case_prefix]_0D-hswe.txt'
+- key: SAVE_CC_PIXELS
+  name: Save cc pixels toggle
+  description: option to save time series of cold content {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: cc_ts_file
+  name: Save cc pixels file
+  description: filename for time series of cold content [J/m^2]
+  value:
+    type: string
+    default: '[case_prefix]_0D-Ecc.txt'
+- key: ModelName
+  name: Model name
+  description: Name of the model
+  value:
+    type: String
+    default: SnowEnergyBalance
+- key: ModelAuthor
+  name: Author name
+  description: Name of the model author
+  value:
+    type: String
+    default: 'Scott D. Peckham '
+- key: HTML_HELP_FILE
+  name: HTML help file
+  description: URL for HTML help file
+  value:
+    type: String
+    default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Snowmelt-Energy_Balance

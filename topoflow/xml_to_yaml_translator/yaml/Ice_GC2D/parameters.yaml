@@ -1,385 +1,443 @@
-B:
-  default: '0.0012'
-  description: '[m / (Pa * yr)], see MacGregor (2000)'
-  name: Glen's Law coeff, B
-  range:
-    max: '0.01'
-    min: 1e-3
-  type: float
-Cp_ice:
-  default: '2060.0'
-  description: specific heat capacity [J / (kg * K)]
-  name: Heat capacity (ice)
-  range:
-    max: '2100.0'
-    min: '2000.0'
-  type: float
-DEM_file:
-  default: '[site_prefix]_DEM.rtg'
-  description: binary file containing a DEM [m]
+- key: comp_status
+  name: Component status
+  description: component status {Enabled; Disabled}
+  value:
+    type: string
+    default: Enabled
+- key: in_directory
+  name: Input directory
+  description: input directory
+  value:
+    type: string
+    default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
+- key: out_directory
+  name: Output directory
+  description: output directory
+  value:
+    type: string
+    default: ~/CMT_Output/
+- key: site_prefix
+  name: Site prefix
+  description: file prefix for the study site
+  value:
+    type: string
+    default: Treynor
+- key: case_prefix
+  name: Case prefix
+  description: file prefix for the model scenario
+  value:
+    type: string
+    default: Case5
+- key: n_steps
+  name: Number of steps
+  description: number of time steps for simulation
+  value:
+    type: int
+    default: '10'
+    range:
+      min: '0.0'
+      max: 1e7
+- key: dt
+  name: Time step
+  description: ice process timestep [years]
+  value:
+    type: float
+    default: '0.1'
+    range:
+      min: '0'
+      max: '100'
+- key: dt_max
+  name: Max timestep
+  description: max timestep [years]
+  value:
+    type: float
+    default: '0.4'
+    range:
+      min: '0.0'
+      max: '100'
+- key: t_max
+  name: Max simulation time
+  description: max time to simulate [years]
+  value:
+    type: float
+    default: '100000'
+    range:
+      min: '0.0'
+      max: 1e7
+- key: DEM_file
   name: DEM file
-  type: string
-EAST_BC_TOGGLE:
-  default: ICE_FREE_BOUND
-  description: boundary condition {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND;
-    SURF_ELEV_BOUND; SURF_SLOPE_BOUND}
-  name: Eastern b.c. method
-  type: string
-ELA_step_interval:
-  default: '500.0'
-  description: ELA step interval  [meters]
-  name: ELA step interval
-  range:
-    max: '1000.0'
-    min: '50.0'
-  type: float
-ELA_step_size:
-  default: '-10.0'
-  description: ELA step size [meters]
-  name: ELA step size
-  range:
-    max: '100.0'
-    min: '-100'
-  type: float
-FREEZE_ON_TOGGLE:
-  default: '0'
-  description: basal ice frozen to bed (0 = no, 1 = yes)
-  name: Freeze on toggle
-  range:
-    max: '1'
-    min: '0'
-  type: int
-GENERIC_ICE_TOGGLE:
-  default: '0'
-  description: start w/ generic ice surface (0 = no, 1 = yes)
-  name: Generic ice toggle
-  range:
-    max: '1'
-    min: '0'
-  type: int
-H0_file:
-  default: None
-  description: binary file containing initial ice depth [m]
+  description: binary file containing a DEM [m]
+  value:
+    type: string
+    default: '[site_prefix]_DEM.rtg'
+- key: H0_file
   name: Init. ice depth file
-  type: string
-HTML_HELP_FILE:
-  default: http://csdms.colorado.edu/wiki/Model_help:Gc2d
-  description: URL for HTML help file
-  name: HTML help file
-  type: String
-Hp_eff:
-  default: '20.0'
-  description: effective pressure [meters] of water
+  description: binary file containing initial ice depth [m]
+  value:
+    type: string
+    default: None
+- key: min_glacier_thick
+  name: Min ice depth
+  description: min glacier thickness
+  value:
+    type: float
+    default: '1.0'
+    range:
+      min: '0.0'
+      max: '1000'
+- key: glens_A
+  name: Glen's Law param, a
+  description: Glen's Law exponent
+  value:
+    type: float
+    default: '2.142e-16'
+    range:
+      min: '0.0'
+      max: 3e-15
+- key: B
+  name: Glen's Law coeff, B
+  description: '[m / (Pa * yr)], see MacGregor (2000)'
+  value:
+    type: float
+    default: '0.0012'
+    range:
+      min: 1e-3
+      max: '0.01'
+- key: char_sliding_vel
+  name: Char. sliding velocity
+  description: characteristic sliding velocity [*** units needed]
+  value:
+    type: float
+    default: '10.0'
+    range:
+      min: '0.0'
+      max: '100.0'
+- key: char_tau_bed
+  name: Char. bed stress
+  description: characteristic shear stress at the bed [**** units needed]
+  value:
+    type: float
+    default: '100000.0'
+    range:
+      min: '0.0'
+      max: 1e6
+- key: depth_to_water_table
+  name: Depth to water table
+  description: distance from ice surface to water table [meters]
+  value:
+    type: float
+    default: '20.0'
+    range:
+      min: '0'
+      max: '1000.0'
+- key: max_float_fraction
+  name: Max float fraction
+  description: limits the water level in ice [percent]
+  value:
+    type: float
+    default: '80.0'
+    range:
+      min: '0'
+      max: '100.0'
+- key: Hp_eff
   name: Hp effective (****)
-  range:
-    max: '100.0'
-    min: '0'
-  type: float
-ICEFLOW_TOGGLE:
-  default: '1'
-  description: ice motion by deformation (0 = no, 1 = yes)
-  name: Ice flow toggle
-  range:
-    max: '1'
-    min: '0'
-  type: int
-ICESLIDE_TOGGLE:
-  default: '0'
-  description: ice motion by sliding (0 = no, 1 = yes)
-  name: Ice slide toggl
-  range:
-    max: '1'
-    min: '0'
-  type: int
-INIT_COND_TOGGLE:
-  default: '1'
-  description: 0 = ??, 1 = ??, 2 = ??
+  description: effective pressure [meters] of water
+  value:
+    type: float
+    default: '20.0'
+    range:
+      min: '0'
+      max: '100.0'
+- key: init_ELA
+  name: Initial ELA value
+  description: Equilibrium Line Altitude  [meters]
+  value:
+    type: float
+    default: '3350.0'
+    range:
+      min: '2500.0'
+      max: '4500.0'
+- key: ELA_step_size
+  name: ELA step size
+  description: ELA step size [meters]
+  value:
+    type: float
+    default: '-10.0'
+    range:
+      min: '-100'
+      max: '100.0'
+- key: ELA_step_interval
+  name: ELA step interval
+  description: ELA step interval  [meters]
+  value:
+    type: float
+    default: '500.0'
+    range:
+      min: '50.0'
+      max: '1000.0'
+- key: grad_Bz
+  name: Mass balance gradient
+  description: mass balance gradient in z [*** units needed]
+  value:
+    type: float
+    default: '0.01'
+    range:
+      min: 1e-3
+      max: '0.1'
+- key: max_Bz
+  name: Max mass balance
+  description: maximum allowed mass balance [*** units needed]
+  value:
+    type: float
+    default: '2.0'
+    range:
+      min: '1.0'
+      max: '10.0'
+- key: spinup_time
+  name: Spinup time
+  description: spinup time [years]
+  value:
+    type: float
+    default: '200.0'
+    range:
+      min: '0.0'
+      max: 1e3
+- key: sea_level
+  name: Sea level
+  description: sea level [meters]
+  value:
+    type: float
+    default: '-100'
+    range:
+      min: '-200.0'
+      max: '200.0'
+- key: Cp_ice
+  name: Heat capacity (ice)
+  description: specific heat capacity [J / (kg * K)]
+  value:
+    type: float
+    default: '2060.0'
+    range:
+      min: '2000.0'
+      max: '2100.0'
+- key: geothermal_heat_flux
+  name: Geothermal heat flux
+  description: geothermal heat flux  [(J / year) / m^2]
+  value:
+    type: float
+    default: 1.575e6
+    range:
+      min: 1e5
+      max: 1e7
+- key: geothermal_gradient
+  name: Geothermal gradient
+  description: geothermal gradient  [*** deg_C / meter ??]
+  value:
+    type: float
+    default: '-0.0255'
+    range:
+      min: '-0.1'
+      max: '0.0'
+- key: VARIABLE_DT_TOGGLE
+  name: Variable dt toggle
+  description: use variable/adaptive timestep  (0 = no, 1 = yes)
+  value:
+    type: int
+    default: '1'
+    range:
+      min: '0'
+      max: '1'
+- key: INIT_COND_TOGGLE
   name: Init. condition choice
-  range:
-    max: '1'
-    min: '0'
-  type: int
-MASS_BALANCE_TOGGLE:
-  default: ELA_LOWERING
+  description: 0 = ??, 1 = ??, 2 = ??
+  value:
+    type: int
+    default: '1'
+    range:
+      min: '0'
+      max: '1'
+- key: GENERIC_ICE_TOGGLE
+  name: Generic ice toggle
+  description: start w/ generic ice surface (0 = no, 1 = yes)
+  value:
+    type: int
+    default: '0'
+    range:
+      min: '0'
+      max: '1'
+- key: ICEFLOW_TOGGLE
+  name: Ice flow toggle
+  description: ice motion by deformation (0 = no, 1 = yes)
+  value:
+    type: int
+    default: '1'
+    range:
+      min: '0'
+      max: '1'
+- key: ICESLIDE_TOGGLE
+  name: Ice slide toggle
+  description: ice motion by sliding (0 = no, 1 = yes)
+  value:
+    type: int
+    default: '0'
+    range:
+      min: '0'
+      max: '1'
+- key: FREEZE_ON_TOGGLE
+  name: Freeze on toggle
+  description: basal ice frozen to bed (0 = no, 1 = yes)
+  value:
+    type: int
+    default: '0'
+    range:
+      min: '0'
+      max: '1'
+- key: MASS_BALANCE_TOGGLE
+  name: Mass balance method
   description: climate scenario {ZERO_BALANCE; CONSTANT_ELA; ELA_LOWERING; ELA_TIME_SERIES;
     EXTERNAL_FUNC; ELA_LOWERING2; BALANCE_FILE; D18O_TIME_SERIES}
-  name: Mass balance method
-  type: string
-ModelAuthor:
-  default: 'Mark Kessler, Eric Hutton, Scott Peckham '
-  description: Name of the model author
-  name: Author name
-  type: String
-ModelName:
-  default: IceGC2D
-  description: Name of the model
-  name: Model name
-  type: String
-NORTH_BC_TOGGLE:
-  default: ICE_FREE_BOUND
-  description: boundary condition {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND;
-    SURF_ELEV_BOUND; SURF_SLOPE_BOUND}
-  name: Northern b.c. method
-  type: string
-SAVE_HI_GRIDS:
-  default: 'Yes'
-  description: option to save computed Hi grids {Yes; No}
-  name: Save Hi grids toggle
-  type: string
-SAVE_HI_PIXELS:
-  default: 'No'
-  description: option to save computed Hi time series {Yes; No}
-  name: Save Hi time series toggle
-  type: string
-SAVE_MR_GRIDS:
-  default: 'No'
-  description: option to save computed MR grids {Yes; No}
-  name: Save MR grids toggle
-  type: string
-SAVE_MR_PIXELS:
-  default: 'No'
-  description: option to save computed MR time series {Yes; No}
-  name: Save MR time series toggle
-  type: string
-SAVE_ZI_GRIDS:
-  default: 'No'
-  description: option to save computed Zi grids {Yes; No}
-  name: Save Zi grids toggle
-  type: string
-SAVE_ZI_PIXELS:
-  default: 'No'
-  description: option to save computed Zi time series {Yes; No}
-  name: Save Zi pixels toggle
-  type: string
-SOUTH_BC_TOGGLE:
-  default: ICE_FREE_BOUND
-  description: boundary condition {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND;
-    SURF_ELEV_BOUND; SURF_SLOPE_BOUND}
-  name: Southern b.c. method
-  type: string
-VARIABLE_DT_TOGGLE:
-  default: '1'
-  description: use variable/adaptive timestep  (0 = no, 1 = yes)
-  name: Variable dt toggle
-  range:
-    max: '1'
-    min: '0'
-  type: int
-WEST_BC_TOGGLE:
-  default: ICE_FREE_BOUND
-  description: boundary condition {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND;
-    SURF_ELEV_BOUND; SURF_SLOPE_BOUND}
+  value:
+    type: string
+    default: ELA_LOWERING
+- key: WEST_BC_TOGGLE
   name: Western b.c. method
-  type: string
-case_prefix:
-  default: Case5
-  description: file prefix for the model scenario
-  name: Case prefix
-  type: string
-char_sliding_vel:
-  default: '10.0'
-  description: characteristic sliding velocity [*** units needed]
-  name: Char. sliding velocity
-  range:
-    max: '100.0'
-    min: '0.0'
-  type: float
-char_tau_bed:
-  default: '100000.0'
-  description: characteristic shear stress at the bed [**** units needed]
-  name: Char. bed stress
-  range:
-    max: 1e6
-    min: '0.0'
-  type: float
-comp_status:
-  default: Enabled
-  description: component status {Enabled; Disabled}
-  name: Component status
-  type: string
-depth_to_water_table:
-  default: '20.0'
-  description: distance from ice surface to water table [meters]
-  name: Depth to water table
-  range:
-    max: '1000.0'
-    min: '0'
-  type: float
-dt:
-  default: '0.1'
-  description: ice process timestep [years]
-  name: Time step
-  range:
-    max: '100'
-    min: '0'
-  type: float
-dt_max:
-  default: '0.4'
-  description: max timestep [years]
-  name: Max timestep
-  range:
-    max: '100'
-    min: '0.0'
-  type: float
-geothermal_gradient:
-  default: '-0.0255'
-  description: geothermal gradient  [*** deg_C / meter ??]
-  name: Geothermal gradient
-  range:
-    max: '0.0'
-    min: '-0.1'
-  type: float
-geothermal_heat_flux:
-  default: 1.575e6
-  description: geothermal heat flux  [(J / year) / m^2]
-  name: Geothermal heat flux
-  range:
-    max: 1e7
-    min: 1e5
-  type: float
-glens_A:
-  default: '2.142e-16'
-  description: Glen's Law exponent
-  name: Glen's Law param, a
-  range:
-    max: 3e-15
-    min: '0.0'
-  type: float
-grad_Bz:
-  default: '0.01'
-  description: mass balance gradient in z [*** units needed]
-  name: Mass balance gradient
-  range:
-    max: '0.1'
-    min: 1e-3
-  type: float
-hi_gs_file:
-  default: '[case_prefix]_2D_iceH.nc'
-  description: filename for Hi grid stack
-  name: Save Hi grids file
-  type: string
-hi_ts_file:
-  default: '[case_prefix]_0D_iceH.txt'
-  description: filename for Hi  time series
-  name: Save Hi time series file
-  type: string
-in_directory:
-  default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  description: input directory
-  name: Input directory
-  type: string
-init_ELA:
-  default: '3350.0'
-  description: Equilibrium Line Altitude  [meters]
-  name: Initial ELA value
-  range:
-    max: '4500.0'
-    min: '2500.0'
-  type: float
-max_Bz:
-  default: '2.0'
-  description: maximum allowed mass balance [*** units needed]
-  name: Max mass balance
-  range:
-    max: '10.0'
-    min: '1.0'
-  type: float
-max_float_fraction:
-  default: '80.0'
-  description: limits the water level in ice [percent]
-  name: Max float fraction
-  range:
-    max: '100.0'
-    min: '0'
-  type: float
-min_glacier_thick:
-  default: '1.0'
-  description: min glacier thickness
-  name: Min ice depth
-  range:
-    max: '1000'
-    min: '0.0'
-  type: float
-mr_gs_file:
-  default: '[case_prefix]_2D_iceMR.nc'
-  description: filename for MR grid stack
-  name: Save MR grids file
-  type: string
-mr_ts_file:
-  default: '[case_prefix]_0D_iceMR.txt'
-  description: filename for MR  time series
-  name: Save MR time series file
-  type: string
-n_steps:
-  default: '10'
-  description: number of time steps for simulation
-  name: Number of steps
-  range:
-    max: 1e7
-    min: '0.0'
-  type: int
-out_directory:
-  default: ~/CMT_Output/
-  description: output directory
-  name: Output directory
-  type: string
-pixel_file:
-  default: '[case_prefix]_outlets.txt'
-  description: filename for monitored pixel file
-  name: Monitored pixel file
-  type: string
-save_grid_dt:
-  default: '100.0'
-  description: interval to save grids, years
+  description: boundary condition {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND;
+    SURF_ELEV_BOUND; SURF_SLOPE_BOUND}
+  value:
+    type: string
+    default: ICE_FREE_BOUND
+- key: EAST_BC_TOGGLE
+  name: Eastern b.c. method
+  description: boundary condition {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND;
+    SURF_ELEV_BOUND; SURF_SLOPE_BOUND}
+  value:
+    type: string
+    default: ICE_FREE_BOUND
+- key: SOUTH_BC_TOGGLE
+  name: Southern b.c. method
+  description: boundary condition {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND;
+    SURF_ELEV_BOUND; SURF_SLOPE_BOUND}
+  value:
+    type: string
+    default: ICE_FREE_BOUND
+- key: NORTH_BC_TOGGLE
+  name: Northern b.c. method
+  description: boundary condition {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND;
+    SURF_ELEV_BOUND; SURF_SLOPE_BOUND}
+  value:
+    type: string
+    default: ICE_FREE_BOUND
+- key: save_grid_dt
   name: Save grid dt
-  range:
-    max: 1e5
-    min: '1.0'
-  type: float
-save_pixels_dt:
-  default: '10.0'
-  description: interval to save time series values, years
-  name: Save time series dt
-  range:
-    max: '1000'
-    min: '1.0'
-  type: float
-sea_level:
-  default: '-100'
-  description: sea level [meters]
-  name: Sea level
-  range:
-    max: '200.0'
-    min: '-200.0'
-  type: float
-site_prefix:
-  default: Treynor
-  description: file prefix for the study site
-  name: Site prefix
-  type: string
-spinup_time:
-  default: '200.0'
-  description: spinup time [years]
-  name: Spinup time
-  range:
-    max: 1e3
-    min: '0.0'
-  type: float
-t_max:
-  default: '100000'
-  description: max time to simulate [years]
-  name: Max simulation time
-  range:
-    max: 1e7
-    min: '0.0'
-  type: float
-zi_gs_file:
-  default: '[case_prefix]_2D_iceZ.nc'
-  description: filename for Zi grid stack
+  description: interval to save grids, years
+  value:
+    type: float
+    default: '100.0'
+    range:
+      min: '1.0'
+      max: 1e5
+- key: SAVE_HI_GRIDS
+  name: Save Hi grids toggle
+  description: option to save computed Hi grids {Yes; No}
+  value:
+    type: string
+    default: 'Yes'
+- key: hi_gs_file
+  name: Save Hi grids file
+  description: filename for Hi grid stack
+  value:
+    type: string
+    default: '[case_prefix]_2D_iceH.nc'
+- key: SAVE_ZI_GRIDS
+  name: Save Zi grids toggle
+  description: option to save computed Zi grids {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: zi_gs_file
   name: Save Zi grids file
-  type: string
-zi_ts_file:
-  default: '[case_prefix]_0D_iceZ.txt'
-  description: filename for Zi time series
+  description: filename for Zi grid stack
+  value:
+    type: string
+    default: '[case_prefix]_2D_iceZ.nc'
+- key: SAVE_MR_GRIDS
+  name: Save MR grids toggle
+  description: option to save computed MR grids {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: mr_gs_file
+  name: Save MR grids file
+  description: filename for MR grid stack
+  value:
+    type: string
+    default: '[case_prefix]_2D_iceMR.nc'
+- key: save_pixels_dt
+  name: Save time series dt
+  description: interval to save time series values, years
+  value:
+    type: float
+    default: '10.0'
+    range:
+      min: '1.0'
+      max: '1000'
+- key: pixel_file
+  name: Monitored pixel file
+  description: filename for monitored pixel file
+  value:
+    type: string
+    default: '[case_prefix]_outlets.txt'
+- key: SAVE_HI_PIXELS
+  name: Save Hi time series toggle
+  description: option to save computed Hi time series {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: hi_ts_file
+  name: Save Hi time series file
+  description: filename for Hi  time series
+  value:
+    type: string
+    default: '[case_prefix]_0D_iceH.txt'
+- key: SAVE_ZI_PIXELS
+  name: Save Zi pixels toggle
+  description: option to save computed Zi time series {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: zi_ts_file
   name: Save Zi time series file
-  type: string
+  description: filename for Zi time series
+  value:
+    type: string
+    default: '[case_prefix]_0D_iceZ.txt'
+- key: SAVE_MR_PIXELS
+  name: Save MR time series toggle
+  description: option to save computed MR time series {Yes; No}
+  value:
+    type: string
+    default: 'No'
+- key: mr_ts_file
+  name: Save MR time series file
+  description: filename for MR  time series
+  value:
+    type: string
+    default: '[case_prefix]_0D_iceMR.txt'
+- key: ModelName
+  name: Model name
+  description: Name of the model
+  value:
+    type: String
+    default: IceGC2D
+- key: ModelAuthor
+  name: Author name
+  description: Name of the model author
+  value:
+    type: String
+    default: 'Mark Kessler, Eric Hutton, Scott Peckham '
+- key: HTML_HELP_FILE
+  name: HTML help file
+  description: URL for HTML help file
+  value:
+    type: String
+    default: http://csdms.colorado.edu/wiki/Model_help:Gc2d
