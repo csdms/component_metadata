@@ -1,0 +1,12 @@
+{
+    "id":"vector_parameter_study",
+    "name":"Vector Parameter Study",
+    "class":"VectorParameterStudy",
+    "initialize_args":"vector_parameter_study.yaml",
+    "time_step":1.0,
+    "summary": "A vector parameter study computes response data sets at selected intervals along a vector in parameter space. It is often used for single-coordinate parameter studies (to study the effect of a single variable on a response set), but it can be used more generally for multiple coordinate vector studies (to investigate the response variations along some n-dimensional vector such as an optimizer search direction).",
+    "url":"https://dakota.sandia.gov",
+    "author": "Sandia National Laboratories",
+    "version": "6.1",
+    "license": "LGPL"
+}
