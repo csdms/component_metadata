@@ -1,6 +1,6 @@
 [
     {
-        "description": "component status", 
+        "description": "Component status", 
         "key": "comp_status", 
         "name": "Component status", 
         "value": {
@@ -14,7 +14,7 @@
         }
     }, 
     {
-        "description": "input directory", 
+        "description": "Input directory", 
         "key": "in_directory", 
         "name": "Input directory", 
         "value": {
@@ -24,7 +24,7 @@
         }
     }, 
     {
-        "description": "output directory", 
+        "description": "Output directory", 
         "key": "out_directory", 
         "name": "Output directory", 
         "value": {
@@ -34,7 +34,7 @@
         }
     }, 
     {
-        "description": "file prefix for the study site", 
+        "description": "File prefix for the study site", 
         "key": "site_prefix", 
         "name": "Site prefix", 
         "value": {
@@ -44,7 +44,7 @@
         }
     }, 
     {
-        "description": "file prefix for the model scenario", 
+        "description": "File prefix for the model scenario", 
         "key": "case_prefix", 
         "name": "Case prefix", 
         "value": {
@@ -54,7 +54,7 @@
         }
     }, 
     {
-        "description": "number of time steps", 
+        "description": "Number of time steps", 
         "key": "n_steps", 
         "name": "Number of steps", 
         "value": {
@@ -68,7 +68,7 @@
         }
     }, 
     {
-        "description": "meteorology time step", 
+        "description": "Meteorology time step", 
         "key": "dt", 
         "name": "Time step", 
         "value": {
@@ -82,7 +82,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "rho_H2O_type", 
         "name": "rho_H2O type", 
         "value": {
@@ -98,7 +98,7 @@
         }
     }, 
     {
-        "description": "density of water", 
+        "description": "Density of water", 
         "key": "rho_H2O", 
         "name": "rho_H2O", 
         "value": {
@@ -112,7 +112,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "Cp_air_type", 
         "name": "Cp_air type", 
         "value": {
@@ -128,7 +128,7 @@
         }
     }, 
     {
-        "description": "heat capacity of air", 
+        "description": "Heat capacity of air", 
         "key": "Cp_air", 
         "name": "Cp_air", 
         "value": {
@@ -142,7 +142,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "rho_air_type", 
         "name": "rho_air type", 
         "value": {
@@ -158,7 +158,7 @@
         }
     }, 
     {
-        "description": "density of air", 
+        "description": "Density of air", 
         "key": "rho_air", 
         "name": "rho_air", 
         "value": {
@@ -172,7 +172,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "P_type", 
         "name": "precip. rates type", 
         "value": {
@@ -188,7 +188,7 @@
         }
     }, 
     {
-        "description": "precipitation rate", 
+        "description": "Precipitation rate", 
         "key": "P", 
         "name": "precip. rates", 
         "value": {
@@ -198,7 +198,7 @@
         }
     }, 
     {
-        "description": "toggle to turn off all variable updates except precip.", 
+        "description": "Toggle to turn off all variable updates except precip.", 
         "key": "PRECIP_ONLY", 
         "name": "PRECIP_ONLY toggle", 
         "value": {
@@ -212,7 +212,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "T_air_type", 
         "name": "T_air type", 
         "value": {
@@ -228,7 +228,7 @@
         }
     }, 
     {
-        "description": "temperature of air", 
+        "description": "Temperature of air", 
         "key": "T_air", 
         "name": "T_air", 
         "value": {
@@ -242,7 +242,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "T_surf_type", 
         "name": "T_surf type", 
         "value": {
@@ -258,7 +258,7 @@
         }
     }, 
     {
-        "description": "temperature of surface", 
+        "description": "Temperature of surface", 
         "key": "T_surf", 
         "name": "T_surf", 
         "value": {
@@ -272,7 +272,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "RH_type", 
         "name": "RH type", 
         "value": {
@@ -288,7 +288,7 @@
         }
     }, 
     {
-        "description": "relative humidity", 
+        "description": "Relative humidity", 
         "key": "RH", 
         "name": "RH", 
         "value": {
@@ -302,7 +302,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "p0_type", 
         "name": "p0 type", 
         "value": {
@@ -318,7 +318,7 @@
         }
     }, 
     {
-        "description": "atmospheric pressure", 
+        "description": "Atmospheric pressure", 
         "key": "p0", 
         "name": "p0", 
         "value": {
@@ -332,7 +332,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "uz_type", 
         "name": "uz type", 
         "value": {
@@ -348,7 +348,7 @@
         }
     }, 
     {
-        "description": "wind velocity at height z", 
+        "description": "Wind velocity at height z", 
         "key": "uz", 
         "name": "uz", 
         "value": {
@@ -362,7 +362,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "z_type", 
         "name": "z type", 
         "value": {
@@ -378,7 +378,7 @@
         }
     }, 
     {
-        "description": "wind reference height", 
+        "description": "Wind reference height", 
         "key": "z", 
         "name": "z", 
         "value": {
@@ -392,7 +392,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "z0_air_type", 
         "name": "z0_air type", 
         "value": {
@@ -408,7 +408,7 @@
         }
     }, 
     {
-        "description": "surface roughness length scale for wind", 
+        "description": "Surface roughness length scale for wind", 
         "key": "z0_air", 
         "name": "z0_air", 
         "value": {
@@ -422,7 +422,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "albedo_type", 
         "name": "albedo type", 
         "value": {
@@ -438,7 +438,7 @@
         }
     }, 
     {
-        "description": "surface albedo in", 
+        "description": "Surface albedo in", 
         "key": "albedo", 
         "name": "albedo", 
         "value": {
@@ -452,7 +452,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "em_surf_type", 
         "name": "emissivity type", 
         "value": {
@@ -468,7 +468,7 @@
         }
     }, 
     {
-        "description": "surface emissivity in", 
+        "description": "Surface emissivity in", 
         "key": "em_surf", 
         "name": "emissivity", 
         "value": {
@@ -482,7 +482,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "dust_atten_type", 
         "name": "dust atten. type", 
         "value": {
@@ -498,7 +498,7 @@
         }
     }, 
     {
-        "description": "dust attenuation factor in", 
+        "description": "Dust attenuation factor in", 
         "key": "dust_atten", 
         "name": "dust attenuation", 
         "value": {
@@ -512,7 +512,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "cloud_factor_type", 
         "name": "cloud factor type", 
         "value": {
@@ -528,7 +528,7 @@
         }
     }, 
     {
-        "description": "cloudiness factor, C, in", 
+        "description": "Cloudiness factor, C, in", 
         "key": "cloud_factor", 
         "name": "cloud factor", 
         "value": {
@@ -542,7 +542,7 @@
         }
     }, 
     {
-        "description": "allowed input types", 
+        "description": "Allowed input types", 
         "key": "canopy_factor_type", 
         "name": "canopy factor type", 
         "value": {
@@ -558,7 +558,7 @@
         }
     }, 
     {
-        "description": "canopy coverage factor, F, in", 
+        "description": "Canopy coverage factor, F, in", 
         "key": "canopy_factor", 
         "name": "canopy factor", 
         "value": {
@@ -572,7 +572,7 @@
         }
     }, 
     {
-        "description": "flat binary, row-major file with grid of 4-byte slopes", 
+        "description": "Flat binary, row-major file with grid of 4-byte slopes", 
         "key": "slope_grid_file", 
         "name": "slope grid file", 
         "value": {
@@ -582,7 +582,7 @@
         }
     }, 
     {
-        "description": "flat binary, row-major file with grid of 4-byte aspects", 
+        "description": "Flat binary, row-major file with grid of 4-byte aspects", 
         "key": "aspect_grid_file", 
         "name": "aspect grid file", 
         "value": {
@@ -592,7 +592,7 @@
         }
     }, 
     {
-        "description": "time zone offset from GMT", 
+        "description": "Time zone offset from GMT", 
         "key": "GMT_offset", 
         "name": "time zone offset", 
         "value": {
@@ -629,7 +629,7 @@
         }
     }, 
     {
-        "description": "start month", 
+        "description": "Start month", 
         "key": "start_month", 
         "name": "start month", 
         "value": {
@@ -653,7 +653,7 @@
         }
     }, 
     {
-        "description": "start day", 
+        "description": "Start day", 
         "key": "start_day", 
         "name": "start_day", 
         "value": {
@@ -667,7 +667,7 @@
         }
     }, 
     {
-        "description": "start hour", 
+        "description": "Start hour", 
         "key": "start_hour", 
         "name": "start_hour", 
         "value": {
@@ -681,7 +681,7 @@
         }
     }, 
     {
-        "description": "time interval between saved grids", 
+        "description": "Time interval between saved grids", 
         "key": "save_grid_dt", 
         "name": "Save grid timestep", 
         "value": {
@@ -695,7 +695,7 @@
         }
     }, 
     {
-        "description": "option to save grids of vapor pressure (in air)", 
+        "description": "Option to save grids of vapor pressure (in air)", 
         "key": "SAVE_EA_GRIDS", 
         "name": "Save e_air grids toggle", 
         "value": {
@@ -709,7 +709,7 @@
         }
     }, 
     {
-        "description": "filename for grid stack of vapor pressure (air)", 
+        "description": "Filename for grid stack of vapor pressure (air)", 
         "key": "ea_gs_file", 
         "name": "Save e_air grids toggle", 
         "value": {
@@ -719,7 +719,7 @@
         }
     }, 
     {
-        "description": "option to save grids of vapor pressure (at surf)", 
+        "description": "Option to save grids of vapor pressure (at surf)", 
         "key": "SAVE_ES_GRIDS", 
         "name": "Save e_surf grids toggle", 
         "value": {
@@ -733,7 +733,7 @@
         }
     }, 
     {
-        "description": "filename for grid stack of vapor pressure (surf)", 
+        "description": "Filename for grid stack of vapor pressure (surf)", 
         "key": "es_gs_file", 
         "name": "Save e_surf grids file", 
         "value": {
@@ -743,7 +743,7 @@
         }
     }, 
     {
-        "description": "option to save grids of net shortwave radiation", 
+        "description": "Option to save grids of net shortwave radiation", 
         "key": "SAVE_QSW_GRIDS", 
         "name": "Save Qn_SW grids toggle", 
         "value": {
@@ -757,7 +757,7 @@
         }
     }, 
     {
-        "description": "filename for grid stack of net shortwave radiation", 
+        "description": "Filename for grid stack of net shortwave radiation", 
         "key": "Qsw_gs_file", 
         "name": "Save Qn_SW grids file", 
         "value": {
@@ -767,7 +767,7 @@
         }
     }, 
     {
-        "description": "option to save grids of net longwave radiation", 
+        "description": "Option to save grids of net longwave radiation", 
         "key": "SAVE_QLW_GRIDS", 
         "name": "Save Qn_LW grids toggle", 
         "value": {
@@ -781,7 +781,7 @@
         }
     }, 
     {
-        "description": "filename for grid stack of net longwave radiation", 
+        "description": "Filename for grid stack of net longwave radiation", 
         "key": "Qlw_gs_file", 
         "name": "Save Qn_LW grids file", 
         "value": {
@@ -791,7 +791,7 @@
         }
     }, 
     {
-        "description": "option to save grids of air emissivity", 
+        "description": "Option to save grids of air emissivity", 
         "key": "SAVE_EMA_GRIDS", 
         "name": "Save em_air grids toggle", 
         "value": {
@@ -805,7 +805,7 @@
         }
     }, 
     {
-        "description": "filename for grid stack of air emissivity in", 
+        "description": "Filename for grid stack of air emissivity in", 
         "key": "ema_gs_file", 
         "name": "Save em_air grids file", 
         "value": {
@@ -815,7 +815,7 @@
         }
     }, 
     {
-        "description": "time interval between time series values", 
+        "description": "Time interval between time series values", 
         "key": "save_pixels_dt", 
         "name": "Save pixels timestep", 
         "value": {
@@ -829,7 +829,7 @@
         }
     }, 
     {
-        "description": "filename for monitored pixel file", 
+        "description": "Filename for monitored pixel file", 
         "key": "pixel_file", 
         "name": "Monitored pixel file", 
         "value": {
@@ -839,7 +839,7 @@
         }
     }, 
     {
-        "description": "option to save time series of sat. vapor press. (in air)", 
+        "description": "Option to save time series of sat. vapor press. (in air)", 
         "key": "SAVE_EA_PIXELS", 
         "name": "Save e_air pixels toggle", 
         "value": {
@@ -853,7 +853,7 @@
         }
     }, 
     {
-        "description": "filename for time series of sat. vapor press. (in air)", 
+        "description": "Filename for time series of sat. vapor press. (in air)", 
         "key": "ea_ts_file", 
         "name": "Save e_air pixels file", 
         "value": {
@@ -863,7 +863,7 @@
         }
     }, 
     {
-        "description": "option to save time series of sat. vapor press. (at surf)", 
+        "description": "Option to save time series of sat. vapor press. (at surf)", 
         "key": "SAVE_ES_PIXELS", 
         "name": "Save e_surf pixels toggle", 
         "value": {
@@ -877,7 +877,7 @@
         }
     }, 
     {
-        "description": "filename for time series of sat. vapor press. (at surf)", 
+        "description": "Filename for time series of sat. vapor press. (at surf)", 
         "key": "es_ts_file", 
         "name": "Save e_surf pixels file", 
         "value": {
@@ -887,7 +887,7 @@
         }
     }, 
     {
-        "description": "option to save time series of net shortwave radiation", 
+        "description": "Option to save time series of net shortwave radiation", 
         "key": "SAVE_QSW_PIXELS", 
         "name": "Save Qn_SW pixels toggle", 
         "value": {
@@ -901,7 +901,7 @@
         }
     }, 
     {
-        "description": "filename for time series of net shortwave radiation", 
+        "description": "Filename for time series of net shortwave radiation", 
         "key": "Qsw_ts_file", 
         "name": "Save Qn_SW pixels file", 
         "value": {
@@ -911,7 +911,7 @@
         }
     }, 
     {
-        "description": "option to save time series of net longwave radiation", 
+        "description": "Option to save time series of net longwave radiation", 
         "key": "SAVE_QLW_PIXELS", 
         "name": "Save Qn_LW pixels toggle", 
         "value": {
@@ -925,7 +925,7 @@
         }
     }, 
     {
-        "description": "filename for time series of net longwave radiation", 
+        "description": "Filename for time series of net longwave radiation", 
         "key": "Qlw_ts_file", 
         "name": "Save Qn_LW pixels file", 
         "value": {
@@ -935,7 +935,7 @@
         }
     }, 
     {
-        "description": "option to save time series of air emissivity", 
+        "description": "Option to save time series of air emissivity", 
         "key": "SAVE_EMA_PIXELS", 
         "name": "Save em_air pixels toggle", 
         "value": {
@@ -949,7 +949,7 @@
         }
     }, 
     {
-        "description": "filename for time series of air emissivity in", 
+        "description": "Filename for time series of air emissivity in", 
         "key": "ema_ts_file", 
         "name": "Save em_air pixels file", 
         "value": {
