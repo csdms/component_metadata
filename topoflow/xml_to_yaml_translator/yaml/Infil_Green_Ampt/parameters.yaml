@@ -7,35 +7,35 @@
     choices:
     - Enabled
     - Disabled
-  units: None
+  units: '-'
 - key: in_directory
   name: Input directory
   description: input directory
   value:
     type: string
     default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  units: None
+  units: '-'
 - key: out_directory
   name: Output directory
   description: output directory
   value:
     type: string
     default: ~/CMT_Output/
-  units: None
+  units: '-'
 - key: site_prefix
   name: Site prefix
   description: file prefix for the study site
   value:
     type: string
     default: Treynor
-  units: None
+  units: '-'
 - key: case_prefix
   name: Case prefix
   description: file prefix for the model scenario
   value:
     type: string
     default: Case5
-  units: None
+  units: '-'
 - key: n_steps
   name: Number of steps
   description: number of time steps
@@ -45,7 +45,7 @@
     range:
       min: '1'
       max: 1e7
-  units: None
+  units: '-'
 - key: n_layers
   name: Number of soil layers
   description: number of soil layers
@@ -55,7 +55,7 @@
     range:
       min: '1'
       max: '3'
-  units: None
+  units: '-'
 - key: dt
   name: Time step
   description: timestep for infiltration process
@@ -77,7 +77,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: Ks_0
   name: K_sat
   description: sat. hydraulic conductivity
@@ -99,7 +99,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: Ki_0
   name: K_init
   description: init. hydraulic conductivity (< K_sat)
@@ -121,7 +121,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: qs_0
   name: theta_sat
   description: sat. soil water content
@@ -131,7 +131,7 @@
     range:
       min: '0.0'
       max: '1.0'
-  units: None
+  units: '-'
 - key: qi_type_0
   name: theta_init type
   description: allowed input types
@@ -143,7 +143,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: qi_0
   name: theta_init
   description: init. soil water content (< theta_sat)
@@ -153,7 +153,7 @@
     range:
       min: '0.0'
       max: '1.0'
-  units: None
+  units: '-'
 - key: G_type_0
   name: G type
   description: allowed input types
@@ -165,7 +165,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: G_0
   name: G
   description: capillary length scale
@@ -194,7 +194,7 @@
     - sandy_clay
     - silty_clay
     - clay
-  units: None
+  units: '-'
 - key: save_grid_dt
   name: Save grid timestep
   description: time interval between saved grids
@@ -214,7 +214,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: v0_gs_file
   name: Save v0 grids file
   description: filename for grid stack of v0
@@ -231,7 +231,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: I_gs_file
   name: Save I  grids file
   description: filename for grid stack of I
@@ -255,7 +255,7 @@
   value:
     type: string
     default: '[case_prefix]_outlets.txt'
-  units: None
+  units: '-'
 - key: SAVE_V0_PIXELS
   name: Save v0 pixels toggle
   description: option to save time series of infil. rate (at surf)
@@ -265,7 +265,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: v0_ts_file
   name: Save v0 pixels file
   description: filename for time series of v0
@@ -282,7 +282,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: I_ts_file
   name: Save I  pixels file
   description: filename for time series of I
@@ -296,18 +296,18 @@
   value:
     type: String
     default: InfilGreenAmpt
-  units: None
+  units: '-'
 - key: ModelAuthor
   name: Author name
   description: Name of the model author
   value:
     type: String
     default: 'Scott D. Peckham '
-  units: None
+  units: '-'
 - key: HTML_HELP_FILE
   name: HTML help file
   description: URL for HTML help file
   value:
     type: String
     default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Green-Ampt
-  units: None
+  units: '-'

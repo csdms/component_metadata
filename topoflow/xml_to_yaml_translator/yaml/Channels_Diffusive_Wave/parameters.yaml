@@ -7,35 +7,35 @@
     choices:
     - Enabled
     - Disabled
-  units: None
+  units: '-'
 - key: in_directory
   name: Input directory
   description: input directory
   value:
     type: string
     default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  units: None
+  units: '-'
 - key: out_directory
   name: Output directory
   description: output directory
   value:
     type: string
     default: ~/CMT_Output/
-  units: None
+  units: '-'
 - key: site_prefix
   name: Site prefix
   description: file prefix for the study site
   value:
     type: string
     default: Treynor
-  units: None
+  units: '-'
 - key: case_prefix
   name: Case prefix
   description: file prefix for the model scenario
   value:
     type: string
     default: Case5
-  units: None
+  units: '-'
 - key: n_steps
   name: Number of steps
   description: number of time steps
@@ -45,7 +45,7 @@
     range:
       min: '1'
       max: 1e7
-  units: None
+  units: '-'
 - key: dt
   name: Time step
   description: channel process timestep
@@ -62,7 +62,7 @@
   value:
     type: string
     default: '[site_prefix]_flow.rtg'
-  units: None
+  units: '-'
 - key: slope_file
   name: D8 slope file
   description: grid of D8 slopes in binary file
@@ -79,7 +79,7 @@
     range:
       min: '0'
       max: '1'
-  units: None
+  units: '-'
 - key: LAW_OF_WALL
   name: Law of Wall flag
   description: option to use Law of Wall for roughness
@@ -89,7 +89,7 @@
     range:
       min: '0'
       max: '1'
-  units: None
+  units: '-'
 - key: nval_type
   name: Manning N type
   description: allowed input types
@@ -101,7 +101,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: nval
   name: Manning N
   description: Manning's N values
@@ -120,7 +120,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: z0val
   name: Roughness z0
   description: Law-of-wall roughness values
@@ -139,7 +139,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: width
   name: Bed width
   description: bottom width of trapezoid cross-section
@@ -158,7 +158,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: angle
   name: Bank angle
   description: bank angle of trapezoid cross-section
@@ -177,7 +177,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: d0
   name: Init. depth
   description: initial flow depth (if Scalar, use 0.0!)
@@ -199,7 +199,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: sinu
   name: Sinuosity
   description: absolute channel sinuosity
@@ -229,7 +229,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: Q_gs_file
   name: Save Q grids file
   description: filename for Q grid stack
@@ -246,7 +246,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: u_gs_file
   name: Save u grids file
   description: filename for u grid stack
@@ -263,7 +263,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: d_gs_file
   name: Save d grids file
   description: filename for d grid stack
@@ -280,14 +280,14 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: f_gs_file
   name: Save f grids file
   description: filename for f grid stack
   value:
     type: string
     default: '[case_prefix]_2D-f.nc'
-  units: None
+  units: '-'
 - key: save_pixels_dt
   name: Save pixels timestep
   description: time interval between time series values
@@ -304,7 +304,7 @@
   value:
     type: string
     default: '[case_prefix]_outlets.txt'
-  units: None
+  units: '-'
 - key: SAVE_Q_PIXELS
   name: Save Q pixels toggle
   description: option to save computed Q time series
@@ -314,7 +314,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: Q_ts_file
   name: Save Q pixels file
   description: filename for computed Q time series
@@ -331,7 +331,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: u_ts_file
   name: Save u pixels file
   description: filename for computed u time series
@@ -348,7 +348,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: d_ts_file
   name: Save d pixels file
   description: filename for computed d time series
@@ -365,32 +365,32 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: f_ts_file
   name: Save f pixels file
   description: filename for computed f time series
   value:
     type: string
     default: '[case_prefix]_0D-f.txt'
-  units: None
+  units: '-'
 - key: ModelName
   name: Model name
   description: Name of the model
   value:
     type: String
     default: ChannelsDiffWave
-  units: None
+  units: '-'
 - key: ModelAuthor
   name: Author name
   description: Name of the model author
   value:
     type: String
     default: 'Scott D. Peckham '
-  units: None
+  units: '-'
 - key: HTML_HELP_FILE
   name: HTML help file
   description: URL for HTML help file
   value:
     type: String
     default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Channels-Diffusive_Wave
-  units: None
+  units: '-'

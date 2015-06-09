@@ -7,35 +7,35 @@
     choices:
     - Enabled
     - Disabled
-  units: None
+  units: '-'
 - key: in_directory
   name: Input directory
   description: input directory
   value:
     type: string
     default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  units: None
+  units: '-'
 - key: out_directory
   name: Output directory
   description: output directory
   value:
     type: string
     default: ~/CMT_Output/
-  units: None
+  units: '-'
 - key: site_prefix
   name: Site prefix
   description: file prefix for the study site
   value:
     type: string
     default: Treynor
-  units: None
+  units: '-'
 - key: case_prefix
   name: Case prefix
   description: file prefix for the model scenario
   value:
     type: string
     default: Case5
-  units: None
+  units: '-'
 - key: n_steps
   name: Number of steps
   description: number of time steps
@@ -45,7 +45,7 @@
     range:
       min: '1'
       max: 1e7
-  units: None
+  units: '-'
 - key: n_layers
   name: Number of soil layers
   description: number of soil layers
@@ -55,7 +55,7 @@
     range:
       min: '1'
       max: '6'
-  units: None
+  units: '-'
 - key: dt
   name: Time step
   description: timestep for subsurface flow
@@ -77,7 +77,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: elev
   name: DEM
   description: land surface elevation
@@ -96,7 +96,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: h0_table
   name: h0_table
   description: initial water table height
@@ -118,7 +118,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: d_freeze
   name: d_freeze
   description: freeze depth below surface
@@ -140,7 +140,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: d_thaw
   name: d_thaw
   description: thaw depth below surface
@@ -162,7 +162,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: Ks_0
   name: K_sat
   description: sat. hydraulic conductivity
@@ -184,7 +184,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: qs_0
   name: theta_sat
   description: sat. soil water content
@@ -194,7 +194,7 @@
     range:
       min: '0.0'
       max: '1.0'
-  units: None
+  units: '-'
 - key: th_type_0
   name: thickness type
   description: allowed input types
@@ -206,7 +206,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: th_0
   name: thickness
   description: soil layer thickness
@@ -228,7 +228,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: Ks_1
   name: K_sat
   description: sat. hydraulic conductivity
@@ -250,7 +250,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: qs_1
   name: theta_sat
   description: sat. soil water content
@@ -260,7 +260,7 @@
     range:
       min: '0.0'
       max: '1.0'
-  units: None
+  units: '-'
 - key: th_type_1
   name: thickness type
   description: allowed input types
@@ -272,7 +272,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: th_1
   name: thickness
   description: soil layer thickness
@@ -294,7 +294,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: Ks_2
   name: K_sat
   description: sat. hydraulic conductivity
@@ -316,7 +316,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: qs_2
   name: theta_sat
   description: sat. soil water content
@@ -326,7 +326,7 @@
     range:
       min: '0.0'
       max: '1.0'
-  units: None
+  units: '-'
 - key: th_type_2
   name: thickness type
   description: allowed input types
@@ -338,7 +338,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: th_2
   name: thickness
   description: soil layer thickness
@@ -360,7 +360,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: Ks_3
   name: K_sat
   description: sat. hydraulic conductivity
@@ -382,7 +382,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: qs_3
   name: theta_sat
   description: sat. soil water content
@@ -392,7 +392,7 @@
     range:
       min: '0.0'
       max: '1.0'
-  units: None
+  units: '-'
 - key: th_type_3
   name: thickness type
   description: allowed input types
@@ -404,7 +404,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: th_3
   name: thickness
   description: soil layer thickness
@@ -426,7 +426,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: Ks_4
   name: K_sat
   description: sat. hydraulic conductivity
@@ -448,7 +448,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: qs_4
   name: theta_sat
   description: sat. soil water content
@@ -458,7 +458,7 @@
     range:
       min: '0.0'
       max: '1.0'
-  units: None
+  units: '-'
 - key: th_type_4
   name: thickness type
   description: allowed input types
@@ -470,7 +470,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: th_4
   name: thickness
   description: soil layer thickness
@@ -492,7 +492,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: Ks_5
   name: K_sat
   description: sat. hydraulic conductivity
@@ -514,7 +514,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: qs_5
   name: theta_sat
   description: sat. soil water content
@@ -524,7 +524,7 @@
     range:
       min: '0.0'
       max: '1.0'
-  units: None
+  units: '-'
 - key: th_type_5
   name: thickness type
   description: allowed input types
@@ -536,7 +536,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: th_5
   name: thickness
   description: soil layer thickness
@@ -566,7 +566,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: ht_gs_file
   name: Save ht grids file
   description: filename for grid stack of water table height
@@ -583,7 +583,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: df_gs_file
   name: Save df grids file
   description: filename for grid stack of freeze depth
@@ -600,7 +600,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: dt_gs_file
   name: Save dt grids file
   description: filename for grid stack of thaw depth
@@ -624,7 +624,7 @@
   value:
     type: string
     default: '[case_prefix]_outlets.txt'
-  units: None
+  units: '-'
 - key: SAVE_HT_PIXELS
   name: Save ht pixels toggle
   description: option to save time series of water table height
@@ -634,7 +634,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: ht_ts_file
   name: Save ht pixels file
   description: filename for time series of water table height
@@ -651,7 +651,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: df_ts_file
   name: Save df pixels file
   description: filename for time series of freeze depth
@@ -668,7 +668,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: dt_ts_file
   name: Save dt pixels file
   description: filename for time series of thaw depth
@@ -682,18 +682,18 @@
   value:
     type: String
     default: SatZoneDarcyLayers
-  units: None
+  units: '-'
 - key: ModelAuthor
   name: Author name
   description: Name of the model author
   value:
     type: String
     default: 'Scott D. Peckham '
-  units: None
+  units: '-'
 - key: HTML_HELP_FILE
   name: HTML help file
   description: URL for HTML help file
   value:
     type: String
     default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Saturated_Zone-Darcy_Layers
-  units: None
+  units: '-'

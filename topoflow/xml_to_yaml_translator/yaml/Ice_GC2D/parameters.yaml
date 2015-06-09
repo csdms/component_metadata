@@ -7,35 +7,35 @@
     choices:
     - Enabled
     - Disabled
-  units: None
+  units: '-'
 - key: in_directory
   name: Input directory
   description: input directory
   value:
     type: string
     default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  units: None
+  units: '-'
 - key: out_directory
   name: Output directory
   description: output directory
   value:
     type: string
     default: ~/CMT_Output/
-  units: None
+  units: '-'
 - key: site_prefix
   name: Site prefix
   description: file prefix for the study site
   value:
     type: string
     default: Treynor
-  units: None
+  units: '-'
 - key: case_prefix
   name: Case prefix
   description: file prefix for the model scenario
   value:
     type: string
     default: Case5
-  units: None
+  units: '-'
 - key: n_steps
   name: Number of steps
   description: number of time steps for simulation
@@ -45,7 +45,7 @@
     range:
       min: '0.0'
       max: 1e7
-  units: None
+  units: '-'
 - key: dt
   name: Time step
   description: ice process timestep
@@ -99,7 +99,7 @@
     range:
       min: '0.0'
       max: '1000'
-  units: None
+  units: '-'
 - key: glens_A
   name: Glen's Law param, a
   description: Glen's Law exponent
@@ -109,7 +109,7 @@
     range:
       min: '0.0'
       max: 3e-15
-  units: None
+  units: '-'
 - key: B
   name: Glen's Law coeff, B
   description: ', see MacGregor (2000)'
@@ -279,7 +279,7 @@
     range:
       min: '0'
       max: '1'
-  units: None
+  units: '-'
 - key: INIT_COND_TOGGLE
   name: Init. condition choice
   description: 0 = ??, 1 = ??, 2 = ??
@@ -289,7 +289,7 @@
     range:
       min: '0'
       max: '1'
-  units: None
+  units: '-'
 - key: GENERIC_ICE_TOGGLE
   name: Generic ice toggle
   description: start w/ generic ice surface (0 = no, 1 = yes)
@@ -299,7 +299,7 @@
     range:
       min: '0'
       max: '1'
-  units: None
+  units: '-'
 - key: ICEFLOW_TOGGLE
   name: Ice flow toggle
   description: ice motion by deformation (0 = no, 1 = yes)
@@ -309,7 +309,7 @@
     range:
       min: '0'
       max: '1'
-  units: None
+  units: '-'
 - key: ICESLIDE_TOGGLE
   name: Ice slide toggle
   description: ice motion by sliding (0 = no, 1 = yes)
@@ -319,7 +319,7 @@
     range:
       min: '0'
       max: '1'
-  units: None
+  units: '-'
 - key: FREEZE_ON_TOGGLE
   name: Freeze on toggle
   description: basal ice frozen to bed (0 = no, 1 = yes)
@@ -329,7 +329,7 @@
     range:
       min: '0'
       max: '1'
-  units: None
+  units: '-'
 - key: MASS_BALANCE_TOGGLE
   name: Mass balance method
   description: climate scenario
@@ -345,7 +345,7 @@
     - ELA_LOWERING2
     - BALANCE_FILE
     - D18O_TIME_SERIES
-  units: None
+  units: '-'
 - key: WEST_BC_TOGGLE
   name: Western b.c. method
   description: boundary condition
@@ -358,7 +358,7 @@
     - CONST_FLUX_BOUND
     - SURF_ELEV_BOUND
     - SURF_SLOPE_BOUND
-  units: None
+  units: '-'
 - key: EAST_BC_TOGGLE
   name: Eastern b.c. method
   description: boundary condition
@@ -371,7 +371,7 @@
     - CONST_FLUX_BOUND
     - SURF_ELEV_BOUND
     - SURF_SLOPE_BOUND
-  units: None
+  units: '-'
 - key: SOUTH_BC_TOGGLE
   name: Southern b.c. method
   description: boundary condition
@@ -384,7 +384,7 @@
     - CONST_FLUX_BOUND
     - SURF_ELEV_BOUND
     - SURF_SLOPE_BOUND
-  units: None
+  units: '-'
 - key: NORTH_BC_TOGGLE
   name: Northern b.c. method
   description: boundary condition
@@ -397,7 +397,7 @@
     - CONST_FLUX_BOUND
     - SURF_ELEV_BOUND
     - SURF_SLOPE_BOUND
-  units: None
+  units: '-'
 - key: save_grid_dt
   name: Save grid dt
   description: interval to save grids, years
@@ -407,7 +407,7 @@
     range:
       min: '1.0'
       max: 1e5
-  units: None
+  units: '-'
 - key: SAVE_HI_GRIDS
   name: Save Hi grids toggle
   description: option to save computed Hi grids
@@ -417,14 +417,14 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: hi_gs_file
   name: Save Hi grids file
   description: filename for Hi grid stack
   value:
     type: string
     default: '[case_prefix]_2D_iceH.nc'
-  units: None
+  units: '-'
 - key: SAVE_ZI_GRIDS
   name: Save Zi grids toggle
   description: option to save computed Zi grids
@@ -434,14 +434,14 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: zi_gs_file
   name: Save Zi grids file
   description: filename for Zi grid stack
   value:
     type: string
     default: '[case_prefix]_2D_iceZ.nc'
-  units: None
+  units: '-'
 - key: SAVE_MR_GRIDS
   name: Save MR grids toggle
   description: option to save computed MR grids
@@ -451,14 +451,14 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: mr_gs_file
   name: Save MR grids file
   description: filename for MR grid stack
   value:
     type: string
     default: '[case_prefix]_2D_iceMR.nc'
-  units: None
+  units: '-'
 - key: save_pixels_dt
   name: Save time series dt
   description: interval to save time series values, years
@@ -468,14 +468,14 @@
     range:
       min: '1.0'
       max: '1000'
-  units: None
+  units: '-'
 - key: pixel_file
   name: Monitored pixel file
   description: filename for monitored pixel file
   value:
     type: string
     default: '[case_prefix]_outlets.txt'
-  units: None
+  units: '-'
 - key: SAVE_HI_PIXELS
   name: Save Hi time series toggle
   description: option to save computed Hi time series
@@ -485,14 +485,14 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: hi_ts_file
   name: Save Hi time series file
   description: filename for Hi time series
   value:
     type: string
     default: '[case_prefix]_0D_iceH.txt'
-  units: None
+  units: '-'
 - key: SAVE_ZI_PIXELS
   name: Save Zi pixels toggle
   description: option to save computed Zi time series
@@ -502,14 +502,14 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: zi_ts_file
   name: Save Zi time series file
   description: filename for Zi time series
   value:
     type: string
     default: '[case_prefix]_0D_iceZ.txt'
-  units: None
+  units: '-'
 - key: SAVE_MR_PIXELS
   name: Save MR time series toggle
   description: option to save computed MR time series
@@ -519,32 +519,32 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: mr_ts_file
   name: Save MR time series file
   description: filename for MR time series
   value:
     type: string
     default: '[case_prefix]_0D_iceMR.txt'
-  units: None
+  units: '-'
 - key: ModelName
   name: Model name
   description: Name of the model
   value:
     type: String
     default: IceGC2D
-  units: None
+  units: '-'
 - key: ModelAuthor
   name: Author name
   description: Name of the model author
   value:
     type: String
     default: 'Mark Kessler, Eric Hutton, Scott Peckham '
-  units: None
+  units: '-'
 - key: HTML_HELP_FILE
   name: HTML help file
   description: URL for HTML help file
   value:
     type: String
     default: http://csdms.colorado.edu/wiki/Model_help:Gc2d
-  units: None
+  units: '-'

@@ -7,35 +7,35 @@
     choices:
     - Enabled
     - Disabled
-  units: None
+  units: '-'
 - key: in_directory
   name: Input directory
   description: input directory
   value:
     type: string
     default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  units: None
+  units: '-'
 - key: out_directory
   name: Output directory
   description: output directory
   value:
     type: string
     default: ~/CMT_Output/
-  units: None
+  units: '-'
 - key: site_prefix
   name: Site prefix
   description: file prefix for the study site
   value:
     type: string
     default: Treynor
-  units: None
+  units: '-'
 - key: case_prefix
   name: Case prefix
   description: file prefix for the model scenario
   value:
     type: string
     default: Case5
-  units: None
+  units: '-'
 - key: n_steps
   name: Number of steps
   description: number of time steps
@@ -45,7 +45,7 @@
     range:
       min: '1'
       max: 1e7
-  units: None
+  units: '-'
 - key: dt
   name: Time step
   description: meteorology time step
@@ -67,7 +67,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: rho_H2O
   name: rho_H2O
   description: density of water
@@ -89,7 +89,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: Cp_air
   name: Cp_air
   description: heat capacity of air
@@ -111,7 +111,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: rho_air
   name: rho_air
   description: density of air
@@ -133,7 +133,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: P
   name: precip. rates
   description: precipitation rate
@@ -150,7 +150,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: T_air_type
   name: T_air type
   description: allowed input types
@@ -162,7 +162,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: T_air
   name: T_air
   description: temperature of air
@@ -184,7 +184,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: T_surf
   name: T_surf
   description: temperature of surface
@@ -206,7 +206,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: RH
   name: RH
   description: relative humidity
@@ -216,7 +216,7 @@
     range:
       min: '0.0'
       max: '1.0'
-  units: None
+  units: '-'
 - key: p0_type
   name: p0 type
   description: allowed input types
@@ -228,7 +228,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: p0
   name: p0
   description: atmospheric pressure
@@ -250,7 +250,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: uz
   name: uz
   description: wind velocity at height z
@@ -272,7 +272,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: z
   name: z
   description: wind reference height
@@ -294,7 +294,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: z0_air
   name: z0_air
   description: surface roughness length scale for wind
@@ -316,7 +316,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: albedo
   name: albedo
   description: surface albedo in
@@ -338,7 +338,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: em_surf
   name: emissivity
   description: surface emissivity in
@@ -360,7 +360,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: dust_atten
   name: dust attenuation
   description: dust attenuation factor in
@@ -382,7 +382,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: cloud_factor
   name: cloud factor
   description: cloudiness factor, C, in
@@ -404,7 +404,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: canopy_factor
   name: canopy factor
   description: canopy coverage factor, F, in
@@ -421,14 +421,14 @@
   value:
     type: string
     default: '[site_prefix]_slope.bin'
-  units: None
+  units: '-'
 - key: aspect_grid_file
   name: aspect grid file
   description: flat binary, row-major file with grid of 4-byte aspects
   value:
     type: string
     default: '[site_prefix]_aspect.bin'
-  units: None
+  units: '-'
 - key: GMT_offset
   name: time zone offset
   description: time zone offset from GMT
@@ -461,7 +461,7 @@
     - '10'
     - '11'
     - '12'
-  units: None
+  units: '-'
 - key: start_month
   name: start month
   description: start month
@@ -481,7 +481,7 @@
     - October
     - November
     - December
-  units: None
+  units: '-'
 - key: start_day
   name: start_day
   description: start day
@@ -491,7 +491,7 @@
     range:
       min: '0'
       max: '31'
-  units: None
+  units: '-'
 - key: start_hour
   name: start_hour
   description: start hour
@@ -501,7 +501,7 @@
     range:
       min: '0.0'
       max: '23.99'
-  units: None
+  units: '-'
 - key: save_grid_dt
   name: Save grid timestep
   description: time interval between saved grids
@@ -521,7 +521,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: ea_gs_file
   name: Save e_air grids toggle
   description: filename for grid stack of vapor pressure (air)
@@ -538,7 +538,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: es_gs_file
   name: Save e_surf grids file
   description: filename for grid stack of vapor pressure (surf)
@@ -555,7 +555,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: Qsw_gs_file
   name: Save Qn_SW grids file
   description: filename for grid stack of net shortwave radiation
@@ -572,7 +572,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: Qlw_gs_file
   name: Save Qn_LW grids file
   description: filename for grid stack of net longwave radiation
@@ -589,7 +589,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: ema_gs_file
   name: Save em_air grids file
   description: filename for grid stack of air emissivity in
@@ -613,7 +613,7 @@
   value:
     type: string
     default: '[case_prefix]_outlets.txt'
-  units: None
+  units: '-'
 - key: SAVE_EA_PIXELS
   name: Save e_air pixels toggle
   description: option to save time series of sat. vapor press. (in air)
@@ -623,7 +623,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: ea_ts_file
   name: Save e_air pixels file
   description: filename for time series of sat. vapor press. (in air)
@@ -640,7 +640,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: es_ts_file
   name: Save e_surf pixels file
   description: filename for time series of sat. vapor press. (at surf)
@@ -657,7 +657,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: Qsw_ts_file
   name: Save Qn_SW pixels file
   description: filename for time series of net shortwave radiation
@@ -674,7 +674,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: Qlw_ts_file
   name: Save Qn_LW pixels file
   description: filename for time series of net longwave radiation
@@ -691,7 +691,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: ema_ts_file
   name: Save em_air pixels file
   description: filename for time series of air emissivity in
@@ -705,18 +705,18 @@
   value:
     type: String
     default: Meteorology
-  units: None
+  units: '-'
 - key: ModelAuthor
   name: Author name
   description: Name of the model author
   value:
     type: String
     default: 'Scott D. Peckham '
-  units: None
+  units: '-'
 - key: HTML_HELP_FILE
   name: HTML help file
   description: URL for HTML help file
   value:
     type: String
     default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Meteorology
-  units: None
+  units: '-'

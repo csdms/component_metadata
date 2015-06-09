@@ -196,7 +196,7 @@ def create_yaml_file(inFileName):
 
         try: param['units'] = objDict.pop('units')
         except:
-            param['units'] = 'None'
+            param['units'] = '-'
             pass
         
         assert (len(objDict) == 0), "items left in the parameter entry definition! %r" % objDict.keys()

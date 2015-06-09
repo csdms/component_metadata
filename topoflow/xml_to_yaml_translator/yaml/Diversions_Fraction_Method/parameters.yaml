@@ -7,35 +7,35 @@
     choices:
     - Enabled
     - Disabled
-  units: None
+  units: '-'
 - key: in_directory
   name: Input directory
   description: input directory
   value:
     type: string
     default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  units: None
+  units: '-'
 - key: out_directory
   name: Output directory
   description: output directory
   value:
     type: string
     default: ~/CMT_Output/
-  units: None
+  units: '-'
 - key: site_prefix
   name: Site prefix
   description: file prefix for the study site
   value:
     type: string
     default: Treynor
-  units: None
+  units: '-'
 - key: case_prefix
   name: Case prefix
   description: file prefix for the model scenario
   value:
     type: string
     default: Case5
-  units: None
+  units: '-'
 - key: use_sources
   name: Use sources toggle
   description: option to use sources
@@ -45,14 +45,14 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: source_file
   name: Sources file
   description: source information file
   value:
     type: string
     default: '[site_prefix]_sources.txt'
-  units: None
+  units: '-'
 - key: use_sinks
   name: Use sinks toggle
   description: option to use sinks
@@ -62,14 +62,14 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: sink_file
   name: Sinks file
   description: sink information file
   value:
     type: string
     default: '[site_prefix]_sinks.txt'
-  units: None
+  units: '-'
 - key: use_canals
   name: Use canals toggle
   description: option to use canals
@@ -79,32 +79,32 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: canal_file
   name: Canal file
   description: canal information file
   value:
     type: string
     default: '[site_prefix]_canals.txt'
-  units: None
+  units: '-'
 - key: ModelName
   name: Model name
   description: Name of the model
   value:
     type: String
     default: DiversionsFraction
-  units: None
+  units: '-'
 - key: ModelAuthor
   name: Author name
   description: Name of the model author
   value:
     type: String
     default: 'Scott D. Peckham '
-  units: None
+  units: '-'
 - key: HTML_HELP_FILE
   name: HTML help file
   description: URL for HTML help file
   value:
     type: String
     default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Diversions
-  units: None
+  units: '-'

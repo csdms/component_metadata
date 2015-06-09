@@ -7,35 +7,35 @@
     choices:
     - Enabled
     - Disabled
-  units: None
+  units: '-'
 - key: in_directory
   name: Input directory
   description: input directory
   value:
     type: string
     default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  units: None
+  units: '-'
 - key: out_directory
   name: Output directory
   description: output directory
   value:
     type: string
     default: ~/CMT_Output/
-  units: None
+  units: '-'
 - key: site_prefix
   name: Site prefix
   description: file prefix for the study site
   value:
     type: string
     default: Treynor
-  units: None
+  units: '-'
 - key: case_prefix
   name: Case prefix
   description: file prefix for the model scenario
   value:
     type: string
     default: Case5
-  units: None
+  units: '-'
 - key: n_steps
   name: Number of steps
   description: number of time steps
@@ -45,7 +45,7 @@
     range:
       min: '1'
       max: 1e7
-  units: None
+  units: '-'
 - key: dt
   name: Time step
   description: timestep for snowmelt process
@@ -67,7 +67,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: Cp_snow
   name: Cp_snow
   description: heat capacity of snow
@@ -89,7 +89,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: rho_snow
   name: rho_snow
   description: density of snow
@@ -111,7 +111,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: c0
   name: c0
   description: degree-day coefficient
@@ -133,7 +133,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: T0
   name: T0
   description: reference temperature
@@ -155,7 +155,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: h0_snow
   name: h0_snow
   description: depth of snow
@@ -177,7 +177,7 @@
     - Grid
     - Time_Series
     - Grid_Sequence
-  units: None
+  units: '-'
 - key: h0_swe
   name: h0_swe
   description: depth of snow water equivalent (SWE)
@@ -207,7 +207,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: mr_gs_file
   name: Save mr grids file
   description: filename for grid stack of snow meltrate
@@ -224,7 +224,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: hs_gs_file
   name: Save hs grids file
   description: filename for grid stack of snow depth
@@ -241,7 +241,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: sw_gs_file
   name: Save sw grids file
   description: filename for grid stack of snow water equivalent
@@ -258,7 +258,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: cc_gs_file
   name: Save cc grids file
   description: filename for grid stack of cold content
@@ -282,7 +282,7 @@
   value:
     type: string
     default: '[case_prefix]_outlets.txt'
-  units: None
+  units: '-'
 - key: SAVE_MR_PIXELS
   name: Save mr pixels toggle
   description: option to save time series of snow meltrate
@@ -292,7 +292,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: mr_ts_file
   name: Save mr pixels file
   description: filename for time series of
@@ -309,7 +309,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: hs_ts_file
   name: Save hs pixels file
   description: filename for time series of snow depth
@@ -326,7 +326,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: sw_ts_file
   name: Save sw pixels file
   description: filename for time series of snow water equivalent
@@ -343,7 +343,7 @@
     choices:
     - 'Yes'
     - 'No'
-  units: None
+  units: '-'
 - key: cc_ts_file
   name: Save cc pixels file
   description: filename for time series of cold content
@@ -357,18 +357,18 @@
   value:
     type: String
     default: SnowEnergyBalance
-  units: None
+  units: '-'
 - key: ModelAuthor
   name: Author name
   description: Name of the model author
   value:
     type: String
     default: 'Scott D. Peckham '
-  units: None
+  units: '-'
 - key: HTML_HELP_FILE
   name: HTML help file
   description: URL for HTML help file
   value:
     type: String
     default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Snowmelt-Energy_Balance
-  units: None
+  units: '-'
