@@ -1,0 +1,14 @@
+{
+  "id":"meteorology",
+  "name":"Meteorology",
+  "class":"Meteorology",
+  "initialize_args":"Meteorology.cfg",
+  "time_step":1.0,
+  "summary": "Meteorology is a process component for TopoFlow, a D8-based, spatial hydrologic model. TopoFlow attempts to model many different physical processes in a watershed with the goal of accurately predicting how various hydrologic variables will evolve in time in response to climatic forcings. Meteorology can be used within TopoFlow, or as a stand-alone model.",
+  "url":"http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Meteorology",
+  "author": "Scott Peckham",
+  "email": "scott.peckham@colorado.edu",
+  "version": "3.1.0",
+  "doi": "10.1594/IEDA/100174",
+  "license": "Apache"
+}
