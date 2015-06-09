@@ -7,42 +7,42 @@
     choices:
     - Enabled
     - Disabled
-  units: '-'
+    units: '-'
 - key: in_directory
   name: Input directory
   description: input directory
   value:
     type: string
     default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  units: '-'
+    units: '-'
 - key: out_directory
   name: Output directory
   description: output directory
   value:
     type: string
     default: ~/CMT_Output/
-  units: '-'
+    units: '-'
 - key: site_prefix
   name: Site prefix
   description: file prefix for the study site
   value:
     type: string
     default: Treynor
-  units: '-'
+    units: '-'
 - key: case_prefix
   name: Case prefix
   description: file prefix for the model scenario
   value:
     type: string
     default: Case5
-  units: '-'
+    units: '-'
 - key: data_keyword
   name: Data keyword
   description: HIS data keyword
   value:
     type: string
     default: Precipitation
-  units: '-'
+    units: '-'
 - key: west_edge_lon
   name: West edge longitude
   description: longitude of west edge of geographic region
@@ -52,7 +52,7 @@
     range:
       min: '-180.0'
       max: '180.0'
-  units: dec.degrees
+    units: dec.degrees
 - key: east_edge_lon
   name: East edge longitude
   description: longitude of east edge of geographic region
@@ -62,7 +62,7 @@
     range:
       min: '-180.0'
       max: '180.0'
-  units: dec.degrees
+    units: dec.degrees
 - key: north_edge_lat
   name: North edge latitude
   description: latitude of north edge of geographic region
@@ -72,7 +72,7 @@
     range:
       min: '-90.0'
       max: '90.0'
-  units: dec.degrees
+    units: dec.degrees
 - key: south_edge_lat
   name: South edge latitude
   description: latitude of south edge of geographic region
@@ -82,7 +82,7 @@
     range:
       min: '-90.0'
       max: '90.0'
-  units: dec.degrees
+    units: dec.degrees
 - key: start_month
   name: Start month
   description: start month
@@ -102,7 +102,7 @@
     - October
     - November
     - December
-  units: '-'
+    units: '-'
 - key: start_day
   name: Start day
   description: start day
@@ -112,7 +112,7 @@
     range:
       min: '0'
       max: '31'
-  units: '-'
+    units: '-'
 - key: start_year
   name: Start year
   description: start year
@@ -122,7 +122,7 @@
     range:
       min: '1900'
       max: '2020'
-  units: '-'
+    units: '-'
 - key: stop_month
   name: Stop month
   description: stop month
@@ -142,7 +142,7 @@
     - October
     - November
     - December
-  units: '-'
+    units: '-'
 - key: stop_day
   name: Stop day
   description: stop day
@@ -152,7 +152,7 @@
     range:
       min: '0'
       max: '31'
-  units: '-'
+    units: '-'
 - key: stop_year
   name: Stop year
   description: stop year
@@ -162,7 +162,7 @@
     range:
       min: '1900'
       max: '2020'
-  units: '-'
+    units: '-'
 - key: max_n_values
   name: Max values per series
   description: max number of values allowed in any time series
@@ -172,7 +172,7 @@
     range:
       min: '1'
       max: '1000000'
-  units: '-'
+    units: '-'
 - key: max_n_series
   name: Max number of series
   description: max number of time series allows in the report
@@ -182,7 +182,7 @@
     range:
       min: '1'
       max: '100000'
-  units: '-'
+    units: '-'
 - key: save_pixels_dt
   name: Save time series timestep
   description: time interval between time series values
@@ -192,7 +192,7 @@
     range:
       min: '0.0'
       max: 1e6
-  units: sec
+    units: sec
 - key: SAVE_DAT_PIXELS
   name: Save time series toggle
   description: option to save time series
@@ -202,32 +202,32 @@
     choices:
     - 'Yes'
     - 'No'
-  units: '-'
+    units: '-'
 - key: dat_ts_file
   name: Save time series file
   description: filename for time series
   value:
     type: string
     default: '[case_prefix]_0D-data.txt'
-  units: '-'
+    units: '-'
 - key: ModelName
   name: Model name
   description: Name of the model
   value:
     type: String
     default: DataHIS
-  units: '-'
+    units: '-'
 - key: ModelAuthor
   name: Author name
   description: Name of the model author
   value:
     type: String
     default: 'Scott D. Peckham '
-  units: '-'
+    units: '-'
 - key: HTML_HELP_FILE
   name: HTML help file
   description: URL for HTML help file
   value:
     type: String
     default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Data-HIS
-  units: '-'
+    units: '-'

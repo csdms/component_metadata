@@ -7,35 +7,35 @@
     choices:
     - Enabled
     - Disabled
-  units: '-'
+    units: '-'
 - key: in_directory
   name: Input directory
   description: input directory
   value:
     type: String
     default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
-  units: '-'
+    units: '-'
 - key: out_directory
   name: Output directory
   description: output directory
   value:
     type: String
     default: ~/CMT_Output/
-  units: '-'
+    units: '-'
 - key: site_prefix
   name: Site prefix
   description: file prefix for the study site
   value:
     type: String
     default: Treynor
-  units: '-'
+    units: '-'
 - key: case_prefix
   name: Case prefix
   description: file prefix for the model scenario
   value:
     type: String
     default: Case5
-  units: '-'
+    units: '-'
 - key: stop_method
   name: Stopping method
   description: stopping method
@@ -46,7 +46,7 @@
     - Q_peak_fraction
     - Until_model_time
     - Until_n_steps
-  units: '-'
+    units: '-'
 - key: Qp_fraction
   name: Q_peak fraction
   description: Value for Q_peak_fraction method
@@ -56,7 +56,7 @@
     range:
       min: '0.0'
       max: '1.0'
-  units: '-'
+    units: '-'
 - key: T_stop_model
   name: Model stop time
   description: Value for Until_model_time method
@@ -66,7 +66,7 @@
     range:
       min: '0.0'
       max: 1e9
-  units: minutes
+    units: minutes
 - key: n_steps
   name: Number of steps
   description: Value for Until_n_steps method
@@ -76,25 +76,25 @@
     range:
       min: '1'
       max: '1000000000'
-  units: '-'
+    units: '-'
 - key: ModelName
   name: Model name
   description: Name of the model
   value:
     type: String
     default: TopoFlow
-  units: '-'
+    units: '-'
 - key: ModelAuthor
   name: Author name
   description: Name of the model author
   value:
     type: String
     default: 'Scott D. Peckham '
-  units: '-'
+    units: '-'
 - key: HTML_HELP_FILE
   name: HTML help file
   description: URL for HTML help file
   value:
     type: String
     default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow
-  units: '-'
+    units: '-'
