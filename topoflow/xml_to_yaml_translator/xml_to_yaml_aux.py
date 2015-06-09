@@ -76,6 +76,59 @@ def expand_list(obj):
     return vals
 
 
+def check_for_units(obj):
+    ''' checks for units and multiple-choice options in the description'''
+
+    ## units
+    units_regx = "\[.*\]"
+    units_s = re.search(units_regx, obj)
+    
+    
+    if units_s:
+        # clean up units
+        units = (units_s.group())[1:-1]
+        
+        cite = re.search('\D\s\d',units)
+        met = re.search('.*\[.*',units)
+              
+        if cite: # Could it be a citation?
+        
+        	print 'Found something funny:', units_s.group(), 'Check units!'
+        	obj = obj.replace(units_s.group(),'(' + units + ')')
+        	units = None
+        
+        elif met: # weird meteorology format
+        	
+        	met = re.search('\[.*',units)
+        	units = (met.group())[1:]
+        	obj = obj.replace(units_s.group(),'')
+        	
+        else:
+        
+        	units = re.sub('\s+', '', units).strip()
+        	obj = obj.replace(units_s.group(),'')
+            
+        if units == 'none':
+            units = None
+    else:
+        units = None
+    
+    ## boolean / multiple choices
+    bool_regx = "\{.*\}"
+    bool_s = re.search(bool_regx, obj)
+    
+    if bool_s:
+        # clean up units
+        bools = (bool_s.group())[1:-1]
+        bools = string.split(bools,'; ')
+        obj = obj.replace(bool_s.group(),'')
+    else:
+        bools = None
+        
+    obj = re.sub('\s+', ' ', obj).strip()
+    
+    return obj, units, bools
+    
 
 def create_yaml_file(inFileName):
 
@@ -106,9 +159,23 @@ def create_yaml_file(inFileName):
         except: pass
         try: param['name'] = string.rsplit(objDict.pop('label'),':')[0]
         except: pass
-        try: param['description'] = objDict.pop('help_brief')
+        try:
+            [objDict['help_brief'], units, bools] = check_for_units(objDict['help_brief'])
+            param['description'] = objDict.pop('help_brief')
+            
+            if units and not objDict.has_key('units'):
+                objDict['units'] = units
+            elif units and objDict.has_key('units'):
+                print param['key'], 'has two sets of units:', units, objDict['units']
+                print 'Not replacing the units. Check by hand.'
+            else: pass
+            
+            if bools:
+                objDict['type'] = 'choice'
+                objDict['choices'] = bools
+            
         except: pass
-
+        
         try: vals['type'] = objDict.pop('type')
         except: pass
         try: vals['default'] = objDict.pop('default')
@@ -118,14 +185,21 @@ def create_yaml_file(inFileName):
         except: pass
         try: range_vals['max'] = objDict.pop('max')
         except: pass
+        
         if len(range_vals)>0:
             vals['range'] = range_vals
+        
+        try: vals['choices'] = objDict.pop('choices')
+        except: pass
+        
         param['value'] = vals
 
         try: param['units'] = objDict.pop('units')
-        except: pass
+        except:
+            param['units'] = 'None'
+            pass
         
-        assert len(objDict) == 0, "items left in the parameter entry definition!"
+        assert (len(objDict) == 0), "items left in the parameter entry definition! %r" % objDict.keys()
 
         allParams.append(param)
         
