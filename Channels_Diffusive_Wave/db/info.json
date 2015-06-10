@@ -1,0 +1,14 @@
+{
+  "id": "Channels_Diffusive_Wave", 
+  "name": "ChannelsDiffWave", 
+  "class": "Channels_Diffusive_Wave", 
+  "initialize_args": "Channels_Diffusive_Wave.cfg", 
+  "time_step": "6.00000000", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Channels-Diffusive_Wave", 
+  "author": "Scott D. Peckham ", 
+  "email": "", 
+  "version": "", 
+  "doi": "", 
+  "license": ""
+}

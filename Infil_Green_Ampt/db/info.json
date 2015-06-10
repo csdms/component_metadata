@@ -1,0 +1,14 @@
+{
+  "id": "Infil_Green_Ampt", 
+  "name": "InfilGreenAmpt", 
+  "class": "Infil_Green_Ampt", 
+  "initialize_args": "Infil_Green_Ampt.cfg", 
+  "time_step": "60.000", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Green-Ampt", 
+  "author": "Scott D. Peckham ", 
+  "email": "", 
+  "version": "", 
+  "doi": "", 
+  "license": ""
+}

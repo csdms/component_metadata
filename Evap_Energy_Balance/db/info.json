@@ -1,0 +1,14 @@
+{
+  "id": "Evap_Energy_Balance", 
+  "name": "EvapEnergyBalance", 
+  "class": "Evap_Energy_Balance", 
+  "initialize_args": "Evap_Energy_Balance.cfg", 
+  "time_step": "3600.000", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Evaporation-Energy_Balance", 
+  "author": "Scott D. Peckham ", 
+  "email": "", 
+  "version": "", 
+  "doi": "", 
+  "license": ""
+}

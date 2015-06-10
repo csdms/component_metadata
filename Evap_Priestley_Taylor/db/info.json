@@ -1,0 +1,14 @@
+{
+  "id": "Evap_Priestley_Taylor", 
+  "name": "EvapPriestleyTaylor", 
+  "class": "Evap_Priestley_Taylor", 
+  "initialize_args": "Evap_Priestley_Taylor.cfg", 
+  "time_step": "3600.000", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Evaporation-Priestley_Taylor", 
+  "author": "Scott D. Peckham ", 
+  "email": "", 
+  "version": "", 
+  "doi": "", 
+  "license": ""
+}

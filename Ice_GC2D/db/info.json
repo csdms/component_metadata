@@ -1,0 +1,14 @@
+{
+  "id": "Ice_GC2D", 
+  "name": "IceGC2D", 
+  "class": "Ice_GC2D", 
+  "initialize_args": "Ice_GC2D.cfg", 
+  "time_step": "0.1", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:Gc2d", 
+  "author": "Mark Kessler, Eric Hutton, Scott Peckham ", 
+  "email": "", 
+  "version": "", 
+  "doi": "", 
+  "license": ""
+}

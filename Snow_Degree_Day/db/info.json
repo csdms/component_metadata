@@ -1,0 +1,14 @@
+{
+  "id": "Snow_Degree_Day", 
+  "name": "SnowDegreeDay", 
+  "class": "Snow_Degree_Day", 
+  "initialize_args": "Snow_Degree_Day.cfg", 
+  "time_step": "3600.000", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Snowmelt-Degree-Day", 
+  "author": "Scott D. Peckham ", 
+  "email": "", 
+  "version": "", 
+  "doi": "", 
+  "license": ""
+}

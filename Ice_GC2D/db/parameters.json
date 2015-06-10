@@ -1,0 +1,768 @@
+[
+    {
+        "key": "comp_status", 
+        "name": "Component status", 
+        "value": {
+            "default": "Enabled", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Enabled", 
+                "Disabled"
+            ]
+        }, 
+        "description": "component status"
+    }, 
+    {
+        "key": "in_directory", 
+        "name": "Input directory", 
+        "value": {
+            "default": "/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "input directory"
+    }, 
+    {
+        "key": "out_directory", 
+        "name": "Output directory", 
+        "value": {
+            "default": "~/CMT_Output/", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "output directory"
+    }, 
+    {
+        "key": "site_prefix", 
+        "name": "Site prefix", 
+        "value": {
+            "default": "Treynor", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "file prefix for the study site"
+    }, 
+    {
+        "key": "case_prefix", 
+        "name": "Case prefix", 
+        "value": {
+            "default": "Case5", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "file prefix for the model scenario"
+    }, 
+    {
+        "key": "n_steps", 
+        "name": "Number of steps", 
+        "value": {
+            "default": "10", 
+            "units": "-", 
+            "range": {
+                "max": "1e7", 
+                "min": "0.0"
+            }, 
+            "type": "int"
+        }, 
+        "description": "number of time steps for simulation"
+    }, 
+    {
+        "key": "dt", 
+        "name": "Time step", 
+        "value": {
+            "default": "0.1", 
+            "units": "years", 
+            "range": {
+                "max": "100", 
+                "min": "0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "ice process timestep"
+    }, 
+    {
+        "key": "dt_max", 
+        "name": "Max timestep", 
+        "value": {
+            "default": "0.4", 
+            "units": "years", 
+            "range": {
+                "max": "100", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "max timestep"
+    }, 
+    {
+        "key": "t_max", 
+        "name": "Max simulation time", 
+        "value": {
+            "default": "100000", 
+            "units": "years", 
+            "range": {
+                "max": "1e7", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "max time to simulate"
+    }, 
+    {
+        "key": "DEM_file", 
+        "name": "DEM file", 
+        "value": {
+            "default": "[site_prefix]_DEM.rtg", 
+            "units": "m", 
+            "type": "string"
+        }, 
+        "description": "binary file containing a DEM"
+    }, 
+    {
+        "key": "H0_file", 
+        "name": "Init. ice depth file", 
+        "value": {
+            "default": "None", 
+            "units": "m", 
+            "type": "string"
+        }, 
+        "description": "binary file containing initial ice depth"
+    }, 
+    {
+        "key": "min_glacier_thick", 
+        "name": "Min ice depth", 
+        "value": {
+            "default": "1.0", 
+            "units": "-", 
+            "range": {
+                "max": "1000", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "min glacier thickness"
+    }, 
+    {
+        "key": "glens_A", 
+        "name": "Glen's Law param, a", 
+        "value": {
+            "default": "2.142e-16", 
+            "units": "-", 
+            "range": {
+                "max": "3e-15", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "Glen's Law exponent"
+    }, 
+    {
+        "key": "B", 
+        "name": "Glen's Law coeff, B", 
+        "value": {
+            "default": "0.0012", 
+            "units": "m/(Pa*yr)", 
+            "range": {
+                "max": "0.01", 
+                "min": "1e-3"
+            }, 
+            "type": "float"
+        }, 
+        "description": ", see MacGregor (2000)"
+    }, 
+    {
+        "key": "char_sliding_vel", 
+        "name": "Char. sliding velocity", 
+        "value": {
+            "default": "10.0", 
+            "units": "***unitsneeded", 
+            "range": {
+                "max": "100.0", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "characteristic sliding velocity"
+    }, 
+    {
+        "key": "char_tau_bed", 
+        "name": "Char. bed stress", 
+        "value": {
+            "default": "100000.0", 
+            "units": "****unitsneeded", 
+            "range": {
+                "max": "1e6", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "characteristic shear stress at the bed"
+    }, 
+    {
+        "key": "depth_to_water_table", 
+        "name": "Depth to water table", 
+        "value": {
+            "default": "20.0", 
+            "units": "meters", 
+            "range": {
+                "max": "1000.0", 
+                "min": "0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "distance from ice surface to water table"
+    }, 
+    {
+        "key": "max_float_fraction", 
+        "name": "Max float fraction", 
+        "value": {
+            "default": "80.0", 
+            "units": "percent", 
+            "range": {
+                "max": "100.0", 
+                "min": "0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "limits the water level in ice"
+    }, 
+    {
+        "key": "Hp_eff", 
+        "name": "Hp effective (****)", 
+        "value": {
+            "default": "20.0", 
+            "units": "meters", 
+            "range": {
+                "max": "100.0", 
+                "min": "0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "effective pressure of water"
+    }, 
+    {
+        "key": "init_ELA", 
+        "name": "Initial ELA value", 
+        "value": {
+            "default": "3350.0", 
+            "units": "meters", 
+            "range": {
+                "max": "4500.0", 
+                "min": "2500.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "Equilibrium Line Altitude"
+    }, 
+    {
+        "key": "ELA_step_size", 
+        "name": "ELA step size", 
+        "value": {
+            "default": "-10.0", 
+            "units": "meters", 
+            "range": {
+                "max": "100.0", 
+                "min": "-100"
+            }, 
+            "type": "float"
+        }, 
+        "description": "ELA step size"
+    }, 
+    {
+        "key": "ELA_step_interval", 
+        "name": "ELA step interval", 
+        "value": {
+            "default": "500.0", 
+            "units": "meters", 
+            "range": {
+                "max": "1000.0", 
+                "min": "50.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "ELA step interval"
+    }, 
+    {
+        "key": "grad_Bz", 
+        "name": "Mass balance gradient", 
+        "value": {
+            "default": "0.01", 
+            "units": "***unitsneeded", 
+            "range": {
+                "max": "0.1", 
+                "min": "1e-3"
+            }, 
+            "type": "float"
+        }, 
+        "description": "mass balance gradient in z"
+    }, 
+    {
+        "key": "max_Bz", 
+        "name": "Max mass balance", 
+        "value": {
+            "default": "2.0", 
+            "units": "***unitsneeded", 
+            "range": {
+                "max": "10.0", 
+                "min": "1.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "maximum allowed mass balance"
+    }, 
+    {
+        "key": "spinup_time", 
+        "name": "Spinup time", 
+        "value": {
+            "default": "200.0", 
+            "units": "years", 
+            "range": {
+                "max": "1e3", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "spinup time"
+    }, 
+    {
+        "key": "sea_level", 
+        "name": "Sea level", 
+        "value": {
+            "default": "-100", 
+            "units": "meters", 
+            "range": {
+                "max": "200.0", 
+                "min": "-200.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "sea level"
+    }, 
+    {
+        "key": "Cp_ice", 
+        "name": "Heat capacity (ice)", 
+        "value": {
+            "default": "2060.0", 
+            "units": "J/(kg*K)", 
+            "range": {
+                "max": "2100.0", 
+                "min": "2000.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "specific heat capacity"
+    }, 
+    {
+        "key": "geothermal_heat_flux", 
+        "name": "Geothermal heat flux", 
+        "value": {
+            "default": "1.575e6", 
+            "units": "(J/year)/m^2", 
+            "range": {
+                "max": "1e7", 
+                "min": "1e5"
+            }, 
+            "type": "float"
+        }, 
+        "description": "geothermal heat flux"
+    }, 
+    {
+        "key": "geothermal_gradient", 
+        "name": "Geothermal gradient", 
+        "value": {
+            "default": "-0.0255", 
+            "units": "***deg_C/meter??", 
+            "range": {
+                "max": "0.0", 
+                "min": "-0.1"
+            }, 
+            "type": "float"
+        }, 
+        "description": "geothermal gradient"
+    }, 
+    {
+        "key": "VARIABLE_DT_TOGGLE", 
+        "name": "Variable dt toggle", 
+        "value": {
+            "default": "1", 
+            "units": "-", 
+            "range": {
+                "max": "1", 
+                "min": "0"
+            }, 
+            "type": "int"
+        }, 
+        "description": "use variable/adaptive timestep (0 = no, 1 = yes)"
+    }, 
+    {
+        "key": "INIT_COND_TOGGLE", 
+        "name": "Init. condition choice", 
+        "value": {
+            "default": "1", 
+            "units": "-", 
+            "range": {
+                "max": "1", 
+                "min": "0"
+            }, 
+            "type": "int"
+        }, 
+        "description": "0 = ??, 1 = ??, 2 = ??"
+    }, 
+    {
+        "key": "GENERIC_ICE_TOGGLE", 
+        "name": "Generic ice toggle", 
+        "value": {
+            "default": "0", 
+            "units": "-", 
+            "range": {
+                "max": "1", 
+                "min": "0"
+            }, 
+            "type": "int"
+        }, 
+        "description": "start w/ generic ice surface (0 = no, 1 = yes)"
+    }, 
+    {
+        "key": "ICEFLOW_TOGGLE", 
+        "name": "Ice flow toggle", 
+        "value": {
+            "default": "1", 
+            "units": "-", 
+            "range": {
+                "max": "1", 
+                "min": "0"
+            }, 
+            "type": "int"
+        }, 
+        "description": "ice motion by deformation (0 = no, 1 = yes)"
+    }, 
+    {
+        "key": "ICESLIDE_TOGGLE", 
+        "name": "Ice slide toggle", 
+        "value": {
+            "default": "0", 
+            "units": "-", 
+            "range": {
+                "max": "1", 
+                "min": "0"
+            }, 
+            "type": "int"
+        }, 
+        "description": "ice motion by sliding (0 = no, 1 = yes)"
+    }, 
+    {
+        "key": "FREEZE_ON_TOGGLE", 
+        "name": "Freeze on toggle", 
+        "value": {
+            "default": "0", 
+            "units": "-", 
+            "range": {
+                "max": "1", 
+                "min": "0"
+            }, 
+            "type": "int"
+        }, 
+        "description": "basal ice frozen to bed (0 = no, 1 = yes)"
+    }, 
+    {
+        "key": "MASS_BALANCE_TOGGLE", 
+        "name": "Mass balance method", 
+        "value": {
+            "default": "ELA_LOWERING", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "ZERO_BALANCE", 
+                "CONSTANT_ELA", 
+                "ELA_LOWERING", 
+                "ELA_TIME_SERIES", 
+                "EXTERNAL_FUNC", 
+                "ELA_LOWERING2", 
+                "BALANCE_FILE", 
+                "D18O_TIME_SERIES"
+            ]
+        }, 
+        "description": "climate scenario"
+    }, 
+    {
+        "key": "WEST_BC_TOGGLE", 
+        "name": "Western b.c. method", 
+        "value": {
+            "default": "ICE_FREE_BOUND", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "ICE_FREE_BOUND", 
+                "ZERO_FLUX_BOUND", 
+                "CONST_FLUX_BOUND", 
+                "SURF_ELEV_BOUND", 
+                "SURF_SLOPE_BOUND"
+            ]
+        }, 
+        "description": "boundary condition"
+    }, 
+    {
+        "key": "EAST_BC_TOGGLE", 
+        "name": "Eastern b.c. method", 
+        "value": {
+            "default": "ICE_FREE_BOUND", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "ICE_FREE_BOUND", 
+                "ZERO_FLUX_BOUND", 
+                "CONST_FLUX_BOUND", 
+                "SURF_ELEV_BOUND", 
+                "SURF_SLOPE_BOUND"
+            ]
+        }, 
+        "description": "boundary condition"
+    }, 
+    {
+        "key": "SOUTH_BC_TOGGLE", 
+        "name": "Southern b.c. method", 
+        "value": {
+            "default": "ICE_FREE_BOUND", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "ICE_FREE_BOUND", 
+                "ZERO_FLUX_BOUND", 
+                "CONST_FLUX_BOUND", 
+                "SURF_ELEV_BOUND", 
+                "SURF_SLOPE_BOUND"
+            ]
+        }, 
+        "description": "boundary condition"
+    }, 
+    {
+        "key": "NORTH_BC_TOGGLE", 
+        "name": "Northern b.c. method", 
+        "value": {
+            "default": "ICE_FREE_BOUND", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "ICE_FREE_BOUND", 
+                "ZERO_FLUX_BOUND", 
+                "CONST_FLUX_BOUND", 
+                "SURF_ELEV_BOUND", 
+                "SURF_SLOPE_BOUND"
+            ]
+        }, 
+        "description": "boundary condition"
+    }, 
+    {
+        "key": "save_grid_dt", 
+        "name": "Save grid dt", 
+        "value": {
+            "default": "100.0", 
+            "units": "-", 
+            "range": {
+                "max": "1e5", 
+                "min": "1.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "interval to save grids, years"
+    }, 
+    {
+        "key": "SAVE_HI_GRIDS", 
+        "name": "Save Hi grids toggle", 
+        "value": {
+            "default": "Yes", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save computed Hi grids"
+    }, 
+    {
+        "key": "hi_gs_file", 
+        "name": "Save Hi grids file", 
+        "value": {
+            "default": "[case_prefix]_2D_iceH.nc", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "filename for Hi grid stack"
+    }, 
+    {
+        "key": "SAVE_ZI_GRIDS", 
+        "name": "Save Zi grids toggle", 
+        "value": {
+            "default": "No", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save computed Zi grids"
+    }, 
+    {
+        "key": "zi_gs_file", 
+        "name": "Save Zi grids file", 
+        "value": {
+            "default": "[case_prefix]_2D_iceZ.nc", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "filename for Zi grid stack"
+    }, 
+    {
+        "key": "SAVE_MR_GRIDS", 
+        "name": "Save MR grids toggle", 
+        "value": {
+            "default": "No", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save computed MR grids"
+    }, 
+    {
+        "key": "mr_gs_file", 
+        "name": "Save MR grids file", 
+        "value": {
+            "default": "[case_prefix]_2D_iceMR.nc", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "filename for MR grid stack"
+    }, 
+    {
+        "key": "save_pixels_dt", 
+        "name": "Save time series dt", 
+        "value": {
+            "default": "10.0", 
+            "units": "-", 
+            "range": {
+                "max": "1000", 
+                "min": "1.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "interval to save time series values, years"
+    }, 
+    {
+        "key": "pixel_file", 
+        "name": "Monitored pixel file", 
+        "value": {
+            "default": "[case_prefix]_outlets.txt", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "filename for monitored pixel file"
+    }, 
+    {
+        "key": "SAVE_HI_PIXELS", 
+        "name": "Save Hi time series toggle", 
+        "value": {
+            "default": "No", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save computed Hi time series"
+    }, 
+    {
+        "key": "hi_ts_file", 
+        "name": "Save Hi time series file", 
+        "value": {
+            "default": "[case_prefix]_0D_iceH.txt", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "filename for Hi time series"
+    }, 
+    {
+        "key": "SAVE_ZI_PIXELS", 
+        "name": "Save Zi pixels toggle", 
+        "value": {
+            "default": "No", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save computed Zi time series"
+    }, 
+    {
+        "key": "zi_ts_file", 
+        "name": "Save Zi time series file", 
+        "value": {
+            "default": "[case_prefix]_0D_iceZ.txt", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "filename for Zi time series"
+    }, 
+    {
+        "key": "SAVE_MR_PIXELS", 
+        "name": "Save MR time series toggle", 
+        "value": {
+            "default": "No", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save computed MR time series"
+    }, 
+    {
+        "key": "mr_ts_file", 
+        "name": "Save MR time series file", 
+        "value": {
+            "default": "[case_prefix]_0D_iceMR.txt", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "filename for MR time series"
+    }, 
+    {
+        "key": "ModelName", 
+        "name": "Model name", 
+        "value": {
+            "default": "IceGC2D", 
+            "units": "-", 
+            "type": "String"
+        }, 
+        "description": "Name of the model"
+    }, 
+    {
+        "key": "ModelAuthor", 
+        "name": "Author name", 
+        "value": {
+            "default": "Mark Kessler, Eric Hutton, Scott Peckham ", 
+            "units": "-", 
+            "type": "String"
+        }, 
+        "description": "Name of the model author"
+    }, 
+    {
+        "key": "HTML_HELP_FILE", 
+        "name": "HTML help file", 
+        "value": {
+            "default": "http://csdms.colorado.edu/wiki/Model_help:Gc2d", 
+            "units": "-", 
+            "type": "String"
+        }, 
+        "description": "URL for HTML help file"
+    }
+]

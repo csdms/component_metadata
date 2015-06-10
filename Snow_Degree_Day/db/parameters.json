@@ -1,0 +1,524 @@
+[
+    {
+        "key": "comp_status", 
+        "name": "Component status", 
+        "value": {
+            "default": "Enabled", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Enabled", 
+                "Disabled"
+            ]
+        }, 
+        "description": "component status"
+    }, 
+    {
+        "key": "in_directory", 
+        "name": "Input directory", 
+        "value": {
+            "default": "/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "input directory"
+    }, 
+    {
+        "key": "out_directory", 
+        "name": "Output directory", 
+        "value": {
+            "default": "~/CMT_Output/", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "output directory"
+    }, 
+    {
+        "key": "site_prefix", 
+        "name": "Site prefix", 
+        "value": {
+            "default": "Treynor", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "file prefix for the study site"
+    }, 
+    {
+        "key": "case_prefix", 
+        "name": "Case prefix", 
+        "value": {
+            "default": "Case5", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "file prefix for the model scenario"
+    }, 
+    {
+        "key": "n_steps", 
+        "name": "Number of steps", 
+        "value": {
+            "default": "10", 
+            "units": "-", 
+            "range": {
+                "max": "1e7", 
+                "min": "1"
+            }, 
+            "type": "long"
+        }, 
+        "description": "number of time steps"
+    }, 
+    {
+        "key": "dt", 
+        "name": "Time step", 
+        "value": {
+            "default": "3600.000", 
+            "units": "sec", 
+            "range": {
+                "max": "1e6", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "timestep for snowmelt process"
+    }, 
+    {
+        "key": "Cp_snow_type", 
+        "name": "Cp_snow type", 
+        "value": {
+            "default": "Scalar", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Scalar", 
+                "Grid", 
+                "Time_Series", 
+                "Grid_Sequence"
+            ]
+        }, 
+        "description": "allowed input types"
+    }, 
+    {
+        "key": "Cp_snow", 
+        "name": "Cp_snow", 
+        "value": {
+            "default": "2090.000", 
+            "units": "J/kg/K", 
+            "range": {
+                "max": "3e3", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "heat capacity of snow"
+    }, 
+    {
+        "key": "rho_snow_type", 
+        "name": "rho_snow type", 
+        "value": {
+            "default": "Scalar", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Scalar", 
+                "Grid", 
+                "Time_Series", 
+                "Grid_Sequence"
+            ]
+        }, 
+        "description": "allowed input types"
+    }, 
+    {
+        "key": "rho_snow", 
+        "name": "rho_snow", 
+        "value": {
+            "default": "300.000", 
+            "units": "kg/m^3", 
+            "range": {
+                "max": "1e3", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "density of snow"
+    }, 
+    {
+        "key": "c0_type", 
+        "name": "c0 type", 
+        "value": {
+            "default": "Scalar", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Scalar", 
+                "Grid", 
+                "Time_Series", 
+                "Grid_Sequence"
+            ]
+        }, 
+        "description": "allowed input types"
+    }, 
+    {
+        "key": "c0", 
+        "name": "c0", 
+        "value": {
+            "default": "2.700", 
+            "units": "mm/day/degC", 
+            "range": {
+                "max": "1e2", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "degree-day coefficient"
+    }, 
+    {
+        "key": "T0_type", 
+        "name": "T0 type", 
+        "value": {
+            "default": "Scalar", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Scalar", 
+                "Grid", 
+                "Time_Series", 
+                "Grid_Sequence"
+            ]
+        }, 
+        "description": "allowed input types"
+    }, 
+    {
+        "key": "T0", 
+        "name": "T0", 
+        "value": {
+            "default": "-0.200", 
+            "units": "degC", 
+            "range": {
+                "max": "100", 
+                "min": "-100"
+            }, 
+            "type": "float"
+        }, 
+        "description": "reference temperature"
+    }, 
+    {
+        "key": "h0_snow_type", 
+        "name": "h0_snow type", 
+        "value": {
+            "default": "Scalar", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Scalar", 
+                "Grid", 
+                "Time_Series", 
+                "Grid_Sequence"
+            ]
+        }, 
+        "description": "allowed input types"
+    }, 
+    {
+        "key": "h0_snow", 
+        "name": "h0_snow", 
+        "value": {
+            "default": "0.500", 
+            "units": "m", 
+            "range": {
+                "max": "20.0", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "depth of snow"
+    }, 
+    {
+        "key": "h0_swe_type", 
+        "name": "h0_swe type", 
+        "value": {
+            "default": "Scalar", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Scalar", 
+                "Grid", 
+                "Time_Series", 
+                "Grid_Sequence"
+            ]
+        }, 
+        "description": "allowed input types"
+    }, 
+    {
+        "key": "h0_swe", 
+        "name": "h0_swe", 
+        "value": {
+            "default": "0.150", 
+            "units": "m", 
+            "range": {
+                "max": "20.0", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "depth of snow water equivalent (SWE)"
+    }, 
+    {
+        "key": "save_grid_dt", 
+        "name": "Save grid timestep", 
+        "value": {
+            "default": "60.000", 
+            "units": "sec", 
+            "range": {
+                "max": "1e6", 
+                "min": "0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "time interval between saved grids"
+    }, 
+    {
+        "key": "SAVE_MR_GRIDS", 
+        "name": "Save mr grids toggle", 
+        "value": {
+            "default": "No", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save grids of snow meltrate"
+    }, 
+    {
+        "key": "mr_gs_file", 
+        "name": "Save mr grids file", 
+        "value": {
+            "default": "[case_prefix]_2D-SMrate.nc", 
+            "units": "m/s", 
+            "type": "string"
+        }, 
+        "description": "filename for grid stack of snow meltrate"
+    }, 
+    {
+        "key": "SAVE_HS_GRIDS", 
+        "name": "Save hs grids toggle", 
+        "value": {
+            "default": "No", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save grids of snow depth"
+    }, 
+    {
+        "key": "hs_gs_file", 
+        "name": "Save hs grids file", 
+        "value": {
+            "default": "[case_prefix]_2D-hsnow.nc", 
+            "units": "m", 
+            "type": "string"
+        }, 
+        "description": "filename for grid stack of snow depth"
+    }, 
+    {
+        "key": "SAVE_SW_GRIDS", 
+        "name": "Save sw grids toggle", 
+        "value": {
+            "default": "No", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save grids of snow water equivalent"
+    }, 
+    {
+        "key": "sw_gs_file", 
+        "name": "Save sw grids file", 
+        "value": {
+            "default": "[case_prefix]_2D-hswe.nc", 
+            "units": "m", 
+            "type": "string"
+        }, 
+        "description": "filename for grid stack of snow water equivalent"
+    }, 
+    {
+        "key": "SAVE_CC_GRIDS", 
+        "name": "Save cc grids toggle", 
+        "value": {
+            "default": "No", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save grids of cold content"
+    }, 
+    {
+        "key": "cc_gs_file", 
+        "name": "Save cc grids file", 
+        "value": {
+            "default": "[case_prefix]_2D-Ecc.nc", 
+            "units": "J/m^2", 
+            "type": "string"
+        }, 
+        "description": "filename for grid stack of cold content"
+    }, 
+    {
+        "key": "save_pixels_dt", 
+        "name": "Save pixels timestep", 
+        "value": {
+            "default": "60.000", 
+            "units": "sec", 
+            "range": {
+                "max": "1e6", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "time interval between time series values"
+    }, 
+    {
+        "key": "pixel_file", 
+        "name": "Monitored pixel file", 
+        "value": {
+            "default": "[case_prefix]_outlets.txt", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "filename for monitored pixel file"
+    }, 
+    {
+        "key": "SAVE_MR_PIXELS", 
+        "name": "Save mr pixels toggle", 
+        "value": {
+            "default": "No", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save time series of snow meltrate"
+    }, 
+    {
+        "key": "mr_ts_file", 
+        "name": "Save mr pixels file", 
+        "value": {
+            "default": "[case_prefix]_0D-SMrate.txt", 
+            "units": "m/s", 
+            "type": "string"
+        }, 
+        "description": "filename for time series of"
+    }, 
+    {
+        "key": "SAVE_HS_PIXELS", 
+        "name": "Save hs pixels toggle", 
+        "value": {
+            "default": "No", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save time series of snow depth"
+    }, 
+    {
+        "key": "hs_ts_file", 
+        "name": "Save hs pixels file", 
+        "value": {
+            "default": "[case_prefix]_0D-hsnow.txt", 
+            "units": "m", 
+            "type": "string"
+        }, 
+        "description": "filename for time series of snow depth"
+    }, 
+    {
+        "key": "SAVE_SW_PIXELS", 
+        "name": "Save sw pixels toggle", 
+        "value": {
+            "default": "No", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save time series of snow water equivalent"
+    }, 
+    {
+        "key": "sw_ts_file", 
+        "name": "Save sw pixels file", 
+        "value": {
+            "default": "[case_prefix]_0D-hswe.txt", 
+            "units": "m", 
+            "type": "string"
+        }, 
+        "description": "filename for time series of snow water equivalent"
+    }, 
+    {
+        "key": "SAVE_CC_PIXELS", 
+        "name": "Save cc pixels toggle", 
+        "value": {
+            "default": "No", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save time series of cold content"
+    }, 
+    {
+        "key": "cc_ts_file", 
+        "name": "Save cc pixels file", 
+        "value": {
+            "default": "[case_prefix]_0D-Ecc.txt", 
+            "units": "J/m^2", 
+            "type": "string"
+        }, 
+        "description": "filename for time series of cold content"
+    }, 
+    {
+        "key": "ModelName", 
+        "name": "Model name", 
+        "value": {
+            "default": "SnowDegreeDay", 
+            "units": "-", 
+            "type": "String"
+        }, 
+        "description": "Name of the model"
+    }, 
+    {
+        "key": "ModelAuthor", 
+        "name": "Author name", 
+        "value": {
+            "default": "Scott D. Peckham ", 
+            "units": "-", 
+            "type": "String"
+        }, 
+        "description": "Name of the model author"
+    }, 
+    {
+        "key": "HTML_HELP_FILE", 
+        "name": "HTML help file", 
+        "value": {
+            "default": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Snowmelt-Degree-Day", 
+            "units": "-", 
+            "type": "String"
+        }, 
+        "description": "URL for HTML help file"
+    }
+]

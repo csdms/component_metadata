@@ -1,0 +1,320 @@
+[
+    {
+        "key": "comp_status", 
+        "name": "Component status", 
+        "value": {
+            "default": "Enabled", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Enabled", 
+                "Disabled"
+            ]
+        }, 
+        "description": "component status"
+    }, 
+    {
+        "key": "in_directory", 
+        "name": "Input directory", 
+        "value": {
+            "default": "/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "input directory"
+    }, 
+    {
+        "key": "out_directory", 
+        "name": "Output directory", 
+        "value": {
+            "default": "~/CMT_Output/", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "output directory"
+    }, 
+    {
+        "key": "site_prefix", 
+        "name": "Site prefix", 
+        "value": {
+            "default": "Treynor", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "file prefix for the study site"
+    }, 
+    {
+        "key": "case_prefix", 
+        "name": "Case prefix", 
+        "value": {
+            "default": "Case5", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "file prefix for the model scenario"
+    }, 
+    {
+        "key": "n_steps", 
+        "name": "Number of steps", 
+        "value": {
+            "default": "10", 
+            "units": "-", 
+            "range": {
+                "max": "1e7", 
+                "min": "1"
+            }, 
+            "type": "long"
+        }, 
+        "description": "number of time steps"
+    }, 
+    {
+        "key": "dt", 
+        "name": "Time step", 
+        "value": {
+            "default": "3600.000", 
+            "units": "sec", 
+            "range": {
+                "max": "1e6", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "evaporation process timestep"
+    }, 
+    {
+        "key": "alpha_type", 
+        "name": "alpha type", 
+        "value": {
+            "default": "Scalar", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Scalar", 
+                "Grid", 
+                "Time_Series", 
+                "Grid_Sequence"
+            ]
+        }, 
+        "description": "allowed input types"
+    }, 
+    {
+        "key": "alpha", 
+        "name": "alpha", 
+        "value": {
+            "default": "1.200", 
+            "units": "-", 
+            "range": {
+                "max": "3.0", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "coefficient"
+    }, 
+    {
+        "key": "K_soil_type", 
+        "name": "K_soil type", 
+        "value": {
+            "default": "Scalar", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Scalar", 
+                "Grid", 
+                "Time_Series", 
+                "Grid_Sequence"
+            ]
+        }, 
+        "description": "allowed input types"
+    }, 
+    {
+        "key": "K_soil", 
+        "name": "K_soil", 
+        "value": {
+            "default": "0.450", 
+            "units": "W/m/deg_C", 
+            "range": {
+                "max": "1e2", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "thermal conductivity of soil"
+    }, 
+    {
+        "key": "soil_x_type", 
+        "name": "soil_x type", 
+        "value": {
+            "default": "Scalar", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Scalar", 
+                "Grid", 
+                "Time_Series", 
+                "Grid_Sequence"
+            ]
+        }, 
+        "description": "allowed input types"
+    }, 
+    {
+        "key": "soil_x", 
+        "name": "soil_x", 
+        "value": {
+            "default": "0.050", 
+            "units": "m", 
+            "range": {
+                "max": "10.0", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "reference depth in soil"
+    }, 
+    {
+        "key": "T_soil_x_type", 
+        "name": "T_soil_x type", 
+        "value": {
+            "default": "Scalar", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Scalar", 
+                "Grid", 
+                "Time_Series", 
+                "Grid_Sequence"
+            ]
+        }, 
+        "description": "allowed input types"
+    }, 
+    {
+        "key": "T_soil_x", 
+        "name": "T_soil_x", 
+        "value": {
+            "default": "0.000", 
+            "units": "degC", 
+            "range": {
+                "max": "30.0", 
+                "min": "-100.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "temperature of soil at depth x"
+    }, 
+    {
+        "key": "save_grid_dt", 
+        "name": "Save grid timestep", 
+        "value": {
+            "default": "60.000", 
+            "units": "sec", 
+            "range": {
+                "max": "1e6", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "time interval between saved grids"
+    }, 
+    {
+        "key": "SAVE_ER_GRIDS", 
+        "name": "Save er grids toggle", 
+        "value": {
+            "default": "No", 
+            "units": "mm/hr", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save grids of evap. rate"
+    }, 
+    {
+        "key": "er_gs_file", 
+        "name": "Save er grids file", 
+        "value": {
+            "default": "[case_prefix]_2D-ETrate.nc", 
+            "units": "mm/hr", 
+            "type": "string"
+        }, 
+        "description": "filename for grid stack of evap. rate"
+    }, 
+    {
+        "key": "save_pixels_dt", 
+        "name": "Save pixels timestep", 
+        "value": {
+            "default": "60.000", 
+            "units": "sec", 
+            "range": {
+                "max": "1e6", 
+                "min": "0.0"
+            }, 
+            "type": "float"
+        }, 
+        "description": "time interval between time series values"
+    }, 
+    {
+        "key": "pixel_file", 
+        "name": "Monitored pixel file", 
+        "value": {
+            "default": "[case_prefix]_outlets.txt", 
+            "units": "-", 
+            "type": "string"
+        }, 
+        "description": "filename for monitored pixel file"
+    }, 
+    {
+        "key": "SAVE_ER_PIXELS", 
+        "name": "Save er pixels toggle", 
+        "value": {
+            "default": "No", 
+            "units": "-", 
+            "type": "choice", 
+            "choices": [
+                "Yes", 
+                "No"
+            ]
+        }, 
+        "description": "option to save time series of evap. rate"
+    }, 
+    {
+        "key": "er_ts_file", 
+        "name": "Save er pixels file", 
+        "value": {
+            "default": "[case_prefix]_0D-ETrate.txt", 
+            "units": "mm/hr", 
+            "type": "string"
+        }, 
+        "description": "filename for time series of evap. rate"
+    }, 
+    {
+        "key": "ModelName", 
+        "name": "Model name", 
+        "value": {
+            "default": "EvapPriestleyTaylor", 
+            "units": "-", 
+            "type": "String"
+        }, 
+        "description": "Name of the model"
+    }, 
+    {
+        "key": "ModelAuthor", 
+        "name": "Author name", 
+        "value": {
+            "default": "Scott D. Peckham ", 
+            "units": "-", 
+            "type": "String"
+        }, 
+        "description": "Name of the model author"
+    }, 
+    {
+        "key": "HTML_HELP_FILE", 
+        "name": "HTML help file", 
+        "value": {
+            "default": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Evaporation-Priestley_Taylor", 
+            "units": "-", 
+            "type": "String"
+        }, 
+        "description": "URL for HTML help file"
+    }
+]

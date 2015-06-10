@@ -1,0 +1,14 @@
+{
+  "id": "Infil_Smith_Parlange", 
+  "name": "InfilSmithParlange", 
+  "class": "Infil_Smith_Parlange", 
+  "initialize_args": "Infil_Smith_Parlange.cfg", 
+  "time_step": "60.000", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Smith-Parlange", 
+  "author": "Scott D. Peckham ", 
+  "email": "", 
+  "version": "", 
+  "doi": "", 
+  "license": ""
+}

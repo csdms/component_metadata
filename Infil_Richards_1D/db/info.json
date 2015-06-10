@@ -1,0 +1,14 @@
+{
+  "id": "Infil_Richards_1D", 
+  "name": "InfilRichards1D", 
+  "class": "Infil_Richards_1D", 
+  "initialize_args": "Infil_Richards_1D.cfg", 
+  "time_step": "60.000", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Richards_1D", 
+  "author": "Scott D. Peckham ", 
+  "email": "", 
+  "version": "", 
+  "doi": "", 
+  "license": ""
+}

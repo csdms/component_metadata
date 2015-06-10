@@ -1,0 +1,14 @@
+{
+  "id": "Channels_Dynamic_Wave", 
+  "name": "ChannelsDynamWave", 
+  "class": "Channels_Dynamic_Wave", 
+  "initialize_args": "Channels_Dynamic_Wave.cfg", 
+  "time_step": "6.00000000", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Channels-Dynamic_Wave", 
+  "author": "Scott D. Peckham ", 
+  "email": "", 
+  "version": "", 
+  "doi": "", 
+  "license": ""
+}

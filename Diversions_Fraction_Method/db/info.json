@@ -1,0 +1,14 @@
+{
+  "id": "Diversions_Fraction_Method", 
+  "name": "DiversionsFraction", 
+  "class": "Diversions_Fraction_Method", 
+  "initialize_args": "Diversions_Fraction_Method.cfg", 
+  "time_step": "", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Diversions", 
+  "author": "Scott D. Peckham ", 
+  "email": "", 
+  "version": "", 
+  "doi": "", 
+  "license": ""
+}

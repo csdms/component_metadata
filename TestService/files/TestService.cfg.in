@@ -1,0 +1,11 @@
+===============================================================================
+Topoflow Config File for: TestService
+===============================================================================
+comp_status         | ${comp_status}      | choice    | component status [-] {Enabled; Disabled}
+in_directory        | ${in_directory}     | String    | input directory [-]
+out_directory       | ${out_directory}    | String    | output directory [-]
+site_prefix         | ${site_prefix}      | String    | file prefix for the study site [-]
+case_prefix         | ${case_prefix}      | String    | file prefix for the model scenario [-]
+ModelName           | ${ModelName}        | String    | Name of the model [-]
+ModelAuthor         | ${ModelAuthor}      | String    | Name of the model author [-]
+HTML_HELP_FILE      | ${HTML_HELP_FILE}   | String    | URL for HTML help file [-]
