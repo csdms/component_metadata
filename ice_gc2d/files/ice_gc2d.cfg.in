@@ -1,19 +1,18 @@
-===============================================================================
-Topoflow Config File for: ice_gc2d
-===============================================================================
-ModelName           | ${ModelName}        | String    | Name of the model [-]
-ModelAuthor         | ${ModelAuthor}      | String    | Name of the model author [-]
-HTML_HELP_FILE      | ${HTML_HELP_FILE}   | String    | Url for html help file [-]
-init_ELA            | ${init_ELA}         | float     | Equilibrium line altitude [meters]
-ELA_step_size       | ${ELA_step_size}    | float     | Ela step size [meters]
-ELA_step_interval   | ${ELA_step_interval}| float     | Ela step interval [meters]
-grad_Bz             | ${grad_Bz}          | float     | Mass balance gradient in z [***unitsneeded]
-max_Bz              | ${max_Bz}           | float     | Maximum allowed mass balance [***unitsneeded]
-spinup_time         | ${spinup_time}      | float     | Spinup time [years]
-sea_level           | ${sea_level}        | float     | Sea level [meters]
-Cp_ice              | ${Cp_ice}           | float     | Specific heat capacity [J/(kg*K)]
-geothermal_heat_flux| ${geothermal_heat_flux}| float     | Geothermal heat flux [(J/year)/m^2]
-geothermal_gradient | ${geothermal_gradient}| float     | Geothermal gradient [***deg_C/meter??]
+#===============================================================================
+# Topoflow Config File for: ice_gc2d
+#===============================================================================
+# Input 1
+comp_status         | ${comp_status}      | choice    | Component status [-] {Enabled; Disabled}
+in_directory        | ${in_directory}     | string    | Input directory [-]
+out_directory       | ${out_directory}    | string    | Output directory [-]
+site_prefix         | ${site_prefix}      | string    | File prefix for the study site [-]
+case_prefix         | ${case_prefix}      | string    | File prefix for the model scenario [-]
+n_steps             | ${n_steps}          | int       | Number of time steps for simulation [-]
+dt                  | ${dt}               | float     | Ice process timestep [years]
+dt_max              | ${dt_max}           | float     | Max timestep [years]
+t_max               | ${t_max}            | float     | Max time to simulate [years]
+#===============================================================================
+# Input 2
 DEM_file            | ${DEM_file}         | string    | Binary file containing a dem [m]
 H0_file             | ${H0_file}          | string    | Binary file containing initial ice depth [m]
 min_glacier_thick   | ${min_glacier_thick}| float     | Min glacier thickness [-]
@@ -24,15 +23,20 @@ char_tau_bed        | ${char_tau_bed}     | float     | Characteristic shear str
 depth_to_water_table| ${depth_to_water_table}| float     | Distance from ice surface to water table [meters]
 max_float_fraction  | ${max_float_fraction}| float     | Limits the water level in ice [percent]
 Hp_eff              | ${Hp_eff}           | float     | Effective pressure of water [meters]
-comp_status         | ${comp_status}      | choice    | Component status [-] {Enabled; Disabled}
-in_directory        | ${in_directory}     | string    | Input directory [-]
-out_directory       | ${out_directory}    | string    | Output directory [-]
-site_prefix         | ${site_prefix}      | string    | File prefix for the study site [-]
-case_prefix         | ${case_prefix}      | string    | File prefix for the model scenario [-]
-n_steps             | ${n_steps}          | int       | Number of time steps for simulation [-]
-dt                  | ${dt}               | float     | Ice process timestep [years]
-dt_max              | ${dt_max}           | float     | Max timestep [years]
-t_max               | ${t_max}            | float     | Max time to simulate [years]
+#===============================================================================
+# Input 3
+init_ELA            | ${init_ELA}         | float     | Equilibrium line altitude [meters]
+ELA_step_size       | ${ELA_step_size}    | float     | Ela step size [meters]
+ELA_step_interval   | ${ELA_step_interval}| float     | Ela step interval [meters]
+grad_Bz             | ${grad_Bz}          | float     | Mass balance gradient in z [***unitsneeded]
+max_Bz              | ${max_Bz}           | float     | Maximum allowed mass balance [***unitsneeded]
+spinup_time         | ${spinup_time}      | float     | Spinup time [years]
+sea_level           | ${sea_level}        | float     | Sea level [meters]
+Cp_ice              | ${Cp_ice}           | float     | Specific heat capacity [J/(kg*K)]
+geothermal_heat_flux| ${geothermal_heat_flux}| float     | Geothermal heat flux [(J/year)/m^2]
+geothermal_gradient | ${geothermal_gradient}| float     | Geothermal gradient [***deg_C/meter??]
+#===============================================================================
+# Toggles
 VARIABLE_DT_TOGGLE  | ${VARIABLE_DT_TOGGLE}| int       | Use variable/adaptive timestep (0 = no, 1 = yes) [-]
 INIT_COND_TOGGLE    | ${INIT_COND_TOGGLE} | int       | 0 = ??, 1 = ??, 2 = ?? [-]
 GENERIC_ICE_TOGGLE  | ${GENERIC_ICE_TOGGLE}| int       | Start w/ generic ice surface (0 = no, 1 = yes) [-]
@@ -44,6 +48,8 @@ WEST_BC_TOGGLE      | ${WEST_BC_TOGGLE}   | choice    | Boundary condition [-] {
 EAST_BC_TOGGLE      | ${EAST_BC_TOGGLE}   | choice    | Boundary condition [-] {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND; SURF_ELEV_BOUND; SURF_SLOPE_BOUND}
 SOUTH_BC_TOGGLE     | ${SOUTH_BC_TOGGLE}  | choice    | Boundary condition [-] {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND; SURF_ELEV_BOUND; SURF_SLOPE_BOUND}
 NORTH_BC_TOGGLE     | ${NORTH_BC_TOGGLE}  | choice    | Boundary condition [-] {ICE_FREE_BOUND; ZERO_FLUX_BOUND; CONST_FLUX_BOUND; SURF_ELEV_BOUND; SURF_SLOPE_BOUND}
+#===============================================================================
+# Output
 save_grid_dt        | ${save_grid_dt}     | float     | Interval to save grids, years [-]
 SAVE_HI_GRIDS       | ${SAVE_HI_GRIDS}    | choice    | Option to save computed hi grids [-] {Yes; No}
 hi_gs_file          | ${hi_gs_file}       | string    | Filename for hi grid stack [-]
@@ -59,3 +65,8 @@ SAVE_ZI_PIXELS      | ${SAVE_ZI_PIXELS}   | choice    | Option to save computed 
 zi_ts_file          | ${zi_ts_file}       | string    | Filename for zi time series [-]
 SAVE_MR_PIXELS      | ${SAVE_MR_PIXELS}   | choice    | Option to save computed mr time series [-] {Yes; No}
 mr_ts_file          | ${mr_ts_file}       | string    | Filename for mr time series [-]
+#===============================================================================
+# About
+ModelName           | ${ModelName}        | String    | Name of the model [-]
+ModelAuthor         | ${ModelAuthor}      | String    | Name of the model author [-]
+HTML_HELP_FILE      | ${HTML_HELP_FILE}   | String    | Url for html help file [-]
