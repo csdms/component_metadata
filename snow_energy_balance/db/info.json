@@ -1,0 +1,14 @@
+{
+  "id": "snow_energy_balance", 
+  "name": "SnowEnergyBalance", 
+  "class": "Snow_energy_balance", 
+  "initialize_args": "snow_energy_balance.cfg", 
+  "time_step": "3600.000", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Snowmelt-Energy_Balance", 
+  "author": "Scott D. Peckham ", 
+  "email": "scott.peckham@colorado.edu", 
+  "version": "3.1.0", 
+  "doi": "10.1594/IEDA/100174", 
+  "license": "Apache"
+}

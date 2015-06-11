@@ -1,0 +1,14 @@
+{
+  "id": "evap_read_file", 
+  "name": "EvapReadFile", 
+  "class": "Evap_read_file", 
+  "initialize_args": "evap_read_file.cfg", 
+  "time_step": "10800.000", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Evaporation-Read_File", 
+  "author": "Scott D. Peckham ", 
+  "email": "scott.peckham@colorado.edu", 
+  "version": "3.1.0", 
+  "doi": "10.1594/IEDA/100174", 
+  "license": "Apache"
+}

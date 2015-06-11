@@ -1,6 +1,6 @@
 [
   {
-    "id":"meteorology",
-    "required":false
+    "id": "meteorology", 
+    "required": false
   }
 ]
