@@ -1,6 +1,7 @@
+Input:
 - key: comp_status
   name: Component status
-  description: component status
+  description: Component status
   value:
     type: choice
     default: Enabled
@@ -10,42 +11,43 @@
     units: '-'
 - key: in_directory
   name: Input directory
-  description: input directory
+  description: Input directory
   value:
     type: string
     default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
     units: '-'
 - key: out_directory
   name: Output directory
-  description: output directory
+  description: Output directory
   value:
     type: string
     default: ~/CMT_Output/
     units: '-'
 - key: site_prefix
   name: Site prefix
-  description: file prefix for the study site
+  description: File prefix for the study site
   value:
     type: string
     default: Treynor
     units: '-'
 - key: case_prefix
   name: Case prefix
-  description: file prefix for the model scenario
+  description: File prefix for the model scenario
   value:
     type: string
     default: Case5
     units: '-'
+Query:
 - key: data_keyword
   name: Data keyword
-  description: HIS data keyword
+  description: His data keyword
   value:
     type: string
     default: Precipitation
     units: '-'
 - key: west_edge_lon
   name: West edge longitude
-  description: longitude of west edge of geographic region
+  description: Longitude of west edge of geographic region
   value:
     type: float
     default: '-111.0'
@@ -55,7 +57,7 @@
     units: dec.degrees
 - key: east_edge_lon
   name: East edge longitude
-  description: longitude of east edge of geographic region
+  description: Longitude of east edge of geographic region
   value:
     type: float
     default: '-110.0'
@@ -65,7 +67,7 @@
     units: dec.degrees
 - key: north_edge_lat
   name: North edge latitude
-  description: latitude of north edge of geographic region
+  description: Latitude of north edge of geographic region
   value:
     type: float
     default: '42.0'
@@ -75,7 +77,7 @@
     units: dec.degrees
 - key: south_edge_lat
   name: South edge latitude
-  description: latitude of south edge of geographic region
+  description: Latitude of south edge of geographic region
   value:
     type: float
     default: '41.0'
@@ -85,7 +87,7 @@
     units: dec.degrees
 - key: start_month
   name: Start month
-  description: start month
+  description: Start month
   value:
     type: choice
     default: January
@@ -105,7 +107,7 @@
     units: '-'
 - key: start_day
   name: Start day
-  description: start day
+  description: Start day
   value:
     type: int
     default: '1'
@@ -115,7 +117,7 @@
     units: '-'
 - key: start_year
   name: Start year
-  description: start year
+  description: Start year
   value:
     type: int
     default: '1998'
@@ -125,7 +127,7 @@
     units: '-'
 - key: stop_month
   name: Stop month
-  description: stop month
+  description: Stop month
   value:
     type: choice
     default: January
@@ -145,7 +147,7 @@
     units: '-'
 - key: stop_day
   name: Stop day
-  description: stop day
+  description: Stop day
   value:
     type: int
     default: '1'
@@ -155,7 +157,7 @@
     units: '-'
 - key: stop_year
   name: Stop year
-  description: stop year
+  description: Stop year
   value:
     type: int
     default: '2010'
@@ -165,7 +167,7 @@
     units: '-'
 - key: max_n_values
   name: Max values per series
-  description: max number of values allowed in any time series
+  description: Max number of values allowed in any time series
   value:
     type: int
     default: '1000'
@@ -175,7 +177,7 @@
     units: '-'
 - key: max_n_series
   name: Max number of series
-  description: max number of time series allows in the report
+  description: Max number of time series allows in the report
   value:
     type: int
     default: '100'
@@ -183,9 +185,10 @@
       min: '1'
       max: '100000'
     units: '-'
+Output:
 - key: save_pixels_dt
   name: Save time series timestep
-  description: time interval between time series values
+  description: Time interval between time series values
   value:
     type: float
     default: '60.000'
@@ -195,7 +198,7 @@
     units: sec
 - key: SAVE_DAT_PIXELS
   name: Save time series toggle
-  description: option to save time series
+  description: Option to save time series
   value:
     type: choice
     default: 'No'
@@ -205,11 +208,12 @@
     units: '-'
 - key: dat_ts_file
   name: Save time series file
-  description: filename for time series
+  description: Filename for time series
   value:
     type: string
     default: '[case_prefix]_0D-data.txt'
     units: '-'
+About:
 - key: ModelName
   name: Model name
   description: Name of the model
@@ -226,7 +230,7 @@
     units: '-'
 - key: HTML_HELP_FILE
   name: HTML help file
-  description: URL for HTML help file
+  description: Url for html help file
   value:
     type: String
     default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Data-HIS

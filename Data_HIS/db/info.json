@@ -1,14 +1,14 @@
 {
-  "id": "Data_HIS", 
+  "id": "data_his", 
   "name": "DataHIS", 
-  "class": "Data_HIS", 
-  "initialize_args": "Data_HIS.cfg", 
+  "class": "Data_his", 
+  "initialize_args": "data_his.cfg", 
   "time_step": "", 
   "summary": "", 
   "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Data-HIS", 
   "author": "Scott D. Peckham ", 
-  "email": "", 
-  "version": "", 
-  "doi": "", 
-  "license": ""
+  "email": "scott.peckham@colorado.edu", 
+  "version": "3.1.0", 
+  "doi": "10.1594/IEDA/100174", 
+  "license": "Apache"
 }

@@ -1,6 +1,7 @@
+Input:
 - key: comp_status
   name: Component status
-  description: component status
+  description: Component status
   value:
     type: choice
     default: Enabled
@@ -10,35 +11,35 @@
     units: '-'
 - key: in_directory
   name: Input directory
-  description: input directory
+  description: Input directory
   value:
     type: string
     default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
     units: '-'
 - key: out_directory
   name: Output directory
-  description: output directory
+  description: Output directory
   value:
     type: string
     default: ~/CMT_Output/
     units: '-'
 - key: site_prefix
   name: Site prefix
-  description: file prefix for the study site
+  description: File prefix for the study site
   value:
     type: string
     default: Treynor
     units: '-'
 - key: case_prefix
   name: Case prefix
-  description: file prefix for the model scenario
+  description: File prefix for the model scenario
   value:
     type: string
     default: Case5
     units: '-'
 - key: n_steps
   name: Number of steps
-  description: number of time steps
+  description: Number of time steps
   value:
     type: long
     default: '10'
@@ -46,9 +47,10 @@
       min: '1'
       max: 1e7
     units: '-'
+Output:
 - key: save_grid_dt
   name: Save grid timestep
-  description: time interval between saved grids
+  description: Time interval between saved grids
   value:
     type: float
     default: '60.000'
@@ -58,7 +60,7 @@
     units: sec
 - key: SAVE_V0_GRIDS
   name: Save v0 grids toggle
-  description: option to save grids of infil. rate (at surf)
+  description: Option to save grids of infil. rate (at surf)
   value:
     type: choice
     default: 'No'
@@ -68,14 +70,14 @@
     units: '-'
 - key: v0_gs_file
   name: Save v0 grids file
-  description: filename for grid stack of v0
+  description: Filename for grid stack of v0
   value:
     type: string
     default: '[case_prefix]_2D-v0.nc'
     units: m/s
 - key: SAVE_I_GRIDS
   name: Save I  grids toggle
-  description: option to save grids of cumul. infil. depth
+  description: Option to save grids of cumul. infil. depth
   value:
     type: choice
     default: 'No'
@@ -85,14 +87,14 @@
     units: '-'
 - key: I_gs_file
   name: Save I  grids file
-  description: filename for grid stack of I
+  description: Filename for grid stack of i
   value:
     type: string
     default: '[case_prefix]_2D-I.nc'
     units: m
 - key: save_pixels_dt
   name: Save pixels timestep
-  description: time interval between time series values
+  description: Time interval between time series values
   value:
     type: float
     default: '60.000'
@@ -102,14 +104,14 @@
     units: sec
 - key: pixel_file
   name: Monitored pixel file
-  description: filename for monitored pixel file
+  description: Filename for monitored pixel file
   value:
     type: string
     default: '[case_prefix]_outlets.txt'
     units: '-'
 - key: SAVE_V0_PIXELS
   name: Save v0 pixels toggle
-  description: option to save time series of infil. rate (at surf)
+  description: Option to save time series of infil. rate (at surf)
   value:
     type: choice
     default: 'No'
@@ -119,14 +121,14 @@
     units: '-'
 - key: v0_ts_file
   name: Save v0 pixels file
-  description: filename for time series of v0
+  description: Filename for time series of v0
   value:
     type: string
     default: '[case_prefix]_0D-v0.txt'
     units: m/s
 - key: SAVE_I_PIXELS
   name: Save I  pixels toggle
-  description: option to save time series of cumul. infil. depth
+  description: Option to save time series of cumul. infil. depth
   value:
     type: choice
     default: 'No'
@@ -136,11 +138,12 @@
     units: '-'
 - key: I_ts_file
   name: Save I  pixels file
-  description: filename for time series of I
+  description: Filename for time series of i
   value:
     type: string
     default: '[case_prefix]_0D-I.txt'
     units: m
+About:
 - key: ModelName
   name: Model name
   description: Name of the model
@@ -157,7 +160,7 @@
     units: '-'
 - key: HTML_HELP_FILE
   name: HTML help file
-  description: URL for HTML help file
+  description: Url for html help file
   value:
     type: String
     default: http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Beven

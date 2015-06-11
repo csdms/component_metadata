@@ -1,14 +1,14 @@
 {
-  "id": "Evap_Priestley_Taylor", 
+  "id": "evap_priestley_taylor", 
   "name": "EvapPriestleyTaylor", 
-  "class": "Evap_Priestley_Taylor", 
-  "initialize_args": "Evap_Priestley_Taylor.cfg", 
+  "class": "Evap_priestley_taylor", 
+  "initialize_args": "evap_priestley_taylor.cfg", 
   "time_step": "3600.000", 
   "summary": "", 
   "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Evaporation-Priestley_Taylor", 
   "author": "Scott D. Peckham ", 
-  "email": "", 
-  "version": "", 
-  "doi": "", 
-  "license": ""
+  "email": "scott.peckham@colorado.edu", 
+  "version": "3.1.0", 
+  "doi": "10.1594/IEDA/100174", 
+  "license": "Apache"
 }

@@ -1,556 +1,566 @@
-[
-    {
-        "key": "comp_status", 
-        "name": "Component status", 
-        "value": {
-            "default": "Enabled", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Enabled", 
-                "Disabled"
-            ]
+{
+    "Input 1": [
+        {
+            "key": "comp_status", 
+            "name": "Component status", 
+            "description": "Component status", 
+            "value": {
+                "type": "choice", 
+                "default": "Enabled", 
+                "choices": [
+                    "Enabled", 
+                    "Disabled"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "component status"
-    }, 
-    {
-        "key": "in_directory", 
-        "name": "Input directory", 
-        "value": {
-            "default": "/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "in_directory", 
+            "name": "Input directory", 
+            "description": "Input directory", 
+            "value": {
+                "type": "string", 
+                "default": "/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/", 
+                "units": "-"
+            }
         }, 
-        "description": "input directory"
-    }, 
-    {
-        "key": "out_directory", 
-        "name": "Output directory", 
-        "value": {
-            "default": "~/CMT_Output/", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "out_directory", 
+            "name": "Output directory", 
+            "description": "Output directory", 
+            "value": {
+                "type": "string", 
+                "default": "~/CMT_Output/", 
+                "units": "-"
+            }
         }, 
-        "description": "output directory"
-    }, 
-    {
-        "key": "site_prefix", 
-        "name": "Site prefix", 
-        "value": {
-            "default": "Treynor", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "site_prefix", 
+            "name": "Site prefix", 
+            "description": "File prefix for the study site", 
+            "value": {
+                "type": "string", 
+                "default": "Treynor", 
+                "units": "-"
+            }
         }, 
-        "description": "file prefix for the study site"
-    }, 
-    {
-        "key": "case_prefix", 
-        "name": "Case prefix", 
-        "value": {
-            "default": "Case5", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "case_prefix", 
+            "name": "Case prefix", 
+            "description": "File prefix for the model scenario", 
+            "value": {
+                "type": "string", 
+                "default": "Case5", 
+                "units": "-"
+            }
         }, 
-        "description": "file prefix for the model scenario"
-    }, 
-    {
-        "key": "n_steps", 
-        "name": "Number of steps", 
-        "value": {
-            "default": "10", 
-            "units": "-", 
-            "range": {
-                "max": "1e7", 
-                "min": "1"
-            }, 
-            "type": "long"
+        {
+            "key": "n_steps", 
+            "name": "Number of steps", 
+            "description": "Number of time steps", 
+            "value": {
+                "type": "long", 
+                "default": "10", 
+                "range": {
+                    "min": "1", 
+                    "max": "1e7"
+                }, 
+                "units": "-"
+            }
         }, 
-        "description": "number of time steps"
-    }, 
-    {
-        "key": "dt", 
-        "name": "Time step", 
-        "value": {
-            "default": "6.00000000", 
-            "units": "sec", 
-            "range": {
-                "max": "100", 
-                "min": "0"
-            }, 
-            "type": "float"
+        {
+            "key": "dt", 
+            "name": "Time step", 
+            "description": "Channel process timestep", 
+            "value": {
+                "type": "float", 
+                "default": "6.00000000", 
+                "range": {
+                    "min": "0", 
+                    "max": "100"
+                }, 
+                "units": "sec"
+            }
         }, 
-        "description": "channel process timestep"
-    }, 
-    {
-        "key": "code_file", 
-        "name": "D8 flow code file", 
-        "value": {
-            "default": "[site_prefix]_flow.rtg", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "code_file", 
+            "name": "D8 flow code file", 
+            "description": "Grid of d8 flow codes in binary file (jenson 84)", 
+            "value": {
+                "type": "string", 
+                "default": "[site_prefix]_flow.rtg", 
+                "units": "-"
+            }
         }, 
-        "description": "grid of D8 flow codes in binary file (Jenson 84)"
-    }, 
-    {
-        "key": "slope_file", 
-        "name": "D8 slope file", 
-        "value": {
-            "default": "[site_prefix]_slope.rtg", 
-            "units": "m/m", 
-            "type": "string"
+        {
+            "key": "slope_file", 
+            "name": "D8 slope file", 
+            "description": "Grid of d8 slopes in binary file", 
+            "value": {
+                "type": "string", 
+                "default": "[site_prefix]_slope.rtg", 
+                "units": "m/m"
+            }
         }, 
-        "description": "grid of D8 slopes in binary file"
-    }, 
-    {
-        "key": "MANNING", 
-        "name": "Manning flag", 
-        "value": {
-            "default": "1", 
-            "units": "-", 
-            "range": {
-                "max": "1", 
-                "min": "0"
-            }, 
-            "type": "int"
+        {
+            "key": "MANNING", 
+            "name": "Manning flag", 
+            "description": "Option to use manning's n for roughness", 
+            "value": {
+                "type": "int", 
+                "default": "1", 
+                "range": {
+                    "min": "0", 
+                    "max": "1"
+                }, 
+                "units": "-"
+            }
         }, 
-        "description": "option to use Manning's n for roughness"
-    }, 
-    {
-        "key": "LAW_OF_WALL", 
-        "name": "Law of Wall flag", 
-        "value": {
-            "default": "0", 
-            "units": "-", 
-            "range": {
-                "max": "1", 
-                "min": "0"
-            }, 
-            "type": "int"
+        {
+            "key": "LAW_OF_WALL", 
+            "name": "Law of Wall flag", 
+            "description": "Option to use law of wall for roughness", 
+            "value": {
+                "type": "int", 
+                "default": "0", 
+                "range": {
+                    "min": "0", 
+                    "max": "1"
+                }, 
+                "units": "-"
+            }
         }, 
-        "description": "option to use Law of Wall for roughness"
-    }, 
-    {
-        "key": "nval_type", 
-        "name": "Manning N type", 
-        "value": {
-            "default": "Grid", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ]
+        {
+            "key": "nval_type", 
+            "name": "Manning N type", 
+            "description": "Allowed input types", 
+            "value": {
+                "type": "choice", 
+                "default": "Grid", 
+                "choices": [
+                    "Scalar", 
+                    "Grid", 
+                    "Time_Series", 
+                    "Grid_Sequence"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "allowed input types"
-    }, 
-    {
-        "key": "nval", 
-        "name": "Manning N", 
-        "value": {
-            "default": "[site_prefix]_chan-n.rtg", 
-            "units": "s/m^(1/3)", 
-            "type": "string"
+        {
+            "key": "nval", 
+            "name": "Manning N", 
+            "description": "Manning's n values", 
+            "value": {
+                "type": "string", 
+                "default": "[site_prefix]_chan-n.rtg", 
+                "units": "s/m^(1/3)"
+            }
         }, 
-        "description": "Manning's N values"
-    }, 
-    {
-        "key": "z0val_type", 
-        "name": "Roughness z0 type", 
-        "value": {
-            "default": "Grid", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ]
+        {
+            "key": "z0val_type", 
+            "name": "Roughness z0 type", 
+            "description": "Allowed input types", 
+            "value": {
+                "type": "choice", 
+                "default": "Grid", 
+                "choices": [
+                    "Scalar", 
+                    "Grid", 
+                    "Time_Series", 
+                    "Grid_Sequence"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "allowed input types"
-    }, 
-    {
-        "key": "z0val", 
-        "name": "Roughness z0", 
-        "value": {
-            "default": "[site_prefix]_chan-z0.rtg", 
-            "units": "m", 
-            "type": "string"
+        {
+            "key": "z0val", 
+            "name": "Roughness z0", 
+            "description": "Law-of-wall roughness values", 
+            "value": {
+                "type": "string", 
+                "default": "[site_prefix]_chan-z0.rtg", 
+                "units": "m"
+            }
+        }
+    ], 
+    "Input 2": [
+        {
+            "key": "width_type", 
+            "name": "Bed width type", 
+            "description": "Allowed input types", 
+            "value": {
+                "type": "choice", 
+                "default": "Grid", 
+                "choices": [
+                    "Scalar", 
+                    "Grid", 
+                    "Time_Series", 
+                    "Grid_Sequence"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "Law-of-wall roughness values"
-    }, 
-    {
-        "key": "width_type", 
-        "name": "Bed width type", 
-        "value": {
-            "default": "Grid", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ]
+        {
+            "key": "width", 
+            "name": "Bed width", 
+            "description": "Bottom width of trapezoid cross-section", 
+            "value": {
+                "type": "string", 
+                "default": "[site_prefix]_chan-w.rtg", 
+                "units": "m"
+            }
         }, 
-        "description": "allowed input types"
-    }, 
-    {
-        "key": "width", 
-        "name": "Bed width", 
-        "value": {
-            "default": "[site_prefix]_chan-w.rtg", 
-            "units": "m", 
-            "type": "string"
+        {
+            "key": "angle_type", 
+            "name": "Bank angle type", 
+            "description": "Allowed input types", 
+            "value": {
+                "type": "choice", 
+                "default": "Grid", 
+                "choices": [
+                    "Scalar", 
+                    "Grid", 
+                    "Time_Series", 
+                    "Grid_Sequence"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "bottom width of trapezoid cross-section"
-    }, 
-    {
-        "key": "angle_type", 
-        "name": "Bank angle type", 
-        "value": {
-            "default": "Grid", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ]
+        {
+            "key": "angle", 
+            "name": "Bank angle", 
+            "description": "Bank angle of trapezoid cross-section", 
+            "value": {
+                "type": "string", 
+                "default": "[site_prefix]_chan-a.rtg", 
+                "units": "deg"
+            }
         }, 
-        "description": "allowed input types"
-    }, 
-    {
-        "key": "angle", 
-        "name": "Bank angle", 
-        "value": {
-            "default": "[site_prefix]_chan-a.rtg", 
-            "units": "deg", 
-            "type": "string"
+        {
+            "key": "d0_type", 
+            "name": "Init. depth type", 
+            "description": "Allowed input types", 
+            "value": {
+                "type": "choice", 
+                "default": "Scalar", 
+                "choices": [
+                    "Scalar", 
+                    "Grid", 
+                    "Time_Series", 
+                    "Grid_Sequence"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "bank angle of trapezoid cross-section"
-    }, 
-    {
-        "key": "d0_type", 
-        "name": "Init. depth type", 
-        "value": {
-            "default": "Scalar", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ]
+        {
+            "key": "d0", 
+            "name": "Init. depth", 
+            "description": "Initial flow depth (if scalar, use 0.0!)", 
+            "value": {
+                "type": "float", 
+                "default": "0.00000000", 
+                "range": {
+                    "min": "0.0", 
+                    "max": "0.1"
+                }, 
+                "units": "m"
+            }
         }, 
-        "description": "allowed input types"
-    }, 
-    {
-        "key": "d0", 
-        "name": "Init. depth", 
-        "value": {
-            "default": "0.00000000", 
-            "units": "m", 
-            "range": {
-                "max": "0.1", 
-                "min": "0.0"
-            }, 
-            "type": "float"
+        {
+            "key": "sinu_type", 
+            "name": "Sinuosity type", 
+            "description": "Allowed input types", 
+            "value": {
+                "type": "choice", 
+                "default": "Scalar", 
+                "choices": [
+                    "Scalar", 
+                    "Grid", 
+                    "Time_Series", 
+                    "Grid_Sequence"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "initial flow depth (if Scalar, use 0.0!)"
-    }, 
-    {
-        "key": "sinu_type", 
-        "name": "Sinuosity type", 
-        "value": {
-            "default": "Scalar", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ]
+        {
+            "key": "sinu", 
+            "name": "Sinuosity", 
+            "description": "Absolute channel sinuosity", 
+            "value": {
+                "type": "float", 
+                "default": "1.00000000", 
+                "range": {
+                    "min": "0.0", 
+                    "max": "3.0"
+                }, 
+                "units": "m/m"
+            }
+        }
+    ], 
+    "Output 1": [
+        {
+            "key": "save_grid_dt", 
+            "name": "Save grid timestep", 
+            "description": "Time interval between saved grids", 
+            "value": {
+                "type": "float", 
+                "default": "60.00000000", 
+                "range": {
+                    "min": "0.0", 
+                    "max": "1e6"
+                }, 
+                "units": "sec"
+            }
         }, 
-        "description": "allowed input types"
-    }, 
-    {
-        "key": "sinu", 
-        "name": "Sinuosity", 
-        "value": {
-            "default": "1.00000000", 
-            "units": "m/m", 
-            "range": {
-                "max": "3.0", 
-                "min": "0.0"
-            }, 
-            "type": "float"
+        {
+            "key": "SAVE_Q_GRIDS", 
+            "name": "Save Q grids toggle", 
+            "description": "Option to save computed q grids", 
+            "value": {
+                "type": "choice", 
+                "default": "Yes", 
+                "choices": [
+                    "Yes", 
+                    "No"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "absolute channel sinuosity"
-    }, 
-    {
-        "key": "save_grid_dt", 
-        "name": "Save grid timestep", 
-        "value": {
-            "default": "60.00000000", 
-            "units": "sec", 
-            "range": {
-                "max": "1e6", 
-                "min": "0.0"
-            }, 
-            "type": "float"
+        {
+            "key": "Q_gs_file", 
+            "name": "Save Q grids file", 
+            "description": "Filename for q grid stack", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_2D-Q.nc", 
+                "units": "m^3/s"
+            }
         }, 
-        "description": "time interval between saved grids"
-    }, 
-    {
-        "key": "SAVE_Q_GRIDS", 
-        "name": "Save Q grids toggle", 
-        "value": {
-            "default": "Yes", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Yes", 
-                "No"
-            ]
+        {
+            "key": "SAVE_U_GRIDS", 
+            "name": "Save u grids toggle", 
+            "description": "Option to save computed u grids", 
+            "value": {
+                "type": "choice", 
+                "default": "No", 
+                "choices": [
+                    "Yes", 
+                    "No"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "option to save computed Q grids"
-    }, 
-    {
-        "key": "Q_gs_file", 
-        "name": "Save Q grids file", 
-        "value": {
-            "default": "[case_prefix]_2D-Q.nc", 
-            "units": "m^3/s", 
-            "type": "string"
+        {
+            "key": "u_gs_file", 
+            "name": "Save u grids file", 
+            "description": "Filename for u grid stack", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_2D-u.nc", 
+                "units": "m/s"
+            }
         }, 
-        "description": "filename for Q grid stack"
-    }, 
-    {
-        "key": "SAVE_U_GRIDS", 
-        "name": "Save u grids toggle", 
-        "value": {
-            "default": "No", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Yes", 
-                "No"
-            ]
+        {
+            "key": "SAVE_D_GRIDS", 
+            "name": "Save d grids toggle", 
+            "description": "Option to save computed d grids", 
+            "value": {
+                "type": "choice", 
+                "default": "No", 
+                "choices": [
+                    "Yes", 
+                    "No"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "option to save computed u grids"
-    }, 
-    {
-        "key": "u_gs_file", 
-        "name": "Save u grids file", 
-        "value": {
-            "default": "[case_prefix]_2D-u.nc", 
-            "units": "m/s", 
-            "type": "string"
+        {
+            "key": "d_gs_file", 
+            "name": "Save d grids file", 
+            "description": "Filename for d grid stack", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_2D-d.nc", 
+                "units": "m"
+            }
         }, 
-        "description": "filename for u grid stack"
-    }, 
-    {
-        "key": "SAVE_D_GRIDS", 
-        "name": "Save d grids toggle", 
-        "value": {
-            "default": "No", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Yes", 
-                "No"
-            ]
+        {
+            "key": "SAVE_F_GRIDS", 
+            "name": "Save f grids toggle", 
+            "description": "Option to save computed f grids", 
+            "value": {
+                "type": "choice", 
+                "default": "No", 
+                "choices": [
+                    "Yes", 
+                    "No"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "option to save computed d grids"
-    }, 
-    {
-        "key": "d_gs_file", 
-        "name": "Save d grids file", 
-        "value": {
-            "default": "[case_prefix]_2D-d.nc", 
-            "units": "m", 
-            "type": "string"
+        {
+            "key": "f_gs_file", 
+            "name": "Save f grids file", 
+            "description": "Filename for f grid stack", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_2D-f.nc", 
+                "units": "-"
+            }
+        }
+    ], 
+    "Output 2": [
+        {
+            "key": "save_pixels_dt", 
+            "name": "Save pixels timestep", 
+            "description": "Time interval between time series values", 
+            "value": {
+                "type": "float", 
+                "default": "60.00000000", 
+                "range": {
+                    "min": "0.0", 
+                    "max": "1e6"
+                }, 
+                "units": "sec"
+            }
         }, 
-        "description": "filename for d grid stack"
-    }, 
-    {
-        "key": "SAVE_F_GRIDS", 
-        "name": "Save f grids toggle", 
-        "value": {
-            "default": "No", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Yes", 
-                "No"
-            ]
+        {
+            "key": "pixel_file", 
+            "name": "Monitored pixel file", 
+            "description": "Filename for monitored pixel file", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_outlets.txt", 
+                "units": "-"
+            }
         }, 
-        "description": "option to save computed f grids"
-    }, 
-    {
-        "key": "f_gs_file", 
-        "name": "Save f grids file", 
-        "value": {
-            "default": "[case_prefix]_2D-f.nc", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "SAVE_Q_PIXELS", 
+            "name": "Save Q pixels toggle", 
+            "description": "Option to save computed q time series", 
+            "value": {
+                "type": "choice", 
+                "default": "Yes", 
+                "choices": [
+                    "Yes", 
+                    "No"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "filename for f grid stack"
-    }, 
-    {
-        "key": "save_pixels_dt", 
-        "name": "Save pixels timestep", 
-        "value": {
-            "default": "60.00000000", 
-            "units": "sec", 
-            "range": {
-                "max": "1e6", 
-                "min": "0.0"
-            }, 
-            "type": "float"
+        {
+            "key": "Q_ts_file", 
+            "name": "Save Q pixels file", 
+            "description": "Filename for computed q time series", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_0D-Q.txt", 
+                "units": "m^3/s"
+            }
         }, 
-        "description": "time interval between time series values"
-    }, 
-    {
-        "key": "pixel_file", 
-        "name": "Monitored pixel file", 
-        "value": {
-            "default": "[case_prefix]_outlets.txt", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "SAVE_U_PIXELS", 
+            "name": "Save u pixels toggle", 
+            "description": "Option to save computed u time series", 
+            "value": {
+                "type": "choice", 
+                "default": "No", 
+                "choices": [
+                    "Yes", 
+                    "No"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "filename for monitored pixel file"
-    }, 
-    {
-        "key": "SAVE_Q_PIXELS", 
-        "name": "Save Q pixels toggle", 
-        "value": {
-            "default": "Yes", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Yes", 
-                "No"
-            ]
+        {
+            "key": "u_ts_file", 
+            "name": "Save u pixels file", 
+            "description": "Filename for computed u time series", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_0D-u.txt", 
+                "units": "m/s"
+            }
         }, 
-        "description": "option to save computed Q time series"
-    }, 
-    {
-        "key": "Q_ts_file", 
-        "name": "Save Q pixels file", 
-        "value": {
-            "default": "[case_prefix]_0D-Q.txt", 
-            "units": "m^3/s", 
-            "type": "string"
+        {
+            "key": "SAVE_D_PIXELS", 
+            "name": "Save d pixels toggle", 
+            "description": "Option to save computed d time series", 
+            "value": {
+                "type": "choice", 
+                "default": "No", 
+                "choices": [
+                    "Yes", 
+                    "No"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "filename for computed Q time series"
-    }, 
-    {
-        "key": "SAVE_U_PIXELS", 
-        "name": "Save u pixels toggle", 
-        "value": {
-            "default": "No", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Yes", 
-                "No"
-            ]
+        {
+            "key": "d_ts_file", 
+            "name": "Save d pixels file", 
+            "description": "Filename for computed d time series", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_0D-d.txt", 
+                "units": "m"
+            }
         }, 
-        "description": "option to save computed u time series"
-    }, 
-    {
-        "key": "u_ts_file", 
-        "name": "Save u pixels file", 
-        "value": {
-            "default": "[case_prefix]_0D-u.txt", 
-            "units": "m/s", 
-            "type": "string"
+        {
+            "key": "SAVE_F_PIXELS", 
+            "name": "Save f pixels toggle", 
+            "description": "Option to save computed f time series", 
+            "value": {
+                "type": "choice", 
+                "default": "No", 
+                "choices": [
+                    "Yes", 
+                    "No"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "filename for computed u time series"
-    }, 
-    {
-        "key": "SAVE_D_PIXELS", 
-        "name": "Save d pixels toggle", 
-        "value": {
-            "default": "No", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Yes", 
-                "No"
-            ]
+        {
+            "key": "f_ts_file", 
+            "name": "Save f pixels file", 
+            "description": "Filename for computed f time series", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_0D-f.txt", 
+                "units": "-"
+            }
+        }
+    ], 
+    "About": [
+        {
+            "key": "ModelName", 
+            "name": "Model name", 
+            "description": "Name of the model", 
+            "value": {
+                "type": "String", 
+                "default": "ChannelsDynamWave", 
+                "units": "-"
+            }
         }, 
-        "description": "option to save computed d time series"
-    }, 
-    {
-        "key": "d_ts_file", 
-        "name": "Save d pixels file", 
-        "value": {
-            "default": "[case_prefix]_0D-d.txt", 
-            "units": "m", 
-            "type": "string"
+        {
+            "key": "ModelAuthor", 
+            "name": "Author name", 
+            "description": "Name of the model author", 
+            "value": {
+                "type": "String", 
+                "default": "Scott D. Peckham ", 
+                "units": "-"
+            }
         }, 
-        "description": "filename for computed d time series"
-    }, 
-    {
-        "key": "SAVE_F_PIXELS", 
-        "name": "Save f pixels toggle", 
-        "value": {
-            "default": "No", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Yes", 
-                "No"
-            ]
-        }, 
-        "description": "option to save computed f time series"
-    }, 
-    {
-        "key": "f_ts_file", 
-        "name": "Save f pixels file", 
-        "value": {
-            "default": "[case_prefix]_0D-f.txt", 
-            "units": "-", 
-            "type": "string"
-        }, 
-        "description": "filename for computed f time series"
-    }, 
-    {
-        "key": "ModelName", 
-        "name": "Model name", 
-        "value": {
-            "default": "ChannelsDynamWave", 
-            "units": "-", 
-            "type": "String"
-        }, 
-        "description": "Name of the model"
-    }, 
-    {
-        "key": "ModelAuthor", 
-        "name": "Author name", 
-        "value": {
-            "default": "Scott D. Peckham ", 
-            "units": "-", 
-            "type": "String"
-        }, 
-        "description": "Name of the model author"
-    }, 
-    {
-        "key": "HTML_HELP_FILE", 
-        "name": "HTML help file", 
-        "value": {
-            "default": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Channels-Dynamic_Wave", 
-            "units": "-", 
-            "type": "String"
-        }, 
-        "description": "URL for HTML help file"
-    }
-]
+        {
+            "key": "HTML_HELP_FILE", 
+            "name": "HTML help file", 
+            "description": "Url for html help file", 
+            "value": {
+                "type": "String", 
+                "default": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Channels-Dynamic_Wave", 
+                "units": "-"
+            }
+        }
+    ]
+}

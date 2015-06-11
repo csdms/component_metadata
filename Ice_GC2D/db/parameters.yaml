@@ -1,6 +1,7 @@
+Input 1:
 - key: comp_status
   name: Component status
-  description: component status
+  description: Component status
   value:
     type: choice
     default: Enabled
@@ -10,35 +11,35 @@
     units: '-'
 - key: in_directory
   name: Input directory
-  description: input directory
+  description: Input directory
   value:
     type: string
     default: /home/csdms/models/topoflow/3.1/share/data/treynor_iowa/
     units: '-'
 - key: out_directory
   name: Output directory
-  description: output directory
+  description: Output directory
   value:
     type: string
     default: ~/CMT_Output/
     units: '-'
 - key: site_prefix
   name: Site prefix
-  description: file prefix for the study site
+  description: File prefix for the study site
   value:
     type: string
     default: Treynor
     units: '-'
 - key: case_prefix
   name: Case prefix
-  description: file prefix for the model scenario
+  description: File prefix for the model scenario
   value:
     type: string
     default: Case5
     units: '-'
 - key: n_steps
   name: Number of steps
-  description: number of time steps for simulation
+  description: Number of time steps for simulation
   value:
     type: int
     default: '10'
@@ -48,7 +49,7 @@
     units: '-'
 - key: dt
   name: Time step
-  description: ice process timestep
+  description: Ice process timestep
   value:
     type: float
     default: '0.1'
@@ -58,7 +59,7 @@
     units: years
 - key: dt_max
   name: Max timestep
-  description: max timestep
+  description: Max timestep
   value:
     type: float
     default: '0.4'
@@ -68,7 +69,7 @@
     units: years
 - key: t_max
   name: Max simulation time
-  description: max time to simulate
+  description: Max time to simulate
   value:
     type: float
     default: '100000'
@@ -76,23 +77,24 @@
       min: '0.0'
       max: 1e7
     units: years
+Input 2:
 - key: DEM_file
   name: DEM file
-  description: binary file containing a DEM
+  description: Binary file containing a dem
   value:
     type: string
     default: '[site_prefix]_DEM.rtg'
     units: m
 - key: H0_file
   name: Init. ice depth file
-  description: binary file containing initial ice depth
+  description: Binary file containing initial ice depth
   value:
     type: string
     default: None
     units: m
 - key: min_glacier_thick
   name: Min ice depth
-  description: min glacier thickness
+  description: Min glacier thickness
   value:
     type: float
     default: '1.0'
@@ -102,7 +104,7 @@
     units: '-'
 - key: glens_A
   name: Glen's Law param, a
-  description: Glen's Law exponent
+  description: Glen's law exponent
   value:
     type: float
     default: '2.142e-16'
@@ -112,7 +114,7 @@
     units: '-'
 - key: B
   name: Glen's Law coeff, B
-  description: ', see MacGregor (2000)'
+  description: ', see macgregor (2000)'
   value:
     type: float
     default: '0.0012'
@@ -122,7 +124,7 @@
     units: m/(Pa*yr)
 - key: char_sliding_vel
   name: Char. sliding velocity
-  description: characteristic sliding velocity
+  description: Characteristic sliding velocity
   value:
     type: float
     default: '10.0'
@@ -132,7 +134,7 @@
     units: '***unitsneeded'
 - key: char_tau_bed
   name: Char. bed stress
-  description: characteristic shear stress at the bed
+  description: Characteristic shear stress at the bed
   value:
     type: float
     default: '100000.0'
@@ -142,7 +144,7 @@
     units: '****unitsneeded'
 - key: depth_to_water_table
   name: Depth to water table
-  description: distance from ice surface to water table
+  description: Distance from ice surface to water table
   value:
     type: float
     default: '20.0'
@@ -152,7 +154,7 @@
     units: meters
 - key: max_float_fraction
   name: Max float fraction
-  description: limits the water level in ice
+  description: Limits the water level in ice
   value:
     type: float
     default: '80.0'
@@ -162,7 +164,7 @@
     units: percent
 - key: Hp_eff
   name: Hp effective (****)
-  description: effective pressure of water
+  description: Effective pressure of water
   value:
     type: float
     default: '20.0'
@@ -170,9 +172,10 @@
       min: '0'
       max: '100.0'
     units: meters
+Input 3:
 - key: init_ELA
   name: Initial ELA value
-  description: Equilibrium Line Altitude
+  description: Equilibrium line altitude
   value:
     type: float
     default: '3350.0'
@@ -182,7 +185,7 @@
     units: meters
 - key: ELA_step_size
   name: ELA step size
-  description: ELA step size
+  description: Ela step size
   value:
     type: float
     default: '-10.0'
@@ -192,7 +195,7 @@
     units: meters
 - key: ELA_step_interval
   name: ELA step interval
-  description: ELA step interval
+  description: Ela step interval
   value:
     type: float
     default: '500.0'
@@ -202,7 +205,7 @@
     units: meters
 - key: grad_Bz
   name: Mass balance gradient
-  description: mass balance gradient in z
+  description: Mass balance gradient in z
   value:
     type: float
     default: '0.01'
@@ -212,7 +215,7 @@
     units: '***unitsneeded'
 - key: max_Bz
   name: Max mass balance
-  description: maximum allowed mass balance
+  description: Maximum allowed mass balance
   value:
     type: float
     default: '2.0'
@@ -222,7 +225,7 @@
     units: '***unitsneeded'
 - key: spinup_time
   name: Spinup time
-  description: spinup time
+  description: Spinup time
   value:
     type: float
     default: '200.0'
@@ -232,7 +235,7 @@
     units: years
 - key: sea_level
   name: Sea level
-  description: sea level
+  description: Sea level
   value:
     type: float
     default: '-100'
@@ -242,7 +245,7 @@
     units: meters
 - key: Cp_ice
   name: Heat capacity (ice)
-  description: specific heat capacity
+  description: Specific heat capacity
   value:
     type: float
     default: '2060.0'
@@ -252,7 +255,7 @@
     units: J/(kg*K)
 - key: geothermal_heat_flux
   name: Geothermal heat flux
-  description: geothermal heat flux
+  description: Geothermal heat flux
   value:
     type: float
     default: 1.575e6
@@ -262,7 +265,7 @@
     units: (J/year)/m^2
 - key: geothermal_gradient
   name: Geothermal gradient
-  description: geothermal gradient
+  description: Geothermal gradient
   value:
     type: float
     default: '-0.0255'
@@ -270,9 +273,10 @@
       min: '-0.1'
       max: '0.0'
     units: '***deg_C/meter??'
+Toggles:
 - key: VARIABLE_DT_TOGGLE
   name: Variable dt toggle
-  description: use variable/adaptive timestep (0 = no, 1 = yes)
+  description: Use variable/adaptive timestep (0 = no, 1 = yes)
   value:
     type: int
     default: '1'
@@ -292,7 +296,7 @@
     units: '-'
 - key: GENERIC_ICE_TOGGLE
   name: Generic ice toggle
-  description: start w/ generic ice surface (0 = no, 1 = yes)
+  description: Start w/ generic ice surface (0 = no, 1 = yes)
   value:
     type: int
     default: '0'
@@ -302,7 +306,7 @@
     units: '-'
 - key: ICEFLOW_TOGGLE
   name: Ice flow toggle
-  description: ice motion by deformation (0 = no, 1 = yes)
+  description: Ice motion by deformation (0 = no, 1 = yes)
   value:
     type: int
     default: '1'
@@ -312,7 +316,7 @@
     units: '-'
 - key: ICESLIDE_TOGGLE
   name: Ice slide toggle
-  description: ice motion by sliding (0 = no, 1 = yes)
+  description: Ice motion by sliding (0 = no, 1 = yes)
   value:
     type: int
     default: '0'
@@ -322,7 +326,7 @@
     units: '-'
 - key: FREEZE_ON_TOGGLE
   name: Freeze on toggle
-  description: basal ice frozen to bed (0 = no, 1 = yes)
+  description: Basal ice frozen to bed (0 = no, 1 = yes)
   value:
     type: int
     default: '0'
@@ -332,7 +336,7 @@
     units: '-'
 - key: MASS_BALANCE_TOGGLE
   name: Mass balance method
-  description: climate scenario
+  description: Climate scenario
   value:
     type: choice
     default: ELA_LOWERING
@@ -348,7 +352,7 @@
     units: '-'
 - key: WEST_BC_TOGGLE
   name: Western b.c. method
-  description: boundary condition
+  description: Boundary condition
   value:
     type: choice
     default: ICE_FREE_BOUND
@@ -361,7 +365,7 @@
     units: '-'
 - key: EAST_BC_TOGGLE
   name: Eastern b.c. method
-  description: boundary condition
+  description: Boundary condition
   value:
     type: choice
     default: ICE_FREE_BOUND
@@ -374,7 +378,7 @@
     units: '-'
 - key: SOUTH_BC_TOGGLE
   name: Southern b.c. method
-  description: boundary condition
+  description: Boundary condition
   value:
     type: choice
     default: ICE_FREE_BOUND
@@ -387,7 +391,7 @@
     units: '-'
 - key: NORTH_BC_TOGGLE
   name: Northern b.c. method
-  description: boundary condition
+  description: Boundary condition
   value:
     type: choice
     default: ICE_FREE_BOUND
@@ -398,9 +402,10 @@
     - SURF_ELEV_BOUND
     - SURF_SLOPE_BOUND
     units: '-'
+Output:
 - key: save_grid_dt
   name: Save grid dt
-  description: interval to save grids, years
+  description: Interval to save grids, years
   value:
     type: float
     default: '100.0'
@@ -410,7 +415,7 @@
     units: '-'
 - key: SAVE_HI_GRIDS
   name: Save Hi grids toggle
-  description: option to save computed Hi grids
+  description: Option to save computed hi grids
   value:
     type: choice
     default: 'Yes'
@@ -420,14 +425,14 @@
     units: '-'
 - key: hi_gs_file
   name: Save Hi grids file
-  description: filename for Hi grid stack
+  description: Filename for hi grid stack
   value:
     type: string
     default: '[case_prefix]_2D_iceH.nc'
     units: '-'
 - key: SAVE_ZI_GRIDS
   name: Save Zi grids toggle
-  description: option to save computed Zi grids
+  description: Option to save computed zi grids
   value:
     type: choice
     default: 'No'
@@ -437,14 +442,14 @@
     units: '-'
 - key: zi_gs_file
   name: Save Zi grids file
-  description: filename for Zi grid stack
+  description: Filename for zi grid stack
   value:
     type: string
     default: '[case_prefix]_2D_iceZ.nc'
     units: '-'
 - key: SAVE_MR_GRIDS
   name: Save MR grids toggle
-  description: option to save computed MR grids
+  description: Option to save computed mr grids
   value:
     type: choice
     default: 'No'
@@ -454,14 +459,14 @@
     units: '-'
 - key: mr_gs_file
   name: Save MR grids file
-  description: filename for MR grid stack
+  description: Filename for mr grid stack
   value:
     type: string
     default: '[case_prefix]_2D_iceMR.nc'
     units: '-'
 - key: save_pixels_dt
   name: Save time series dt
-  description: interval to save time series values, years
+  description: Interval to save time series values, years
   value:
     type: float
     default: '10.0'
@@ -471,14 +476,14 @@
     units: '-'
 - key: pixel_file
   name: Monitored pixel file
-  description: filename for monitored pixel file
+  description: Filename for monitored pixel file
   value:
     type: string
     default: '[case_prefix]_outlets.txt'
     units: '-'
 - key: SAVE_HI_PIXELS
   name: Save Hi time series toggle
-  description: option to save computed Hi time series
+  description: Option to save computed hi time series
   value:
     type: choice
     default: 'No'
@@ -488,14 +493,14 @@
     units: '-'
 - key: hi_ts_file
   name: Save Hi time series file
-  description: filename for Hi time series
+  description: Filename for hi time series
   value:
     type: string
     default: '[case_prefix]_0D_iceH.txt'
     units: '-'
 - key: SAVE_ZI_PIXELS
   name: Save Zi pixels toggle
-  description: option to save computed Zi time series
+  description: Option to save computed zi time series
   value:
     type: choice
     default: 'No'
@@ -505,14 +510,14 @@
     units: '-'
 - key: zi_ts_file
   name: Save Zi time series file
-  description: filename for Zi time series
+  description: Filename for zi time series
   value:
     type: string
     default: '[case_prefix]_0D_iceZ.txt'
     units: '-'
 - key: SAVE_MR_PIXELS
   name: Save MR time series toggle
-  description: option to save computed MR time series
+  description: Option to save computed mr time series
   value:
     type: choice
     default: 'No'
@@ -522,11 +527,12 @@
     units: '-'
 - key: mr_ts_file
   name: Save MR time series file
-  description: filename for MR time series
+  description: Filename for mr time series
   value:
     type: string
     default: '[case_prefix]_0D_iceMR.txt'
     units: '-'
+About:
 - key: ModelName
   name: Model name
   description: Name of the model
@@ -543,7 +549,7 @@
     units: '-'
 - key: HTML_HELP_FILE
   name: HTML help file
-  description: URL for HTML help file
+  description: Url for html help file
   value:
     type: String
     default: http://csdms.colorado.edu/wiki/Model_help:Gc2d

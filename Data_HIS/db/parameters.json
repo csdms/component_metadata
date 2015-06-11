@@ -1,322 +1,330 @@
-[
-    {
-        "key": "comp_status", 
-        "name": "Component status", 
-        "value": {
-            "default": "Enabled", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Enabled", 
-                "Disabled"
-            ]
+{
+    "Input": [
+        {
+            "key": "comp_status", 
+            "name": "Component status", 
+            "description": "Component status", 
+            "value": {
+                "type": "choice", 
+                "default": "Enabled", 
+                "choices": [
+                    "Enabled", 
+                    "Disabled"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "component status"
-    }, 
-    {
-        "key": "in_directory", 
-        "name": "Input directory", 
-        "value": {
-            "default": "/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "in_directory", 
+            "name": "Input directory", 
+            "description": "Input directory", 
+            "value": {
+                "type": "string", 
+                "default": "/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/", 
+                "units": "-"
+            }
         }, 
-        "description": "input directory"
-    }, 
-    {
-        "key": "out_directory", 
-        "name": "Output directory", 
-        "value": {
-            "default": "~/CMT_Output/", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "out_directory", 
+            "name": "Output directory", 
+            "description": "Output directory", 
+            "value": {
+                "type": "string", 
+                "default": "~/CMT_Output/", 
+                "units": "-"
+            }
         }, 
-        "description": "output directory"
-    }, 
-    {
-        "key": "site_prefix", 
-        "name": "Site prefix", 
-        "value": {
-            "default": "Treynor", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "site_prefix", 
+            "name": "Site prefix", 
+            "description": "File prefix for the study site", 
+            "value": {
+                "type": "string", 
+                "default": "Treynor", 
+                "units": "-"
+            }
         }, 
-        "description": "file prefix for the study site"
-    }, 
-    {
-        "key": "case_prefix", 
-        "name": "Case prefix", 
-        "value": {
-            "default": "Case5", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "case_prefix", 
+            "name": "Case prefix", 
+            "description": "File prefix for the model scenario", 
+            "value": {
+                "type": "string", 
+                "default": "Case5", 
+                "units": "-"
+            }
+        }
+    ], 
+    "Query": [
+        {
+            "key": "data_keyword", 
+            "name": "Data keyword", 
+            "description": "His data keyword", 
+            "value": {
+                "type": "string", 
+                "default": "Precipitation", 
+                "units": "-"
+            }
         }, 
-        "description": "file prefix for the model scenario"
-    }, 
-    {
-        "key": "data_keyword", 
-        "name": "Data keyword", 
-        "value": {
-            "default": "Precipitation", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "west_edge_lon", 
+            "name": "West edge longitude", 
+            "description": "Longitude of west edge of geographic region", 
+            "value": {
+                "type": "float", 
+                "default": "-111.0", 
+                "range": {
+                    "min": "-180.0", 
+                    "max": "180.0"
+                }, 
+                "units": "dec.degrees"
+            }
         }, 
-        "description": "HIS data keyword"
-    }, 
-    {
-        "key": "west_edge_lon", 
-        "name": "West edge longitude", 
-        "value": {
-            "default": "-111.0", 
-            "units": "dec.degrees", 
-            "range": {
-                "max": "180.0", 
-                "min": "-180.0"
-            }, 
-            "type": "float"
+        {
+            "key": "east_edge_lon", 
+            "name": "East edge longitude", 
+            "description": "Longitude of east edge of geographic region", 
+            "value": {
+                "type": "float", 
+                "default": "-110.0", 
+                "range": {
+                    "min": "-180.0", 
+                    "max": "180.0"
+                }, 
+                "units": "dec.degrees"
+            }
         }, 
-        "description": "longitude of west edge of geographic region"
-    }, 
-    {
-        "key": "east_edge_lon", 
-        "name": "East edge longitude", 
-        "value": {
-            "default": "-110.0", 
-            "units": "dec.degrees", 
-            "range": {
-                "max": "180.0", 
-                "min": "-180.0"
-            }, 
-            "type": "float"
+        {
+            "key": "north_edge_lat", 
+            "name": "North edge latitude", 
+            "description": "Latitude of north edge of geographic region", 
+            "value": {
+                "type": "float", 
+                "default": "42.0", 
+                "range": {
+                    "min": "-90.0", 
+                    "max": "90.0"
+                }, 
+                "units": "dec.degrees"
+            }
         }, 
-        "description": "longitude of east edge of geographic region"
-    }, 
-    {
-        "key": "north_edge_lat", 
-        "name": "North edge latitude", 
-        "value": {
-            "default": "42.0", 
-            "units": "dec.degrees", 
-            "range": {
-                "max": "90.0", 
-                "min": "-90.0"
-            }, 
-            "type": "float"
+        {
+            "key": "south_edge_lat", 
+            "name": "South edge latitude", 
+            "description": "Latitude of south edge of geographic region", 
+            "value": {
+                "type": "float", 
+                "default": "41.0", 
+                "range": {
+                    "min": "-90.0", 
+                    "max": "90.0"
+                }, 
+                "units": "dec.degrees"
+            }
         }, 
-        "description": "latitude of north edge of geographic region"
-    }, 
-    {
-        "key": "south_edge_lat", 
-        "name": "South edge latitude", 
-        "value": {
-            "default": "41.0", 
-            "units": "dec.degrees", 
-            "range": {
-                "max": "90.0", 
-                "min": "-90.0"
-            }, 
-            "type": "float"
+        {
+            "key": "start_month", 
+            "name": "Start month", 
+            "description": "Start month", 
+            "value": {
+                "type": "choice", 
+                "default": "January", 
+                "choices": [
+                    "January", 
+                    "February", 
+                    "March", 
+                    "April", 
+                    "May", 
+                    "June", 
+                    "July", 
+                    "August", 
+                    "September", 
+                    "October", 
+                    "November", 
+                    "December"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "latitude of south edge of geographic region"
-    }, 
-    {
-        "key": "start_month", 
-        "name": "Start month", 
-        "value": {
-            "default": "January", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "January", 
-                "February", 
-                "March", 
-                "April", 
-                "May", 
-                "June", 
-                "July", 
-                "August", 
-                "September", 
-                "October", 
-                "November", 
-                "December"
-            ]
+        {
+            "key": "start_day", 
+            "name": "Start day", 
+            "description": "Start day", 
+            "value": {
+                "type": "int", 
+                "default": "1", 
+                "range": {
+                    "min": "0", 
+                    "max": "31"
+                }, 
+                "units": "-"
+            }
         }, 
-        "description": "start month"
-    }, 
-    {
-        "key": "start_day", 
-        "name": "Start day", 
-        "value": {
-            "default": "1", 
-            "units": "-", 
-            "range": {
-                "max": "31", 
-                "min": "0"
-            }, 
-            "type": "int"
+        {
+            "key": "start_year", 
+            "name": "Start year", 
+            "description": "Start year", 
+            "value": {
+                "type": "int", 
+                "default": "1998", 
+                "range": {
+                    "min": "1900", 
+                    "max": "2020"
+                }, 
+                "units": "-"
+            }
         }, 
-        "description": "start day"
-    }, 
-    {
-        "key": "start_year", 
-        "name": "Start year", 
-        "value": {
-            "default": "1998", 
-            "units": "-", 
-            "range": {
-                "max": "2020", 
-                "min": "1900"
-            }, 
-            "type": "int"
+        {
+            "key": "stop_month", 
+            "name": "Stop month", 
+            "description": "Stop month", 
+            "value": {
+                "type": "choice", 
+                "default": "January", 
+                "choices": [
+                    "January", 
+                    "February", 
+                    "March", 
+                    "April", 
+                    "May", 
+                    "June", 
+                    "July", 
+                    "August", 
+                    "September", 
+                    "October", 
+                    "November", 
+                    "December"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "start year"
-    }, 
-    {
-        "key": "stop_month", 
-        "name": "Stop month", 
-        "value": {
-            "default": "January", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "January", 
-                "February", 
-                "March", 
-                "April", 
-                "May", 
-                "June", 
-                "July", 
-                "August", 
-                "September", 
-                "October", 
-                "November", 
-                "December"
-            ]
+        {
+            "key": "stop_day", 
+            "name": "Stop day", 
+            "description": "Stop day", 
+            "value": {
+                "type": "int", 
+                "default": "1", 
+                "range": {
+                    "min": "0", 
+                    "max": "31"
+                }, 
+                "units": "-"
+            }
         }, 
-        "description": "stop month"
-    }, 
-    {
-        "key": "stop_day", 
-        "name": "Stop day", 
-        "value": {
-            "default": "1", 
-            "units": "-", 
-            "range": {
-                "max": "31", 
-                "min": "0"
-            }, 
-            "type": "int"
+        {
+            "key": "stop_year", 
+            "name": "Stop year", 
+            "description": "Stop year", 
+            "value": {
+                "type": "int", 
+                "default": "2010", 
+                "range": {
+                    "min": "1900", 
+                    "max": "2020"
+                }, 
+                "units": "-"
+            }
         }, 
-        "description": "stop day"
-    }, 
-    {
-        "key": "stop_year", 
-        "name": "Stop year", 
-        "value": {
-            "default": "2010", 
-            "units": "-", 
-            "range": {
-                "max": "2020", 
-                "min": "1900"
-            }, 
-            "type": "int"
+        {
+            "key": "max_n_values", 
+            "name": "Max values per series", 
+            "description": "Max number of values allowed in any time series", 
+            "value": {
+                "type": "int", 
+                "default": "1000", 
+                "range": {
+                    "min": "1", 
+                    "max": "1000000"
+                }, 
+                "units": "-"
+            }
         }, 
-        "description": "stop year"
-    }, 
-    {
-        "key": "max_n_values", 
-        "name": "Max values per series", 
-        "value": {
-            "default": "1000", 
-            "units": "-", 
-            "range": {
-                "max": "1000000", 
-                "min": "1"
-            }, 
-            "type": "int"
+        {
+            "key": "max_n_series", 
+            "name": "Max number of series", 
+            "description": "Max number of time series allows in the report", 
+            "value": {
+                "type": "int", 
+                "default": "100", 
+                "range": {
+                    "min": "1", 
+                    "max": "100000"
+                }, 
+                "units": "-"
+            }
+        }
+    ], 
+    "Output": [
+        {
+            "key": "save_pixels_dt", 
+            "name": "Save time series timestep", 
+            "description": "Time interval between time series values", 
+            "value": {
+                "type": "float", 
+                "default": "60.000", 
+                "range": {
+                    "min": "0.0", 
+                    "max": "1e6"
+                }, 
+                "units": "sec"
+            }
         }, 
-        "description": "max number of values allowed in any time series"
-    }, 
-    {
-        "key": "max_n_series", 
-        "name": "Max number of series", 
-        "value": {
-            "default": "100", 
-            "units": "-", 
-            "range": {
-                "max": "100000", 
-                "min": "1"
-            }, 
-            "type": "int"
+        {
+            "key": "SAVE_DAT_PIXELS", 
+            "name": "Save time series toggle", 
+            "description": "Option to save time series", 
+            "value": {
+                "type": "choice", 
+                "default": "No", 
+                "choices": [
+                    "Yes", 
+                    "No"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "max number of time series allows in the report"
-    }, 
-    {
-        "key": "save_pixels_dt", 
-        "name": "Save time series timestep", 
-        "value": {
-            "default": "60.000", 
-            "units": "sec", 
-            "range": {
-                "max": "1e6", 
-                "min": "0.0"
-            }, 
-            "type": "float"
+        {
+            "key": "dat_ts_file", 
+            "name": "Save time series file", 
+            "description": "Filename for time series", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_0D-data.txt", 
+                "units": "-"
+            }
+        }
+    ], 
+    "About": [
+        {
+            "key": "ModelName", 
+            "name": "Model name", 
+            "description": "Name of the model", 
+            "value": {
+                "type": "String", 
+                "default": "DataHIS", 
+                "units": "-"
+            }
         }, 
-        "description": "time interval between time series values"
-    }, 
-    {
-        "key": "SAVE_DAT_PIXELS", 
-        "name": "Save time series toggle", 
-        "value": {
-            "default": "No", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Yes", 
-                "No"
-            ]
+        {
+            "key": "ModelAuthor", 
+            "name": "Author name", 
+            "description": "Name of the model author", 
+            "value": {
+                "type": "String", 
+                "default": "Scott D. Peckham ", 
+                "units": "-"
+            }
         }, 
-        "description": "option to save time series"
-    }, 
-    {
-        "key": "dat_ts_file", 
-        "name": "Save time series file", 
-        "value": {
-            "default": "[case_prefix]_0D-data.txt", 
-            "units": "-", 
-            "type": "string"
-        }, 
-        "description": "filename for time series"
-    }, 
-    {
-        "key": "ModelName", 
-        "name": "Model name", 
-        "value": {
-            "default": "DataHIS", 
-            "units": "-", 
-            "type": "String"
-        }, 
-        "description": "Name of the model"
-    }, 
-    {
-        "key": "ModelAuthor", 
-        "name": "Author name", 
-        "value": {
-            "default": "Scott D. Peckham ", 
-            "units": "-", 
-            "type": "String"
-        }, 
-        "description": "Name of the model author"
-    }, 
-    {
-        "key": "HTML_HELP_FILE", 
-        "name": "HTML help file", 
-        "value": {
-            "default": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Data-HIS", 
-            "units": "-", 
-            "type": "String"
-        }, 
-        "description": "URL for HTML help file"
-    }
-]
+        {
+            "key": "HTML_HELP_FILE", 
+            "name": "HTML help file", 
+            "description": "Url for html help file", 
+            "value": {
+                "type": "String", 
+                "default": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Data-HIS", 
+                "units": "-"
+            }
+        }
+    ]
+}

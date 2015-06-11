@@ -1,14 +1,14 @@
 {
-  "id": "Infil_Beven", 
+  "id": "infil_beven", 
   "name": "InfilBeven", 
-  "class": "Infil_Beven", 
-  "initialize_args": "Infil_Beven.cfg", 
+  "class": "Infil_beven", 
+  "initialize_args": "infil_beven.cfg", 
   "time_step": "", 
   "summary": "", 
   "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Beven", 
   "author": "Scott D. Peckham ", 
-  "email": "", 
-  "version": "", 
-  "doi": "", 
-  "license": ""
+  "email": "scott.peckham@colorado.edu", 
+  "version": "3.1.0", 
+  "doi": "10.1594/IEDA/100174", 
+  "license": "Apache"
 }

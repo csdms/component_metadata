@@ -1,234 +1,240 @@
-[
-    {
-        "key": "comp_status", 
-        "name": "Component status", 
-        "value": {
-            "default": "Enabled", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Enabled", 
-                "Disabled"
-            ]
+{
+    "Input": [
+        {
+            "key": "comp_status", 
+            "name": "Component status", 
+            "description": "Component status", 
+            "value": {
+                "type": "choice", 
+                "default": "Enabled", 
+                "choices": [
+                    "Enabled", 
+                    "Disabled"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "component status"
-    }, 
-    {
-        "key": "in_directory", 
-        "name": "Input directory", 
-        "value": {
-            "default": "/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "in_directory", 
+            "name": "Input directory", 
+            "description": "Input directory", 
+            "value": {
+                "type": "string", 
+                "default": "/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/", 
+                "units": "-"
+            }
         }, 
-        "description": "input directory"
-    }, 
-    {
-        "key": "out_directory", 
-        "name": "Output directory", 
-        "value": {
-            "default": "~/CMT_Output/", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "out_directory", 
+            "name": "Output directory", 
+            "description": "Output directory", 
+            "value": {
+                "type": "string", 
+                "default": "~/CMT_Output/", 
+                "units": "-"
+            }
         }, 
-        "description": "output directory"
-    }, 
-    {
-        "key": "site_prefix", 
-        "name": "Site prefix", 
-        "value": {
-            "default": "Treynor", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "site_prefix", 
+            "name": "Site prefix", 
+            "description": "File prefix for the study site", 
+            "value": {
+                "type": "string", 
+                "default": "Treynor", 
+                "units": "-"
+            }
         }, 
-        "description": "file prefix for the study site"
-    }, 
-    {
-        "key": "case_prefix", 
-        "name": "Case prefix", 
-        "value": {
-            "default": "Case5", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "case_prefix", 
+            "name": "Case prefix", 
+            "description": "File prefix for the model scenario", 
+            "value": {
+                "type": "string", 
+                "default": "Case5", 
+                "units": "-"
+            }
         }, 
-        "description": "file prefix for the model scenario"
-    }, 
-    {
-        "key": "n_steps", 
-        "name": "Number of steps", 
-        "value": {
-            "default": "10", 
-            "units": "-", 
-            "range": {
-                "max": "1e7", 
-                "min": "1"
-            }, 
-            "type": "long"
+        {
+            "key": "n_steps", 
+            "name": "Number of steps", 
+            "description": "Number of time steps", 
+            "value": {
+                "type": "long", 
+                "default": "10", 
+                "range": {
+                    "min": "1", 
+                    "max": "1e7"
+                }, 
+                "units": "-"
+            }
+        }
+    ], 
+    "Output": [
+        {
+            "key": "save_grid_dt", 
+            "name": "Save grid timestep", 
+            "description": "Time interval between saved grids", 
+            "value": {
+                "type": "float", 
+                "default": "60.000", 
+                "range": {
+                    "min": "0.0", 
+                    "max": "1e6"
+                }, 
+                "units": "sec"
+            }
         }, 
-        "description": "number of time steps"
-    }, 
-    {
-        "key": "save_grid_dt", 
-        "name": "Save grid timestep", 
-        "value": {
-            "default": "60.000", 
-            "units": "sec", 
-            "range": {
-                "max": "1e6", 
-                "min": "0.0"
-            }, 
-            "type": "float"
+        {
+            "key": "SAVE_V0_GRIDS", 
+            "name": "Save v0 grids toggle", 
+            "description": "Option to save grids of infil. rate (at surf)", 
+            "value": {
+                "type": "choice", 
+                "default": "No", 
+                "choices": [
+                    "Yes", 
+                    "No"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "time interval between saved grids"
-    }, 
-    {
-        "key": "SAVE_V0_GRIDS", 
-        "name": "Save v0 grids toggle", 
-        "value": {
-            "default": "No", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Yes", 
-                "No"
-            ]
+        {
+            "key": "v0_gs_file", 
+            "name": "Save v0 grids file", 
+            "description": "Filename for grid stack of v0", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_2D-v0.nc", 
+                "units": "m/s"
+            }
         }, 
-        "description": "option to save grids of infil. rate (at surf)"
-    }, 
-    {
-        "key": "v0_gs_file", 
-        "name": "Save v0 grids file", 
-        "value": {
-            "default": "[case_prefix]_2D-v0.nc", 
-            "units": "m/s", 
-            "type": "string"
+        {
+            "key": "SAVE_I_GRIDS", 
+            "name": "Save I  grids toggle", 
+            "description": "Option to save grids of cumul. infil. depth", 
+            "value": {
+                "type": "choice", 
+                "default": "No", 
+                "choices": [
+                    "Yes", 
+                    "No"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "filename for grid stack of v0"
-    }, 
-    {
-        "key": "SAVE_I_GRIDS", 
-        "name": "Save I  grids toggle", 
-        "value": {
-            "default": "No", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Yes", 
-                "No"
-            ]
+        {
+            "key": "I_gs_file", 
+            "name": "Save I  grids file", 
+            "description": "Filename for grid stack of i", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_2D-I.nc", 
+                "units": "m"
+            }
         }, 
-        "description": "option to save grids of cumul. infil. depth"
-    }, 
-    {
-        "key": "I_gs_file", 
-        "name": "Save I  grids file", 
-        "value": {
-            "default": "[case_prefix]_2D-I.nc", 
-            "units": "m", 
-            "type": "string"
+        {
+            "key": "save_pixels_dt", 
+            "name": "Save pixels timestep", 
+            "description": "Time interval between time series values", 
+            "value": {
+                "type": "float", 
+                "default": "60.000", 
+                "range": {
+                    "min": "0.0", 
+                    "max": "1e6"
+                }, 
+                "units": "sec"
+            }
         }, 
-        "description": "filename for grid stack of I"
-    }, 
-    {
-        "key": "save_pixels_dt", 
-        "name": "Save pixels timestep", 
-        "value": {
-            "default": "60.000", 
-            "units": "sec", 
-            "range": {
-                "max": "1e6", 
-                "min": "0.0"
-            }, 
-            "type": "float"
+        {
+            "key": "pixel_file", 
+            "name": "Monitored pixel file", 
+            "description": "Filename for monitored pixel file", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_outlets.txt", 
+                "units": "-"
+            }
         }, 
-        "description": "time interval between time series values"
-    }, 
-    {
-        "key": "pixel_file", 
-        "name": "Monitored pixel file", 
-        "value": {
-            "default": "[case_prefix]_outlets.txt", 
-            "units": "-", 
-            "type": "string"
+        {
+            "key": "SAVE_V0_PIXELS", 
+            "name": "Save v0 pixels toggle", 
+            "description": "Option to save time series of infil. rate (at surf)", 
+            "value": {
+                "type": "choice", 
+                "default": "No", 
+                "choices": [
+                    "Yes", 
+                    "No"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "filename for monitored pixel file"
-    }, 
-    {
-        "key": "SAVE_V0_PIXELS", 
-        "name": "Save v0 pixels toggle", 
-        "value": {
-            "default": "No", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Yes", 
-                "No"
-            ]
+        {
+            "key": "v0_ts_file", 
+            "name": "Save v0 pixels file", 
+            "description": "Filename for time series of v0", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_0D-v0.txt", 
+                "units": "m/s"
+            }
         }, 
-        "description": "option to save time series of infil. rate (at surf)"
-    }, 
-    {
-        "key": "v0_ts_file", 
-        "name": "Save v0 pixels file", 
-        "value": {
-            "default": "[case_prefix]_0D-v0.txt", 
-            "units": "m/s", 
-            "type": "string"
+        {
+            "key": "SAVE_I_PIXELS", 
+            "name": "Save I  pixels toggle", 
+            "description": "Option to save time series of cumul. infil. depth", 
+            "value": {
+                "type": "choice", 
+                "default": "No", 
+                "choices": [
+                    "Yes", 
+                    "No"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "filename for time series of v0"
-    }, 
-    {
-        "key": "SAVE_I_PIXELS", 
-        "name": "Save I  pixels toggle", 
-        "value": {
-            "default": "No", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Yes", 
-                "No"
-            ]
+        {
+            "key": "I_ts_file", 
+            "name": "Save I  pixels file", 
+            "description": "Filename for time series of i", 
+            "value": {
+                "type": "string", 
+                "default": "[case_prefix]_0D-I.txt", 
+                "units": "m"
+            }
+        }
+    ], 
+    "About": [
+        {
+            "key": "ModelName", 
+            "name": "Model name", 
+            "description": "Name of the model", 
+            "value": {
+                "type": "String", 
+                "default": "InfilBeven", 
+                "units": "-"
+            }
         }, 
-        "description": "option to save time series of cumul. infil. depth"
-    }, 
-    {
-        "key": "I_ts_file", 
-        "name": "Save I  pixels file", 
-        "value": {
-            "default": "[case_prefix]_0D-I.txt", 
-            "units": "m", 
-            "type": "string"
+        {
+            "key": "ModelAuthor", 
+            "name": "Author name", 
+            "description": "Name of the model author", 
+            "value": {
+                "type": "String", 
+                "default": "Scott D. Peckham ", 
+                "units": "-"
+            }
         }, 
-        "description": "filename for time series of I"
-    }, 
-    {
-        "key": "ModelName", 
-        "name": "Model name", 
-        "value": {
-            "default": "InfilBeven", 
-            "units": "-", 
-            "type": "String"
-        }, 
-        "description": "Name of the model"
-    }, 
-    {
-        "key": "ModelAuthor", 
-        "name": "Author name", 
-        "value": {
-            "default": "Scott D. Peckham ", 
-            "units": "-", 
-            "type": "String"
-        }, 
-        "description": "Name of the model author"
-    }, 
-    {
-        "key": "HTML_HELP_FILE", 
-        "name": "HTML help file", 
-        "value": {
-            "default": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Beven", 
-            "units": "-", 
-            "type": "String"
-        }, 
-        "description": "URL for HTML help file"
-    }
-]
+        {
+            "key": "HTML_HELP_FILE", 
+            "name": "HTML help file", 
+            "description": "Url for html help file", 
+            "value": {
+                "type": "String", 
+                "default": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Beven", 
+                "units": "-"
+            }
+        }
+    ]
+}

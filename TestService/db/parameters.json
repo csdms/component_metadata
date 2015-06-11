@@ -1,86 +1,90 @@
-[
-    {
-        "key": "comp_status", 
-        "name": "Component status", 
-        "value": {
-            "default": "Enabled", 
-            "units": "-", 
-            "type": "choice", 
-            "choices": [
-                "Enabled", 
-                "Disabled"
-            ]
+{
+    "Input Parameters": [
+        {
+            "key": "comp_status", 
+            "name": "Component status", 
+            "description": "Component status", 
+            "value": {
+                "type": "choice", 
+                "default": "Enabled", 
+                "choices": [
+                    "Enabled", 
+                    "Disabled"
+                ], 
+                "units": "-"
+            }
         }, 
-        "description": "component status"
-    }, 
-    {
-        "key": "in_directory", 
-        "name": "Input directory", 
-        "value": {
-            "default": "/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/", 
-            "units": "-", 
-            "type": "String"
+        {
+            "key": "in_directory", 
+            "name": "Input directory", 
+            "description": "Input directory", 
+            "value": {
+                "type": "String", 
+                "default": "/home/csdms/models/topoflow/3.1/share/data/treynor_iowa/", 
+                "units": "-"
+            }
         }, 
-        "description": "input directory"
-    }, 
-    {
-        "key": "out_directory", 
-        "name": "Output directory", 
-        "value": {
-            "default": "~/CMT_Output/", 
-            "units": "-", 
-            "type": "String"
+        {
+            "key": "out_directory", 
+            "name": "Output directory", 
+            "description": "Output directory", 
+            "value": {
+                "type": "String", 
+                "default": "~/CMT_Output/", 
+                "units": "-"
+            }
         }, 
-        "description": "output directory"
-    }, 
-    {
-        "key": "site_prefix", 
-        "name": "Site prefix", 
-        "value": {
-            "default": "Treynor", 
-            "units": "-", 
-            "type": "String"
+        {
+            "key": "site_prefix", 
+            "name": "Site prefix", 
+            "description": "File prefix for the study site", 
+            "value": {
+                "type": "String", 
+                "default": "Treynor", 
+                "units": "-"
+            }
         }, 
-        "description": "file prefix for the study site"
-    }, 
-    {
-        "key": "case_prefix", 
-        "name": "Case prefix", 
-        "value": {
-            "default": "Case5", 
-            "units": "-", 
-            "type": "String"
+        {
+            "key": "case_prefix", 
+            "name": "Case prefix", 
+            "description": "File prefix for the model scenario", 
+            "value": {
+                "type": "String", 
+                "default": "Case5", 
+                "units": "-"
+            }
+        }
+    ], 
+    "About": [
+        {
+            "key": "ModelName", 
+            "name": "Model name", 
+            "description": "Name of the model", 
+            "value": {
+                "type": "String", 
+                "default": "TestService", 
+                "units": "-"
+            }
         }, 
-        "description": "file prefix for the model scenario"
-    }, 
-    {
-        "key": "ModelName", 
-        "name": "Model name", 
-        "value": {
-            "default": "TestService", 
-            "units": "-", 
-            "type": "String"
+        {
+            "key": "ModelAuthor", 
+            "name": "Author name", 
+            "description": "Name of the model author", 
+            "value": {
+                "type": "String", 
+                "default": "Scott D. Peckham ", 
+                "units": "-"
+            }
         }, 
-        "description": "Name of the model"
-    }, 
-    {
-        "key": "ModelAuthor", 
-        "name": "Author name", 
-        "value": {
-            "default": "Scott D. Peckham ", 
-            "units": "-", 
-            "type": "String"
-        }, 
-        "description": "Name of the model author"
-    }, 
-    {
-        "key": "HTML_HELP_FILE", 
-        "name": "HTML help file", 
-        "value": {
-            "default": "http://csdms.colorado.edu/help/models/topoflow/TF_tutorial.htm", 
-            "units": "-", 
-            "type": "String"
-        }, 
-        "description": "URL for HTML help file"
-    }
-]
+        {
+            "key": "HTML_HELP_FILE", 
+            "name": "HTML help file", 
+            "description": "Url for html help file", 
+            "value": {
+                "type": "String", 
+                "default": "http://csdms.colorado.edu/help/models/topoflow/TF_tutorial.htm", 
+                "units": "-"
+            }
+        }
+    ]
+}
