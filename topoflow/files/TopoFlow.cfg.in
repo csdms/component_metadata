@@ -1,15 +1,15 @@
 ===============================================================================
-Topoflow Config File for: TopoFlow
+Topoflow Config File for: topoflow
 ===============================================================================
-comp_status         | ${comp_status}      | choice    | component status [-] {Enabled; Disabled}
-in_directory        | ${in_directory}     | String    | input directory [-]
-out_directory       | ${out_directory}    | String    | output directory [-]
-site_prefix         | ${site_prefix}      | String    | file prefix for the study site [-]
-case_prefix         | ${case_prefix}      | String    | file prefix for the model scenario [-]
-stop_method         | ${stop_method}      | choice    | stopping method [-] {Q_peak_fraction; Until_model_time; Until_n_steps}
-Qp_fraction         | ${Qp_fraction}      | Float     | Value for Q_peak_fraction method [-]
-T_stop_model        | ${T_stop_model}     | Float     | Value for Until_model_time method [minutes]
-n_steps             | ${n_steps}          | Int       | Value for Until_n_steps method [-]
+comp_status         | ${comp_status}      | choice    | Component status [-] {Enabled; Disabled}
+in_directory        | ${in_directory}     | String    | Input directory [-]
+out_directory       | ${out_directory}    | String    | Output directory [-]
+site_prefix         | ${site_prefix}      | String    | File prefix for the study site [-]
+case_prefix         | ${case_prefix}      | String    | File prefix for the model scenario [-]
+stop_method         | ${stop_method}      | choice    | Stopping method [-] {Q_peak_fraction; Until_model_time; Until_n_steps}
+Qp_fraction         | ${Qp_fraction}      | Float     | Value for q_peak_fraction method [-]
+T_stop_model        | ${T_stop_model}     | Float     | Value for until_model_time method [minutes]
+n_steps             | ${n_steps}          | Int       | Value for until_n_steps method [-]
 ModelName           | ${ModelName}        | String    | Name of the model [-]
 ModelAuthor         | ${ModelAuthor}      | String    | Name of the model author [-]
-HTML_HELP_FILE      | ${HTML_HELP_FILE}   | String    | URL for HTML help file [-]
+HTML_HELP_FILE      | ${HTML_HELP_FILE}   | String    | Url for html help file [-]

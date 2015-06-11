@@ -1,14 +1,14 @@
 {
-  "id": "TopoFlow", 
+  "id": "topoflow", 
   "name": "TopoFlow", 
-  "class": "TopoFlow", 
-  "initialize_args": "TopoFlow.cfg", 
+  "class": "Topoflow", 
+  "initialize_args": "topoflow.cfg", 
   "time_step": "", 
   "summary": "", 
   "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow", 
   "author": "Scott D. Peckham ", 
-  "email": "", 
-  "version": "", 
-  "doi": "", 
-  "license": ""
+  "email": "scott.peckham@colorado.edu", 
+  "version": "3.1.0", 
+  "doi": "10.1594/IEDA/100174", 
+  "license": "Apache"
 }
