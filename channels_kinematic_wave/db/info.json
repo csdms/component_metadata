@@ -1,0 +1,14 @@
+{
+  "id": "channels_kinematic_wave", 
+  "name": "ChannelsKinWave", 
+  "class": "Channels_kinematic_wave", 
+  "initialize_args": "channels_kinematic_wave.cfg", 
+  "time_step": "6.00000000", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Channels-Kinematic_Wave", 
+  "author": "Scott D. Peckham ", 
+  "email": "scott.peckham@colorado.edu", 
+  "version": "3.1.0", 
+  "doi": "10.1594/IEDA/100174", 
+  "license": "Apache"
+}

@@ -1,0 +1,14 @@
+#===============================================================================
+# Topoflow Config File for: testservice
+#===============================================================================
+# Input Parameters
+comp_status         | ${comp_status}      | choice    | Component status [-] {Enabled; Disabled}
+in_directory        | ${in_directory}     | String    | Input directory [-]
+out_directory       | ${out_directory}    | String    | Output directory [-]
+site_prefix         | ${site_prefix}      | String    | File prefix for the study site [-]
+case_prefix         | ${case_prefix}      | String    | File prefix for the model scenario [-]
+#===============================================================================
+# About
+ModelName           | ${ModelName}        | String    | Name of the model [-]
+ModelAuthor         | ${ModelAuthor}      | String    | Name of the model author [-]
+HTML_HELP_FILE      | ${HTML_HELP_FILE}   | String    | Url for html help file [-]

@@ -1,0 +1,14 @@
+{
+  "id": "satzone_darcy_layers", 
+  "name": "SatZoneDarcyLayers", 
+  "class": "Satzone_darcy_layers", 
+  "initialize_args": "satzone_darcy_layers.cfg", 
+  "time_step": "3600.000", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Saturated_Zone-Darcy_Layers", 
+  "author": "Scott D. Peckham ", 
+  "email": "scott.peckham@colorado.edu", 
+  "version": "3.1.0", 
+  "doi": "10.1594/IEDA/100174", 
+  "license": "Apache"
+}
