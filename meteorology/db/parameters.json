@@ -475,7 +475,7 @@
                 "min": 0.0,
                 "max": 1.0
             },
-            "units": "unitless"
+            "units": "-"
         }
     },
     {
@@ -505,7 +505,7 @@
                 "min": 0.0,
                 "max": 1.0
             },
-            "units": "unitless"
+            "units": "-"
         }
     },
     {
@@ -535,7 +535,7 @@
                 "min": 0.0,
                 "max": 0.3
             },
-            "units": "unitless"
+            "units": "-"
         }
     },
     {
@@ -565,7 +565,7 @@
                 "min": 0.0,
                 "max": 1.0
             },
-            "units": "unitless"
+            "units": "-"
         }
     },
     {
@@ -595,7 +595,7 @@
                 "min": 0.0,
                 "max": 1.0
             },
-            "units": "unitless"
+            "units": "-"
         }
     },
     {
@@ -847,7 +847,7 @@
         "value": {
             "type": "string",
             "default": "[case_prefix]_2D-emair.nc",
-            "units": "unitless"
+            "units": "-"
         }
     },
     {
@@ -1000,7 +1000,7 @@
         "value": {
             "type": "string",
             "default": "[case_prefix]_0D-emair.nc",
-            "units": "unitless"
+            "units": "-"
         }
     },
     {
