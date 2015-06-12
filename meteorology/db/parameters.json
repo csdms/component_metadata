@@ -87,7 +87,7 @@
                 "min": 0.0,
                 "max": 1e6
             },
-            "units": "sec"
+            "units": "s"
         }
     },
     {
@@ -117,7 +117,7 @@
                 "min": 0.0,
                 "max": 2000.0
             },
-            "units": "kg/m^3"
+            "units": "kg m-3"
         }
     },
     {
@@ -147,7 +147,7 @@
                 "min": 0.0,
                 "max": 2000.0
             },
-            "units": "J/kg/K"
+            "units": "J kg-1 K-1"
         }
     },
     {
@@ -177,7 +177,7 @@
                 "min": 0.0,
                 "max": 2.0
             },
-            "units": "kg/m^3"
+            "units": "kg m-3"
         }
     },
     {
@@ -203,7 +203,7 @@
         "value": {
             "type": "string",
             "default": "[case_prefix]_rain_rates.txt",
-            "units": "mm/hr"
+            "units": "mm hr-1"
         }
     },
     {
@@ -376,7 +376,7 @@
                 "min": 0.0,
                 "max": 20.0
             },
-            "units": "m/s"
+            "units": "m s-1"
         }
     },
     {
@@ -710,7 +710,7 @@
     {
         "key": "separator",
         "name": "Output Parameters 1",
-        "description": "Output Parameters 1",
+        "description": "Output 1",
         "value": {
             "type": "string",
             "default": ""
@@ -727,7 +727,7 @@
                 "min": 0.0,
                 "max": 1e6
             },
-            "units": "sec"
+            "units": "s"
         }
     },
     {
@@ -799,7 +799,7 @@
         "value": {
             "type": "string",
             "default": "[case_prefix]_2D-QnSW.nc",
-            "units": "W/m^2"
+            "units": "W m-2"
         }
     },
     {
@@ -823,7 +823,7 @@
         "value": {
             "type": "string",
             "default": "[case_prefix]_2D-QnLW.nc",
-            "units": "W/m^2"
+            "units": "W m-2"
         }
     },
     {
@@ -870,7 +870,7 @@
                 "min": 0.0,
                 "max": 1e6
             },
-            "units": "sec"
+            "units": "s"
         }
     },
     {
@@ -952,7 +952,7 @@
         "value": {
             "type": "string",
             "default": "[case_prefix]_0D-QnSW.nc",
-            "units": "W/m^2"
+            "units": "W m-2"
         }
     },
     {
@@ -976,7 +976,7 @@
         "value": {
             "type": "string",
             "default": "[case_prefix]_0D-QnLW.nc",
-            "units": "W/m^2"
+            "units": "W m-2"
         }
     },
     {
