@@ -1002,44 +1002,5 @@
             "default": "[case_prefix]_0D-emair.nc",
             "units": "-"
         }
-    },
-    {
-        "key": "separator",
-        "name": "About",
-        "description": "About",
-        "value": {
-            "type": "string",
-            "default": ""
-        }
-    },
-    {
-        "key": "ModelName",
-        "name": "Model name",
-        "description": "Name of the model",
-        "value": {
-            "type": "String",
-            "default": "Meteorology",
-            "units": "-"
-        }
-    },
-    {
-        "key": "ModelAuthor",
-        "name": "Author name",
-        "description": "Name of the model author",
-        "value": {
-            "type": "String",
-            "default": "Scott D. Peckham ",
-            "units": "-"
-        }
-    },
-    {
-        "key": "HTML_HELP_FILE",
-        "name": "HTML help file",
-        "description": "Url for html help file",
-        "value": {
-            "type": "String",
-            "default": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Meteorology",
-            "units": "-"
-        }
     }
 ]
