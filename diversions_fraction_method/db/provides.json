@@ -1,6 +1,6 @@
 [
   {
-    "id": "", 
+    "id": "diversions", 
     "required": false, 
     "exchange_items": [
       "canals__count", 
