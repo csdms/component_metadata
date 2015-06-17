@@ -1,24 +1,21 @@
 [
   {
-    "id": "", 
+    "id": "infil", 
     "required": false, 
     "exchange_items": [
-      "canals__count", 
-      "canals_entrance_water__volume_fraction", 
-      "canals_entrance__x_coordinate", 
-      "canals_entrance__y_coordinate", 
-      "canals_exit_water__volume_flow_rate", 
-      "canals_exit__x_coordinate", 
-      "canals_exit__y_coordinate", 
-      "model__time_step", 
-      "sinks_water__volume_flow_rate", 
-      "sinks__count", 
-      "sinks__x_coordinate", 
-      "sinks__y_coordinate", 
-      "sources_water__volume_flow_rate", 
-      "sources__count", 
-      "sources__x_coordinate", 
-      "sources__y_coordinate"
+        "model__time_step",
+        "soil_surface_water__domain_time_integral_of_infiltration_volume_flux",
+        "soil_surface_water__infiltration_volume_flux",
+        "soil_surface_water__time_integral_of_infiltration_volume_flux",
+        "soil_water__green-ampt_capillary_length",
+        "soil_water__potential_infiltration_volume_flux",
+        "soil_water__initial_hydraulic_conductivity",
+        "soil_water__initial_volume_fraction",
+        "soil_water__saturated_hydraulic_conductivity",
+        "soil_water__saturated_volume_fraction",
+        "soil_water_flow__z_component_of_darcy_velocity",
+        "soil_water_sat-zone_top__domain_time_integral_of_recharge_volume_flux",
+        "soil_water_sat-zone_top__recharge_volume_flux"
     ]
   }
 ]
