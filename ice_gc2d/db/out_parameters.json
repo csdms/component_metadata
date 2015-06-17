@@ -1,0 +1,184 @@
+[
+    {
+        "key": "save_grid_dt", 
+        "name": "Save grid dt", 
+        "description": "Interval to save grids, years", 
+        "value": {
+            "type": "float", 
+            "default": "100.0", 
+            "range": {
+                "min": "1.0", 
+                "max": "1e5"
+            }, 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_HI_GRIDS", 
+        "name": "Save Hi grids toggle", 
+        "description": "Option to save computed hi grids", 
+        "value": {
+            "type": "choice", 
+            "default": "Yes", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "hi_gs_file", 
+        "name": "Save Hi grids file", 
+        "description": "Filename for hi grid stack", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D_iceH.nc", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_ZI_GRIDS", 
+        "name": "Save Zi grids toggle", 
+        "description": "Option to save computed zi grids", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "zi_gs_file", 
+        "name": "Save Zi grids file", 
+        "description": "Filename for zi grid stack", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D_iceZ.nc", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_MR_GRIDS", 
+        "name": "Save MR grids toggle", 
+        "description": "Option to save computed mr grids", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "mr_gs_file", 
+        "name": "Save MR grids file", 
+        "description": "Filename for mr grid stack", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D_iceMR.nc", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "save_pixels_dt", 
+        "name": "Save time series dt", 
+        "description": "Interval to save time series values, years", 
+        "value": {
+            "type": "float", 
+            "default": "10.0", 
+            "range": {
+                "min": "1.0", 
+                "max": "1000"
+            }, 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "pixel_file", 
+        "name": "Monitored pixel file", 
+        "description": "Filename for monitored pixel file", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_outlets.txt", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_HI_PIXELS", 
+        "name": "Save Hi time series toggle", 
+        "description": "Option to save computed hi time series", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "hi_ts_file", 
+        "name": "Save Hi time series file", 
+        "description": "Filename for hi time series", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D_iceH.txt", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_ZI_PIXELS", 
+        "name": "Save Zi pixels toggle", 
+        "description": "Option to save computed zi time series", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "zi_ts_file", 
+        "name": "Save Zi time series file", 
+        "description": "Filename for zi time series", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D_iceZ.txt", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_MR_PIXELS", 
+        "name": "Save MR time series toggle", 
+        "description": "Option to save computed mr time series", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "mr_ts_file", 
+        "name": "Save MR time series file", 
+        "description": "Filename for mr time series", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D_iceMR.txt", 
+            "units": "-"
+        }
+    }
+]

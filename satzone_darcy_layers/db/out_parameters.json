@@ -1,0 +1,184 @@
+[
+    {
+        "key": "save_grid_dt", 
+        "name": "Save grid timestep", 
+        "description": "Time interval between saved grids", 
+        "value": {
+            "type": "float", 
+            "default": "60.000", 
+            "range": {
+                "min": "0.0", 
+                "max": "1e6"
+            }, 
+            "units": "sec"
+        }
+    }, 
+    {
+        "key": "SAVE_HT_GRIDS", 
+        "name": "Save ht grids toggle", 
+        "description": "Option to save grids of water table height", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "ht_gs_file", 
+        "name": "Save ht grids file", 
+        "description": "Filename for grid stack of water table height", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-htable.nc", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "SAVE_DF_GRIDS", 
+        "name": "Save df grids toggle", 
+        "description": "Option to save grids of freeze depth", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "df_gs_file", 
+        "name": "Save df grids file", 
+        "description": "Filename for grid stack of freeze depth", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-dfreeze.nc", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "SAVE_DT_GRIDS", 
+        "name": "Save dt grids toggle", 
+        "description": "Option to save grids of thaw depth", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "dt_gs_file", 
+        "name": "Save dt grids file", 
+        "description": "Filename for grid stack of thaw depth", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-dthaw.nc", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "save_pixels_dt", 
+        "name": "Save pixels timestep", 
+        "description": "Time interval between time series values", 
+        "value": {
+            "type": "float", 
+            "default": "60.000", 
+            "range": {
+                "min": "0.0", 
+                "max": "1e6"
+            }, 
+            "units": "sec"
+        }
+    }, 
+    {
+        "key": "pixel_file", 
+        "name": "Monitored pixel file", 
+        "description": "Filename for monitored pixel file", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_outlets.txt", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_HT_PIXELS", 
+        "name": "Save ht pixels toggle", 
+        "description": "Option to save time series of water table height", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "ht_ts_file", 
+        "name": "Save ht pixels file", 
+        "description": "Filename for time series of water table height", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-htable.txt", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "SAVE_DF_PIXELS", 
+        "name": "Save df pixels toggle", 
+        "description": "Option to save time series of freeze depth", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "df_ts_file", 
+        "name": "Save df pixels file", 
+        "description": "Filename for time series of freeze depth", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-dfreeze.txt", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "SAVE_DT_PIXELS", 
+        "name": "Save dt pixels toggle", 
+        "description": "Option to save time series of thaw depth", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "dt_ts_file", 
+        "name": "Save dt pixels file", 
+        "description": "Filename for time series of thaw depth", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-dthaw.txt", 
+            "units": "m"
+        }
+    }
+]
