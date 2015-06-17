@@ -1,0 +1,232 @@
+[
+    {
+        "key": "save_grid_dt", 
+        "name": "Save grid timestep", 
+        "description": "Time interval between saved grids", 
+        "value": {
+            "type": "float", 
+            "default": "60.000", 
+            "range": {
+                "min": "0", 
+                "max": "1e6"
+            }, 
+            "units": "sec"
+        }
+    }, 
+    {
+        "key": "SAVE_MR_GRIDS", 
+        "name": "Save mr grids toggle", 
+        "description": "Option to save grids of snow meltrate", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "mr_gs_file", 
+        "name": "Save mr grids file", 
+        "description": "Filename for grid stack of snow meltrate", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-SMrate.nc", 
+            "units": "m/s"
+        }
+    }, 
+    {
+        "key": "SAVE_HS_GRIDS", 
+        "name": "Save hs grids toggle", 
+        "description": "Option to save grids of snow depth", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "hs_gs_file", 
+        "name": "Save hs grids file", 
+        "description": "Filename for grid stack of snow depth", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-hsnow.nc", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "SAVE_SW_GRIDS", 
+        "name": "Save sw grids toggle", 
+        "description": "Option to save grids of snow water equivalent", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "sw_gs_file", 
+        "name": "Save sw grids file", 
+        "description": "Filename for grid stack of snow water equivalent", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-hswe.nc", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "SAVE_CC_GRIDS", 
+        "name": "Save cc grids toggle", 
+        "description": "Option to save grids of cold content", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "cc_gs_file", 
+        "name": "Save cc grids file", 
+        "description": "Filename for grid stack of cold content", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-Ecc.nc", 
+            "units": "J/m^2"
+        }
+    }, 
+    {
+        "key": "save_pixels_dt", 
+        "name": "Save pixels timestep", 
+        "description": "Time interval between time series values", 
+        "value": {
+            "type": "float", 
+            "default": "60.000", 
+            "range": {
+                "min": "0.0", 
+                "max": "1e6"
+            }, 
+            "units": "sec"
+        }
+    }, 
+    {
+        "key": "pixel_file", 
+        "name": "Monitored pixel file", 
+        "description": "Filename for monitored pixel file", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_outlets.txt", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_MR_PIXELS", 
+        "name": "Save mr pixels toggle", 
+        "description": "Option to save time series of snow meltrate", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "mr_ts_file", 
+        "name": "Save mr pixels file", 
+        "description": "Filename for time series of", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-SMrate.txt", 
+            "units": "m/s"
+        }
+    }, 
+    {
+        "key": "SAVE_HS_PIXELS", 
+        "name": "Save hs pixels toggle", 
+        "description": "Option to save time series of snow depth", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "hs_ts_file", 
+        "name": "Save hs pixels file", 
+        "description": "Filename for time series of snow depth", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-hsnow.txt", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "SAVE_SW_PIXELS", 
+        "name": "Save sw pixels toggle", 
+        "description": "Option to save time series of snow water equivalent", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "sw_ts_file", 
+        "name": "Save sw pixels file", 
+        "description": "Filename for time series of snow water equivalent", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-hswe.txt", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "SAVE_CC_PIXELS", 
+        "name": "Save cc pixels toggle", 
+        "description": "Option to save time series of cold content", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "cc_ts_file", 
+        "name": "Save cc pixels file", 
+        "description": "Filename for time series of cold content", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-Ecc.txt", 
+            "units": "J/m^2"
+        }
+    }
+]

@@ -1,0 +1,232 @@
+[
+    {
+        "key": "save_grid_dt", 
+        "name": "Save grid timestep", 
+        "description": "Time interval between saved grids", 
+        "value": {
+            "type": "float", 
+            "default": "60.00000000", 
+            "range": {
+                "min": "0.0", 
+                "max": "1e6"
+            }, 
+            "units": "sec"
+        }
+    }, 
+    {
+        "key": "SAVE_Q_GRIDS", 
+        "name": "Save Q grids toggle", 
+        "description": "Option to save computed q grids", 
+        "value": {
+            "type": "choice", 
+            "default": "Yes", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Q_gs_file", 
+        "name": "Save Q grids file", 
+        "description": "Filename for q grid stack", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-Q.nc", 
+            "units": "m^3/s"
+        }
+    }, 
+    {
+        "key": "SAVE_U_GRIDS", 
+        "name": "Save u grids toggle", 
+        "description": "Option to save computed u grids", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "u_gs_file", 
+        "name": "Save u grids file", 
+        "description": "Filename for u grid stack", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-u.nc", 
+            "units": "m/s"
+        }
+    }, 
+    {
+        "key": "SAVE_D_GRIDS", 
+        "name": "Save d grids toggle", 
+        "description": "Option to save computed d grids", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "d_gs_file", 
+        "name": "Save d grids file", 
+        "description": "Filename for d grid stack", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-d.nc", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "SAVE_F_GRIDS", 
+        "name": "Save f grids toggle", 
+        "description": "Option to save computed f grids", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "f_gs_file", 
+        "name": "Save f grids file", 
+        "description": "Filename for f grid stack", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-f.nc", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "save_pixels_dt", 
+        "name": "Save pixels timestep", 
+        "description": "Time interval between time series values", 
+        "value": {
+            "type": "float", 
+            "default": "60.00000000", 
+            "range": {
+                "min": "0.0", 
+                "max": "1e6"
+            }, 
+            "units": "sec"
+        }
+    }, 
+    {
+        "key": "pixel_file", 
+        "name": "Monitored pixel file", 
+        "description": "Filename for monitored pixel file", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_outlets.txt", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_Q_PIXELS", 
+        "name": "Save Q pixels toggle", 
+        "description": "Option to save computed q time series", 
+        "value": {
+            "type": "choice", 
+            "default": "Yes", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Q_ts_file", 
+        "name": "Save Q pixels file", 
+        "description": "Filename for computed q time series", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-Q.txt", 
+            "units": "m^3/s"
+        }
+    }, 
+    {
+        "key": "SAVE_U_PIXELS", 
+        "name": "Save u pixels toggle", 
+        "description": "Option to save computed u time series", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "u_ts_file", 
+        "name": "Save u pixels file", 
+        "description": "Filename for computed u time series", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-u.txt", 
+            "units": "m/s"
+        }
+    }, 
+    {
+        "key": "SAVE_D_PIXELS", 
+        "name": "Save d pixels toggle", 
+        "description": "Option to save computed d time series", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "d_ts_file", 
+        "name": "Save d pixels file", 
+        "description": "Filename for computed d time series", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-d.txt", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "SAVE_F_PIXELS", 
+        "name": "Save f pixels toggle", 
+        "description": "Option to save computed f time series", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "f_ts_file", 
+        "name": "Save f pixels file", 
+        "description": "Filename for computed f time series", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-f.txt", 
+            "units": "-"
+        }
+    }
+]

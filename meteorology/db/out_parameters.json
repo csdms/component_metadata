@@ -1,0 +1,280 @@
+[
+    {
+        "key": "save_grid_dt", 
+        "name": "Save grid timestep", 
+        "description": "Time interval between saved grids", 
+        "value": {
+            "type": "float", 
+            "default": "60.000", 
+            "range": {
+                "min": "0.0", 
+                "max": "1e6"
+            }, 
+            "units": "sec"
+        }
+    }, 
+    {
+        "key": "SAVE_EA_GRIDS", 
+        "name": "Save e_air grids toggle", 
+        "description": "Option to save grids of vapor pressure (in air)", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "ea_gs_file", 
+        "name": "Save e_air grids toggle", 
+        "description": "Filename for grid stack of vapor pressure (air)", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-eair.nc", 
+            "units": "mbar"
+        }
+    }, 
+    {
+        "key": "SAVE_ES_GRIDS", 
+        "name": "Save e_surf grids toggle", 
+        "description": "Option to save grids of vapor pressure (at surf)", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "es_gs_file", 
+        "name": "Save e_surf grids file", 
+        "description": "Filename for grid stack of vapor pressure (surf)", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-esurf.nc", 
+            "units": "mbar"
+        }
+    }, 
+    {
+        "key": "SAVE_QSW_GRIDS", 
+        "name": "Save Qn_SW grids toggle", 
+        "description": "Option to save grids of net shortwave radiation", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Qsw_gs_file", 
+        "name": "Save Qn_SW grids file", 
+        "description": "Filename for grid stack of net shortwave radiation", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-QnSW.nc", 
+            "units": "W/m^2"
+        }
+    }, 
+    {
+        "key": "SAVE_QLW_GRIDS", 
+        "name": "Save Qn_LW grids toggle", 
+        "description": "Option to save grids of net longwave radiation", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Qlw_gs_file", 
+        "name": "Save Qn_LW grids file", 
+        "description": "Filename for grid stack of net longwave radiation", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-QnLW.nc", 
+            "units": "W/m^2"
+        }
+    }, 
+    {
+        "key": "SAVE_EMA_GRIDS", 
+        "name": "Save em_air grids toggle", 
+        "description": "Option to save grids of air emissivity", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "ema_gs_file", 
+        "name": "Save em_air grids file", 
+        "description": "Filename for grid stack of air emissivity in", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-emair.nc", 
+            "units": "unitless"
+        }
+    }, 
+    {
+        "key": "save_pixels_dt", 
+        "name": "Save pixels timestep", 
+        "description": "Time interval between time series values", 
+        "value": {
+            "type": "float", 
+            "default": "60.000", 
+            "range": {
+                "min": "0.0", 
+                "max": "1e6"
+            }, 
+            "units": "sec"
+        }
+    }, 
+    {
+        "key": "pixel_file", 
+        "name": "Monitored pixel file", 
+        "description": "Filename for monitored pixel file", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_outlets.txt", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_EA_PIXELS", 
+        "name": "Save e_air pixels toggle", 
+        "description": "Option to save time series of sat. vapor press. (in air)", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "ea_ts_file", 
+        "name": "Save e_air pixels file", 
+        "description": "Filename for time series of sat. vapor press. (in air)", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-eair.nc", 
+            "units": "mbar"
+        }
+    }, 
+    {
+        "key": "SAVE_ES_PIXELS", 
+        "name": "Save e_surf pixels toggle", 
+        "description": "Option to save time series of sat. vapor press. (at surf)", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "es_ts_file", 
+        "name": "Save e_surf pixels file", 
+        "description": "Filename for time series of sat. vapor press. (at surf)", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-esurf.nc", 
+            "units": "mbar"
+        }
+    }, 
+    {
+        "key": "SAVE_QSW_PIXELS", 
+        "name": "Save Qn_SW pixels toggle", 
+        "description": "Option to save time series of net shortwave radiation", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Qsw_ts_file", 
+        "name": "Save Qn_SW pixels file", 
+        "description": "Filename for time series of net shortwave radiation", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-QnSW.nc", 
+            "units": "W/m^2"
+        }
+    }, 
+    {
+        "key": "SAVE_QLW_PIXELS", 
+        "name": "Save Qn_LW pixels toggle", 
+        "description": "Option to save time series of net longwave radiation", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Qlw_ts_file", 
+        "name": "Save Qn_LW pixels file", 
+        "description": "Filename for time series of net longwave radiation", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-QnLW.nc", 
+            "units": "W/m^2"
+        }
+    }, 
+    {
+        "key": "SAVE_EMA_PIXELS", 
+        "name": "Save em_air pixels toggle", 
+        "description": "Option to save time series of air emissivity", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "ema_ts_file", 
+        "name": "Save em_air pixels file", 
+        "description": "Filename for time series of air emissivity in", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-emair.nc", 
+            "units": "unitless"
+        }
+    }
+]

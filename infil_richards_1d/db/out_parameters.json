@@ -1,0 +1,452 @@
+[
+    {
+        "key": "save_grid_dt", 
+        "name": "Save grid timestep", 
+        "description": "Time interval between saved grids", 
+        "value": {
+            "type": "float", 
+            "default": "60.000", 
+            "range": {
+                "min": "0.0", 
+                "max": "1e6"
+            }, 
+            "units": "sec"
+        }
+    }, 
+    {
+        "key": "SAVE_V0_GRIDS", 
+        "name": "Save v0 grids toggle", 
+        "description": "Option to save grids of infil. rate (at surf)", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "v0_gs_file", 
+        "name": "Save v0 grids file", 
+        "description": "Filename for grid stack of v0", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-v0.nc", 
+            "units": "m/s"
+        }
+    }, 
+    {
+        "key": "SAVE_I_GRIDS", 
+        "name": "Save I  grids toggle", 
+        "description": "Option to save grids of cumul. infil. depth", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "I_gs_file", 
+        "name": "Save I  grids file", 
+        "description": "Filename for grid stack of i", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-I.nc", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "SAVE_Q0_GRIDS", 
+        "name": "Save q0 grids toggle", 
+        "description": "Option to save grids of soil water content (at surf)", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "q0_gs_file", 
+        "name": "Save q0 grids file", 
+        "description": "Filename for grid stack of q0", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-q0.nc", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_ZW_GRIDS", 
+        "name": "Save Zw grids toggle", 
+        "description": "Option to save grids of depth to wetting front", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Zw_gs_file", 
+        "name": "Save Zw grids file", 
+        "description": "Filename for grid stack of zw", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_2D-Zw.nc", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "save_pixels_dt", 
+        "name": "Save pixels timestep", 
+        "description": "Time interval between time series values", 
+        "value": {
+            "type": "float", 
+            "default": "60.000", 
+            "range": {
+                "min": "0.0", 
+                "max": "1e6"
+            }, 
+            "units": "sec"
+        }
+    }, 
+    {
+        "key": "pixel_file", 
+        "name": "Monitored pixel file", 
+        "description": "Filename for monitored pixel file", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_outlets.txt", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_V0_PIXELS", 
+        "name": "Save v0 pixels toggle", 
+        "description": "Option to save time series of infil. rate (at surf)", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "v0_ts_file", 
+        "name": "Save v0 pixels file", 
+        "description": "Filename for time series of v0", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-v0.txt", 
+            "units": "m/s"
+        }
+    }, 
+    {
+        "key": "SAVE_I_PIXELS", 
+        "name": "Save I  pixels toggle", 
+        "description": "Option to save time series of cumul. infil. depth", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "I_ts_file", 
+        "name": "Save I  pixels file", 
+        "description": "Filename for time series of i", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-I.txt", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "SAVE_Q0_PIXELS", 
+        "name": "Save q0 pixels toggle", 
+        "description": "Option to save time series of soil water content (at surf)", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "q0_ts_file", 
+        "name": "Save q0 pixels file", 
+        "description": "Filename for time series of q0", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-q0.txt", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_ZW_PIXELS", 
+        "name": "Save Zw pixels toggle", 
+        "description": "Option to save time series of depth to wetting front", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "Zw_ts_file", 
+        "name": "Save Zw pixels file", 
+        "description": "Filename for time series of zw", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_0D-Zw.txt", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "save_profile_dt", 
+        "name": "Save profile timestep", 
+        "description": "Time interval between saved 1d profiles", 
+        "value": {
+            "type": "float", 
+            "default": "60.000", 
+            "range": {
+                "min": "0.0", 
+                "max": "1e6"
+            }, 
+            "units": "sec"
+        }
+    }, 
+    {
+        "key": "SAVE_Q_PROFILES", 
+        "name": "Save q profiles toggle", 
+        "description": "Option to save 1d profile of soil water content", 
+        "value": {
+            "type": "choice", 
+            "default": "Yes", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "q_ps_file", 
+        "name": "Save q profiles file", 
+        "description": "Filename for 1d profile of theta", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_1D-q.nc", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_P_PROFILES", 
+        "name": "Save p profiles toggle", 
+        "description": "Option to save 1d profile of pressure head", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "p_ps_file", 
+        "name": "Save p profiles file", 
+        "description": "Filename for 1d profile of psi", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_1D_p.nc", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "SAVE_K_PROFILES", 
+        "name": "Save K profiles toggle", 
+        "description": "Option to save 1d profile of hydr. conductivity", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "K_ps_file", 
+        "name": "Save K profiles file", 
+        "description": "Filename for 1d profile of k", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_1D_K.nc", 
+            "units": "m/s"
+        }
+    }, 
+    {
+        "key": "SAVE_V_PROFILES", 
+        "name": "Save v profiles toggle", 
+        "description": "Option to save 1d profile of vert. flow rate", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "v_ps_file", 
+        "name": "Save v profiles file", 
+        "description": "Filename for 1d profile of v", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_1D_v.nc", 
+            "units": "m/s"
+        }
+    }, 
+    {
+        "key": "save_cube_dt", 
+        "name": "Save cube timestep", 
+        "description": "Time interval between saved 3d cubes", 
+        "value": {
+            "type": "float", 
+            "default": "60.000", 
+            "range": {
+                "min": "0.0", 
+                "max": "1e6"
+            }, 
+            "units": "sec"
+        }
+    }, 
+    {
+        "key": "SAVE_Q_CUBES", 
+        "name": "Save q cubes toggle", 
+        "description": "Option to save 3d cubes of soil water content", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "q_cs_file", 
+        "name": "Save q cubes file", 
+        "description": "Filename for 3d cubes of theta", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_3D-q.nc", 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "SAVE_P_CUBES", 
+        "name": "Save p cubes toggle", 
+        "description": "Option to save 3d cubes of pressure head", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "p_cs_file", 
+        "name": "Save p cubes file", 
+        "description": "Filename for 3d cubes of psi", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_3D-p.nc", 
+            "units": "m"
+        }
+    }, 
+    {
+        "key": "SAVE_K_CUBES", 
+        "name": "Save K cubes toggle", 
+        "description": "Option to save 3d cubes of hydr. conductivity", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "K_cs_file", 
+        "name": "Save K cubes file", 
+        "description": "Filename for 3d cubes of k", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_3D-K.nc", 
+            "units": "m/s"
+        }
+    }, 
+    {
+        "key": "SAVE_V_CUBES", 
+        "name": "Save v cubes toggle", 
+        "description": "Option to save 3d cubes of vert. flow rate", 
+        "value": {
+            "type": "choice", 
+            "default": "No", 
+            "choices": [
+                "Yes", 
+                "No"
+            ], 
+            "units": "-"
+        }
+    }, 
+    {
+        "key": "v_cs_file", 
+        "name": "Save v cubes file", 
+        "description": "Filename for 3d cubes of v", 
+        "value": {
+            "type": "string", 
+            "default": "[case_prefix]_3D-v.nc", 
+            "units": "m/s"
+        }
+    }
+]
