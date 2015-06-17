@@ -1,0 +1,14 @@
+{
+  "id": "meteorology", 
+  "name": "Meteorology", 
+  "class": "Meteorology", 
+  "initialize_args": "meteorology.cfg", 
+  "time_step": "60.0", 
+  "summary": "", 
+  "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Meteorology", 
+  "author": "Scott D. Peckham ", 
+  "email": "scott.peckham@colorado.edu", 
+  "version": "3.1.0", 
+  "doi": "10.1594/IEDA/100174", 
+  "license": "Apache"
+}
