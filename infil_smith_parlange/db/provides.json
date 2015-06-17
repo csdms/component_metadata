@@ -1,6 +1,6 @@
 [
   {
-    "id": "", 
+    "id": "infil", 
     "required": false, 
     "exchange_items": [
       "model__time_step", 
