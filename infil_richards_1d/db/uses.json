@@ -8,6 +8,13 @@
     ]
   }, 
   {
+    "id": "erode", 
+    "required": false, 
+    "exchange_items": [
+      "land_surface__elevation"
+    ]
+  }, 
+  {
     "id": "evap", 
     "required": false, 
     "exchange_items": [
