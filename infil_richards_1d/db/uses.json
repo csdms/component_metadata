@@ -1,16 +1,10 @@
 [
   {
-    "id": "", 
-    "required": false, 
-    "exchange_items": [
-      "soil_water_sat-zone_top_surface__elevation"
-    ]
-  }, 
-  {
     "id": "satzone", 
     "required": false, 
     "exchange_items": [
-      "land_surface__elevation"
+      "land_surface__elevation",
+      "soil_water_sat-zone_top_surface__elevation"
     ]
   }, 
   {
@@ -42,7 +36,7 @@
     ]
   }, 
   {
-    "id": "met", 
+    "id": "meteorology", 
     "required": false, 
     "exchange_items": [
       "atmosphere_water__rainfall_volume_flux"

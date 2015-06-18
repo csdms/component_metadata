@@ -35,7 +35,7 @@
     ]
   }, 
   {
-    "id": "met", 
+    "id": "meteorology", 
     "required": false, 
     "exchange_items": [
       "atmosphere_water__rainfall_volume_flux", 

@@ -66,7 +66,7 @@
     ]
   }, 
   {
-    "id": "met", 
+    "id": "meteorology", 
     "required": false, 
     "exchange_items": [
       "atmosphere_water__domain_time_integral_of_precipitation_leq-volume_flux", 

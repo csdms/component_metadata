@@ -1,6 +1,6 @@
 [
   {
-    "id": "met", 
+    "id": "meteorology", 
     "required": false, 
     "exchange_items": [
       "atmosphere_bottom_air__temperature", 
