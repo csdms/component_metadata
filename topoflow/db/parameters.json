@@ -1,19 +1,5 @@
 [
     {
-        "key": "comp_status", 
-        "name": "Component status", 
-        "description": "Component status", 
-        "value": {
-            "type": "choice", 
-            "default": "Enabled", 
-            "choices": [
-                "Enabled", 
-                "Disabled"
-            ], 
-            "units": "-"
-        }
-    }, 
-    {
         "key": "site_prefix", 
         "name": "Site prefix", 
         "description": "File prefix for the study site", 
