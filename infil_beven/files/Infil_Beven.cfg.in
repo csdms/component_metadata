@@ -2,7 +2,7 @@
 # Topoflow Config File for: infil_beven
 #===============================================================================
 # Input
-comp_status         | {comp_status}       | choice    | Component status [-] {Enabled; Disabled}
+comp_status         | Enabled             | choice    | Component status [-] {Enabled; Disabled}
 in_directory        | {in_directory}      | string    | Input directory [-]
 out_directory       | {out_directory}     | string    | Output directory [-]
 site_prefix         | {site_prefix}       | string    | File prefix for the study site [-]
