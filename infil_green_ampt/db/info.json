@@ -4,7 +4,7 @@
   "class": "Infil_green_ampt", 
   "initialize_args": "infil_green_ampt.cfg", 
   "time_step": "60.000", 
-  "summary": "", 
+  "summary": "This module is the infiltration process component (Green-Ampt method) for a D8-based, spatial hydrologic model. This process component is part of a spatially-distributed hydrologic model called TopoFlow, but it can now be used as a stand-alone model.", 
   "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Green-Ampt", 
   "author": "Scott D. Peckham ", 
   "email": "scott.peckham@colorado.edu", 
