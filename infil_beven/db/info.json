@@ -2,7 +2,7 @@
   "id": "infil_beven", 
   "name": "InfilBeven", 
   "class": "Infil_beven", 
-  "initialize_args": "infil_beven.cfg", 
+  "initialize_args": "Infil_Beven.cfg", 
   "time_step": "", 
   "summary": "", 
   "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Infiltration-Beven", 

@@ -2,7 +2,7 @@
   "id": "topoflow", 
   "name": "TopoFlow", 
   "class": "Topoflow", 
-  "initialize_args": "topoflow.cfg", 
+  "initialize_args": "Topoflow.cfg", 
   "time_step": "", 
   "summary": "TopoFlow is a free, spatially-distributed hydrologic model with a user-friendly, wizard-style interface", 
   "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow", 

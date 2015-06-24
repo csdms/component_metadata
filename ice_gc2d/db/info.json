@@ -2,7 +2,7 @@
   "id": "ice_gc2d", 
   "name": "IceGC2D", 
   "class": "Ice_gc2d", 
-  "initialize_args": "ice_gc2d.cfg", 
+  "initialize_args": "Ice_Gc2D.cfg", 
   "time_step": "0.1", 
   "summary": "", 
   "url": "http://csdms.colorado.edu/wiki/Model_help:Gc2d", 
