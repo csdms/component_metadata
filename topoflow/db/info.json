@@ -4,7 +4,7 @@
   "class": "Topoflow", 
   "initialize_args": "topoflow.cfg", 
   "time_step": "", 
-  "summary": "", 
+  "summary": "TopoFlow is a free, spatially-distributed hydrologic model with a user-friendly, wizard-style interface", 
   "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow", 
   "author": "Scott D. Peckham ", 
   "email": "scott.peckham@colorado.edu", 
