@@ -4,7 +4,7 @@
   "class": "Data_his", 
   "initialize_args": "Data_His.cfg", 
   "time_step": "", 
-  "summary": "s component lets you create a query by entering a search keyword, bounding box, start date, stop date, etc. Once data has been downloaded from the web service, it can either be saved to files or accessed directly by other components through the "Data" port, which has a standard CSDMS IRF-based interface. Note that this component must currently be used in "stand-alone/driver" mode, so that the Run button will appear.", 
+  "summary": "This component lets you create a query by entering a search keyword, bounding box, start date, stop date, etc. Once data has been downloaded from the web service, it can either be saved to files or accessed directly by other components through the 'Data' port, which has a standard CSDMS IRF-based interface. Note that this component must currently be used in 'stand-alone/driver' mode, so that the Run button will appear.", 
   "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Data-HIS", 
   "author": "Scott D. Peckham ", 
   "email": "scott.peckham@colorado.edu", 
