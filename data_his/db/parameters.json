@@ -1,5 +1,14 @@
 [
     {
+	"key":"separator",
+	"name":"Run",
+	"description":"Run",
+	"value":{
+	    "type":"string",
+	    "default":""
+	}
+    },
+    {
         "key": "site_prefix", 
         "name": "Site prefix", 
         "description": "File prefix for the study site", 

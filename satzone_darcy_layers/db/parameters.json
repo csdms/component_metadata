@@ -1,5 +1,28 @@
 [
     {
+	"key":"separator",
+	"name":"Run",
+	"description":"Run",
+	"value":{
+	    "type":"string",
+	    "default":""
+	}
+    },
+    {
+	"key":"run_duration",
+	"name":"Run duration",
+	"description":"Simulation run time",
+	"value":{
+	    "type":"int",
+	    "default":1,
+	    "range":{
+		"min":0,
+		"max":1000000
+	    },
+	    "units":"d"
+	}
+    },
+    {
         "key": "site_prefix", 
         "name": "Site prefix", 
         "description": "File prefix for the study site", 
@@ -20,19 +43,14 @@
         }
     }, 
     {
-        "key": "n_steps", 
-        "name": "Number of steps", 
-        "description": "Number of time steps", 
-        "value": {
-            "type": "long", 
-            "default": "10", 
-            "range": {
-                "min": "1", 
-                "max": "1e7"
-            }, 
-            "units": "-"
-        }
-    }, 
+	"key":"separator",
+	"name":"Input",
+	"description":"Input",
+	"value":{
+	    "type":"string",
+	    "default":""
+	}
+    },
     {
         "key": "n_layers", 
         "name": "Number of soil layers", 
@@ -45,20 +63,6 @@
                 "max": "6"
             }, 
             "units": "-"
-        }
-    }, 
-    {
-        "key": "dt", 
-        "name": "Time step", 
-        "description": "Timestep for subsurface flow", 
-        "value": {
-            "type": "float", 
-            "default": "3600.000", 
-            "range": {
-                "min": "0.0", 
-                "max": "1e6"
-            }, 
-            "units": "sec"
         }
     }, 
     {
