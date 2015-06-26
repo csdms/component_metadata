@@ -220,7 +220,7 @@
     {
         "key": "h0_swe", 
         "name": "h0_swe", 
-        "description": "Depth of snow water equivalent (swe)", 
+        "description": "Depth of snow water equivalent (SWE)", 
         "value": {
             "type": "float", 
             "default": "0.150", 

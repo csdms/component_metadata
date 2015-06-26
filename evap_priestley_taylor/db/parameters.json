@@ -160,7 +160,7 @@
     {
         "key": "T_soil_x", 
         "name": "T_soil_x", 
-        "description": "Temperature of soil at depth x", 
+        "description": "Temperature of soil at reference depth", 
         "value": {
             "type": "float", 
             "default": "0.000", 

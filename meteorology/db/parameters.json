@@ -170,7 +170,7 @@
     {
         "key": "PRECIP_ONLY", 
         "name": "PRECIP_ONLY toggle", 
-        "description": "Toggle to turn off all variable updates except precip.", 
+        "description": "Turn off all variable updates except precipitation", 
         "value": {
             "type": "choice", 
             "default": "No", 
@@ -564,7 +564,7 @@
     {
         "key": "GMT_offset", 
         "name": "time zone offset", 
-        "description": "Time zone offset from gmt", 
+        "description": "Time zone offset from GMT", 
         "value": {
             "type": "choice", 
             "default": "0", 
