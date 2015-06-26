@@ -1,5 +1,28 @@
 [
     {
+	"key":"separator",
+	"name":"Run",
+	"description":"Run",
+	"value":{
+	    "type":"string",
+	    "default":""
+	}
+    },
+    {
+	"key":"run_duration",
+	"name":"Run duration",
+	"description":"Simulation run time",
+	"value":{
+	    "type":"int",
+	    "default":365,
+	    "range":{
+		"min":0,
+		"max":1000000
+	    },
+	    "units":"d"
+	}
+    },
+    {
         "key": "site_prefix", 
         "name": "Site prefix", 
         "description": "File prefix for the study site", 
@@ -20,61 +43,14 @@
         }
     }, 
     {
-        "key": "n_steps", 
-        "name": "Number of steps", 
-        "description": "Number of time steps for simulation", 
-        "value": {
-            "type": "int", 
-            "default": "10", 
-            "range": {
-                "min": "0.0", 
-                "max": "1e7"
-            }, 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "dt", 
-        "name": "Time step", 
-        "description": "Ice process timestep", 
-        "value": {
-            "type": "float", 
-            "default": "0.1", 
-            "range": {
-                "min": "0", 
-                "max": "100"
-            }, 
-            "units": "years"
-        }
-    }, 
-    {
-        "key": "dt_max", 
-        "name": "Max timestep", 
-        "description": "Max timestep", 
-        "value": {
-            "type": "float", 
-            "default": "0.4", 
-            "range": {
-                "min": "0.0", 
-                "max": "100"
-            }, 
-            "units": "years"
-        }
-    }, 
-    {
-        "key": "t_max", 
-        "name": "Max simulation time", 
-        "description": "Max time to simulate", 
-        "value": {
-            "type": "float", 
-            "default": "100000", 
-            "range": {
-                "min": "0.0", 
-                "max": "1e7"
-            }, 
-            "units": "years"
-        }
-    }, 
+	"key":"separator",
+	"name":"Input",
+	"description":"Input",
+	"value":{
+	    "type":"string",
+	    "default":""
+	}
+    },
     {
         "key": "DEM_file", 
         "name": "DEM file", 
@@ -112,7 +88,7 @@
     {
         "key": "glens_A", 
         "name": "Glen's Law param, a", 
-        "description": "Glen's law exponent", 
+        "description": "Glen's Law exponent, a", 
         "value": {
             "type": "float", 
             "default": "2.142e-16", 
@@ -126,7 +102,7 @@
     {
         "key": "B", 
         "name": "Glen's Law coeff, B", 
-        "description": ", see macgregor (2000)", 
+        "description": "Glen's Law coefficient, B", 
         "value": {
             "type": "float", 
             "default": "0.0012", 
@@ -210,7 +186,7 @@
     {
         "key": "init_ELA", 
         "name": "Initial ELA value", 
-        "description": "Equilibrium line altitude", 
+        "description": "Equilibrium line altitude (ELA)", 
         "value": {
             "type": "float", 
             "default": "3350.0", 
@@ -224,7 +200,7 @@
     {
         "key": "ELA_step_size", 
         "name": "ELA step size", 
-        "description": "Ela step size", 
+        "description": "ELA step size", 
         "value": {
             "type": "float", 
             "default": "-10.0", 
@@ -238,7 +214,7 @@
     {
         "key": "ELA_step_interval", 
         "name": "ELA step interval", 
-        "description": "Ela step interval", 
+        "description": "ELA step interval", 
         "value": {
             "type": "float", 
             "default": "500.0", 

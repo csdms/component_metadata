@@ -1,5 +1,28 @@
 [
     {
+	"key":"separator",
+	"name":"Run",
+	"description":"Run",
+	"value":{
+	    "type":"string",
+	    "default":""
+	}
+    },
+    {
+	"key":"run_duration",
+	"name":"Run duration",
+	"description":"Simulation run time",
+	"value":{
+	    "type":"int",
+	    "default":1,
+	    "range":{
+		"min":0,
+		"max":1000000
+	    },
+	    "units":"d"
+	}
+    },
+    {
         "key": "site_prefix", 
         "name": "Site prefix", 
         "description": "File prefix for the study site", 
@@ -18,35 +41,16 @@
             "default": "Case5", 
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "n_steps", 
-        "name": "Number of steps", 
-        "description": "Number of time steps", 
-        "value": {
-            "type": "long", 
-            "default": "10", 
-            "range": {
-                "min": "1", 
-                "max": "1e7"
-            }, 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "dt", 
-        "name": "Time step", 
-        "description": "Channel process timestep", 
-        "value": {
-            "type": "float", 
-            "default": "6.00000000", 
-            "range": {
-                "min": "0", 
-                "max": "100"
-            }, 
-            "units": "sec"
-        }
-    }, 
+	"key":"separator",
+	"name":"Input",
+	"description":"Input",
+	"value":{
+	    "type":"string",
+	    "default":""
+	}
+    },
     {
         "key": "code_file", 
         "name": "D8 flow code file", 
@@ -70,28 +74,28 @@
     {
         "key": "MANNING", 
         "name": "Manning flag", 
-        "description": "Option to use manning's n for roughness", 
+        "description": "Option to use Manning's n for roughness",
         "value": {
-            "type": "int", 
-            "default": "1", 
-            "range": {
-                "min": "0", 
-                "max": "1"
-            }, 
+            "type": "choice",
+            "default": "Yes",
+            "choices": [
+                "Yes",
+                "No"
+            ],
             "units": "-"
         }
     }, 
     {
         "key": "LAW_OF_WALL", 
         "name": "Law of Wall flag", 
-        "description": "Option to use law of wall for roughness", 
+        "description": "Option to use law of wall for roughness",
         "value": {
-            "type": "int", 
-            "default": "0", 
-            "range": {
-                "min": "0", 
-                "max": "1"
-            }, 
+            "type": "choice",
+            "default": "No",
+            "choices": [
+                "Yes",
+                "No"
+            ],
             "units": "-"
         }
     }, 
