@@ -68,7 +68,7 @@
                 "min": "0.0", 
                 "max": "1e9"
             }, 
-            "units": "minutes"
+            "units": "min"
         }
     }, 
     {

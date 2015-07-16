@@ -78,7 +78,7 @@
                 "min": "0.0", 
                 "max": "1e2"
             }, 
-            "units": "W/m/deg_C"
+            "units": "W m-1 degC-1"
         }
     }, 
     {

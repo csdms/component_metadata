@@ -110,7 +110,7 @@
                 "min": "1e-3", 
                 "max": "0.01"
             }, 
-            "units": "m/(Pa*yr)"
+            "units": "m Pa-1 yr-1"
         }
     }, 
     {
@@ -124,7 +124,7 @@
                 "min": "0.0", 
                 "max": "100.0"
             }, 
-            "units": "***unitsneeded"
+            "units": "m s-1"
         }
     }, 
     {
@@ -138,7 +138,7 @@
                 "min": "0.0", 
                 "max": "1e6"
             }, 
-            "units": "****unitsneeded"
+            "units": "Pa"
         }
     }, 
     {
@@ -152,7 +152,7 @@
                 "min": "0", 
                 "max": "1000.0"
             }, 
-            "units": "meters"
+            "units": "m"
         }
     }, 
     {
@@ -180,7 +180,7 @@
                 "min": "0", 
                 "max": "100.0"
             }, 
-            "units": "meters"
+            "units": "m"
         }
     }, 
     {
@@ -194,7 +194,7 @@
                 "min": "2500.0", 
                 "max": "4500.0"
             }, 
-            "units": "meters"
+            "units": "m"
         }
     }, 
     {
@@ -208,7 +208,7 @@
                 "min": "-100", 
                 "max": "100.0"
             }, 
-            "units": "meters"
+            "units": "m"
         }
     }, 
     {
@@ -222,7 +222,7 @@
                 "min": "50.0", 
                 "max": "1000.0"
             }, 
-            "units": "meters"
+            "units": "m"
         }
     }, 
     {
@@ -236,7 +236,7 @@
                 "min": "1e-3", 
                 "max": "0.1"
             }, 
-            "units": "***unitsneeded"
+            "units": "m water equivalent m-1"
         }
     }, 
     {
@@ -250,7 +250,7 @@
                 "min": "1.0", 
                 "max": "10.0"
             }, 
-            "units": "***unitsneeded"
+            "units": "m water equivalent"
         }
     }, 
     {
@@ -264,7 +264,7 @@
                 "min": "0.0", 
                 "max": "1e3"
             }, 
-            "units": "years"
+            "units": "yr"
         }
     }, 
     {
@@ -278,7 +278,7 @@
                 "min": "-200.0", 
                 "max": "200.0"
             }, 
-            "units": "meters"
+            "units": "m"
         }
     }, 
     {
@@ -292,7 +292,7 @@
                 "min": "2000.0", 
                 "max": "2100.0"
             }, 
-            "units": "J/(kg*K)"
+            "units": "J kg-1 K-1"
         }
     }, 
     {
@@ -306,7 +306,7 @@
                 "min": "1e5", 
                 "max": "1e7"
             }, 
-            "units": "(J/year)/m^2"
+            "units": "J yr-1 m-2"
         }
     }, 
     {
@@ -320,7 +320,7 @@
                 "min": "-0.1", 
                 "max": "0.0"
             }, 
-            "units": "***deg_C/meter??"
+            "units": "degC m-1"
         }
     }
 ]

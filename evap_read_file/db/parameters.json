@@ -58,7 +58,7 @@
         "value": {
             "type": "string", 
             "default": "[case_prefix]_2D-ETrate-in.nc", 
-            "units": "mm/hr"
+            "units": "mm hr-1"
         }
     }
 ]
