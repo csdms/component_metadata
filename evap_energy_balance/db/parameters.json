@@ -1,143 +1,143 @@
 [
     {
-	"key":"separator",
-	"name":"Run",
-	"description":"Run",
-	"value":{
-	    "type":"string",
-	    "default":""
-	}
+        "key": "separator",
+        "name": "Run",
+        "description": "Run",
+        "value": {
+            "type": "string",
+            "default": ""
+        }
     },
     {
-	"key":"run_duration",
-	"name":"Run duration",
-	"description":"Simulation run time",
-	"value":{
-	    "type":"int",
-	    "default":1,
-	    "range":{
-		"min":0,
-		"max":1000000
-	    },
-	    "units":"d"
-	}
-    },
-    {
-        "key": "site_prefix", 
-        "name": "Site prefix", 
-        "description": "File prefix for the study site", 
+        "key": "run_duration",
+        "name": "Run duration",
+        "description": "Simulation run time",
         "value": {
-            "type": "string", 
-            "default": "Treynor", 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "case_prefix", 
-        "name": "Case prefix", 
-        "description": "File prefix for the model scenario", 
-        "value": {
-            "type": "string", 
-            "default": "Case5", 
-            "units": "-"
-        }
-    }, 
-    {
-	"key":"separator",
-	"name":"Input",
-	"description":"Input",
-	"value":{
-	    "type":"string",
-	    "default":""
-	}
-    },
-    {
-        "key": "K_soil_type", 
-        "name": "K_soil type", 
-        "description": "Allowed input types", 
-        "value": {
-            "type": "choice", 
-            "default": "Scalar", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ], 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "K_soil", 
-        "name": "K_soil", 
-        "description": "Thermal conductivity of soil", 
-        "value": {
-            "type": "float", 
-            "default": "0.450", 
+            "type": "int",
+            "default": 1,
             "range": {
-                "min": "0.0", 
+                "min": 0,
+                "max": 1000000
+            },
+            "units": "d"
+        }
+    },
+    {
+        "key": "site_prefix",
+        "name": "Site prefix",
+        "description": "File prefix for the study site",
+        "value": {
+            "type": "string",
+            "default": "Treynor",
+            "units": "-"
+        }
+    },
+    {
+        "key": "case_prefix",
+        "name": "Case prefix",
+        "description": "File prefix for the model scenario",
+        "value": {
+            "type": "string",
+            "default": "Case5",
+            "units": "-"
+        }
+    },
+    {
+        "key": "separator",
+        "name": "Input",
+        "description": "Input",
+        "value": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    {
+        "key": "K_soil_type",
+        "name": "K_soil type",
+        "description": "Allowed input types",
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "-"
+        }
+    },
+    {
+        "key": "K_soil",
+        "name": "K_soil",
+        "description": "Thermal conductivity of soil",
+        "value": {
+            "type": "float",
+            "default": "0.450",
+            "range": {
+                "min": "0.0",
                 "max": "1e2"
-            }, 
+            },
             "units": "W m-1 degC-1"
         }
-    }, 
+    },
     {
-        "key": "soil_x_type", 
-        "name": "soil_x type", 
-        "description": "Allowed input types", 
+        "key": "soil_x_type",
+        "name": "soil_x type",
+        "description": "Allowed input types",
         "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
+            ],
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "soil_x", 
-        "name": "soil_x", 
-        "description": "Reference depth in soil", 
+        "key": "soil_x",
+        "name": "soil_x",
+        "description": "Reference depth in soil",
         "value": {
-            "type": "float", 
-            "default": "0.050", 
+            "type": "float",
+            "default": "0.050",
             "range": {
-                "min": "0.0", 
+                "min": "0.0",
                 "max": "10.0"
-            }, 
+            },
             "units": "m"
         }
-    }, 
+    },
     {
-        "key": "T_soil_x_type", 
-        "name": "T_soil_x type", 
-        "description": "Allowed input types", 
+        "key": "T_soil_x_type",
+        "name": "T_soil_x type",
+        "description": "Allowed input types",
         "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
+            ],
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "T_soil_x", 
-        "name": "T_soil_x", 
-        "description": "Temperature of soil at reference depth", 
+        "key": "T_soil_x",
+        "name": "T_soil_x",
+        "description": "Temperature of soil at reference depth",
         "value": {
-            "type": "float", 
-            "default": "0.000", 
+            "type": "float",
+            "default": "0.000",
             "range": {
-                "min": "-100.0", 
+                "min": "-100.0",
                 "max": "30.0"
-            }, 
+            },
             "units": "degC"
         }
     }

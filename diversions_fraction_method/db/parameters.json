@@ -1,111 +1,111 @@
 [
     {
-	"key":"separator",
-	"name":"Run",
-	"description":"Run",
-	"value":{
-	    "type":"string",
-	    "default":""
-	}
+        "key": "separator",
+        "name": "Run",
+        "description": "Run",
+        "value": {
+            "type": "string",
+            "default": ""
+        }
     },
     {
-        "key": "site_prefix", 
-        "name": "Site prefix", 
-        "description": "File prefix for the study site", 
+        "key": "site_prefix",
+        "name": "Site prefix",
+        "description": "File prefix for the study site",
         "value": {
-            "type": "string", 
-            "default": "Treynor", 
+            "type": "string",
+            "default": "Treynor",
             "units": "-"
         }
-    }, 
-    {
-        "key": "case_prefix", 
-        "name": "Case prefix", 
-        "description": "File prefix for the model scenario", 
-        "value": {
-            "type": "string", 
-            "default": "Case5", 
-            "units": "-"
-        }
-    }, 
-    {
-	"key":"separator",
-	"name":"Input",
-	"description":"Input",
-	"value":{
-	    "type":"string",
-	    "default":""
-	}
     },
     {
-        "key": "use_sources", 
-        "name": "Use sources toggle", 
-        "description": "Option to use sources", 
+        "key": "case_prefix",
+        "name": "Case prefix",
+        "description": "File prefix for the model scenario",
         "value": {
-            "type": "choice", 
-            "default": "No", 
+            "type": "string",
+            "default": "Case5",
+            "units": "-"
+        }
+    },
+    {
+        "key": "separator",
+        "name": "Input",
+        "description": "Input",
+        "value": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    {
+        "key": "use_sources",
+        "name": "Use sources toggle",
+        "description": "Option to use sources",
+        "value": {
+            "type": "choice",
+            "default": "No",
             "choices": [
-                "Yes", 
+                "Yes",
                 "No"
-            ], 
+            ],
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "source_file", 
-        "name": "Sources file", 
-        "description": "Source information file", 
+        "key": "source_file",
+        "name": "Sources file",
+        "description": "Source information file",
         "value": {
-            "type": "string", 
-            "default": "[site_prefix]_sources.txt", 
+            "type": "string",
+            "default": "[site_prefix]_sources.txt",
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "use_sinks", 
-        "name": "Use sinks toggle", 
-        "description": "Option to use sinks", 
+        "key": "use_sinks",
+        "name": "Use sinks toggle",
+        "description": "Option to use sinks",
         "value": {
-            "type": "choice", 
-            "default": "No", 
+            "type": "choice",
+            "default": "No",
             "choices": [
-                "Yes", 
+                "Yes",
                 "No"
-            ], 
+            ],
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "sink_file", 
-        "name": "Sinks file", 
-        "description": "Sink information file", 
+        "key": "sink_file",
+        "name": "Sinks file",
+        "description": "Sink information file",
         "value": {
-            "type": "string", 
-            "default": "[site_prefix]_sinks.txt", 
+            "type": "string",
+            "default": "[site_prefix]_sinks.txt",
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "use_canals", 
-        "name": "Use canals toggle", 
-        "description": "Option to use canals", 
+        "key": "use_canals",
+        "name": "Use canals toggle",
+        "description": "Option to use canals",
         "value": {
-            "type": "choice", 
-            "default": "No", 
+            "type": "choice",
+            "default": "No",
             "choices": [
-                "Yes", 
+                "Yes",
                 "No"
-            ], 
+            ],
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "canal_file", 
-        "name": "Canal file", 
-        "description": "Canal information file", 
+        "key": "canal_file",
+        "name": "Canal file",
+        "description": "Canal information file",
         "value": {
-            "type": "string", 
-            "default": "[site_prefix]_canals.txt", 
+            "type": "string",
+            "default": "[site_prefix]_canals.txt",
             "units": "-"
         }
     }

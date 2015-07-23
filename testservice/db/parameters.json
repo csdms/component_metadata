@@ -1,21 +1,21 @@
 [
     {
-        "key": "site_prefix", 
-        "name": "Site prefix", 
-        "description": "File prefix for the study site", 
+        "key": "site_prefix",
+        "name": "Site prefix",
+        "description": "File prefix for the study site",
         "value": {
-            "type": "String", 
-            "default": "Treynor", 
+            "type": "String",
+            "default": "Treynor",
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "case_prefix", 
-        "name": "Case prefix", 
-        "description": "File prefix for the model scenario", 
+        "key": "case_prefix",
+        "name": "Case prefix",
+        "description": "File prefix for the model scenario",
         "value": {
-            "type": "String", 
-            "default": "Case5", 
+            "type": "String",
+            "default": "Case5",
             "units": "-"
         }
     }

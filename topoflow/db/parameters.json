@@ -1,87 +1,87 @@
 [
     {
-	"key":"separator",
-	"name":"Run",
-	"description":"Run",
-	"value":{
-	    "type":"string",
-	    "default":""
-	}
+        "key": "separator",
+        "name": "Run",
+        "description": "Run",
+        "value": {
+            "type": "string",
+            "default": ""
+        }
     },
     {
-        "key": "site_prefix", 
-        "name": "Site prefix", 
-        "description": "File prefix for the study site", 
+        "key": "site_prefix",
+        "name": "Site prefix",
+        "description": "File prefix for the study site",
         "value": {
-            "type": "String", 
-            "default": "Treynor", 
+            "type": "String",
+            "default": "Treynor",
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "case_prefix", 
-        "name": "Case prefix", 
-        "description": "File prefix for the model scenario", 
+        "key": "case_prefix",
+        "name": "Case prefix",
+        "description": "File prefix for the model scenario",
         "value": {
-            "type": "String", 
-            "default": "Case5", 
+            "type": "String",
+            "default": "Case5",
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "stop_method", 
-        "name": "Stopping method", 
-        "description": "Stopping method", 
+        "key": "stop_method",
+        "name": "Stopping method",
+        "description": "Stopping method",
         "value": {
-            "type": "choice", 
-            "default": "Q_peak_fraction", 
+            "type": "choice",
+            "default": "Q_peak_fraction",
             "choices": [
-                "Q_peak_fraction", 
-                "Until_model_time", 
+                "Q_peak_fraction",
+                "Until_model_time",
                 "Until_n_steps"
-            ], 
+            ],
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "Qp_fraction", 
-        "name": "Q_peak fraction", 
-        "description": "Value for q_peak_fraction method", 
+        "key": "Qp_fraction",
+        "name": "Q_peak fraction",
+        "description": "Value for q_peak_fraction method",
         "value": {
-            "type": "Float", 
-            "default": "0.05", 
+            "type": "Float",
+            "default": "0.05",
             "range": {
-                "min": "0.0", 
+                "min": "0.0",
                 "max": "1.0"
-            }, 
+            },
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "T_stop_model", 
-        "name": "Model stop time", 
-        "description": "Value for until_model_time method", 
+        "key": "T_stop_model",
+        "name": "Model stop time",
+        "description": "Value for until_model_time method",
         "value": {
-            "type": "Float", 
-            "default": "20.0", 
+            "type": "Float",
+            "default": "20.0",
             "range": {
-                "min": "0.0", 
+                "min": "0.0",
                 "max": "1e9"
-            }, 
+            },
             "units": "min"
         }
-    }, 
+    },
     {
-        "key": "n_steps", 
-        "name": "Number of steps", 
-        "description": "Value for until_n_steps method", 
+        "key": "n_steps",
+        "name": "Number of steps",
+        "description": "Value for until_n_steps method",
         "value": {
-            "type": "Int", 
-            "default": "100", 
+            "type": "Int",
+            "default": "100",
             "range": {
-                "min": "1", 
+                "min": "1",
                 "max": "1000000000"
-            }, 
+            },
             "units": "-"
         }
     }
