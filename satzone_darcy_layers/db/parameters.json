@@ -1,183 +1,183 @@
 [
     {
-	"key":"separator",
-	"name":"Run",
-	"description":"Run",
-	"value":{
-	    "type":"string",
-	    "default":""
-	}
-    },
-    {
-	"key":"run_duration",
-	"name":"Run duration",
-	"description":"Simulation run time",
-	"value":{
-	    "type":"int",
-	    "default":1,
-	    "range":{
-		"min":0,
-		"max":1000000
-	    },
-	    "units":"d"
-	}
-    },
-    {
-        "key": "site_prefix", 
-        "name": "Site prefix", 
-        "description": "File prefix for the study site", 
+        "key": "separator",
+        "name": "Run",
+        "description": "Run",
         "value": {
-            "type": "string", 
-            "default": "Treynor", 
-            "units": "-"
+            "type": "string",
+            "default": ""
         }
-    }, 
-    {
-        "key": "case_prefix", 
-        "name": "Case prefix", 
-        "description": "File prefix for the model scenario", 
-        "value": {
-            "type": "string", 
-            "default": "Case5", 
-            "units": "-"
-        }
-    }, 
-    {
-	"key":"separator",
-	"name":"Input",
-	"description":"Input",
-	"value":{
-	    "type":"string",
-	    "default":""
-	}
     },
     {
-        "key": "n_layers", 
-        "name": "Number of soil layers", 
-        "description": "Number of soil layers", 
+        "key": "run_duration",
+        "name": "Run duration",
+        "description": "Simulation run time",
         "value": {
-            "type": "int", 
-            "default": "6", 
+            "type": "int",
+            "default": 1,
             "range": {
-                "min": "1", 
+                "min": 0,
+                "max": 1000000
+            },
+            "units": "d"
+        }
+    },
+    {
+        "key": "site_prefix",
+        "name": "Site prefix",
+        "description": "File prefix for the study site",
+        "value": {
+            "type": "string",
+            "default": "Treynor",
+            "units": "-"
+        }
+    },
+    {
+        "key": "case_prefix",
+        "name": "Case prefix",
+        "description": "File prefix for the model scenario",
+        "value": {
+            "type": "string",
+            "default": "Case5",
+            "units": "-"
+        }
+    },
+    {
+        "key": "separator",
+        "name": "Input",
+        "description": "Input",
+        "value": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    {
+        "key": "n_layers",
+        "name": "Number of soil layers",
+        "description": "Number of soil layers",
+        "value": {
+            "type": "int",
+            "default": "6",
+            "range": {
+                "min": "1",
                 "max": "6"
-            }, 
+            },
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "elev_type", 
-        "name": "DEM type", 
-        "description": "Allowed input types", 
+        "key": "elev_type",
+        "name": "DEM type",
+        "description": "Allowed input types",
         "value": {
-            "type": "choice", 
-            "default": "Grid", 
+            "type": "choice",
+            "default": "Grid",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
+            ],
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "elev", 
-        "name": "DEM", 
-        "description": "Land surface elevation", 
+        "key": "elev",
+        "name": "DEM",
+        "description": "Land surface elevation",
         "value": {
-            "type": "string", 
-            "default": "[site_prefix]_DEM.rtg", 
+            "type": "string",
+            "default": "[site_prefix]_DEM.rtg",
             "units": "m"
         }
-    }, 
+    },
     {
-        "key": "h0_table_type", 
-        "name": "h0_table type", 
-        "description": "Allowed input types", 
+        "key": "h0_table_type",
+        "name": "h0_table type",
+        "description": "Allowed input types",
         "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
+            ],
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "h0_table", 
-        "name": "h0_table", 
-        "description": "Initial water table height", 
+        "key": "h0_table",
+        "name": "h0_table",
+        "description": "Initial water table height",
         "value": {
-            "type": "float", 
-            "default": "0.000", 
+            "type": "float",
+            "default": "0.000",
             "range": {
-                "min": "0.0", 
+                "min": "0.0",
                 "max": "1e4"
-            }, 
+            },
             "units": "m"
         }
-    }, 
+    },
     {
-        "key": "d_freeze_type", 
-        "name": "d_freeze type", 
-        "description": "Allowed input types", 
+        "key": "d_freeze_type",
+        "name": "d_freeze type",
+        "description": "Allowed input types",
         "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
+            ],
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "d_freeze", 
-        "name": "d_freeze", 
-        "description": "Freeze depth below surface", 
+        "key": "d_freeze",
+        "name": "d_freeze",
+        "description": "Freeze depth below surface",
         "value": {
-            "type": "float", 
-            "default": "0.000", 
+            "type": "float",
+            "default": "0.000",
             "range": {
-                "min": "0.0", 
+                "min": "0.0",
                 "max": "1e4"
-            }, 
+            },
             "units": "m"
         }
-    }, 
+    },
     {
-        "key": "d_thaw_type", 
-        "name": "d_thaw type", 
-        "description": "Allowed input types", 
+        "key": "d_thaw_type",
+        "name": "d_thaw type",
+        "description": "Allowed input types",
         "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
+            ],
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "d_thaw", 
-        "name": "d_thaw", 
-        "description": "Thaw depth below surface", 
+        "key": "d_thaw",
+        "name": "d_thaw",
+        "description": "Thaw depth below surface",
         "value": {
-            "type": "float", 
-            "default": "9999.000", 
+            "type": "float",
+            "default": "9999.000",
             "range": {
-                "min": "0.0", 
+                "min": "0.0",
                 "max": "1e4"
-            }, 
+            },
             "units": "m"
         }
     }

@@ -1,64 +1,64 @@
 [
     {
-	"key":"separator",
-	"name":"Run",
-	"description":"Run",
-	"value":{
-	    "type":"string",
-	    "default":""
-	}
-    },
-    {
-	"key":"run_duration",
-	"name":"Run duration",
-	"description":"Simulation run time",
-	"value":{
-	    "type":"int",
-	    "default":1,
-	    "range":{
-		"min":0,
-		"max":1000000
-	    },
-	    "units":"d"
-	}
-    },
-    {
-        "key": "site_prefix", 
-        "name": "Site prefix", 
-        "description": "File prefix for the study site", 
+        "key": "separator",
+        "name": "Run",
+        "description": "Run",
         "value": {
-            "type": "string", 
-            "default": "Treynor", 
+            "type": "string",
+            "default": ""
+        }
+    },
+    {
+        "key": "run_duration",
+        "name": "Run duration",
+        "description": "Simulation run time",
+        "value": {
+            "type": "int",
+            "default": 1,
+            "range": {
+                "min": 0,
+                "max": 1000000
+            },
+            "units": "d"
+        }
+    },
+    {
+        "key": "site_prefix",
+        "name": "Site prefix",
+        "description": "File prefix for the study site",
+        "value": {
+            "type": "string",
+            "default": "Treynor",
             "units": "-"
         }
-    }, 
-    {
-        "key": "case_prefix", 
-        "name": "Case prefix", 
-        "description": "File prefix for the model scenario", 
-        "value": {
-            "type": "string", 
-            "default": "Case5", 
-            "units": "-"
-        }
-    }, 
-    {
-	"key":"separator",
-	"name":"Input",
-	"description":"Input",
-	"value":{
-	    "type":"string",
-	    "default":""
-	}
     },
     {
-        "key": "ET_rate", 
-        "name": "ET rate", 
-        "description": "Grid sequence", 
+        "key": "case_prefix",
+        "name": "Case prefix",
+        "description": "File prefix for the model scenario",
         "value": {
-            "type": "string", 
-            "default": "[case_prefix]_2D-ETrate-in.nc", 
-            "units": "mm/hr"
+            "type": "string",
+            "default": "Case5",
+            "units": "-"
+        }
+    },
+    {
+        "key": "separator",
+        "name": "Input",
+        "description": "Input",
+        "value": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    {
+        "key": "ET_rate",
+        "name": "ET rate",
+        "description": "Grid sequence",
+        "value": {
+            "type": "string",
+            "default": "[case_prefix]_2D-ETrate-in.nc",
+            "units": "mm hr-1"
         }
     }
 ]
