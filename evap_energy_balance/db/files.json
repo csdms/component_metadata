@@ -1,1 +1,3 @@
-["Evap_Energy_Balance.cfg.in"]
+[
+    "Evap_Energy_Balance.cfg.tmpl"
+]

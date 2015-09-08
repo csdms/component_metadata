@@ -1,1 +1,3 @@
-["Data_His.cfg.in"]
+[
+    "Data_His.cfg.tmpl"
+]

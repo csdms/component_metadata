@@ -1,1 +1,3 @@
-["Snow_Energy_Balance.cfg.in"]
+[
+    "Snow_Energy_Balance.cfg.tmpl"
+]

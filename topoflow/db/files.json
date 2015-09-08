@@ -1,1 +1,3 @@
-["Topoflow.cfg.in"]
+[
+    "Topoflow.cfg.tmpl"
+]

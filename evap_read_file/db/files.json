@@ -1,1 +1,3 @@
-["Evap_Read_File.cfg.in"]
+[
+    "Evap_Read_File.cfg.tmpl"
+]

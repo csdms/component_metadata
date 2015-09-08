@@ -1,1 +1,3 @@
-["Infil_Richards_1D.cfg.in"]
+[
+    "Infil_Richards_1D.cfg.tmpl"
+]
