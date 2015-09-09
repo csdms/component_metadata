@@ -9,6 +9,20 @@
         }
     },
     {
+        "key": "run_duration",
+        "name": "Run duration",
+        "description": "Simulation run time",
+        "value": {
+            "type": "int",
+            "default": 1,
+            "range": {
+                "min": 0,
+                "max": 1000000
+            },
+            "units": "d"
+        }
+    },
+    {
         "key": "site_prefix",
         "name": "Site prefix",
         "description": "File prefix for the study site",
