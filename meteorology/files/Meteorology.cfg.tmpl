@@ -55,29 +55,29 @@ start_hour          | {start_hour}        | float     | Start hour [-]
 #===============================================================================
 # Output 1
 save_grid_dt        | {save_grid_dt}      | float     | Time interval between saved grids [sec]
-SAVE_EA_GRIDS       | {SAVE_EA_GRIDS}     | string    | Option to save grids of vapor pressure (in air) [-] {Yes; No}
+SAVE_EA_GRIDS       | No     | string    | Option to save grids of vapor pressure (in air) [-] {Yes; No}
 ea_gs_file          | {ea_gs_file}        | string    | Filename for grid stack of vapor pressure (air) [mbar]
-SAVE_ES_GRIDS       | {SAVE_ES_GRIDS}     | string    | Option to save grids of vapor pressure (at surf) [-] {Yes; No}
+SAVE_ES_GRIDS       | No     | string    | Option to save grids of vapor pressure (at surf) [-] {Yes; No}
 es_gs_file          | {es_gs_file}        | string    | Filename for grid stack of vapor pressure (surf) [mbar]
-SAVE_QSW_GRIDS      | {SAVE_QSW_GRIDS}    | string    | Option to save grids of net shortwave radiation [-] {Yes; No}
+SAVE_QSW_GRIDS      | No    | string    | Option to save grids of net shortwave radiation [-] {Yes; No}
 Qsw_gs_file         | {Qsw_gs_file}       | string    | Filename for grid stack of net shortwave radiation [W/m^2]
-SAVE_QLW_GRIDS      | {SAVE_QLW_GRIDS}    | string    | Option to save grids of net longwave radiation [-] {Yes; No}
+SAVE_QLW_GRIDS      | No    | string    | Option to save grids of net longwave radiation [-] {Yes; No}
 Qlw_gs_file         | {Qlw_gs_file}       | string    | Filename for grid stack of net longwave radiation [W/m^2]
-SAVE_EMA_GRIDS      | {SAVE_EMA_GRIDS}    | string    | Option to save grids of air emissivity [-] {Yes; No}
+SAVE_EMA_GRIDS      | No    | string    | Option to save grids of air emissivity [-] {Yes; No}
 ema_gs_file         | {ema_gs_file}       | string    | Filename for grid stack of air emissivity in [unitless]
 #===============================================================================
 # Output 2
 save_pixels_dt      | {save_pixels_dt}    | float     | Time interval between time series values [sec]
 pixel_file          | {pixel_file}        | string    | Filename for monitored pixel file [-]
-SAVE_EA_PIXELS      | {SAVE_EA_PIXELS}    | string    | Option to save time series of sat. vapor press. (in air) [-] {Yes; No}
+SAVE_EA_PIXELS      | No    | string    | Option to save time series of sat. vapor press. (in air) [-] {Yes; No}
 ea_ts_file          | {ea_ts_file}        | string    | Filename for time series of sat. vapor press. (in air) [mbar]
-SAVE_ES_PIXELS      | {SAVE_ES_PIXELS}    | string    | Option to save time series of sat. vapor press. (at surf) [-] {Yes; No}
+SAVE_ES_PIXELS      | No    | string    | Option to save time series of sat. vapor press. (at surf) [-] {Yes; No}
 es_ts_file          | {es_ts_file}        | string    | Filename for time series of sat. vapor press. (at surf) [mbar]
-SAVE_QSW_PIXELS     | {SAVE_QSW_PIXELS}   | string    | Option to save time series of net shortwave radiation [-] {Yes; No}
+SAVE_QSW_PIXELS     | No   | string    | Option to save time series of net shortwave radiation [-] {Yes; No}
 Qsw_ts_file         | {Qsw_ts_file}       | string    | Filename for time series of net shortwave radiation [W/m^2]
-SAVE_QLW_PIXELS     | {SAVE_QLW_PIXELS}   | string    | Option to save time series of net longwave radiation [-] {Yes; No}
+SAVE_QLW_PIXELS     | No   | string    | Option to save time series of net longwave radiation [-] {Yes; No}
 Qlw_ts_file         | {Qlw_ts_file}       | string    | Filename for time series of net longwave radiation [W/m^2]
-SAVE_EMA_PIXELS     | {SAVE_EMA_PIXELS}   | string    | Option to save time series of air emissivity [-] {Yes; No}
+SAVE_EMA_PIXELS     | No   | string    | Option to save time series of air emissivity [-] {Yes; No}
 ema_ts_file         | {ema_ts_file}       | string    | Filename for time series of air emissivity in [unitless]
 #===============================================================================
 # About
