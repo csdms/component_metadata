@@ -38,7 +38,7 @@
         "description": "File prefix for the model scenario",
         "value": {
             "type": "string",
-            "default": "Case5",
+            "default": "June_20_67",
             "units": "-"
         }
     }
