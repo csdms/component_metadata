@@ -1,1 +1,5 @@
-["Meteorology.cfg.in"]
+[
+    "Meteorology.cfg.tmpl",
+    "Treynor.rti",
+    "June_20_67_rain_rates.txt"
+]

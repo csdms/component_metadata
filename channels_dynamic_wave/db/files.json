@@ -1,1 +1,3 @@
-["Channels_Dynamic_Wave.cfg.in"]
+[
+    "Channels_Dynamic_Wave.cfg.tmpl"
+]

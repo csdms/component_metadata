@@ -1,1 +1,3 @@
-["Testservice.cfg.in"]
+[
+    "Testservice.cfg.tmpl"
+]

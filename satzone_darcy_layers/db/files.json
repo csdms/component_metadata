@@ -1,1 +1,3 @@
-["Satzone_Darcy_Layers.cfg.in"]
+[
+    "Satzone_Darcy_Layers.cfg.tmpl"
+]
