@@ -14,12 +14,26 @@
         "description": "Simulation run time",
         "value": {
             "type": "int",
-            "default": 1,
+            "default": 3600,
             "range": {
-                "min": 0,
-                "max": 1000000
+                "min": 1,
+                "max": 3153600000
             },
-            "units": "d"
+            "units": "s"
+        }
+    },
+    {
+        "key": "dt",
+        "name": "Time step",
+        "description": "Model time step",
+        "value": {
+            "type": "int",
+            "default": 600,
+            "range": {
+                "min": 1,
+                "max": 31536000
+            },
+            "units": "s"
         }
     },
     {
