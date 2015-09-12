@@ -9,11 +9,17 @@ from wmt.utils.hook import find_simulation_input_file
 def execute(env):
     env['n_steps'] = int(round(float(env['run_duration']) / float(env['dt'])))
 
-    env['rti_file'] = env['site_prefix'] + '.rti'
+    # Determine TopoFlow site_prefix from RTI filename.
+    env['site_prefix'] = os.path.splitext(env['rti_file'])[0]
+
     env['P'] = env['case_prefix'] + '_rain_rates.txt'
-    env['slope_grid_file'] = env['site_prefix'] + '_slope.bin'
-    env['aspect_grid_file'] = env['site_prefix'] + '_aspect.bin'
     env['pixel_file'] = env['case_prefix'] + '_outlets.txt'
+
+    ### Special temporary fix!
+    # env['slope_grid_file'] = env['site_prefix'] + '_slope.bin'
+    # env['aspect_grid_file'] = env['site_prefix'] + '_aspect.bin'
+    env['slope_grid_file'] = 'Treynor_slope.bin'
+    env['aspect_grid_file'] = 'Treynor_aspect.bin'
 
     # Default files common to all TopoFlow components are stored with the
     # topoflow component metadata.
@@ -24,6 +30,12 @@ def execute(env):
     for fname in file_list:
         src = find_simulation_input_file(env[fname])
         shutil.copy(src, os.curdir)
+
+    ### Special temporary fix!
+    env['slope_grid_file'] = env['site_prefix'] + '_slope.bin'
+    env['aspect_grid_file'] = env['site_prefix'] + '_aspect.bin'
+    shutil.move('Treynor_aspect.bin', env['aspect_grid_file'])
+    shutil.move('Treynor_slope.bin', env['slope_grid_file'])
 
     env['save_grid_dt'] = float(env['dt'])
     env['save_pixels_dt'] = float(env['dt'])

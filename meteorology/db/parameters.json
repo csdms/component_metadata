@@ -37,14 +37,16 @@
         }
     },
     {
-        "key": "site_prefix",
-        "name": "Site prefix",
-        "description": "File prefix for the study site",
-        "value": {
-            "type": "string",
-            "default": "Treynor",
-            "units": "-"
-        }
+	"key":"rti_file",
+	"name":"RTI file",
+	"description":"RiverTools info file",
+	"value":{
+	    "type":"file",
+	    "default":"Treynor.rti",
+	    "files":[
+		"Treynor.rti"
+	    ]
+	}
     },
     {
         "key": "case_prefix",
