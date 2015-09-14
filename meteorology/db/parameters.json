@@ -560,22 +560,26 @@
     {
         "key": "slope_grid_file",
         "name": "slope grid file",
-        "description": "Flat binary, row-major file with grid of 4-byte slopes",
-        "value": {
-            "type": "string",
-            "default": "[site_prefix]_slope.bin",
-            "units": "-"
-        }
+        "description": "Slope grid file (flat binary file, row-major grid, 4-byte values)",
+	"value":{
+	    "type":"file",
+	    "default":"Treynor_slope.bin",
+	    "files":[
+		"Treynor_slope.bin"
+	    ]
+	}
     },
     {
         "key": "aspect_grid_file",
         "name": "aspect grid file",
-        "description": "Flat binary, row-major file with grid of 4-byte aspects",
-        "value": {
-            "type": "string",
-            "default": "[site_prefix]_aspect.bin",
-            "units": "-"
-        }
+        "description": "Aspect grid file (flat binary file, row-major grid, 4-byte values)",
+	"value":{
+	    "type":"file",
+	    "default":"Treynor_aspect.bin",
+	    "files":[
+		"Treynor_aspect.bin"
+	    ]
+	}
     },
     {
         "key": "GMT_offset",
