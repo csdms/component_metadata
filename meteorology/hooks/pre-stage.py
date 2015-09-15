@@ -21,8 +21,12 @@ def execute(env):
     # Determine TopoFlow site_prefix from RTI filename.
     env['site_prefix'] = os.path.splitext(env['rti_file'])[0]
 
+    # If no pixel_file is given, let TopoFlow make one.
+    if env['pixel_file'] == 'None':
+        file_list.remove('pixel_file')
+        env['pixel_file'] = '_outlets.txt'
+
     env['P'] = env['case_prefix'] + '_rain_rates.txt'
-    env['pixel_file'] = env['case_prefix'] + '_outlets.txt'
 
     # Default files common to all TopoFlow components are stored with the
     # topoflow component metadata.

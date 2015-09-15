@@ -59,6 +59,19 @@
         }
     },
     {
+        "key": "pixel_file",
+        "name": "pixel file",
+        "description": "Monitored pixel/grid file (outlets)",
+	"value":{
+	    "type":"file",
+	    "default":"June_20_67_outlets.txt",
+	    "files":[
+		"None",
+		"June_20_67_outlets.txt"
+	    ]
+	}
+    },
+    {
         "key": "separator",
         "name": "Input",
         "description": "Input",
