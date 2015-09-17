@@ -12,7 +12,17 @@ file_list = ['rti_file',
              'pixel_file']
 
 
-def assign_parameter_value(env):
+def get_typeof_parameter(parameter_value):
+    """Get the TopoFlow type of a parameter."""
+    try:
+        float(parameter_value)
+    except ValueError:
+        return 'string'
+    else:
+        return 'float'
+
+
+def assign_parameter_type_and_value(env):
     """Assign the value of a TopoFlow input parameter.
 
     A subset of TopoFlow input parameters can take a scalar value, or,
@@ -34,6 +44,7 @@ def assign_parameter_value(env):
             else:
                 env[key_root] = env[key_root + '_file']
                 file_list.append(key_root)
+            env['typeof_' + key_root] = get_typeof_parameter(env[key_root])
 
 
 def execute(env):
@@ -57,7 +68,7 @@ def execute(env):
         file_list.remove('pixel_file')
         env['pixel_file'] = '_outlets.txt'
 
-    assign_parameter_value(env)
+    assign_parameter_type_and_value(env)
 
     # Default files common to all TopoFlow components are stored with the
     # topoflow component metadata.
