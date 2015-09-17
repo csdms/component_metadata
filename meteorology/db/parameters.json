@@ -56,7 +56,7 @@
 	    "type":"file",
 	    "default":"June_20_67_outlets.txt",
 	    "files":[
-		"None",
+		"off",
 		"June_20_67_outlets.txt"
 	    ]
 	}

@@ -65,7 +65,7 @@ def execute(env):
     env['case_prefix'] = 'scenario'
 
     # If no pixel_file is given, let TopoFlow make one.
-    if env['pixel_file'] == 'None':
+    if env['pixel_file'] == 'off':
         file_list.remove('pixel_file')
         env['pixel_file'] = '_outlets.txt'
 
