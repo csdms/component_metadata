@@ -60,8 +60,9 @@ def execute(env):
     env['save_grid_dt'] = float(env['dt'])
     env['save_pixels_dt'] = float(env['dt'])
 
-    # Determine TopoFlow site_prefix from RTI filename.
+    # TopoFlow needs site_prefix and case_prefix.
     env['site_prefix'] = os.path.splitext(env['rti_file'])[0]
+    env['case_prefix'] = 'scenario'
 
     # If no pixel_file is given, let TopoFlow make one.
     if env['pixel_file'] == 'None':

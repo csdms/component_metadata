@@ -49,16 +49,6 @@
 	}
     },
     {
-        "key": "case_prefix",
-        "name": "Case prefix",
-        "description": "File prefix for the model scenario",
-        "value": {
-            "type": "string",
-            "default": "June_20_67",
-            "units": "-"
-        }
-    },
-    {
         "key": "pixel_file",
         "name": "pixel file",
         "description": "Monitored pixel/grid file (outlets)",
