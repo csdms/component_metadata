@@ -27,11 +27,11 @@
         "name": "Time step",
         "description": "Model time step",
         "value": {
-            "type": "int",
-            "default": 600,
+            "type": "float",
+            "default": 600.0,
             "range": {
-                "min": 1,
-                "max": 31536000
+                "min": 1.0,
+                "max": 31536000.0
             },
             "units": "s"
         }
@@ -1018,10 +1018,10 @@
         "description": "Start day",
         "value": {
             "type": "int",
-            "default": "1",
+            "default": 1,
             "range": {
-                "min": "0",
-                "max": "31"
+                "min": 0,
+                "max": 31
             },
             "units": "-"
         }
@@ -1032,10 +1032,10 @@
         "description": "Start hour",
         "value": {
             "type": "float",
-            "default": "0.0",
+            "default": 0.0,
             "range": {
-                "min": "0.0",
-                "max": "23.99"
+                "min": 0.0,
+                "max": 23.99
             },
             "units": "-"
         }
