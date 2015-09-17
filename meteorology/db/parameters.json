@@ -42,9 +42,9 @@
 	"description":"RiverTools info file",
 	"value":{
 	    "type":"file",
-	    "default":"Treynor.rti",
+	    "default":"default.rti",
 	    "files":[
-		"Treynor.rti"
+		"default.rti"
 	    ]
 	}
     },
@@ -54,10 +54,9 @@
         "description": "Monitored pixel/grid file (outlets)",
 	"value":{
 	    "type":"file",
-	    "default":"June_20_67_outlets.txt",
+	    "default":"off",
 	    "files":[
-		"off",
-		"June_20_67_outlets.txt"
+		"off"
 	    ]
 	}
     },
@@ -251,7 +250,7 @@
 	},
         "value": {
             "type": "choice",
-            "default": "Time_Series",
+            "default": "Scalar",
             "choices": [
                 "Scalar",
                 "Grid",
@@ -286,10 +285,9 @@
 	},
 	"value":{
 	    "type":"file",
-	    "default":"June_20_67_rain_rates.txt",
+	    "default":"off",
 	    "files":[
-		"off",
-		"June_20_67_rain_rates.txt"
+		"off"
 	    ]
 	}
     },
@@ -923,9 +921,9 @@
         "description": "Slope grid file (flat binary file, row-major grid, 4-byte values)",
 	"value":{
 	    "type":"file",
-	    "default":"Treynor_slope.bin",
+	    "default":"default_slope.bin",
 	    "files":[
-		"Treynor_slope.bin"
+		"default_slope.bin"
 	    ]
 	}
     },
@@ -935,9 +933,9 @@
         "description": "Aspect grid file (flat binary file, row-major grid, 4-byte values)",
 	"value":{
 	    "type":"file",
-	    "default":"Treynor_aspect.bin",
+	    "default":"default_aspect.bin",
 	    "files":[
-		"Treynor_aspect.bin"
+		"default_aspect.bin"
 	    ]
 	}
     },
