@@ -1,1 +1,3 @@
-["Snow_Degree_Day.cfg.in"]
+[
+    "Snow_Degree_Day.cfg.tmpl"
+]

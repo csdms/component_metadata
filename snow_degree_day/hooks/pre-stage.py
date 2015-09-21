@@ -7,19 +7,17 @@ from wmt.utils.hook import find_simulation_input_file
 
 
 file_list = ['rti_file',
-             'aspect_grid_file',
-             'slope_grid_file',
              'pixel_file']
 
 
 def get_typeof_parameter(parameter_value):
-    if isinstance(parameter_value, int):
-        parameter_type = 'long'
-    elif isinstance(parameter_value, float):
-        parameter_type = 'float'
+    """Get the TopoFlow type of a parameter."""
+    try:
+        float(parameter_value)
+    except ValueError:
+        return 'string'
     else:
-        parameter_type = 'string'
-    return parameter_type
+        return 'float'
 
 
 def assign_parameter_type_and_value(env):
@@ -60,20 +58,21 @@ def execute(env):
     env['save_grid_dt'] = float(env['dt'])
     env['save_pixels_dt'] = float(env['dt'])
 
-    # Determine TopoFlow site_prefix from RTI filename.
+    # TopoFlow needs site_prefix and case_prefix.
     env['site_prefix'] = os.path.splitext(env['rti_file'])[0]
+    env['case_prefix'] = 'scenario'
 
     # If no pixel_file is given, let TopoFlow make one.
-    if env['pixel_file'] == 'None':
+    if env['pixel_file'] == 'off':
         file_list.remove('pixel_file')
         env['pixel_file'] = '_outlets.txt'
 
-    assign_parameter_type_and_value(env)
+    #assign_parameter_type_and_value(env)
 
     # Default files common to all TopoFlow components are stored with the
-    # topoflow component metadata.
+    # topoflow component metadata. Copies 'default.rti' file to the same folder
     prepend_to_path('WMT_INPUT_FILE_PATH',
-                    os.path.join(site['db'], 'components', 'topoflow', 'files'))
+		 os.path.join(site['db'], 'components', 'topoflow', 'files'))
     for fname in file_list:
-        src = find_simulation_input_file(env[fname])
+    	src = find_simulation_input_file(env[fname])
         shutil.copy(src, os.curdir)

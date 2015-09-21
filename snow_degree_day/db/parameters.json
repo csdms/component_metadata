@@ -14,12 +14,12 @@
         "description": "Simulation run time",
         "value": {
             "type": "int",
-            "default": 1,
+            "default": 3600,
             "range": {
                 "min": 0,
-                "max": 1000000
+                "max": 3153600000
             },
-            "units": "d"
+            "units": "s"
         }
     },
     {
@@ -27,27 +27,13 @@
         "name": "Time step",
         "description": "Model time step",
         "value": {
-            "type": "int",
+            "type": "float",
             "default": 600,
             "range": {
                 "min": 1,
                 "max": 31536000
             },
             "units": "s"
-        }
-    },
-    {
-        "key": "n_steps",
-        "name": "Number of time steps",
-        "description": "Model number of time steps",
-        "value": {
-            "type": "int",
-            "default": 100,
-            "range": {
-                "min": 1,
-                "max": 31536000
-            },
-            "units": "-"
         }
     },
     {
@@ -56,30 +42,10 @@
         "description":"RiverTools info file",
         "value":{
             "type":"file",
-            "default":"Treynor.rti",
+            "default":"default.rti",
             "files":[
-                "Treynor.rti"
+                "default.rti"
             ]
-        }
-    },
-    {
-        "key": "site_prefix",
-        "name": "Site prefix",
-        "description": "File prefix for the study site",
-        "value": {
-            "type": "string",
-            "default": "Treynor",
-            "units": "-"
-        }
-    },
-    {
-        "key": "case_prefix",
-        "name": "Case prefix",
-        "description": "File prefix for the model scenario",
-        "value": {
-            "type": "string",
-            "default": "June_20_67",
-            "units": "-"
         }
     },
     {
@@ -88,39 +54,10 @@
         "description": "Monitored pixel/grid file (outlets)",
         "value":{
             "type":"file",
-            "default":"June_20_67_outlets.txt",
+            "default":"off",
             "files":[
-                "None",
-                "June_20_67_outlets.txt"
+                "off"
             ]
-        }
-    },
-   {
-        "key": "save_grid_dt",
-        "name": "Interval time",
-        "description": "Interval time between saved grids",
-        "value": {
-            "type": "float",
-            "default": 600,
-            "range": {
-                "min": 1,
-                "max": 31536000
-            },
-            "units": "s"
-        }
-    },
-    {
-        "key": "save_pixels_dt",
-        "name": "Time interval",
-        "description": "Time interval between time series values",
-        "value": {
-            "type": "float",
-            "default": 600,
-            "range": {
-                "min": 1,
-                "max": 31536000
-            },
-            "units": "s"
         }
     },
     {
