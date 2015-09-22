@@ -38,7 +38,7 @@ def assign_parameter_type_and_value(env):
     """
     for key in env.copy().iterkeys():
         if key.endswith('_type'):
-            key_root = str(key.rstrip('_type'))
+            key_root = str(key[:-5])
             if env[key] == 'Scalar':
                 env[key_root] = env[key_root + '_scalar']
             else:
