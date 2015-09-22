@@ -1,5 +1,5 @@
 #===============================================================================
-# Topoflow Config File for: satzone_darcy_layers
+# Topoflow Config File for: Satzone_Darcy_Layers
 #===============================================================================
 # Input
 comp_status         | Enabled             | string    | Component status [-] {Enabled; Disabled}
@@ -10,62 +10,38 @@ case_prefix         | {case_prefix}       | string    | File prefix for the mode
 n_steps             | {n_steps}           | long      | Number of time steps [-]
 n_layers            | {n_layers}          | int       | Number of soil layers [-]
 dt                  | {dt}                | float     | Timestep for subsurface flow [sec]
-elev_type           | {elev_type}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-elev                | {elev}              | string    | Land surface elevation [m]
-h0_table_type       | {h0_table_type}     | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-h0_table            | {h0_table}          | float     | Initial water table height [m]
-d_freeze_type       | {d_freeze_type}     | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-d_freeze            | {d_freeze}          | float     | Freeze depth below surface [m]
-d_thaw_type         | {d_thaw_type}       | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-d_thaw              | {d_thaw}            | float     | Thaw depth below surface [m]
+elev_type           | {elev_type}         | string            | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+elev                | {elev}              | {typeof_elev}     | Land surface elevation [m]
+h0_table_type       | {h0_table_type}     | string            | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+h0_table            | {h0_table}          | {typeof_h0_table} | Initial water table height [m]
+d_freeze_type       | {d_freeze_type}     | string            | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+d_freeze            | {d_freeze}          | {typeof_d_freeze} | Freeze depth below surface [m]
+d_thaw_type         | {d_thaw_type}       | string            | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+d_thaw              | {d_thaw}            | {typeof_d_thaw}   | Thaw depth below surface [m]
 #===============================================================================
 # Layer 1
-Ks_type_0           | {Ks_type_0}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-Ks_0                | {Ks_0}              | float     | Sat. hydraulic conductivity [m/s]
-qs_type_0           | {qs_type_0}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-qs_0                | {qs_0}              | float     | Sat. soil water content [-]
-th_type_0           | {th_type_0}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-th_0                | {th_0}              | float     | Soil layer thickness [m]
+Ks_0_type           | {Ks_0_type}         | string        | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+Ks_0                | {Ks_0}              | {typeof_Ks_0} | Sat. hydraulic conductivity [m/s]
+qs_0_type           | {qs_0_type}         | string        | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+qs_0                | {qs_0}              | {typeof_qs_0} | Sat. soil water content [-]
+th_0_type           | {th_0_type}         | string        | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+th_0                | {th_0}              | {typeof_th_0} | Soil layer thickness [m]
 #===============================================================================
 # Layer 2
-Ks_type_1           | {Ks_type_1}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-Ks_1                | {Ks_1}              | float     | Sat. hydraulic conductivity [m/s]
-qs_type_1           | {qs_type_1}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-qs_1                | {qs_1}              | float     | Sat. soil water content [-]
-th_type_1           | {th_type_1}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-th_1                | {th_1}              | float     | Soil layer thickness [m]
+Ks_1_type           | {Ks_1_type}         | string        | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+Ks_1                | {Ks_1}              | {typeof_Ks_1} | Sat. hydraulic conductivity [m/s]
+qs_1_type           | {qs_1_type}         | string        | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+qs_1                | {qs_1}              | {typeof_qs_1} | Sat. soil water content [-]
+th_1_type           | {th_1_type}         | string        | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+th_1                | {th_1}              | {typeof_th_1} | Soil layer thickness [m]
 #===============================================================================
 # Layer 3
-Ks_type_2           | {Ks_type_2}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-Ks_2                | {Ks_2}              | float     | Sat. hydraulic conductivity [m/s]
-qs_type_2           | {qs_type_2}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-qs_2                | {qs_2}              | float     | Sat. soil water content [-]
-th_type_2           | {th_type_2}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-th_2                | {th_2}              | float     | Soil layer thickness [m]
-#===============================================================================
-# Layer 4
-Ks_type_3           | {Ks_type_3}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-Ks_3                | {Ks_3}              | float     | Sat. hydraulic conductivity [m/s]
-qs_type_3           | {qs_type_3}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-qs_3                | {qs_3}              | float     | Sat. soil water content [-]
-th_type_3           | {th_type_3}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-th_3                | {th_3}              | float     | Soil layer thickness [m]
-#===============================================================================
-# Layer 5
-Ks_type_4           | {Ks_type_4}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-Ks_4                | {Ks_4}              | float     | Sat. hydraulic conductivity [m/s]
-qs_type_4           | {qs_type_4}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-qs_4                | {qs_4}              | float     | Sat. soil water content [-]
-th_type_4           | {th_type_4}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-th_4                | {th_4}              | float     | Soil layer thickness [m]
-#===============================================================================
-# Layer 6
-Ks_type_5           | {Ks_type_5}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-Ks_5                | {Ks_5}              | float     | Sat. hydraulic conductivity [m/s]
-qs_type_5           | {qs_type_5}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-qs_5                | {qs_5}              | float     | Sat. soil water content [-]
-th_type_5           | {th_type_5}         | string    | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-th_5                | {th_5}              | float     | Soil layer thickness [m]
+Ks_2_type           | {Ks_2_type}         | string        | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+Ks_2                | {Ks_2}              | {typeof_Ks_2} | Sat. hydraulic conductivity [m/s]
+qs_2_type           | {qs_2_type}         | string        | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+qs_2                | {qs_2}              | {typeof_qs_2} | Sat. soil water content [-]
+th_2_type           | {th_2_type}         | string        | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+th_2                | {th_2}              | {typeof_th_2} | Soil layer thickness [m]
 #===============================================================================
 # Output
 save_grid_dt        | {save_grid_dt}      | float     | Time interval between saved grids [sec]
