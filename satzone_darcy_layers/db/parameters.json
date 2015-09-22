@@ -70,20 +70,6 @@
         }
     },
     {
-        "key": "n_layers",
-        "name": "Number of soil layers",
-        "description": "Number of soil layers",
-        "value": {
-            "type": "int",
-            "default": "6",
-            "range": {
-                "min": "1",
-                "max": "6"
-            },
-            "units": "-"
-        }
-    },
-    {
         "key": "elev_type",
         "name": "DEM type",
         "description": "Allowed input types",

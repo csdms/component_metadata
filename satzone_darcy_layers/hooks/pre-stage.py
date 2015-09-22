@@ -57,6 +57,7 @@ def execute(env):
     env['n_steps'] = int(round(float(env['run_duration']) / float(env['dt'])))
     env['save_grid_dt'] = float(env['dt'])
     env['save_pixels_dt'] = float(env['dt'])
+    env['n_layers'] = 3  # my choice
 
     # TopoFlow needs site_prefix and case_prefix.
     env['site_prefix'] = os.path.splitext(env['rti_file'])[0]
