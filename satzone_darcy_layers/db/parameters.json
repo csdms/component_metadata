@@ -71,34 +71,65 @@
     },
     {
         "key": "elev_type",
-        "name": "DEM type",
-        "description": "Allowed input types",
+        "name": "elev type",
+        "description": "Land surface elevation",
+	"group":{
+	    "name":"elev_group",
+	    "leader":true,
+	    "members":2
+	},
         "value": {
             "type": "choice",
-            "default": "Grid",
+            "default": "Scalar",
             "choices": [
                 "Scalar",
                 "Grid",
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+            "units": "m"
         }
     },
     {
-        "key": "elev",
-        "name": "DEM",
-        "description": "Land surface elevation",
+        "key": "elev_scalar",
+        "name": "elev",
+        "description": "Scalar value",
+	"group":{
+	    "name":"elev_group"
+	},
         "value": {
-            "type": "string",
-            "default": "[site_prefix]_DEM.rtg",
-            "units": "m"
+            "type": "float",
+            "default": 0.0,
+            "range": {
+                "min": -1E4,
+                "max": 1E4
+            }
         }
+    },
+    {
+        "key": "elev_file",
+        "name": "elev",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"elev_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
     },
     {
         "key": "h0_table_type",
         "name": "h0_table type",
-        "description": "Allowed input types",
+        "description": "Initial water table height",
+	"group":{
+	    "name":"h0_table_group",
+	    "leader":true,
+	    "members":2
+	},
         "value": {
             "type": "choice",
             "default": "Scalar",
@@ -108,27 +139,49 @@
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+            "units": "m"
         }
     },
     {
-        "key": "h0_table",
+        "key": "h0_table_scalar",
         "name": "h0_table",
-        "description": "Initial water table height",
+        "description": "Scalar value",
+	"group":{
+	    "name":"h0_table_group"
+	},
         "value": {
             "type": "float",
-            "default": "0.000",
+            "default": 0.0,
             "range": {
-                "min": "0.0",
-                "max": "1e4"
-            },
-            "units": "m"
+                "min": 0.0,
+                "max": 1E4
+            }
         }
+    },
+    {
+        "key": "h0_table_file",
+        "name": "h0_table",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"h0_table_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
     },
     {
         "key": "d_freeze_type",
         "name": "d_freeze type",
-        "description": "Allowed input types",
+        "description": "Freeze depth below surface",
+	"group":{
+	    "name":"d_freeze_group",
+	    "leader":true,
+	    "members":2
+	},
         "value": {
             "type": "choice",
             "default": "Scalar",
@@ -138,27 +191,49 @@
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+            "units": "m"
         }
     },
     {
-        "key": "d_freeze",
+        "key": "d_freeze_scalar",
         "name": "d_freeze",
-        "description": "Freeze depth below surface",
+        "description": "Scalar value",
+	"group":{
+	    "name":"d_freeze_group"
+	},
         "value": {
             "type": "float",
-            "default": "0.000",
+            "default": 0.0,
             "range": {
-                "min": "0.0",
-                "max": "1e4"
-            },
-            "units": "m"
+                "min": 0.0,
+                "max": 1E4
+            }
         }
+    },
+    {
+        "key": "d_freeze_file",
+        "name": "d_freeze",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"d_freeze_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
     },
     {
         "key": "d_thaw_type",
         "name": "d_thaw type",
-        "description": "Allowed input types",
+        "description": "Thaw depth below surface",
+	"group":{
+	    "name":"d_thaw_group",
+	    "leader":true,
+	    "members":2
+	},
         "value": {
             "type": "choice",
             "default": "Scalar",
@@ -168,21 +243,38 @@
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+            "units": "m"
         }
     },
     {
-        "key": "d_thaw",
+        "key": "d_thaw_scalar",
         "name": "d_thaw",
-        "description": "Thaw depth below surface",
+        "description": "Scalar value",
+	"group":{
+	    "name":"d_thaw_group"
+	},
         "value": {
             "type": "float",
-            "default": "9999.000",
+            "default": 9999.0,
             "range": {
-                "min": "0.0",
-                "max": "1e4"
-            },
-            "units": "m"
+                "min": 0.0,
+                "max": 1E4
+            }
         }
+    },
+    {
+        "key": "d_thaw_file",
+        "name": "d_thaw",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"d_thaw_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
     }
 ]
