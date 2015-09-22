@@ -122,6 +122,18 @@
 	}
     },
     {
+        "key": "flow_grid_file",
+        "name": "flow grid file",
+        "description": "D8 flow grid file",
+	"value":{
+	    "type":"file",
+	    "default":"default_flow.rtg",
+	    "files":[
+		"default_flow.rtg"
+	    ]
+	}
+    },
+    {
         "key": "h0_table_type",
         "name": "h0_table type",
         "description": "Initial water table height",
@@ -772,6 +784,4 @@
 	    ]
 	}
     }
-
-
 ]

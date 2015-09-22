@@ -7,6 +7,7 @@ from wmt.utils.hook import find_simulation_input_file
 
 
 file_list = ['rti_file',
+             'flow_grid_file',
              'pixel_file']
 
 
