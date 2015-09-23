@@ -172,59 +172,116 @@
     {
         "key": "width_type",
         "name": "Bed width type",
-        "description": "Allowed input types",
+        "description": "Bed width of trapezoid cross-section",
+	"group":{
+	    "name":"width_group",
+	    "leader":true,
+	    "members":2
+	},
         "value": {
             "type": "choice",
-            "default": "Grid",
+            "default": "Scalar",
             "choices": [
                 "Scalar",
                 "Grid",
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+            "units": "m"
         }
     },
     {
-        "key": "width",
+        "key": "width_scalar",
         "name": "Bed width",
-        "description": "Bottom width of trapezoid cross-section",
+        "description": "Scalar value",
+	"group":{
+	    "name":"width_group"
+	},
         "value": {
-            "type": "string",
-            "default": "[site_prefix]_chan-w.rtg",
-            "units": "m"
+            "type": "float",
+            "default": 10.0,
+            "range": {
+                "min": 0.0,
+                "max": 1E4
+            }
         }
+    },
+    {
+        "key": "width_file",
+        "name": "Bed width",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"width_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
     },
     {
         "key": "angle_type",
         "name": "Bank angle type",
-        "description": "Allowed input types",
+        "description": "Bank angle of trapezoid cross-section",
+	"group":{
+	    "name":"angle_group",
+	    "leader":true,
+	    "members":2
+	},
         "value": {
             "type": "choice",
-            "default": "Grid",
+            "default": "Scalar",
             "choices": [
                 "Scalar",
                 "Grid",
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
-        }
-    },
-    {
-        "key": "angle",
-        "name": "Bank angle",
-        "description": "Bank angle of trapezoid cross-section",
-        "value": {
-            "type": "string",
-            "default": "[site_prefix]_chan-a.rtg",
             "units": "deg"
         }
     },
     {
+        "key": "angle_scalar",
+        "name": "Bank angle",
+        "description": "Scalar value",
+	"group":{
+	    "name":"angle_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 1.0,
+            "range": {
+                "min": 0.0,
+                "max": 360.0
+            }
+        }
+    },
+    {
+        "key": "angle_file",
+        "name": "Bank angle",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"angle_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
         "key": "d0_type",
-        "name": "Init. depth type",
-        "description": "Allowed input types",
+        "name": "Initial depth type",
+        "description": "Initial depth",
+	"group":{
+	    "name":"d0_group",
+	    "leader":true,
+	    "members":2
+	},
         "value": {
             "type": "choice",
             "default": "Scalar",
@@ -234,27 +291,50 @@
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
-        }
-    },
-    {
-        "key": "d0",
-        "name": "Init. depth",
-        "description": "Initial flow depth (if scalar, use 0.0!)",
-        "value": {
-            "type": "float",
-            "default": "0.00000000",
-            "range": {
-                "min": "0.0",
-                "max": "0.1"
-            },
             "units": "m"
         }
     },
     {
+        "key": "d0_scalar",
+        "name": "Initial depth",
+        "description": "Scalar value",
+	"group":{
+	    "name":"d0_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 0.0,
+            "range": {
+                "min": 0.0,
+                "max": 0.0
+            }
+        }
+    },
+    {
+        "key": "d0_file",
+        "name": "Initial depth",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"d0_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },    
+
+    {
         "key": "sinu_type",
         "name": "Sinuosity type",
-        "description": "Allowed input types",
+        "description": "Absolute channel sinuosity",
+	"group":{
+	    "name":"sinu_group",
+	    "leader":true,
+	    "members":2
+	},
         "value": {
             "type": "choice",
             "default": "Scalar",
@@ -264,21 +344,38 @@
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+            "units": "m m-1"
         }
     },
     {
-        "key": "sinu",
+        "key": "sinu_scalar",
         "name": "Sinuosity",
-        "description": "Absolute channel sinuosity",
+        "description": "Scalar value",
+	"group":{
+	    "name":"sinu_group"
+	},
         "value": {
             "type": "float",
-            "default": "1.00000000",
+            "default": 1.0,
             "range": {
-                "min": "0.0",
-                "max": "3.0"
-            },
-            "units": "m m-1"
+                "min": 0.0,
+                "max": 3.0
+            }
         }
+    },
+    {
+        "key": "sinu_file",
+        "name": "Sinuosity",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"sinu_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
     }
 ]
