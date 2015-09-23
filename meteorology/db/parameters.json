@@ -213,7 +213,7 @@
         "name": "rho_air",
         "description": "Scalar value",
 	"group":{
-	    "name":"rho_H2O_group"
+	    "name":"rho_air_group"
 	},
         "value": {
             "type": "float",
