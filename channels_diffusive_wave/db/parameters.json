@@ -94,84 +94,69 @@
 	}
     },
     {
-        "key": "MANNING",
-        "name": "Manning flag",
-        "description": "Option to use Manning's n for roughness",
+        "key": "roughness_option",
+        "name": "Roughness option",
+        "description": "Roughness option",
         "value": {
             "type": "choice",
-            "default": "Yes",
+            "default": "Manning's formula",
             "choices": [
-                "Yes",
-                "No"
-            ],
-            "units": "-"
+                "Manning's formula",
+                "Law of the wall"
+            ]
         }
     },
     {
-        "key": "LAW_OF_WALL",
-        "name": "Law of Wall flag",
-        "description": "Option to use law of wall for roughness",
+        "key": "roughness_type",
+        "name": "Roughness value",
+        "description": "Roughness value (Manning's <em>n</em> or roughness length <em>z<sub>0</sub></em>)",
+	"group":{
+	    "name":"roughness_group",
+	    "leader":true,
+	    "members":2
+	},
         "value": {
             "type": "choice",
-            "default": "No",
-            "choices": [
-                "Yes",
-                "No"
-            ],
-            "units": "-"
-        }
-    },
-    {
-        "key": "nval_type",
-        "name": "Manning N type",
-        "description": "Allowed input types",
-        "value": {
-            "type": "choice",
-            "default": "Grid",
+            "default": "Scalar",
             "choices": [
                 "Scalar",
                 "Grid",
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+            "units": "m-(1/3) s or m"
         }
     },
     {
-        "key": "nval",
-        "name": "Manning N",
-        "description": "Manning's n values",
+        "key": "roughness_scalar",
+        "name": "Roughness",
+        "description": "Scalar value",
+	"group":{
+	    "name":"roughness_group"
+	},
         "value": {
-            "type": "string",
-            "default": "[site_prefix]_chan-n.rtg",
-            "units": "m-(1/3) s"
+            "type": "float",
+            "default": 0.1,
+            "range": {
+                "min": 0.0,
+                "max": 5.0
+            }
         }
     },
     {
-        "key": "z0val_type",
-        "name": "Roughness z0 type",
-        "description": "Allowed input types",
-        "value": {
-            "type": "choice",
-            "default": "Grid",
-            "choices": [
-                "Scalar",
-                "Grid",
-                "Time_Series",
-                "Grid_Sequence"
-            ],
-            "units": "-"
-        }
-    },
-    {
-        "key": "z0val",
-        "name": "Roughness z0",
-        "description": "Law-of-wall roughness values",
-        "value": {
-            "type": "string",
-            "default": "[site_prefix]_chan-z0.rtg",
-            "units": "m"
-        }
+        "key": "roughness_file",
+        "name": "Roughness",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"roughness_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
     },
     {
         "key": "width_type",
