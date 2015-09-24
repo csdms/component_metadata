@@ -72,22 +72,26 @@
     {
         "key": "code_file",
         "name": "D8 flow code file",
-        "description": "Grid of d8 flow codes in binary file (Jenson84)",
-        "value": {
-            "type": "string",
-            "default": "[site_prefix]_flow.rtg",
-            "units": "-"
-        }
+        "description": "Grid file of D8 flow codes",
+	"value":{
+	    "type":"file",
+	    "default":"default_flow.rtg",
+	    "files":[
+		"default_flow.rtg"
+	    ]
+	}
     },
     {
         "key": "slope_file",
         "name": "D8 slope file",
-        "description": "Grid of d8 slopes in binary file",
-        "value": {
-            "type": "string",
-            "default": "[site_prefix]_slope.rtg",
-            "units": "m m-1"
-        }
+        "description": "Grid file of D8 slopes",
+	"value":{
+	    "type":"file",
+	    "default":"default_slope.rtg",
+	    "files":[
+		"default_slope.rtg"
+	    ]
+	}
     },
     {
         "key": "MANNING",
@@ -276,7 +280,7 @@
     {
         "key": "d0_type",
         "name": "Initial depth type",
-        "description": "Initial depth",
+        "description": "Initial flow depth",
 	"group":{
 	    "name":"d0_group",
 	    "leader":true,
