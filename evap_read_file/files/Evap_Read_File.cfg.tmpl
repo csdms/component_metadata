@@ -1,5 +1,5 @@
 #===============================================================================
-# Topoflow Config File for: evap_read_file
+# Topoflow Config File for: Evap_Read_File
 #===============================================================================
 # Input
 comp_status         | Enabled             | string    | Component status [-] {Enabled; Disabled}
@@ -9,7 +9,8 @@ site_prefix         | {site_prefix}       | string    | File prefix for the stud
 case_prefix         | {case_prefix}       | string    | File prefix for the model scenario [-]
 n_steps             | {n_steps}           | long      | Number of time steps [-]
 dt                  | {dt}                | float     | Timestep for evaporation rate [sec]
-ET_rate             | {ET_rate}           | string    | Grid sequence [mm/hr]
+ET_type             | Grid_Sequence       | string    | type of ET_file
+ET_file             | {ET_file}           | string    | Grid sequence [mm/hr]
 #===============================================================================
 # Output
 save_grid_dt        | {save_grid_dt}      | float     | Time interval between saved grids [sec]
