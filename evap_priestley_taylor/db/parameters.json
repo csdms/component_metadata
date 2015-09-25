@@ -14,33 +14,51 @@
         "description": "Simulation run time",
         "value": {
             "type": "int",
-            "default": 1,
+            "default": 3600,
             "range": {
-                "min": 0,
-                "max": 1000000
+                "min": 1,
+                "max": 3153600000
             },
-            "units": "d"
+            "units": "s"
         }
     },
     {
-        "key": "site_prefix",
-        "name": "Site prefix",
-        "description": "File prefix for the study site",
+        "key": "dt",
+        "name": "Time step",
+        "description": "Model time step",
         "value": {
-            "type": "string",
-            "default": "Treynor",
-            "units": "-"
+            "type": "float",
+            "default": 600.0,
+            "range": {
+                "min": 1.0,
+                "max": 31536000.0
+            },
+            "units": "s"
         }
     },
     {
-        "key": "case_prefix",
-        "name": "Case prefix",
-        "description": "File prefix for the model scenario",
-        "value": {
-            "type": "string",
-            "default": "June_20_67",
-            "units": "-"
-        }
+	"key":"rti_file",
+	"name":"RTI file",
+	"description":"RiverTools info file",
+	"value":{
+	    "type":"file",
+	    "default":"default.rti",
+	    "files":[
+		"default.rti"
+	    ]
+	}
+    },
+    {
+        "key": "pixel_file",
+        "name": "pixel file",
+        "description": "Monitored pixel/grid file",
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
     },
     {
         "key": "separator",
@@ -54,8 +72,13 @@
     {
         "key": "alpha_type",
         "name": "alpha type",
-        "description": "Allowed input types",
-        "value": {
+        "description": "Priestley-Taylor coefficient",
+	"group":{
+	    "name":"alpha_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
             "type": "choice",
             "default": "Scalar",
             "choices": [
@@ -64,28 +87,50 @@
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+	    "units": "-"
         }
     },
     {
-        "key": "alpha",
+        "key": "alpha_scalar",
         "name": "alpha",
-        "description": "Coefficient",
+        "description": "Scalar value",
+	"group":{
+	    "name":"alpha_group"
+	},
         "value": {
             "type": "float",
-            "default": "1.200",
+            "default": 1.2,
             "range": {
-                "min": "0.0",
-                "max": "3.0"
-            },
-            "units": "-"
+                "min": 0.0,
+                "max": 3.0
+            }
         }
+    },
+    {
+        "key": "alpha_file",
+        "name": "alpha",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"alpha_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
     },
     {
         "key": "K_soil_type",
         "name": "K_soil type",
-        "description": "Allowed input types",
-        "value": {
+        "description": "Thermal conductivity of soil",
+	"group":{
+	    "name":"K_soil_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
             "type": "choice",
             "default": "Scalar",
             "choices": [
@@ -94,28 +139,50 @@
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+	    "units": "W m-1 degC-1"
         }
     },
     {
-        "key": "K_soil",
+        "key": "K_soil_scalar",
         "name": "K_soil",
-        "description": "Thermal conductivity of soil",
+        "description": "Scalar value",
+	"group":{
+	    "name":"K_soil_group"
+	},
         "value": {
             "type": "float",
-            "default": "0.450",
+            "default": 0.45,
             "range": {
-                "min": "0.0",
-                "max": "1e2"
-            },
-            "units": "W m-1 degC-1"
+                "min": 0.0,
+                "max": 100.0
+            }
         }
+    },
+    {
+        "key": "K_soil_file",
+        "name": "K_soil",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"K_soil_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
     },
     {
         "key": "soil_x_type",
         "name": "soil_x type",
-        "description": "Allowed input types",
-        "value": {
+        "description": "Soil reference depth",
+	"group":{
+	    "name":"soil_x_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
             "type": "choice",
             "default": "Scalar",
             "choices": [
@@ -124,28 +191,50 @@
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+	    "units": "m"
         }
     },
     {
-        "key": "soil_x",
+        "key": "soil_x_scalar",
         "name": "soil_x",
-        "description": "Reference depth in soil",
+        "description": "Scalar value",
+	"group":{
+	    "name":"soil_x_group"
+	},
         "value": {
             "type": "float",
-            "default": "0.050",
+            "default": 0.05,
             "range": {
-                "min": "0.0",
-                "max": "10.0"
-            },
-            "units": "m"
+                "min": 0.0,
+                "max": 10.0
+            }
         }
+    },
+    {
+        "key": "soil_x_file",
+        "name": "soil_x",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"soil_x_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
     },
     {
         "key": "T_soil_x_type",
         "name": "T_soil_x type",
-        "description": "Allowed input types",
-        "value": {
+        "description": "Temperature of soil at reference depth",
+	"group":{
+	    "name":"T_soil_x_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
             "type": "choice",
             "default": "Scalar",
             "choices": [
@@ -154,21 +243,38 @@
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+	    "units": "degC"
         }
     },
     {
-        "key": "T_soil_x",
+        "key": "T_soil_x_scalar",
         "name": "T_soil_x",
-        "description": "Temperature of soil at reference depth",
+        "description": "Scalar value",
+	"group":{
+	    "name":"T_soil_x_group"
+	},
         "value": {
             "type": "float",
-            "default": "0.000",
+            "default": 0.0,
             "range": {
-                "min": "-100.0",
-                "max": "30.0"
-            },
-            "units": "degC"
+                "min": -100.0,
+                "max": 50.0
+            }
         }
+    },
+    {
+        "key": "T_soil_x_file",
+        "name": "T_soil_x",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"T_soil_x_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
     }
 ]
