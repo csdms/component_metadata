@@ -37,13 +37,13 @@
         }
     },
     {
-        "key":"rti_file",
-        "name":"RTI file",
-        "description":"RiverTools info file",
-        "value":{
-            "type":"file",
-            "default":"default.rti",
-            "files":[
+        "key": "rti_file",
+        "name": "RTI file",
+        "description": "RiverTools info file",
+        "value": {
+            "type": "file",
+            "default": "default.rti",
+            "files": [
                 "default.rti"
             ]
         }
@@ -51,11 +51,11 @@
     {
         "key": "pixel_file",
         "name": "pixel file",
-        "description": "Monitored pixel/grid file (outlets)",
-        "value":{
-            "type":"file",
-            "default":"off",
-            "files":[
+        "description": "Monitored pixel\/grid file (outlets)",
+        "value": {
+            "type": "file",
+            "default": "off",
+            "files": [
                 "off"
             ]
         }
@@ -70,9 +70,14 @@
         }
     },
     {
-        "key": "Cp_snow_type",
-        "name": "Cp_snow type",
-        "description": "Allowed input types",
+        "key": "h0_swe_type",
+        "name": "h0_swe type",
+        "description": "Depth of snow water equivalent (SWE)",
+        "group": {
+            "name": "h0_swe_group",
+            "leader": true,
+            "members": 2
+        },
         "value": {
             "type": "choice",
             "default": "Scalar",
@@ -82,27 +87,101 @@
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+            "units": "m"
         }
     },
     {
-        "key": "Cp_snow",
-        "name": "Cp_snow",
-        "description": "Heat capacity of snow",
+        "key": "h0_swe_scalar",
+        "name": "h0_swe",
+        "description": "Scalar value",
+        "group": {
+            "name": "h0_swe_group"
+        },
         "value": {
             "type": "float",
-            "default": "2090.000",
+            "default": 0.15,
             "range": {
-                "min": "0.0",
-                "max": "3e3"
-            },
+                "min": 0.0,
+                "max": 20.0
+            }
+        }
+    },
+    {
+        "key": "h0_swe_file",
+        "name": "h0_swe",
+        "description": "Grid, time series, or grid sequence file",
+        "group": {
+            "name": "h0_swe_group"
+        },
+        "value": {
+            "type": "file",
+            "default": "off",
+            "files": [
+                "off"
+            ]
+        }
+    },
+    {
+        "key": "Cp_snow_type",
+        "name": "Cp_snow type",
+        "description": "Heat capacity of snow",
+        "group": {
+            "name": "Cp_snow_group",
+            "leader": true,
+            "members": 2
+        },
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
             "units": "J kg-1 K-1"
+        }
+    },
+    {
+        "key": "Cp_snow_scalar",
+        "name": "Cp_snow",
+        "description": "Scalar value",
+        "group": {
+            "name": "Cp_snow_group"
+        },
+        "value": {
+            "type": "float",
+            "default": 2090.0,
+            "range": {
+                "min": 0.0,
+                "max": 3000.0
+            }
+        }
+    },
+    {
+        "key": "Cp_snow_file",
+        "name": "Cp_snow",
+        "description": "Grid, time series, or grid sequence file",
+        "group": {
+            "name": "Cp_snow_group"
+        },
+        "value": {
+            "type": "file",
+            "default": "off",
+            "files": [
+                "off"
+            ]
         }
     },
     {
         "key": "rho_snow_type",
         "name": "rho_snow type",
-        "description": "Allowed input types",
+        "description": "Density of snow",
+        "group": {
+            "name": "rho_snow_group",
+            "leader": true,
+            "members": 2
+        },
         "value": {
             "type": "choice",
             "default": "Scalar",
@@ -112,27 +191,49 @@
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+            "units": "kg m-3"
         }
     },
     {
-        "key": "rho_snow",
+        "key": "rho_snow_scalar",
         "name": "rho_snow",
-        "description": "Density of snow",
+        "description": "Scalar value",
+        "group": {
+            "name": "rho_snow_group"
+        },
         "value": {
             "type": "float",
-            "default": "300.000",
+            "default": 300.0,
             "range": {
-                "min": "0.0",
-                "max": "1e3"
-            },
-            "units": "kg m-3"
+                "min": 0.0,
+                "max": 1e3
+            }
+        }
+    },
+    {
+        "key": "rho_snow_file",
+        "name": "rho_snow",
+        "description": "Grid, time series, or grid sequence file",
+        "group": {
+            "name": "rho_snow_group"
+        },
+        "value": {
+            "type": "file",
+            "default": "off",
+            "files": [
+                "off"
+            ]
         }
     },
     {
         "key": "c0_type",
         "name": "c0 type",
-        "description": "Allowed input types",
+        "description": "Degree day coefficient",
+        "group": {
+            "name": "c0_group",
+            "leader": true,
+            "members": 2
+        },
         "value": {
             "type": "choice",
             "default": "Scalar",
@@ -142,27 +243,49 @@
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+            "units": "mm d-1 degC-1"
         }
     },
     {
-        "key": "c0",
-        "name": "c0",
-        "description": "Degree-day coefficient",
+        "key": "c0_scalar",
+        "name": "c0_snow",
+        "description": "Scalar value",
+        "group": {
+            "name": "c0_group"
+        },
         "value": {
             "type": "float",
-            "default": "2.700",
+            "default": 2.7,
             "range": {
-                "min": "0.0",
-                "max": "1e2"
-            },
-            "units": "mm d-1 degC-1"
+                "min": 0.0,
+                "max": 1e2
+            }
+        }
+    },
+    {
+        "key": "c0_file",
+        "name": "c0",
+        "description": "Grid, time series, or grid sequence file",
+        "group": {
+            "name": "c0_group"
+        },
+        "value": {
+            "type": "file",
+            "default": "off",
+            "files": [
+                "off"
+            ]
         }
     },
     {
         "key": "T0_type",
         "name": "T0 type",
-        "description": "Allowed input types",
+        "description": "Reference temperature",
+        "group": {
+            "name": "T0_group",
+            "leader": true,
+            "members": 2
+        },
         "value": {
             "type": "choice",
             "default": "Scalar",
@@ -172,57 +295,49 @@
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+            "units": "degC"
         }
     },
     {
-        "key": "T0",
+        "key": "T0_scalar",
         "name": "T0",
-        "description": "Reference temperature",
+        "description": "Scalar value",
+        "group": {
+            "name": "T0_group"
+        },
         "value": {
             "type": "float",
-            "default": "-0.200",
+            "default": -0.2,
             "range": {
-                "min": "-100",
-                "max": "100"
-            },
-            "units": "degC"
+                "min": -100.0,
+                "max": 100
+            }
+        }
+    },
+    {
+        "key": "T0_file",
+        "name": "T0",
+        "description": "Grid, time series, or grid sequence file",
+        "group": {
+            "name": "T0_group"
+        },
+        "value": {
+            "type": "file",
+            "default": "off",
+            "files": [
+                "off"
+            ]
         }
     },
     {
         "key": "h0_snow_type",
         "name": "h0_snow type",
-        "description": "Allowed input types",
-        "value": {
-            "type": "choice",
-            "default": "Scalar",
-            "choices": [
-                "Scalar",
-                "Grid",
-                "Time_Series",
-                "Grid_Sequence"
-            ],
-            "units": "-"
-        }
-    },
-    {
-        "key": "h0_snow",
-        "name": "h0_snow",
         "description": "Depth of snow",
-        "value": {
-            "type": "float",
-            "default": "0.500",
-            "range": {
-                "min": "0.0",
-                "max": "20.0"
-            },
-            "units": "m"
-        }
-    },
-    {
-        "key": "h0_swe_type",
-        "name": "h0_swe type",
-        "description": "Allowed input types",
+        "group": {
+            "name": "h0_snow_group",
+            "leader": true,
+            "members": 2
+        },
         "value": {
             "type": "choice",
             "default": "Scalar",
@@ -232,21 +347,38 @@
                 "Time_Series",
                 "Grid_Sequence"
             ],
-            "units": "-"
+            "units": "m"
         }
     },
     {
-        "key": "h0_swe",
-        "name": "h0_swe",
-        "description": "Depth of snow water equivalent (SWE)",
+        "key": "h0_snow_scalar",
+        "name": "h0_snow",
+        "description": "Scalar value",
+        "group": {
+            "name": "h0_snow_group"
+        },
         "value": {
             "type": "float",
-            "default": "0.150",
+            "default": 0.5,
             "range": {
-                "min": "0.0",
-                "max": "20.0"
-            },
-            "units": "m"
+                "min": 0.0,
+                "max": 20.0
+            }
+        }
+    },
+    {
+        "key": "h0_snow_file",
+        "name": "h0_snow",
+        "description": "Grid, time series, or grid sequence file",
+        "group": {
+            "name": "h0_snow_group"
+        },
+        "value": {
+            "type": "file",
+            "default": "off",
+            "files": [
+                "off"
+            ]
         }
     }
 ]

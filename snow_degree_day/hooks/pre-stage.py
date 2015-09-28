@@ -7,6 +7,8 @@ from wmt.utils.hook import find_simulation_input_file
 
 
 file_list = ['rti_file',
+     #        'aspect_grid_file',
+     #        'slope_grid_file',
              'pixel_file']
 
 
@@ -36,7 +38,8 @@ def assign_parameter_type_and_value(env):
     """
     for key in env.copy().iterkeys():
         if key.endswith('_type'):
-            key_root = str(key.rstrip('_type'))
+            #key_root = str(key.rstrip('_type'))
+            key_root = str(key[:-5])
             if env[key] == 'Scalar':
                 env[key_root] = env[key_root + '_scalar']
             else:
@@ -67,12 +70,12 @@ def execute(env):
         file_list.remove('pixel_file')
         env['pixel_file'] = '_outlets.txt'
 
-    #assign_parameter_type_and_value(env)
+    assign_parameter_type_and_value(env)
 
     # Default files common to all TopoFlow components are stored with the
-    # topoflow component metadata. Copies 'default.rti' file to the same folder
+    # topoflow component metadata.
     prepend_to_path('WMT_INPUT_FILE_PATH',
-		 os.path.join(site['db'], 'components', 'topoflow', 'files'))
+                    os.path.join(site['db'], 'components', 'topoflow', 'files'))
     for fname in file_list:
-    	src = find_simulation_input_file(env[fname])
+        src = find_simulation_input_file(env[fname])
         shutil.copy(src, os.curdir)
