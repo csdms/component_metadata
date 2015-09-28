@@ -1,0 +1,97 @@
+[
+    {
+        "key": "separator",
+        "name": "Run",
+        "description": "Run",
+        "value": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    {
+        "key": "run_duration",
+        "name": "Run duration",
+        "description": "Simulation run time",
+        "value": {
+            "type": "int",
+            "default": 3600,
+            "range": {
+                "min": 1,
+                "max": 3153600000
+            },
+            "units": "s"
+        }
+    },
+    {
+        "key": "dt",
+        "name": "Time step",
+        "description": "Model time step",
+        "value": {
+            "type": "float",
+            "default": 600.0,
+            "range": {
+                "min": 1.0,
+                "max": 31536000.0
+            },
+            "units": "s"
+        }
+    },
+    {
+	"key":"rti_file",
+	"name":"RTI file",
+	"description":"RiverTools info file",
+	"value":{
+	    "type":"file",
+	    "default":"default.rti",
+	    "files":[
+		"default.rti"
+	    ]
+	}
+    },
+    {
+        "key": "pixel_file",
+        "name": "pixel file",
+        "description": "Monitored pixel/grid file",
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "separator",
+        "name": "Input",
+        "description": "Input",
+        "value": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    {
+        "key": "DEM_file",
+        "name": "DEM",
+        "description": "RiverTools grid file containing DEM",
+	"value":{
+	    "type":"file",
+	    "default":"default_DEM.rtg",
+	    "files":[
+		"default_DEM.rtg"
+	    ]
+	}
+    },    
+    {
+        "key": "A_units",
+        "name": "Area units",
+        "description": "Base unit for grid area",
+        "value": {
+            "type": "choice",
+            "default": "meters",
+            "choices": [
+                "meters",
+                "kilometers"
+            ]
+        }
+    }
+]
