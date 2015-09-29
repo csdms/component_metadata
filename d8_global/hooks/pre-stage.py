@@ -14,6 +14,10 @@ units_map = {
     'meters': 'm^2',
     'kilometers': 'km^2'
 }
+choices_map = {
+    'Yes': 1,
+    'No': 0
+}
 
 
 def execute(env):
@@ -39,6 +43,10 @@ def execute(env):
         env['pixel_file'] = env['case_prefix'] + '_outlets.txt'
 
     env['A_units'] = units_map[env['A_units']]
+    env['LINK_FLATS'] = choices_map[env['LINK_FLATS']]
+    env['FILL_PITS_IN_Z0'] = choices_map[env['FILL_PITS_IN_Z0']]
+    env['LR_PERIODIC'] = choices_map[env['LR_PERIODIC']]
+    env['TB_PERIODIC'] = choices_map[env['TB_PERIODIC']]
 
     # Default files common to all TopoFlow components are stored with the
     # topoflow component metadata.

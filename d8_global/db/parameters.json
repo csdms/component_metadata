@@ -93,5 +93,57 @@
                 "kilometers"
             ]
         }
+    },
+    {
+        "key": "LINK_FLATS",
+        "name": "Link flats",
+        "description": "Link flats?",
+        "value": {
+            "type": "choice",
+            "default": "Yes",
+            "choices": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "key": "FILL_PITS_IN_Z0",
+        "name": "Fill pits",
+        "description": "Fill pits in original DEM?",
+        "value": {
+            "type": "choice",
+            "default": "No",
+            "choices": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "key": "LR_PERIODIC",
+        "name": "LR bcs",
+        "description": "Use periodic left-right boundary conditions?",
+        "value": {
+            "type": "choice",
+            "default": "No",
+            "choices": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "key": "TB_PERIODIC",
+        "name": "TB bcs",
+        "description": "Use periodic top-bottom boundary conditions?",
+        "value": {
+            "type": "choice",
+            "default": "No",
+            "choices": [
+                "Yes",
+                "No"
+            ]
+        }
     }
 ]
