@@ -23,18 +23,6 @@
         }
     },
     {
-	"key":"rti_file",
-	"name":"RTI file",
-	"description":"RiverTools info file",
-	"value":{
-	    "type":"file",
-	    "default":"default.rti",
-	    "files":[
-		"default.rti"
-	    ]
-	}
-    },
-    {
         "key": "pixel_file",
         "name": "pixel file",
         "description": "Monitored pixel/grid file",
@@ -56,80 +44,269 @@
         }
     },
     {
-        "key": "DEM_file",
-        "name": "DEM",
-        "description": "RiverTools grid file containing DEM",
-	"value":{
-	    "type":"file",
-	    "default":"default_DEM.rtg",
-	    "files":[
-		"default_DEM.rtg"
-	    ]
-	}
-    },    
+        "key": "nx",
+        "name": "Number of cols",
+        "description": "Number of columns in DEM",
+        "value": {
+            "type": "int",
+            "default": 50,
+            "range": {
+                "min": 1,
+                "max": 1000000
+            }
+        }
+    },
     {
-        "key": "A_units",
-        "name": "Area units",
-        "description": "Base unit for grid area",
+        "key": "ny",
+        "name": "Number of rows",
+        "description": "Number of rows in DEM",
+        "value": {
+            "type": "int",
+            "default": 50,
+            "range": {
+                "min": 1,
+                "max": 1000000
+            }
+        }
+    },
+    {
+        "key": "dx",
+        "name": "Grid xsize",
+        "description": "DEM resolution, columns",
+        "value": {
+            "type": "float",
+            "default": 30.0,
+            "range": {
+                "min": 1.0,
+                "max": 1.0E6
+            },
+            "units": "m"
+        }
+    },
+    {
+        "key": "dy",
+        "name": "Grid ysize",
+        "description": "DEM resolution, rows",
+        "value": {
+            "type": "float",
+            "default": 30.0,
+            "range": {
+                "min": 1.0,
+                "max": 1.0E6
+            },
+            "units": "m"
+        }
+    },
+    {
+        "key": "CFL_factor",
+        "name": "CFL factor",
+        "description": "Prefactor for CFL stability condition",
+        "value": {
+            "type": "float",
+            "default": 0.2,
+            "range": {
+                "min": 0.0,
+                "max": 1.0
+            }
+        }
+    },
+    {
+        "key": "m",
+        "name": "Area exponent",
+        "description": "Area exponent, <em>m</em>",
+        "value": {
+            "type": "float",
+            "default": 1.5,
+            "range": {
+                "min": -10.0,
+                "max": 10.0
+            }
+        }
+    },
+    {
+        "key": "n",
+        "name": "Slope exponent",
+        "description": "Slope exponent, <em>n</em>",
+        "value": {
+            "type": "float",
+            "default": 1.0,
+            "range": {
+                "min": -10.0,
+                "max": 10.0
+            }
+        }
+    },
+    {
+        "key": "K",
+        "name": "Erodibility",
+        "description": "Erodibility, <em>K</em>",
+        "value": {
+            "type": "float",
+            "default": 0.01,
+            "range": {
+                "min": 1.0E-4,
+                "max": 1.0E0
+            }
+        }
+    },
+    {
+        "key": "p",
+        "name": "Q-A exponent",
+        "description": "Q-A exponent, <em>p</em>",
+        "value": {
+            "type": "float",
+            "default": 1.0,
+            "range": {
+                "min": -10.0,
+                "max": 10.0
+            }
+        }
+    },
+    {
+        "key": "R",
+        "name": "Rain rate",
+        "description": "Geomorphically effective rain rate, <em>R</em>",
+        "value": {
+            "type": "float",
+            "default": 1.0,
+            "range": {
+                "min": 0.0,
+                "max": 1.0E2
+            },
+	    "units": "m yr-1"
+        }
+    },
+    {
+        "key": "U",
+        "name": "Uplift rate",
+        "description": "Uplift rate, <em>U</em>",
+        "value": {
+            "type": "float",
+            "default": 0.0,
+            "range": {
+                "min": 0.0,
+                "max": 1.0E3
+            },
+	    "units": "mm yr-1"
+        }
+    },
+    {
+        "key": "BLR",
+        "name": "Lowering rate",
+        "description": "Base-level lowering rate, <em>L</em>",
+        "value": {
+            "type": "float",
+            "default": 0.1,
+            "range": {
+                "min": 0.0,
+                "max": 1.0E3
+            },
+	    "units": "mm yr-1"
+        }
+    },
+    {
+        "key": "BC_method",
+        "name": "Boundary condition method",
+        "description": "Boundary condition method",
         "value": {
             "type": "choice",
-            "default": "meters",
+            "default": "Bottom",
             "choices": [
-                "meters",
-                "kilometers"
+                "Bottom",
+                "Right",
+		"Four Sides"
             ]
         }
     },
     {
-        "key": "LINK_FLATS",
-        "name": "Link flats",
-        "description": "Link flats?",
-        "value": {
+        "key": "make_z0_method",
+        "name": "make z0 method",
+        "description": "Method to make initial DEM",
+	"group":{
+	    "name":"make_z0_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
             "type": "choice",
-            "default": "Yes",
+            "default": "Flat",
             "choices": [
-                "Yes",
-                "No"
+                "Flat",
+                "Plane",
+                "Corner Plane"
             ]
         }
     },
     {
-        "key": "FILL_PITS_IN_Z0",
-        "name": "Fill pits",
-        "description": "Fill pits in original DEM?",
+        "key": "z0_plane_dz_dx",
+        "name": "z0 slope x-direction",
+        "description": "Slope in x-direction for Plane method",
+	"group":{
+	    "name":"make_z0_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 0.1,
+            "range": {
+                "min": -1.0E2,
+                "max": 1.0E2
+            }
+        }
+    },
+    {
+        "key": "z0_plane_dz_dy",
+        "name": "z0 slope y-direction",
+        "description": "Slope in y-direction for Plane method",
+	"group":{
+	    "name":"make_z0_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 0.0,
+            "range": {
+                "min": -1.0E2,
+                "max": 1.0E2
+            }
+        }
+    },
+    {
+        "key": "noise_method",
+        "name": "Noise method",
+        "description": "Noise method",
         "value": {
             "type": "choice",
-            "default": "No",
+            "default": "Midpoints",
             "choices": [
-                "Yes",
-                "No"
+                "Midpoints",
+                "Gaussian",
+		"No Noise"
             ]
         }
     },
     {
-        "key": "LR_PERIODIC",
-        "name": "LR bcs",
-        "description": "Use periodic left-right boundary conditions?",
+        "key": "noise_scale",
+        "name": "Noise scale factor",
+        "description": "Scale factor for random noise",
         "value": {
-            "type": "choice",
-            "default": "No",
-            "choices": [
-                "Yes",
-                "No"
-            ]
+            "type": "float",
+            "default": 1.0,
+            "range": {
+                "min": -1.0E2,
+                "max": 1.0E2
+            }
         }
     },
     {
-        "key": "TB_PERIODIC",
-        "name": "TB bcs",
-        "description": "Use periodic top-bottom boundary conditions?",
+        "key": "seed",
+        "name": "RNG seed",
+        "description": "Seed for random number generator",
         "value": {
-            "type": "choice",
-            "default": "No",
-            "choices": [
-                "Yes",
-                "No"
-            ]
+            "type": "int",
+            "default": 1,
+            "range": {
+                "min": 1,
+                "max": 2147483647
+            }
         }
     }
 ]
