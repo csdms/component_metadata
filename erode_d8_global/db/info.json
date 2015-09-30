@@ -1,0 +1,14 @@
+{
+    "id": "erode_d8_global",
+    "name": "Erode_D8_Global",
+    "class": "ErodeD8Global",
+    "initialize_args": "Erode_D8_Global.cfg",
+    "time_step": 1.0,
+    "summary": "Erode, a TopoFlow component, is a raster-based, fluvial landscape evolution model.",
+    "url": "http://csdms.colorado.edu/wiki/Model_help:Erode",
+    "author": "Scott D. Peckham ",
+    "email": "scott.peckham@colorado.edu",
+    "version": "3.1.0",
+    "doi": "10.1594/IEDA/100174",
+    "license": "Apache"
+}
