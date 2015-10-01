@@ -1,60 +1,85 @@
 [
     {
-        "key": "site_prefix", 
-        "name": "Site prefix", 
-        "description": "File prefix for the study site", 
+        "key": "separator",
+        "name": "Run",
+        "description": "Run",
         "value": {
-            "type": "string", 
-            "default": "Treynor", 
-            "units": "-"
+            "type": "string",
+            "default": ""
         }
-    }, 
+    },
     {
-        "key": "case_prefix", 
-        "name": "Case prefix", 
-        "description": "File prefix for the model scenario", 
+        "key": "run_duration",
+        "name": "Run duration",
+        "description": "Simulation run time",
         "value": {
-            "type": "string", 
-            "default": "Case5", 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "n_steps", 
-        "name": "Number of steps", 
-        "description": "Number of time steps", 
-        "value": {
-            "type": "long", 
-            "default": "10", 
+            "type": "int",
+            "default": 3600,
             "range": {
-                "min": "1", 
-                "max": "1e7"
-            }, 
-            "units": "-"
+                "min": 1,
+                "max": 3153600000
+            },
+            "units": "s"
         }
-    }, 
+    },
     {
-        "key": "dt", 
-        "name": "Time step", 
-        "description": "Timestep for evaporation rate", 
+        "key": "dt",
+        "name": "Time step",
+        "description": "Model time step",
         "value": {
-            "type": "float", 
-            "default": "10800.000", 
+            "type": "float",
+            "default": 600.0,
             "range": {
-                "min": "0.0", 
-                "max": "1e4"
-            }, 
-            "units": "sec"
+                "min": 1.0,
+                "max": 31536000.0
+            },
+            "units": "s"
         }
-    }, 
+    },
     {
-        "key": "ET_rate", 
-        "name": "ET rate", 
-        "description": "Grid sequence", 
+	"key":"rti_file",
+	"name":"RTI file",
+	"description":"RiverTools info file",
+	"value":{
+	    "type":"file",
+	    "default":"default.rti",
+	    "files":[
+		"default.rti"
+	    ]
+	}
+    },
+    {
+        "key": "pixel_file",
+        "name": "pixel file",
+        "description": "Monitored pixel/grid file",
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "separator",
+        "name": "Input",
+        "description": "Input",
         "value": {
-            "type": "string", 
-            "default": "[case_prefix]_2D-ETrate-in.nc", 
-            "units": "mm/hr"
+            "type": "string",
+            "default": ""
         }
+    },
+    {
+	"key":"ET_file",
+	"name":"ET file",
+	"description":"Grid sequence file of evapotranspiration rates",
+	"value":{
+	    "type":"file",
+	    "default":"default_2D-ETrate.nc",
+	    "files":[
+		"default_2D-ETrate.nc"
+	    ],
+            "units": "mm hr-1"
+	}
     }
 ]

@@ -1,1 +1,3 @@
-["Meteorology.cfg.in"]
+[
+    "Meteorology.cfg.tmpl"
+]

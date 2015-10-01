@@ -1,180 +1,787 @@
 [
     {
-        "key": "site_prefix", 
-        "name": "Site prefix", 
-        "description": "File prefix for the study site", 
+        "key": "separator",
+        "name": "Run",
+        "description": "Run",
         "value": {
-            "type": "string", 
-            "default": "Treynor", 
-            "units": "-"
+            "type": "string",
+            "default": ""
         }
-    }, 
+    },
     {
-        "key": "case_prefix", 
-        "name": "Case prefix", 
-        "description": "File prefix for the model scenario", 
+        "key": "run_duration",
+        "name": "Run duration",
+        "description": "Simulation run time",
         "value": {
-            "type": "string", 
-            "default": "Case5", 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "n_steps", 
-        "name": "Number of steps", 
-        "description": "Number of time steps", 
-        "value": {
-            "type": "long", 
-            "default": "10", 
+            "type": "int",
+            "default": 3600,
             "range": {
-                "min": "1", 
-                "max": "1e7"
-            }, 
-            "units": "-"
+                "min": 1,
+                "max": 3153600000
+            },
+            "units": "s"
         }
-    }, 
+    },
     {
-        "key": "n_layers", 
-        "name": "Number of soil layers", 
-        "description": "Number of soil layers", 
+        "key": "dt",
+        "name": "Time step",
+        "description": "Model time step",
         "value": {
-            "type": "int", 
-            "default": "6", 
+            "type": "float",
+            "default": 600.0,
             "range": {
-                "min": "1", 
-                "max": "6"
-            }, 
-            "units": "-"
+                "min": 1.0,
+                "max": 31536000.0
+            },
+            "units": "s"
         }
-    }, 
+    },
     {
-        "key": "dt", 
-        "name": "Time step", 
-        "description": "Timestep for subsurface flow", 
+	"key":"rti_file",
+	"name":"RTI file",
+	"description":"RiverTools info file",
+	"value":{
+	    "type":"file",
+	    "default":"default.rti",
+	    "files":[
+		"default.rti"
+	    ]
+	}
+    },
+    {
+        "key": "pixel_file",
+        "name": "pixel file",
+        "description": "Monitored pixel/grid file",
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "separator",
+        "name": "Input",
+        "description": "Input",
         "value": {
-            "type": "float", 
-            "default": "3600.000", 
-            "range": {
-                "min": "0.0", 
-                "max": "1e6"
-            }, 
-            "units": "sec"
+            "type": "string",
+            "default": ""
         }
-    }, 
+    },
     {
-        "key": "elev_type", 
-        "name": "DEM type", 
-        "description": "Allowed input types", 
+        "key": "elev_type",
+        "name": "elev type",
+        "description": "Land surface elevation",
+	"group":{
+	    "name":"elev_group",
+	    "leader":true,
+	    "members":2
+	},
         "value": {
-            "type": "choice", 
-            "default": "Grid", 
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "elev", 
-        "name": "DEM", 
-        "description": "Land surface elevation", 
-        "value": {
-            "type": "string", 
-            "default": "[site_prefix]_DEM.rtg", 
+            ],
             "units": "m"
         }
-    }, 
+    },
     {
-        "key": "h0_table_type", 
-        "name": "h0_table type", 
-        "description": "Allowed input types", 
+        "key": "elev_scalar",
+        "name": "elev",
+        "description": "Scalar value",
+	"group":{
+	    "name":"elev_group"
+	},
         "value": {
-            "type": "choice", 
-            "default": "Scalar", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ], 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "h0_table", 
-        "name": "h0_table", 
-        "description": "Initial water table height", 
-        "value": {
-            "type": "float", 
-            "default": "0.000", 
+            "type": "float",
+            "default": 0.0,
             "range": {
-                "min": "0.0", 
-                "max": "1e4"
-            }, 
+                "min": -1E4,
+                "max": 1E4
+            }
+        }
+    },
+    {
+        "key": "elev_file",
+        "name": "elev",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"elev_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "flow_grid_file",
+        "name": "flow grid file",
+        "description": "Grid file of D8 flow codes",
+	"value":{
+	    "type":"file",
+	    "default":"default_flow.rtg",
+	    "files":[
+		"default_flow.rtg"
+	    ]
+	}
+    },
+    {
+        "key": "h0_table_type",
+        "name": "h0_table type",
+        "description": "Initial water table height",
+	"group":{
+	    "name":"h0_table_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
             "units": "m"
         }
-    }, 
+    },
     {
-        "key": "d_freeze_type", 
-        "name": "d_freeze type", 
-        "description": "Allowed input types", 
+        "key": "h0_table_scalar",
+        "name": "h0_table",
+        "description": "Scalar value",
+	"group":{
+	    "name":"h0_table_group"
+	},
         "value": {
-            "type": "choice", 
-            "default": "Scalar", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ], 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "d_freeze", 
-        "name": "d_freeze", 
-        "description": "Freeze depth below surface", 
-        "value": {
-            "type": "float", 
-            "default": "0.000", 
+            "type": "float",
+            "default": 0.0,
             "range": {
-                "min": "0.0", 
-                "max": "1e4"
-            }, 
+                "min": 0.0,
+                "max": 1E4
+            }
+        }
+    },
+    {
+        "key": "h0_table_file",
+        "name": "h0_table",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"h0_table_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "d_freeze_type",
+        "name": "d_freeze type",
+        "description": "Freeze depth below surface",
+	"group":{
+	    "name":"d_freeze_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
             "units": "m"
         }
-    }, 
+    },
     {
-        "key": "d_thaw_type", 
-        "name": "d_thaw type", 
-        "description": "Allowed input types", 
+        "key": "d_freeze_scalar",
+        "name": "d_freeze",
+        "description": "Scalar value",
+	"group":{
+	    "name":"d_freeze_group"
+	},
         "value": {
-            "type": "choice", 
-            "default": "Scalar", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ], 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "d_thaw", 
-        "name": "d_thaw", 
-        "description": "Thaw depth below surface", 
-        "value": {
-            "type": "float", 
-            "default": "9999.000", 
+            "type": "float",
+            "default": 0.0,
             "range": {
-                "min": "0.0", 
-                "max": "1e4"
-            }, 
+                "min": 0.0,
+                "max": 1E4
+            }
+        }
+    },
+    {
+        "key": "d_freeze_file",
+        "name": "d_freeze",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"d_freeze_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "d_thaw_type",
+        "name": "d_thaw type",
+        "description": "Thaw depth below surface",
+	"group":{
+	    "name":"d_thaw_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
             "units": "m"
         }
+    },
+    {
+        "key": "d_thaw_scalar",
+        "name": "d_thaw",
+        "description": "Scalar value",
+	"group":{
+	    "name":"d_thaw_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 9999.0,
+            "range": {
+                "min": 0.0,
+                "max": 1E4
+            }
+        }
+    },
+    {
+        "key": "d_thaw_file",
+        "name": "d_thaw",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"d_thaw_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "separator",
+        "name": "soil layer 0",
+        "description": "Soil Layer 0",
+        "value": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    {
+        "key": "th_0_type",
+        "name": "th_0 type",
+        "description": "Soil layer thickness",
+	"group":{
+	    "name":"th_0_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "m"
+        }
+    },
+    {
+        "key": "th_0_scalar",
+        "name": "th_0",
+        "description": "Scalar value",
+	"group":{
+	    "name":"th_0_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 0.1,
+            "range": {
+                "min": 0.0,
+                "max": 1E3
+            }
+        }
+    },
+    {
+        "key": "th_0_file",
+        "name": "th_0",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"th_0_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "qs_0_type",
+        "name": "qs_0 type",
+        "description": "Saturated soil water content",
+	"group":{
+	    "name":"qs_0_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "-"
+        }
+    },
+    {
+        "key": "qs_0_scalar",
+        "name": "qs_0",
+        "description": "Scalar value",
+	"group":{
+	    "name":"qs_0_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 0.5,
+            "range": {
+                "min": 0.0,
+                "max": 1.0
+            }
+        }
+    },
+    {
+        "key": "qs_0_file",
+        "name": "qs_0",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"qs_0_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "Ks_0_type",
+        "name": "Ks_0 type",
+        "description": "Saturated hydraulic conductivity",
+	"group":{
+	    "name":"Ks_0_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "m s-1"
+        }
+    },
+    {
+        "key": "Ks_0_scalar",
+        "name": "Ks_0",
+        "description": "Scalar value",
+	"group":{
+	    "name":"Ks_0_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 5E-5,
+            "range": {
+                "min": 1E-8,
+                "max": 1E-0
+            }
+        }
+    },
+    {
+        "key": "Ks_0_file",
+        "name": "Ks_0",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"Ks_0_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "separator",
+        "name": "soil layer 1",
+        "description": "Soil Layer 1",
+        "value": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    {
+        "key": "th_1_type",
+        "name": "th_1 type",
+        "description": "Soil layer thickness",
+	"group":{
+	    "name":"th_1_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "m"
+        }
+    },
+    {
+        "key": "th_1_scalar",
+        "name": "th_1",
+        "description": "Scalar value",
+	"group":{
+	    "name":"th_1_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 0.1,
+            "range": {
+                "min": 0.0,
+                "max": 1E3
+            }
+        }
+    },
+    {
+        "key": "th_1_file",
+        "name": "th_1",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"th_1_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "qs_1_type",
+        "name": "qs_1 type",
+        "description": "Saturated soil water content",
+	"group":{
+	    "name":"qs_1_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "-"
+        }
+    },
+    {
+        "key": "qs_1_scalar",
+        "name": "qs_1",
+        "description": "Scalar value",
+	"group":{
+	    "name":"qs_1_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 0.5,
+            "range": {
+                "min": 0.0,
+                "max": 1.0
+            }
+        }
+    },
+    {
+        "key": "qs_1_file",
+        "name": "qs_1",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"qs_1_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "Ks_1_type",
+        "name": "Ks_1 type",
+        "description": "Saturated hydraulic conductivity",
+	"group":{
+	    "name":"Ks_1_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "m s-1"
+        }
+    },
+    {
+        "key": "Ks_1_scalar",
+        "name": "Ks_1",
+        "description": "Scalar value",
+	"group":{
+	    "name":"Ks_1_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 5E-5,
+            "range": {
+                "min": 1E-8,
+                "max": 1E-0
+            }
+        }
+    },
+    {
+        "key": "Ks_1_file",
+        "name": "Ks_1",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"Ks_1_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "separator",
+        "name": "soil layer 2",
+        "description": "Soil Layer 2",
+        "value": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    {
+        "key": "th_2_type",
+        "name": "th_2 type",
+        "description": "Soil layer thickness",
+	"group":{
+	    "name":"th_2_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "m"
+        }
+    },
+    {
+        "key": "th_2_scalar",
+        "name": "th_2",
+        "description": "Scalar value",
+	"group":{
+	    "name":"th_2_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 0.1,
+            "range": {
+                "min": 0.0,
+                "max": 1E3
+            }
+        }
+    },
+    {
+        "key": "th_2_file",
+        "name": "th_2",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"th_2_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "qs_2_type",
+        "name": "qs_2 type",
+        "description": "Saturated soil water content",
+	"group":{
+	    "name":"qs_2_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "-"
+        }
+    },
+    {
+        "key": "qs_2_scalar",
+        "name": "qs_2",
+        "description": "Scalar value",
+	"group":{
+	    "name":"qs_2_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 0.5,
+            "range": {
+                "min": 0.0,
+                "max": 1.0
+            }
+        }
+    },
+    {
+        "key": "qs_2_file",
+        "name": "qs_2",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"qs_2_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "Ks_2_type",
+        "name": "Ks_2 type",
+        "description": "Saturated hydraulic conductivity",
+	"group":{
+	    "name":"Ks_2_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "m s-1"
+        }
+    },
+    {
+        "key": "Ks_2_scalar",
+        "name": "Ks_2",
+        "description": "Scalar value",
+	"group":{
+	    "name":"Ks_2_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 5E-5,
+            "range": {
+                "min": 1E-8,
+                "max": 1E-0
+            }
+        }
+    },
+    {
+        "key": "Ks_2_file",
+        "name": "Ks_2",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"Ks_2_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
     }
 ]

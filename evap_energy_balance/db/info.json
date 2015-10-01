@@ -1,9 +1,9 @@
 {
   "id": "evap_energy_balance", 
   "name": "EvapEnergyBalance", 
-  "class": "Evap_energy_balance", 
-  "initialize_args": "evap_energy_balance.cfg", 
-  "time_step": "3600.000", 
+  "class": "EvapEnergyBalance", 
+  "initialize_args": "Evap_Energy_Balance.cfg", 
+  "time_step": 3600.0, 
   "summary": "This process component is part of a spatially-distributed hydrologic model called TopoFlow, but it can now be used as a stand-alone model.", 
   "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Evaporation-Energy_Balance", 
   "author": "Scott D. Peckham ", 

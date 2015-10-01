@@ -1,1 +1,3 @@
-["Evap_Priestley_Taylor.cfg.in"]
+[
+    "Evap_Priestley_Taylor.cfg.tmpl"
+]

@@ -1,648 +1,1030 @@
 [
     {
-        "key": "site_prefix", 
-        "name": "Site prefix", 
-        "description": "File prefix for the study site", 
+        "key": "separator",
+        "name": "Run",
+        "description": "Run",
         "value": {
-            "type": "string", 
-            "default": "Treynor", 
-            "units": "-"
+            "type": "string",
+            "default": ""
         }
-    }, 
+    },
     {
-        "key": "case_prefix", 
-        "name": "Case prefix", 
-        "description": "File prefix for the model scenario", 
+        "key": "run_duration",
+        "name": "Run duration",
+        "description": "Simulation run time",
         "value": {
-            "type": "string", 
-            "default": "Case5", 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "n_steps", 
-        "name": "Number of steps", 
-        "description": "Number of time steps", 
-        "value": {
-            "type": "long", 
-            "default": "10", 
+            "type": "int",
+            "default": 3600,
             "range": {
-                "min": "1", 
-                "max": "1e7"
-            }, 
-            "units": "-"
+                "min": 1,
+                "max": 3153600000
+            },
+            "units": "s"
         }
-    }, 
+    },
     {
-        "key": "dt", 
-        "name": "Time step", 
-        "description": "Meteorology time step", 
+        "key": "dt",
+        "name": "Time step",
+        "description": "Model time step",
         "value": {
-            "type": "float", 
-            "default": "60.0", 
+            "type": "float",
+            "default": 600.0,
             "range": {
-                "min": "0.0", 
-                "max": "1e6"
-            }, 
-            "units": "sec"
+                "min": 1.0,
+                "max": 31536000.0
+            },
+            "units": "s"
         }
-    }, 
+    },
     {
-        "key": "rho_H2O_type", 
-        "name": "rho_H2O type", 
-        "description": "Allowed input types", 
+	"key":"rti_file",
+	"name":"RTI file",
+	"description":"RiverTools info file",
+	"value":{
+	    "type":"file",
+	    "default":"default.rti",
+	    "files":[
+		"default.rti"
+	    ]
+	}
+    },
+    {
+        "key": "pixel_file",
+        "name": "pixel file",
+        "description": "Monitored pixel/grid file (outlets)",
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "separator",
+        "name": "Input",
+        "description": "Input",
         "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+            "type": "string",
+            "default": ""
+        }
+    },
+    {
+        "key": "PRECIP_ONLY",
+        "name": "PRECIP_ONLY toggle",
+        "description": "Turn off all variable updates except precipitation",
+        "value": {
+            "type": "choice",
+            "default": "No",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ], 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "rho_H2O", 
-        "name": "rho_H2O", 
-        "description": "Density of water", 
-        "value": {
-            "type": "float", 
-            "default": "1000.000", 
-            "range": {
-                "min": "0.0", 
-                "max": "2000.0"
-            }, 
-            "units": "kg/m^3"
-        }
-    }, 
-    {
-        "key": "Cp_air_type", 
-        "name": "Cp_air type", 
-        "description": "Allowed input types", 
-        "value": {
-            "type": "choice", 
-            "default": "Scalar", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ], 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "Cp_air", 
-        "name": "Cp_air", 
-        "description": "Heat capacity of air", 
-        "value": {
-            "type": "float", 
-            "default": "1005.7000", 
-            "range": {
-                "min": "0.0", 
-                "max": "2000.0"
-            }, 
-            "units": "J/kg/K"
-        }
-    }, 
-    {
-        "key": "rho_air_type", 
-        "name": "rho_air type", 
-        "description": "Allowed input types", 
-        "value": {
-            "type": "choice", 
-            "default": "Scalar", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ], 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "rho_air", 
-        "name": "rho_air", 
-        "description": "Density of air", 
-        "value": {
-            "type": "float", 
-            "default": "1.26139998", 
-            "range": {
-                "min": "0.0", 
-                "max": "2.0"
-            }, 
-            "units": "kg/m^3"
-        }
-    }, 
-    {
-        "key": "P_type", 
-        "name": "precip. rates type", 
-        "description": "Allowed input types", 
-        "value": {
-            "type": "choice", 
-            "default": "Time_Series", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ], 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "P", 
-        "name": "precip. rates", 
-        "description": "Precipitation rate", 
-        "value": {
-            "type": "string", 
-            "default": "[case_prefix]_rain_rates.txt", 
-            "units": "mm/hr"
-        }
-    }, 
-    {
-        "key": "PRECIP_ONLY", 
-        "name": "PRECIP_ONLY toggle", 
-        "description": "Toggle to turn off all variable updates except precip.", 
-        "value": {
-            "type": "choice", 
-            "default": "No", 
-            "choices": [
-                "Yes", 
+                "Yes",
                 "No"
-            ], 
+            ],
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "T_air_type", 
-        "name": "T_air type", 
-        "description": "Allowed input types", 
-        "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+        "key": "rho_H2O_type",
+        "name": "rho_H2O type",
+        "description": "Density of water",
+	"group":{
+	    "name":"rho_H2O_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
-            "units": "-"
+            ],
+	    "units": "kg m-3"
         }
-    }, 
+    },
     {
-        "key": "T_air", 
-        "name": "T_air", 
-        "description": "Temperature of air", 
+        "key": "rho_H2O_scalar",
+        "name": "rho_H2O",
+        "description": "Scalar value",
+	"group":{
+	    "name":"rho_H2O_group"
+	},
         "value": {
-            "type": "float", 
-            "default": "20.000", 
+            "type": "float",
+            "default": 1000.0,
             "range": {
-                "min": "-100.0", 
-                "max": "150.0"
-            }, 
+                "min": 0.0,
+                "max": 2000.0
+            }
+        }
+    },
+    {
+        "key": "rho_H2O_file",
+        "name": "rho_H2O",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"rho_H2O_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "Cp_air_type",
+        "name": "Cp_air type",
+        "description": "Heat capacity of air",
+	"group":{
+	    "name":"Cp_air_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "J kg-1 K-1"
+        }
+    },
+    {
+        "key": "Cp_air_scalar",
+        "name": "Cp_air",
+        "description": "Scalar value",
+	"group":{
+	    "name":"Cp_air_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 1005.7000,
+            "range": {
+                "min": 0.0,
+                "max": 2000.0
+            }
+        }
+    },
+    {
+        "key": "Cp_air_file",
+        "name": "Cp_air",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"Cp_air_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },    
+    {
+        "key": "rho_air_type",
+        "name": "rho_air type",
+        "description": "Density of air",
+	"group":{
+	    "name":"rho_air_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "kg m-3"
+        }
+    },
+    {
+        "key": "rho_air_scalar",
+        "name": "rho_air",
+        "description": "Scalar value",
+	"group":{
+	    "name":"rho_air_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 1.26139998,
+            "range": {
+                "min": 0.0,
+                "max": 2.0
+            }
+        }
+    },
+    {
+        "key": "rho_air_file",
+        "name": "rho_air",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"rho_air_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },    
+    {
+        "key": "P_type",
+        "name": "precip. rates type",
+        "description": "Precipitation rate",
+	"group":{
+	    "name":"P_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "mm hr-1"
+        }
+    },
+    {
+        "key": "P_scalar",
+        "name": "precip rates",
+        "description": "Scalar value",
+	"group":{
+	    "name":"P_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 0.0,
+            "range": {
+                "min": 0.0,
+                "max": 5000.0
+            }
+        }
+    },
+    {
+        "key": "P_file",
+        "name": "precip rates",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"P_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "T_air_type",
+        "name": "T_air type",
+        "description": "Temperature of air",
+	"group":{
+	    "name":"T_air_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
             "units": "degC"
         }
-    }, 
+    },
     {
-        "key": "T_surf_type", 
-        "name": "T_surf type", 
-        "description": "Allowed input types", 
+        "key": "T_air_scalar",
+        "name": "T_air",
+        "description": "Scalar value",
+	"group":{
+	    "name":"T_air_group"
+	},
         "value": {
-            "type": "choice", 
-            "default": "Scalar", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ], 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "T_surf", 
-        "name": "T_surf", 
-        "description": "Temperature of surface", 
-        "value": {
-            "type": "float", 
-            "default": "-5.000", 
+            "type": "float",
+            "default": 20.0,
             "range": {
-                "min": "-100.0", 
-                "max": "150.0"
-            }, 
+                "min": -100.0,
+                "max": 150.0
+            }
+        }
+    },
+    {
+        "key": "T_air_file",
+        "name": "T_air",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"T_air_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "T_surf_type",
+        "name": "T_surf type",
+        "description": "Temperature at surface",
+	"group":{
+	    "name":"T_surf_group",
+	    "leader":true,
+	    "members":2
+	},
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
             "units": "degC"
         }
-    }, 
+    },
     {
-        "key": "RH_type", 
-        "name": "RH type", 
-        "description": "Allowed input types", 
+        "key": "T_surf_scalar",
+        "name": "T_surf",
+        "description": "Scalar value",
+	"group":{
+	    "name":"T_surf_group"
+	},
         "value": {
-            "type": "choice", 
-            "default": "Scalar", 
-            "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
-                "Grid_Sequence"
-            ], 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "RH", 
-        "name": "RH", 
-        "description": "Relative humidity", 
-        "value": {
-            "type": "float", 
-            "default": "0.500", 
+            "type": "float",
+            "default": -5.0,
             "range": {
-                "min": "0.0", 
-                "max": "1.0"
-            }, 
-            "units": "-"
+                "min": -100.0,
+                "max": 150.0
+            }
         }
-    }, 
+    },
     {
-        "key": "p0_type", 
-        "name": "p0 type", 
-        "description": "Allowed input types", 
-        "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+        "key": "T_surf_file",
+        "name": "T_surf",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"T_surf_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "RH_type",
+        "name": "RH type",
+        "description": "Relative humidity",
+	"group":{
+	    "name":"RH_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
-            "units": "-"
+            ],
+	    "units": "-"
         }
-    }, 
+    },
     {
-        "key": "p0", 
-        "name": "p0", 
-        "description": "Atmospheric pressure", 
+        "key": "RH_scalar",
+        "name": "RH",
+        "description": "Scalar value",
+	"group":{
+	    "name":"RH_group"
+	},
         "value": {
-            "type": "float", 
-            "default": "1000.000", 
+            "type": "float",
+            "default": 0.5,
             "range": {
-                "min": "700.0", 
-                "max": "1500.0"
-            }, 
-            "units": "mbar"
+                "min": 0.0,
+                "max": 1.0
+            }
         }
-    }, 
+    },
     {
-        "key": "uz_type", 
-        "name": "uz type", 
-        "description": "Allowed input types", 
-        "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+        "key": "RH_file",
+        "name": "RH",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"RH_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "p0_type",
+        "name": "p0 type",
+        "description": "Atmospheric pressure",
+	"group":{
+	    "name":"p0_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
-            "units": "-"
+            ],
+	    "units": "mbar"
         }
-    }, 
+    },
     {
-        "key": "uz", 
-        "name": "uz", 
-        "description": "Wind velocity at height z", 
+        "key": "p0_scalar",
+        "name": "p0",
+        "description": "Scalar value",
+	"group":{
+	    "name":"p0_group"
+	},
         "value": {
-            "type": "float", 
-            "default": "3.000", 
+            "type": "float",
+            "default": 1000.0,
             "range": {
-                "min": "0.0", 
-                "max": "20.0"
-            }, 
-            "units": "m/s"
+                "min": 750.0,
+                "max": 1500.0
+            }
         }
-    }, 
+    },
     {
-        "key": "z_type", 
-        "name": "z type", 
-        "description": "Allowed input types", 
-        "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+        "key": "p0_file",
+        "name": "p0",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"p0_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "z_type",
+        "name": "z type",
+        "description": "Wind reference height",
+	"group":{
+	    "name":"z_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
-            "units": "-"
+            ],
+	    "units": "m"
         }
-    }, 
+    },
     {
-        "key": "z", 
-        "name": "z", 
-        "description": "Wind reference height", 
+        "key": "z_scalar",
+        "name": "z",
+        "description": "Scalar value",
+	"group":{
+	    "name":"z_group"
+	},
         "value": {
-            "type": "float", 
-            "default": "10.000", 
+            "type": "float",
+            "default": 10.0,
             "range": {
-                "min": "0.0", 
-                "max": "1e3"
-            }, 
-            "units": "m"
+                "min": 0.0,
+                "max": 1000.0
+            }
         }
-    }, 
+    },
     {
-        "key": "z0_air_type", 
-        "name": "z0_air type", 
-        "description": "Allowed input types", 
-        "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+        "key": "z_file",
+        "name": "z",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"z_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "uz_type",
+        "name": "uz type",
+        "description": "Wind velocity at reference height",
+	"group":{
+	    "name":"uz_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
-            "units": "-"
+            ],
+	    "units": "m s-1"
         }
-    }, 
+    },
     {
-        "key": "z0_air", 
-        "name": "z0_air", 
-        "description": "Surface roughness length scale for wind", 
+        "key": "uz_scalar",
+        "name": "uz",
+        "description": "Scalar value",
+	"group":{
+	    "name":"uz_group"
+	},
         "value": {
-            "type": "float", 
-            "default": "0.0200", 
+            "type": "float",
+            "default": 3.0,
             "range": {
-                "min": "1e-4", 
-                "max": "1e2"
-            }, 
-            "units": "m"
+                "min": 0.0,
+                "max": 20.0
+            }
         }
-    }, 
+    },
     {
-        "key": "albedo_type", 
-        "name": "albedo type", 
-        "description": "Allowed input types", 
-        "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+        "key": "uz_file",
+        "name": "uz",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"uz_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "z0_air_type",
+        "name": "z0_air type",
+        "description": "Surface roughness length scale for wind",
+	"group":{
+	    "name":"z0_air_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
-            "units": "-"
+            ],
+	    "units": "m"
         }
-    }, 
+    },
     {
-        "key": "albedo", 
-        "name": "albedo", 
-        "description": "Surface albedo in", 
+        "key": "z0_air_scalar",
+        "name": "z0_air",
+        "description": "Scalar value",
+	"group":{
+	    "name":"z0_air_group"
+	},
         "value": {
-            "type": "float", 
-            "default": "0.8", 
+            "type": "float",
+            "default": 0.02,
             "range": {
-                "min": "0.0", 
-                "max": "1.0"
-            }, 
-            "units": "unitless"
+                "min": 1E-4,
+                "max": 1E2
+            }
         }
-    }, 
+    },
     {
-        "key": "em_surf_type", 
-        "name": "emissivity type", 
-        "description": "Allowed input types", 
-        "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+        "key": "z0_air_file",
+        "name": "z0_air",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"z0_air_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "albedo_type",
+        "name": "albedo type",
+        "description": "Surface albedo",
+	"group":{
+	    "name":"albedo_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
-            "units": "-"
+            ],
+	    "units": "-"
         }
-    }, 
+    },
     {
-        "key": "em_surf", 
-        "name": "emissivity", 
-        "description": "Surface emissivity in", 
+        "key": "albedo_scalar",
+        "name": "albedo",
+        "description": "Scalar value",
+	"group":{
+	    "name":"albedo_group"
+	},
         "value": {
-            "type": "float", 
-            "default": "0.98", 
+            "type": "float",
+            "default": 0.8,
             "range": {
-                "min": "0.0", 
-                "max": "1.0"
-            }, 
-            "units": "unitless"
+                "min": 0.0,
+                "max": 1.0
+            }
         }
-    }, 
+    },
     {
-        "key": "dust_atten_type", 
-        "name": "dust atten. type", 
-        "description": "Allowed input types", 
-        "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+        "key": "albedo_file",
+        "name": "albedo",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"albedo_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "em_surf_type",
+        "name": "em_surf type",
+        "description": "Surface emissivity",
+	"group":{
+	    "name":"em_surf_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
-            "units": "-"
+            ],
+	    "units": "-"
         }
-    }, 
+    },
     {
-        "key": "dust_atten", 
-        "name": "dust attenuation", 
-        "description": "Dust attenuation factor in", 
+        "key": "em_surf_scalar",
+        "name": "em_surf",
+        "description": "Scalar value",
+	"group":{
+	    "name":"em_surf_group"
+	},
         "value": {
-            "type": "float", 
-            "default": "0.08", 
+            "type": "float",
+            "default": 0.0,
             "range": {
-                "min": "0.0", 
-                "max": "0.3"
-            }, 
-            "units": "unitless"
+                "min": 0.98,
+                "max": 1.0
+            }
         }
-    }, 
+    },
     {
-        "key": "cloud_factor_type", 
-        "name": "cloud factor type", 
-        "description": "Allowed input types", 
-        "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+        "key": "em_surf_file",
+        "name": "em_surf",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"em_surf_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "dust_atten_type",
+        "name": "dust_atten type",
+        "description": "Dust attenuation factor",
+	"group":{
+	    "name":"dust_atten_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
-            "units": "-"
+            ],
+	    "units": "-"
         }
-    }, 
+    },
     {
-        "key": "cloud_factor", 
-        "name": "cloud factor", 
-        "description": "Cloudiness factor, c, in", 
+        "key": "dust_atten_scalar",
+        "name": "dust_atten",
+        "description": "Scalar value",
+	"group":{
+	    "name":"dust_atten_group"
+	},
         "value": {
-            "type": "float", 
-            "default": "0.0", 
+            "type": "float",
+            "default": 0.08,
             "range": {
-                "min": "0.0", 
-                "max": "1.0"
-            }, 
-            "units": "unitless"
+                "min": 0.0,
+                "max": 0.3
+            }
         }
-    }, 
+    },
     {
-        "key": "canopy_factor_type", 
-        "name": "canopy factor type", 
-        "description": "Allowed input types", 
-        "value": {
-            "type": "choice", 
-            "default": "Scalar", 
+        "key": "dust_atten_file",
+        "name": "dust_atten",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"dust_atten_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "cloud_factor_type",
+        "name": "cloud_factor type",
+        "description": "Cloudiness factor, <i>c</i>",
+	"group":{
+	    "name":"cloud_factor_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "Scalar", 
-                "Grid", 
-                "Time_Series", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
                 "Grid_Sequence"
-            ], 
-            "units": "-"
+            ],
+	    "units": "-"
         }
-    }, 
+    },
     {
-        "key": "canopy_factor", 
-        "name": "canopy factor", 
-        "description": "Canopy coverage factor, f, in", 
+        "key": "cloud_factor_scalar",
+        "name": "cloud_factor",
+        "description": "Scalar value",
+	"group":{
+	    "name":"cloud_factor_group"
+	},
         "value": {
-            "type": "float", 
-            "default": "0.0", 
+            "type": "float",
+            "default": 0.0,
             "range": {
-                "min": "0.0", 
-                "max": "1.0"
-            }, 
-            "units": "unitless"
+                "min": 0.0,
+                "max": 1.0
+            }
         }
-    }, 
+    },
     {
-        "key": "slope_grid_file", 
-        "name": "slope grid file", 
-        "description": "Flat binary, row-major file with grid of 4-byte slopes", 
-        "value": {
-            "type": "string", 
-            "default": "[site_prefix]_slope.bin", 
-            "units": "-"
-        }
-    }, 
+        "key": "cloud_factor_file",
+        "name": "cloud_factor",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"cloud_factor_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
     {
-        "key": "aspect_grid_file", 
-        "name": "aspect grid file", 
-        "description": "Flat binary, row-major file with grid of 4-byte aspects", 
-        "value": {
-            "type": "string", 
-            "default": "[site_prefix]_aspect.bin", 
-            "units": "-"
-        }
-    }, 
-    {
-        "key": "GMT_offset", 
-        "name": "time zone offset", 
-        "description": "Time zone offset from gmt", 
-        "value": {
-            "type": "choice", 
-            "default": "0", 
+        "key": "canopy_factor_type",
+        "name": "canopy_factor type",
+        "description": "Canopy coverage factor, <i>f</i>",
+	"group":{
+	    "name":"canopy_factor_group",
+	    "leader":true,
+	    "members":2
+	},
+	"value": {
+            "type": "choice",
+            "default": "Scalar",
             "choices": [
-                "-12", 
-                "-11", 
-                "-10", 
-                "-9", 
-                "-8", 
-                "-7", 
-                "-6", 
-                "-5", 
-                "-4", 
-                "-3", 
-                "-2", 
-                "-1", 
-                "0", 
-                "1", 
-                "2", 
-                "3", 
-                "4", 
-                "5", 
-                "6", 
-                "7", 
-                "8", 
-                "9", 
-                "10", 
-                "11", 
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+	    "units": "-"
+        }
+    },
+    {
+        "key": "canopy_factor_scalar",
+        "name": "canopy_factor",
+        "description": "Scalar value",
+	"group":{
+	    "name":"canopy_factor_group"
+	},
+        "value": {
+            "type": "float",
+            "default": 0.0,
+            "range": {
+                "min": 0.0,
+                "max": 1.0
+            }
+        }
+    },
+    {
+        "key": "canopy_factor_file",
+        "name": "canopy_factor",
+        "description": "Grid, time series, or grid sequence file",
+	"group":{
+	    "name":"canopy_factor_group"
+	},
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+        "key": "slope_grid_file",
+        "name": "slope grid file",
+        "description": "Slope grid file (flat binary file, row-major grid, 4-byte values)",
+	"value":{
+	    "type":"file",
+	    "default":"default_slope.bin",
+	    "files":[
+		"default_slope.bin"
+	    ]
+	}
+    },
+    {
+        "key": "aspect_grid_file",
+        "name": "aspect grid file",
+        "description": "Aspect grid file (flat binary file, row-major grid, 4-byte values)",
+	"value":{
+	    "type":"file",
+	    "default":"default_aspect.bin",
+	    "files":[
+		"default_aspect.bin"
+	    ]
+	}
+    },
+    {
+        "key": "GMT_offset",
+        "name": "time zone offset",
+        "description": "Time zone offset from GMT",
+        "value": {
+            "type": "choice",
+            "default": "0",
+            "choices": [
+                "-12",
+                "-11",
+                "-10",
+                "-9",
+                "-8",
+                "-7",
+                "-6",
+                "-5",
+                "-4",
+                "-3",
+                "-2",
+                "-1",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
                 "12"
-            ], 
+            ],
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "start_month", 
-        "name": "start month", 
-        "description": "Start month", 
+        "key": "start_month",
+        "name": "start month",
+        "description": "Start month",
         "value": {
-            "type": "choice", 
-            "default": "January", 
+            "type": "choice",
+            "default": "January",
             "choices": [
-                "January", 
-                "February", 
-                "March", 
-                "April", 
-                "May", 
-                "June", 
-                "July", 
-                "August", 
-                "September", 
-                "October", 
-                "November", 
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
                 "December"
-            ], 
+            ],
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "start_day", 
-        "name": "start_day", 
-        "description": "Start day", 
+        "key": "start_day",
+        "name": "start_day",
+        "description": "Start day",
         "value": {
-            "type": "int", 
-            "default": "1", 
+            "type": "int",
+            "default": 1,
             "range": {
-                "min": "0", 
-                "max": "31"
-            }, 
+                "min": 0,
+                "max": 31
+            },
             "units": "-"
         }
-    }, 
+    },
     {
-        "key": "start_hour", 
-        "name": "start_hour", 
-        "description": "Start hour", 
+        "key": "start_hour",
+        "name": "start_hour",
+        "description": "Start hour",
         "value": {
-            "type": "float", 
-            "default": "0.0", 
+            "type": "float",
+            "default": 0.0,
             "range": {
-                "min": "0.0", 
-                "max": "23.99"
-            }, 
+                "min": 0.0,
+                "max": 23.99
+            },
             "units": "-"
         }
     }

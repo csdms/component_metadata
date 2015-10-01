@@ -1,0 +1,14 @@
+{
+    "id": "d8_global",
+    "name": "D8_Global",
+    "class": "D8Global",
+    "initialize_args": "D8_Global.cfg",
+    "time_step": 1.0,
+    "summary": "The TopoFlow D8_Global component.",
+    "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow",
+    "author": "Scott D. Peckham ",
+    "email": "scott.peckham@colorado.edu",
+    "version": "3.1.0",
+    "doi": "10.1594/IEDA/100174",
+    "license": "Apache"
+}
