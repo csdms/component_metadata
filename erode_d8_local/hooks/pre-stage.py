@@ -6,11 +6,18 @@ from wmt.models.submissions import prepend_to_path
 from wmt.utils.hook import find_simulation_input_file
 
 
-file_list = ['rti_file',
-             'pixel_file']
+file_list = ['pixel_file']
 
 
 def format_choice(choice):
+    """Formats a string for consumption by TopoFlow.
+
+    Parameters
+    ----------
+    choice : str
+      A parameter choice from WMT.
+
+    """
     import string
     return string.join(choice.split(), '_').upper()
 
@@ -26,12 +33,12 @@ def execute(env):
     """
     env['stop_code'] = 1  # my choice
     env['stop_time'] = env['run_duration']  # years
-    # env['n_steps'] = int(round(float(env['run_duration']) / float(env['dt'])))
+    env['n_steps'] = 1  # WMT needs something here
     env['save_grid_dt'] = 1.0  # years
     env['save_pixels_dt'] = 1.0  # years
 
     # TopoFlow needs site_prefix and case_prefix.
-    env['site_prefix'] = os.path.splitext(env['rti_file'])[0]
+    env['site_prefix'] = 'CSDMS'
     env['case_prefix'] = 'WMT'
 
     # If no pixel_file is given, let TopoFlow make one.
