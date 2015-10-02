@@ -10,19 +10,6 @@ file_list = ['rti_file',
              'pixel_file']
 
 
-def lowercase_choice(choice):
-    """Formats a string for consumption by TopoFlow.
-
-    Parameters
-    ----------
-    choice : str
-      A parameter choice from WMT.
-
-    """
-    import string
-    return string.join(choice.split(), '_').lower()
-
-
 def get_typeof_parameter(parameter_value):
     """Get the TopoFlow type of a parameter."""
     try:
@@ -67,10 +54,10 @@ def execute(env):
       A dict of component parameter values from WMT.
 
     """
-    env['n_steps'] = int(round(float(env['run_duration']) / float(env['dt'])))
-    env['save_grid_dt'] = float(env['dt'])
-    env['save_pixels_dt'] = float(env['dt'])
-    env['n_layers'] = 1  # my choice
+    #env['n_steps'] = int(round(float(env['run_duration']) / float(env['dt'])))
+    #env['save_grid_dt'] = float(env['dt'])
+    #env['save_pixels_dt'] = float(env['dt'])
+    #env['n_layers'] = 1  # my choice
 
     # TopoFlow needs site_prefix and case_prefix.
     env['site_prefix'] = os.path.splitext(env['rti_file'])[0]
@@ -82,8 +69,6 @@ def execute(env):
         env['pixel_file'] = '_outlets.txt'
 
     assign_parameter_type_and_value(env)
-
-    env['soil_type_0'] = lowercase_choice(env['soil_type_0'])
 
     # Default files common to all TopoFlow components are stored with the
     # topoflow component metadata.

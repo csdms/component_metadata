@@ -70,58 +70,6 @@
         }
     },
     {
-        "key": "h0_swe_type",
-        "name": "h0_swe type",
-        "description": "Depth of snow water equivalent (SWE)",
-        "group": {
-            "name": "h0_swe_group",
-            "leader": true,
-            "members": 2
-        },
-        "value": {
-            "type": "choice",
-            "default": "Scalar",
-            "choices": [
-                "Scalar",
-                "Grid",
-                "Time_Series",
-                "Grid_Sequence"
-            ],
-            "units": "m"
-        }
-    },
-    {
-        "key": "h0_swe_scalar",
-        "name": "h0_swe",
-        "description": "Scalar value",
-        "group": {
-            "name": "h0_swe_group"
-        },
-        "value": {
-            "type": "float",
-            "default": 0.15,
-            "range": {
-                "min": 0.0,
-                "max": 20.0
-            }
-        }
-    },
-    {
-        "key": "h0_swe_file",
-        "name": "h0_swe",
-        "description": "Grid, time series, or grid sequence file",
-        "group": {
-            "name": "h0_swe_group"
-        },
-        "value": {
-            "type": "file",
-            "default": "off",
-            "files": [
-                "off"
-            ]
-        }
-    },
-    {
         "key": "Cp_snow_type",
         "name": "Cp_snow type",
         "description": "Heat capacity of snow",
@@ -372,6 +320,58 @@
         "description": "Grid, time series, or grid sequence file",
         "group": {
             "name": "h0_snow_group"
+        },
+        "value": {
+            "type": "file",
+            "default": "off",
+            "files": [
+                "off"
+            ]
+        }
+    },
+    {
+        "key": "h0_swe_type",
+        "name": "h0_swe type",
+        "description": "Depth of snow water equivalent (SWE)",
+        "group": {
+            "name": "h0_swe_group",
+            "leader": true,
+            "members": 2
+        },
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "m"
+        }
+    },
+    {
+        "key": "h0_swe_scalar",
+        "name": "h0_swe",
+        "description": "Scalar value",
+        "group": {
+            "name": "h0_swe_group"
+        },
+        "value": {
+            "type": "float",
+            "default": 0.15,
+            "range": {
+                "min": 0.0,
+                "max": 20.0
+            }
+        }
+    },
+    {
+        "key": "h0_swe_file",
+        "name": "h0_swe",
+        "description": "Grid, time series, or grid sequence file",
+        "group": {
+            "name": "h0_swe_group"
         },
         "value": {
             "type": "file",
