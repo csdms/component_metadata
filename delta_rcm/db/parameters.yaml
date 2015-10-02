@@ -1,14 +1,4 @@
 Input 1:
-- key: comp_status
-  name: Component status
-  description: Component status
-  value:
-    type: choice
-    default: ''
-    choices:
-    - Enabled
-    - Disabled
-    units: '-'
 - key: model_output__site_prefix
   name: Site prefix
   description: Site prefix for output file names
