@@ -10,41 +10,6 @@ file_list = ['rti_file',
              'pixel_file']
 
 
-def get_typeof_parameter(parameter_value):
-    """Get the TopoFlow type of a parameter."""
-    try:
-        float(parameter_value)
-    except ValueError:
-        return 'string'
-    else:
-        return 'float'
-
-
-def assign_parameter_type_and_value(env):
-    """Assign the value of a TopoFlow input parameter.
-
-    A subset of TopoFlow input parameters can take a scalar value, or,
-    through an uploaded file, a time series, a grid, or a grid
-    sequence. This function assigns the parameter a scalar value, or
-    the name of a file, based on the user's selection in WMT.
-
-    Parameters
-    ----------
-    env : dict
-      A dict of component parameter values from WMT.
-
-    """
-    for key in env.copy().iterkeys():
-        if key.endswith('_type'):
-            key_root = str(key[:-5])
-            if env[key] == 'Scalar':
-                env[key_root] = env[key_root + '_scalar']
-            else:
-                env[key_root] = env[key_root + '_file']
-                file_list.append(key_root)
-            env['typeof_' + key_root] = get_typeof_parameter(env[key_root])
-
-
 def execute(env):
     """Perform pre-stage tasks for running a component.
 
@@ -68,7 +33,9 @@ def execute(env):
         file_list.remove('pixel_file')
         env['pixel_file'] = '_outlets.txt'
 
-    assign_parameter_type_and_value(env)
+    env['use_sources'] = 'No' if env['source_file'] == 'off' else 'Yes'
+    env['use_sinks'] = 'No' if env['sink_file'] == 'off' else 'Yes'
+    env['use_canals'] = 'No' if env['canal_file'] == 'off' else 'Yes'
 
     # Default files common to all TopoFlow components are stored with the
     # topoflow component metadata.
