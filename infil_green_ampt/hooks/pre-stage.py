@@ -10,7 +10,7 @@ file_list = ['rti_file',
              'pixel_file']
 
 
-def _format_choice(choice):
+def lowercase_choice(choice):
     """Formats a string for consumption by TopoFlow.
 
     Parameters
@@ -83,7 +83,7 @@ def execute(env):
 
     assign_parameter_type_and_value(env)
 
-    env['type_of_soil_layer_0'] = _format_choice(env['type_of_soil_layer_0'])
+    env['soil_type_0'] = lowercase_choice(env['soil_type_0'])
 
     # Default files common to all TopoFlow components are stored with the
     # topoflow component metadata.

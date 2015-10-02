@@ -331,7 +331,7 @@
         }
     },
     {
-	"key": "type_of_soil_layer_0",
+	"key": "soil_type_0",
 	"name": "type of soil layer_0",
 	"description": "Closest standard soil type",
 	"value": {
