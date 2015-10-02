@@ -3,7 +3,7 @@
   "name": "SnowEnergyBalance", 
   "class": "SnowEnergyBalance", 
   "initialize_args": "Snow_Energy_Balance.cfg", 
-  "time_step": "3600.000", 
+  "time_step": 3600.0, 
   "summary": "This module is the snowmelt process component (Energy Balance method) for a D8-based, spatial hydrologic model. This process component is part of a spatially-distributed hydrologic model called TopoFlow, but it can now be used as a stand-alone model.", 
   "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow-Snowmelt-Energy_Balance", 
   "author": "Scott D. Peckham ", 
