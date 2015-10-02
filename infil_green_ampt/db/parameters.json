@@ -23,29 +23,15 @@
         }
     },
     {
-        "key": "n_layers", 
-        "name": "Number of soil layers", 
-        "description": "Number of soil layers", 
-        "value": {
-            "type": "int", 
-            "default": "1", 
-            "range": {
-                "min": "1", 
-                "max": "3"
-            }, 
-            "units": "-"
-        }
-    }, 
-    {
         "key": "dt", 
         "name": "Time step", 
-        "description": "Timestep for infiltration process", 
+        "description": "Model time step",
         "value": {
             "type": "float", 
-            "default": "60.000", 
+            "default": 600.0,
             "range": {
-                "min": "0", 
-                "max": "1e3"
+                "min": 0,
+                "max": 31536000.0
             }, 
             "units": "s"
         }
@@ -65,7 +51,7 @@
     {
         "key": "pixel_file",
         "name": "pixel file",
-        "description": "Monitored pixel\/grid file (outlets)",
+        "description": "Monitored pixel/grid file (outlets)",
         "value": {
             "type": "file",
             "default": "off",
@@ -77,7 +63,7 @@
     {
         "key": "separator",
         "name": "soil layer 0",
-        "description": "Soil Layer 0",
+        "description": "Soil Layer",
         "value": {
             "type": "string",
             "default": ""
@@ -113,7 +99,7 @@
         },
         "value": {
             "type": "float",
-            "default": 5E-5,
+            "default": 7.2E-6,
             "range": {
                 "min": 1E-8,
                 "max": 1E-0
@@ -165,10 +151,10 @@
 	},
         "value": {
             "type": "float",
-            "default": 5E-5,
+            "default": 5.0E-7,
             "range": {
-                "min": 1E-8,
-                "max": 1E-0
+                "min": 1.0E-8,
+                "max": 1.0E-0
             }
         }
     },
@@ -217,7 +203,7 @@
         },
         "value": {
             "type": "float",
-            "default": 0.5,
+            "default": 0.485,
             "range": {
                 "min": 0.0,
                 "max": 1.0
@@ -269,7 +255,7 @@
         },
         "value": {
             "type": "float",
-            "default": 0.5,
+            "default": 0.375,
             "range": {
                 "min": 0.0,
                 "max": 1.0
@@ -322,7 +308,7 @@
         },
         "value": {
             "type": "float",
-            "default": 0.05,
+            "default": 0.725,
             "range": {
                 "min": 0.0,
                 "max": 1.0
@@ -350,19 +336,19 @@
 	"description": "Closest standard soil type",
 	"value": {
 	    "type": "choice",
-	    "default": "sand",
+	    "default": "Sand",
 	    "choices": [
-		"sand",
-		"loamy_sand",
-		"sandy_loam",
-		"silty_loam",
-		"loam",
-		"sandy_clay_loam",
-		"silty_clay_loam",
-		"clay_loam",
-		"sandy_clay",
-		"silty_clay",
-		"clay"
+		"Sand",
+		"Loamy Sand",
+		"Sandy Loam",
+		"Silty Loam",
+		"Loam",
+		"Sandy Clay Loam",
+		"Silty Clay Loam",
+		"Clay Loam",
+		"Sandy Clay",
+		"Silty Clay",
+		"Clay"
 	    ],
 	    "units": "-"
 	}
