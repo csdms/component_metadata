@@ -70,20 +70,6 @@
         }
     },
     {
-        "key": "use_sources",
-        "name": "Use sources toggle",
-        "description": "Option to use sources",
-        "value": {
-            "type": "choice",
-            "default": "No",
-            "choices": [
-                "Yes",
-                "No"
-            ],
-            "units": "-"
-        }
-    },
-    {
         "key": "source_file",
         "name": "source file",
         "description": "Source information file",
@@ -91,22 +77,9 @@
             "type": "file",
             "default": "off",
             "files": [
-                "default_source.txt"
+                "default_source.txt",
+		"off"
             ]
-        }
-    },
-    {
-        "key": "use_sinks",
-        "name": "Use sinks toggle",
-        "description": "Option to use sinks",
-        "value": {
-            "type": "choice",
-            "default": "No",
-            "choices": [
-                "Yes",
-                "No"
-            ],
-            "units": "-"
         }
     },
     {
@@ -117,22 +90,9 @@
             "type": "file",
             "default": "off",
             "files": [
-                "default_sink.txt"
+                "default_sink.txt",
+		"off"
             ]
-        }
-    },
-    {
-        "key": "use_canals",
-        "name": "Use canals toggle",
-        "description": "Option to use canals",
-        "value": {
-            "type": "choice",
-            "default": "No",
-            "choices": [
-                "Yes",
-                "No"
-            ],
-            "units": "-"
         }
     },
     {
@@ -143,7 +103,8 @@
             "type": "file",
             "default": "off",
             "files": [
-                "default_canal.txt"
+                "default_canal.txt",
+		"off"
             ]
         }
     }
