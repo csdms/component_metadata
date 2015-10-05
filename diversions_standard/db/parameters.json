@@ -77,8 +77,8 @@
             "type": "file",
             "default": "off",
             "files": [
-		"off",
-                "default_source.txt"
+                "default_source.txt",
+		"off"
             ]
         }
     },
@@ -90,8 +90,8 @@
             "type": "file",
             "default": "off",
             "files": [
-		"off",
-                "default_sink.txt"
+                "default_sink.txt",
+		"off"
             ]
         }
     },
@@ -103,8 +103,8 @@
             "type": "file",
             "default": "off",
             "files": [
-		"off",
-                "default_canal.txt"
+                "default_canal.txt",
+		"off"
             ]
         }
     }

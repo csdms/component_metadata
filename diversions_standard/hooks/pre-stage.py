@@ -10,6 +10,17 @@ file_list = ['rti_file',
              'pixel_file']
 
 
+def _set_input_file(env, file_base_name):
+    option = 'use_' + file_base_name + 's'
+    file_name = file_base_name + '_file'
+
+    if env[file_name] == 'off':
+        env[option] = 'No'
+    else:
+        env[option] = 'Yes'
+        file_list.append(file_name)
+
+
 def execute(env):
     """Perform pre-stage tasks for running a component.
 
@@ -22,7 +33,6 @@ def execute(env):
     #env['n_steps'] = int(round(float(env['run_duration']) / float(env['dt'])))
     #env['save_grid_dt'] = float(env['dt'])
     #env['save_pixels_dt'] = float(env['dt'])
-    #env['n_layers'] = 1  # my choice
 
     # TopoFlow needs site_prefix and case_prefix.
     env['site_prefix'] = os.path.splitext(env['rti_file'])[0]
@@ -33,9 +43,9 @@ def execute(env):
         file_list.remove('pixel_file')
         env['pixel_file'] = '_outlets.txt'
 
-    env['use_sources'] = 'No' if env['source_file'] == 'off' else 'Yes'
-    env['use_sinks'] = 'No' if env['sink_file'] == 'off' else 'Yes'
-    env['use_canals'] = 'No' if env['canal_file'] == 'off' else 'Yes'
+    _set_input_file(env, 'source')
+    _set_input_file(env, 'sink')
+    _set_input_file(env, 'canal')
 
     # Default files common to all TopoFlow components are stored with the
     # topoflow component metadata.
