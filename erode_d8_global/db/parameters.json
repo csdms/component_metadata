@@ -23,6 +23,19 @@
         }
     },
     {
+        "key": "CFL_factor",
+        "name": "CFL factor",
+        "description": "Prefactor for CFL stability condition",
+        "value": {
+            "type": "float",
+            "default": 0.2,
+            "range": {
+                "min": 0.0,
+                "max": 1.0
+            }
+        }
+    },
+    {
         "key": "pixel_file",
         "name": "pixel file",
         "description": "Monitored pixel/grid file",
@@ -95,19 +108,6 @@
                 "max": 1.0E6
             },
             "units": "m"
-        }
-    },
-    {
-        "key": "CFL_factor",
-        "name": "CFL factor",
-        "description": "Prefactor for CFL stability condition",
-        "value": {
-            "type": "float",
-            "default": 0.2,
-            "range": {
-                "min": 0.0,
-                "max": 1.0
-            }
         }
     },
     {
