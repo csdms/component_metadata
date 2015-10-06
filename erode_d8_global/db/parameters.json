@@ -205,27 +205,13 @@
         }
     },
     {
-        "key": "BC_method",
-        "name": "Boundary condition method",
-        "description": "Boundary condition method",
-        "value": {
-            "type": "choice",
-            "default": "Four Sides",
-            "choices": [
-                "Bottom",
-                "Right",
-		"Four Sides"
-            ]
-        }
-    },
-    {
         "key": "make_z0_method",
         "name": "make z0 method",
-        "description": "Method to make initial DEM",
+        "description": "Method for making initial DEM",
 	"group":{
 	    "name":"make_z0_group",
 	    "leader":true,
-	    "members":2
+	    "members":4
 	},
 	"value": {
             "type": "choice",
@@ -234,6 +220,38 @@
                 "Flat",
                 "Plane",
                 "Corner Plane"
+            ]
+        }
+    },
+    {
+        "key": "FILL_PITS_IN_Z0",
+        "name": "Fill pits",
+        "description": "Fill pits?",
+	"group":{
+	    "name":"make_z0_group"
+	},
+        "value": {
+            "type": "choice",
+            "default": "No",
+            "choices": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "key": "LINK_FLATS",
+        "name": "Link flats",
+        "description": "Link flats?",
+	"group":{
+	    "name":"make_z0_group"
+	},
+        "value": {
+            "type": "choice",
+            "default": "Yes",
+            "choices": [
+                "Yes",
+                "No"
             ]
         }
     },
@@ -273,6 +291,11 @@
         "key": "noise_method",
         "name": "Noise method",
         "description": "Noise method",
+	"group":{
+	    "name":"noise_group",
+	    "leader":true,
+	    "members":2
+	},
         "value": {
             "type": "choice",
             "default": "Midpoints",
@@ -287,6 +310,9 @@
         "key": "noise_scale",
         "name": "Noise scale factor",
         "description": "Scale factor for random noise",
+	"group":{
+	    "name":"noise_group"
+	},
         "value": {
             "type": "float",
             "default": 1.0,
@@ -299,10 +325,13 @@
     {
         "key": "seed",
         "name": "RNG seed",
-        "description": "Seed for random number generator",
+        "description": "Random number generator seed",
+	"group":{
+	    "name":"noise_group"
+	},
         "value": {
             "type": "int",
-            "default": 1,
+            "default": 32767,
             "range": {
                 "min": 1,
                 "max": 2147483647
@@ -310,28 +339,21 @@
         }
     },
     {
-        "key": "LINK_FLATS",
-        "name": "Link flats",
-        "description": "Link flats?",
+        "key": "BC_method",
+        "name": "BC method",
+        "description": "Boundary conditions method",
+	"group":{
+	    "name":"bc_group",
+	    "leader":true,
+	    "members":2
+	},
         "value": {
             "type": "choice",
-            "default": "Yes",
+            "default": "Four Sides",
             "choices": [
-                "Yes",
-                "No"
-            ]
-        }
-    },
-    {
-        "key": "FILL_PITS_IN_Z0",
-        "name": "Fill pits",
-        "description": "Fill pits in initial DEM?",
-        "value": {
-            "type": "choice",
-            "default": "No",
-            "choices": [
-                "Yes",
-                "No"
+                "Bottom",
+                "Right",
+		"Four Sides"
             ]
         }
     },
@@ -339,6 +361,9 @@
         "key": "LR_PERIODIC",
         "name": "LR bcs",
         "description": "Use periodic left-right boundary conditions?",
+	"group":{
+	    "name":"bc_group"
+	},
         "value": {
             "type": "choice",
             "default": "No",
@@ -352,6 +377,9 @@
         "key": "TB_PERIODIC",
         "name": "TB bcs",
         "description": "Use periodic top-bottom boundary conditions?",
+	"group":{
+	    "name":"bc_group"
+	},
         "value": {
             "type": "choice",
             "default": "No",
