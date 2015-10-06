@@ -7,8 +7,20 @@ from wmt.utils.hook import find_simulation_input_file
 
 
 file_list = ['rti_file',
-           #  'flow_grid_file',
              'pixel_file']
+
+
+def lowercase_choice(choice):
+    """Formats a string for consumption by TopoFlow.
+
+    Parameters
+    ----------
+    choice : str
+      A parameter choice from WMT.
+
+    """
+    import string
+    return string.join(choice.split(), '_').lower()
 
 
 def get_typeof_parameter(parameter_value):
@@ -70,6 +82,8 @@ def execute(env):
         env['pixel_file'] = '_outlets.txt'
 
     assign_parameter_type_and_value(env)
+
+    env['soil_type_0'] = lowercase_choice(env['soil_type_0'])
 
     # Default files common to all TopoFlow components are stored with the
     # topoflow component metadata.
