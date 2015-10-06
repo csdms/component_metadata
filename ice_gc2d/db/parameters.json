@@ -14,32 +14,78 @@
         "description": "Simulation run time",
         "value": {
             "type": "int",
-            "default": 365,
+            "default": 100.0,
             "range": {
                 "min": 0,
                 "max": 1000000
             },
-            "units": "d"
+            "units": "y"
         }
     },
     {
-        "key": "site_prefix",
-        "name": "Site prefix",
-        "description": "File prefix for the study site",
+        "key": "dt", 
+        "name": "Time step", 
+        "description": "Model time step", 
         "value": {
-            "type": "string",
-            "default": "Treynor",
-            "units": "-"
+            "type": "float", 
+            "default": 1.0,
+            "range": {
+                "min": 1,
+                "max": 365.0
+            }, 
+            "units": "y"
         }
     },
     {
-        "key": "case_prefix",
-        "name": "Case prefix",
-        "description": "File prefix for the model scenario",
+        "key": "pixel_file",
+        "name": "pixel file",
+        "description": "Monitored pixel/grid file",
+	"value":{
+	    "type":"file",
+	    "default":"off",
+	    "files":[
+		"off"
+	    ]
+	}
+    },
+    {
+	"key":"rti_file",
+	"name":"RTI file",
+	"description":"RiverTools info file",
+	"value":{
+	    "type":"file",
+	    "default":"default.rti",
+	    "files":[
+		"default.rti"
+	    ]
+	}
+    },
+    {
+        "key": "dt_max",
+        "name": "Max time step",
+        "description": "Max time step",
         "value": {
-            "type": "string",
-            "default": "June_20_67",
-            "units": "-"
+            "type": "float",
+            "default": 1.0,
+            "range": {
+                "min": 1,
+                "max": 5.0
+            },
+            "units": "y"
+        }
+    },
+    {
+        "key": "t_max",
+        "name": "Max time",
+        "description": "Max time to simulate",
+        "value": {
+            "type": "float",
+            "default": 100.0,
+            "range": {
+                "min": 1,
+                "max": 1000.0
+            },
+            "units": "y"
         }
     },
     {
@@ -53,12 +99,14 @@
     },
     {
         "key": "DEM_file",
-        "name": "DEM file",
-        "description": "Binary file containing a dem",
+        "name": "DEM",
+        "description": "Binary file containing a DEM",
         "value": {
-            "type": "string",
-            "default": "[site_prefix]_DEM.rtg",
-            "units": "m"
+            "type": "file",
+            "default": "default_DEM.rtg",
+            "files": [
+                "default_DEM.rtg"
+            ]
         }
     },
     {
@@ -66,9 +114,11 @@
         "name": "Init. ice depth file",
         "description": "Binary file containing initial ice depth",
         "value": {
-            "type": "string",
-            "default": "None",
-            "units": "m"
+            "type": "file",
+            "default": "off",
+            "files": [
+                "off"
+            ]        
         }
     },
     {
@@ -321,6 +371,173 @@
                 "max": "0.0"
             },
             "units": "degC m-1"
+        }
+    },
+    {
+        "key": "VARIABLE_DT_TOGGLE",
+        "name": "dt_toggle",
+        "description": "Use variable/adaptive timestep",
+        "value": {
+            "type": "choice",
+            "default": "No",
+            "choices": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "key": "INIT_COND_TOGGLE",
+        "name": "Initial condition",
+        "description": "Initial condition (chose not clear to me)",
+        "value": {
+            "type": "choice",
+            "default": "No",
+            "choices": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "key": "GENERIC_ICE_TOGGLE",
+        "name": "Generic ice toggle",
+        "description": "Start w/ generic ice surface",
+        "value": {
+            "type": "choice",
+            "default": "No",
+            "choices": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "key": "ICEFLOW_TOGGLE",
+        "name": "Iceflow toggle",
+        "description": "Ice motion by deformation",
+        "value": {
+            "type": "choice",
+            "default": "No",
+            "choices": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "key": "ICESLIDE_TOGGLE",
+        "name": "Iceslide toggle",
+        "description": "Ice motion by sliding",
+        "value": {
+            "type": "choice",
+            "default": "No",
+            "choices": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "key": "FREEZE_ON_TOGGLE",
+        "name": "Freeze on toggle",
+        "description": "Basal ice frozen to bed ",
+        "value": {
+            "type": "choice",
+            "default": "No",
+            "choices": [
+                "Yes",
+                "No"
+            ]
+        }
+    },
+    {
+        "key": "MASS_BALANCE_TOGGLE",
+        "name": "Mass balance",
+        "description": "Climate scenario",
+        "value": {
+            "type": "choice",
+            "default": "ZERO_BALANCE",
+            "choices": [
+                "ZERO_BALANCE",
+                "CONSTANT_ELA",
+                "ELA_LOWERING",
+                "ELA_TIME_SERIES",
+                "EXTERNAL_FUNC",
+                "ELA_LOWERING2",
+                "BALANCE_FILE",
+                "D18O_TIME_SERIES"
+            ],
+            "units": "-"
+        }
+    },
+    {
+        "key": "WEST_BC_TOGGLE",
+        "name": "West bc toggle",
+        "description": "Boundary condition west",
+        "value": {
+            "type": "choice",
+            "default": "ICE_FREE_BOUND",
+            "choices": [
+                "ICE_FREE_BOUND",
+                "ICE_FLUX_BOUND",
+                "CONST_FLUX_BOUND",
+                "SURF_ELEV_BOUND",
+                "SURF_SLOPE_BOUND"
+            ],
+            "units": "-"
+        }
+    },
+    {
+        "key": "EAST_BC_TOGGLE",
+        "name": "East bc toggle",
+        "description": "Boundary condition east",
+        "value": {
+            "type": "choice",
+            "default": "ICE_FREE_BOUND",
+            "choices": [
+                "ICE_FREE_BOUND",
+                "ICE_FLUX_BOUND",
+                "CONST_FLUX_BOUND",
+                "SURF_ELEV_BOUND",
+                "SURF_SLOPE_BOUND"
+            ],
+            "units": "-"
+        }
+    },
+
+    {
+        "key": "SOUTH_BC_TOGGLE",
+        "name": "South bc toggle",
+        "description": "Boundary condition south",
+        "value": {
+            "type": "choice",
+            "default": "ICE_FREE_BOUND",
+            "choices": [
+                "ICE_FREE_BOUND",
+                "ICE_FLUX_BOUND",
+                "CONST_FLUX_BOUND",
+                "SURF_ELEV_BOUND",
+                "SURF_SLOPE_BOUND"
+            ],
+            "units": "-"
+        }
+    },
+    {
+        "key": "NORTH_BC_TOGGLE",
+        "name": "North bc toggle",
+        "description": "Boundary condition north",
+        "value": {
+            "type": "choice",
+            "default": "ICE_FREE_BOUND",
+            "choices": [
+                "ICE_FREE_BOUND",
+                "ICE_FLUX_BOUND",
+                "CONST_FLUX_BOUND",
+                "SURF_ELEV_BOUND",
+                "SURF_SLOPE_BOUND"
+            ],
+            "units": "-"
         }
     }
 ]
