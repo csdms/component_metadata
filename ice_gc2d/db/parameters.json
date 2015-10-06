@@ -115,9 +115,9 @@
         "description": "Binary file containing initial ice depth",
         "value": {
             "type": "file",
-            "default": "off",
+            "default": "None",
             "files": [
-                "off"
+                "None"
             ]        
         }
     },
