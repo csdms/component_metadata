@@ -18,13 +18,13 @@ TB_PERIODIC         | {TB_PERIODIC}     | long     | B.C., periodic in top-botto
 #===============================================================================
 # Output
 save_grid_dt        | {save_grid_dt}     | float     | time interval between saved grids [sec]
-SAVE_AREA_GRIDS     | No  | string    | option to save grids of D8 area {Yes; No}
+SAVE_AREA_GRIDS     | Yes  | string    | option to save grids of D8 area {Yes; No}
 area_gs_file        | [case_prefix]_2D-A.nc     | string    | filename for grid stack of D8 area [km^2]
 SAVE_CODE_GRIDS     | Yes  | string    | option to save grids of D8 codes {Yes; No}
 code_gs_file        | [case_prefix]_2D-flow.nc     | string    | filename for grid stack of D8 codes
-SAVE_DS_GRIDS       | No    | string    | option to save grids of ds {Yes; No}
+SAVE_DS_GRIDS       | Yes  | string    | option to save grids of ds {Yes; No}
 ds_gs_file          | [case_prefix]_2D-ds.nc       | string    | filename for grid stack of ds [m]
-SAVE_DW_GRIDS       | No    | string    | option to save grids of dw {Yes; No}
+SAVE_DW_GRIDS       | Yes  | string    | option to save grids of dw {Yes; No}
 dw_gs_file          | [case_prefix]_2D-dw.nc       | string    | filename for grid stack of dw [m]
 save_pixels_dt      | {save_pixels_dt}   | float     | time interval between time series values [sec]
 pixel_file          | {pixel_file}       | string    | filename for monitored pixel info
