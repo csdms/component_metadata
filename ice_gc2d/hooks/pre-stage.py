@@ -86,6 +86,9 @@ def execute(env):
         file_list.remove('pixel_file')
         env['pixel_file'] = '_outlets.txt'
 
+    if env['H0_file'] == 'off':
+        env['H0_file'] = 'None'
+    
     assign_parameter_type_and_value(env)
 
     env['VARIABLE_DT_TOGGLE'] = choices_map[env['VARIABLE_DT_TOGGLE']]
