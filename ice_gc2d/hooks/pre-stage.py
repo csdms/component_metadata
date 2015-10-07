@@ -6,7 +6,7 @@ from wmt.models.submissions import prepend_to_path
 from wmt.utils.hook import find_simulation_input_file
 
 
-file_list = [#'rti_file',
+file_list = ['rti_file',
 	     'DEM_file',
              'pixel_file']
 choices_map = {
@@ -77,6 +77,7 @@ def execute(env):
     env['save_pixels_dt'] = float(env['dt'])
 
     # TopoFlow needs site_prefix and case_prefix.
+    env['site_prefix'] = os.path.splitext(env['rti_file'])[0]    
     env['site_prefix'] = os.path.splitext(env['DEM_file'])[0]
     env['case_prefix'] = 'scenario'
 
@@ -85,6 +86,9 @@ def execute(env):
         file_list.remove('pixel_file')
         env['pixel_file'] = '_outlets.txt'
 
+    if env['H0_file'] == 'off':
+        env['H0_file'] = 'None'
+    
     assign_parameter_type_and_value(env)
 
     env['VARIABLE_DT_TOGGLE'] = choices_map[env['VARIABLE_DT_TOGGLE']]
