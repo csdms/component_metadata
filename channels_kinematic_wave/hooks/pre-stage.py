@@ -67,7 +67,7 @@ def execute(env):
     # If no pixel_file is given, let TopoFlow make one.
     if env['pixel_file'] == 'off':
         file_list.remove('pixel_file')
-        env['pixel_file'] = '_outlets.txt'
+        env['pixel_file'] = env['case_prefix'] + '_outlets.txt'
 
     # Translate the roughness choice to TopoFlow flags.
     env['MANNING'] = env['roughness_option'].startswith('Manning') * 1
