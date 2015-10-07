@@ -72,7 +72,7 @@
     {
         "key": "code_file",
         "name": "D8 flow code file",
-        "description": "Grid file of D8 flow codes",
+        "description": "RiverTools grid file of D8 flow codes",
 	"value":{
 	    "type":"file",
 	    "default":"default_flow.rtg",
@@ -84,7 +84,7 @@
     {
         "key": "slope_file",
         "name": "D8 slope file",
-        "description": "Grid file of D8 slopes",
+        "description": "RiverTools grid file of D8 slopes",
 	"value":{
 	    "type":"file",
 	    "default":"default_slope.rtg",
