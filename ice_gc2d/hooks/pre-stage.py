@@ -8,59 +8,12 @@ from wmt.utils.hook import find_simulation_input_file
 
 file_list = ['rti_file',
 	     'DEM_file',
+             'H0_file',
              'pixel_file']
 choices_map = {
     'Yes': 1,
     'No': 0
 }
-
-
-def lowercase_choice(choice):
-    """Formats a string for consumption by TopoFlow.
-
-    Parameters
-    ----------
-    choice : str
-      A parameter choice from WMT.
-
-    """
-    import string
-    return string.join(choice.split(), '_').lower()
-
-
-def get_typeof_parameter(parameter_value):
-    """Get the TopoFlow type of a parameter."""
-    try:
-        float(parameter_value)
-    except ValueError:
-        return 'string'
-    else:
-        return 'float'
-
-
-def assign_parameter_type_and_value(env):
-    """Assign the value of a TopoFlow input parameter.
-
-    A subset of TopoFlow input parameters can take a scalar value, or,
-    through an uploaded file, a time series, a grid, or a grid
-    sequence. This function assigns the parameter a scalar value, or
-    the name of a file, based on the user's selection in WMT.
-
-    Parameters
-    ----------
-    env : dict
-      A dict of component parameter values from WMT.
-
-    """
-    for key in env.copy().iterkeys():
-        if key.endswith('_type'):
-            key_root = str(key[:-5])
-            if env[key] == 'Scalar':
-                env[key_root] = env[key_root + '_scalar']
-            else:
-                env[key_root] = env[key_root + '_file']
-                file_list.append(key_root)
-            env['typeof_' + key_root] = get_typeof_parameter(env[key_root])
 
 
 def execute(env):
@@ -78,7 +31,6 @@ def execute(env):
 
     # TopoFlow needs site_prefix and case_prefix.
     env['site_prefix'] = os.path.splitext(env['rti_file'])[0]    
-    env['site_prefix'] = os.path.splitext(env['DEM_file'])[0]
     env['case_prefix'] = 'scenario'
 
     # If no pixel_file is given, let TopoFlow make one.
@@ -87,9 +39,8 @@ def execute(env):
         env['pixel_file'] = '_outlets.txt'
 
     if env['H0_file'] == 'off':
+        file_list.remove('H0_file')
         env['H0_file'] = 'None'
-    
-    assign_parameter_type_and_value(env)
 
     env['VARIABLE_DT_TOGGLE'] = choices_map[env['VARIABLE_DT_TOGGLE']]
     env['INIT_COND_TOGGLE'] = choices_map[env['INIT_COND_TOGGLE']]
