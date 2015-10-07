@@ -62,7 +62,7 @@ def execute(env):
 
     # TopoFlow needs site_prefix and case_prefix.
     env['site_prefix'] = os.path.splitext(env['rti_file'])[0]
-    env['case_prefix'] = 'scenario'
+    env['case_prefix'] = 'WMT'
 
     # If no pixel_file is given, let TopoFlow make one.
     if env['pixel_file'] == 'off':

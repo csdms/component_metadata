@@ -38,7 +38,7 @@ def execute(env):
     env['save_pixels_dt'] = 1.0  # years
 
     # TopoFlow needs site_prefix and case_prefix.
-    env['site_prefix'] = 'CSDMS'
+    env['site_prefix'] = 'default'
     env['case_prefix'] = 'WMT'
 
     # If no pixel_file is given, let TopoFlow make one.
