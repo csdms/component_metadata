@@ -4,3 +4,9 @@ DS_Store
 
 # Ignore Emacs backup files
 *~
+
+# Ignore Vim backup files
+*.swp
+
+# Ignore compiled Python files
+*.pyc
