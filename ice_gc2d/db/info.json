@@ -2,7 +2,7 @@
   "id": "ice_gc2d", 
   "name": "IceGC2D", 
   "class": "GC2D", 
-  "initialize_args": "Ice_Gc2D.cfg", 
+  "initialize_args": "Ice_GC2D.cfg", 
   "time_step": 1.0,
   "summary": "GC2D is a two-dimensional finite difference numerical model that is driven by a calculations of glacier mass balance (snow precipitation - melt rate). The model calculates ice surface elevations above a two-dimensional terrain by solving equations for ice flux and mass conservation using explicit methods.", 
   "url": "http://csdms.colorado.edu/wiki/Model_help:Gc2d", 
