@@ -1,9 +1,9 @@
 {
   "id": "topoflow", 
-  "name": "TopoFlow", 
-  "class": "Topoflow", 
+  "name": "TopoFlow_Driver", 
+  "class": "TopoFlow", 
   "initialize_args": "Topoflow.cfg", 
-  "time_step": "", 
+  "time_step": "1.0", 
   "summary": "TopoFlow is a free, spatially-distributed hydrologic model with a user-friendly, wizard-style interface", 
   "url": "http://csdms.colorado.edu/wiki/Model_help:TopoFlow", 
   "author": "Scott D. Peckham ", 
