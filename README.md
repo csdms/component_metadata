@@ -1,4 +1,4 @@
 component_metadata
 ==================
 
-Metadata for CSDMS model components
+Metadata for hydrologic CSDMS model components
