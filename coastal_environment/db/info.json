@@ -1,6 +1,0 @@
-{
-  "id":"coastal_environment",
-  "name":"coastal_environment",
-  "summary":"The coastal_environment service component provides grid merging and regridding capabilities for coupled model runs. It takes user- or model-provided grid files and forms them into a common grid accessible to all components.",
-  "url":"http://csdms.colorado.edu/wiki/Category:Modules"
-}

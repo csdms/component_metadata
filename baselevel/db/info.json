@@ -1,6 +1,0 @@
-{
-  "id":"baselevel",
-  "name":"base_level",
-  "summary": "The base_level service component prescribes the sea (or lake) level elevation over the simulation time. This elevation can be used by multiple components to determine the change in coastline position or river mouth location over the simulation time.",
-  "url":"http://csdms.colorado.edu/wiki/Category:Modules"
-}
