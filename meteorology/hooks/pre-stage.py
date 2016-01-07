@@ -1,9 +1,10 @@
 import os
 import shutil
+import numpy as np
 
 from wmt.config import site
 from wmt.models.submissions import prepend_to_path
-from wmt.utils.hook import find_simulation_input_file
+from wmt.utils.hook import find_simulation_input_file, yaml_dump
 
 
 file_list = ['rti_file',
@@ -70,6 +71,19 @@ def execute(env):
         env['pixel_file'] = env['case_prefix'] + '_outlets.txt'
 
     assign_parameter_type_and_value(env)
+
+    # If P_type is Scalar, replicate the scalar value as a Time_Series.
+    # This works around the issue described in https://trello.com/c/LaOMPpOa.
+    if env['P_type'] == 'Scalar':
+        time_series = np.ones(env['n_steps']) * float(env['P'])
+        file_name = env['case_prefix'] + '_rain_rates.txt'
+        np.savetxt(file_name, time_series, fmt='%8.3f')
+        env['P_type'] = 'Time_Series'
+        env['typeof_P'] = 'string'
+        env['P_file'] = file_name
+        env['P'] = file_name
+
+    # yaml_dump('_env.yaml', env)  # helpful for debugging
 
     # Default files common to all TopoFlow components are stored with the
     # topoflow component metadata.
