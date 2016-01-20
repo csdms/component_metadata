@@ -12,15 +12,15 @@ n_layers            | {n_layers}          | int       | Number of soil layers [-
 dt                  | {dt}                | float     | Timestep for infiltration process [sec]
 #===============================================================================
 # Layer 1
-Ks_type[0]           | {Ks_0_type}         | string            | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+Ks_type[0]           | {Ks_0_ptype}         | string            | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
 Ks[0]                | {Ks_0}              | {typeof_Ks_0}     | Sat. hydraulic conductivity [m/s]
-Ki_type[0]           | {Ki_0_type}         | string   	       | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+Ki_type[0]           | {Ki_0_ptype}         | string   	       | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
 Ki[0]                | {Ki_0}              | {typeof_Ki_0}     | Init. hydraulic conductivity (< k_sat) [m/s]
-qs_type[0]           | {qs_0_type}         | string    	       | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+qs_type[0]           | {qs_0_ptype}         | string    	       | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
 qs[0]                | {qs_0}              | {typeof_qs_0}     | Sat. soil water content [-]
-qi_type[0]           | {qi_0_type}         | string    	       | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+qi_type[0]           | {qi_0_ptype}         | string    	       | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
 qi[0]                | {qi_0}              | {typeof_qi_0}     | Init. soil water content (< theta_sat) [-]
-G_type[0]            | {G_0_type}          | string            | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+G_type[0]            | {G_0_ptype}          | string            | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
 G[0]                 | {G_0}               | {typeof_G_0}      | Capillary length scale [m]
 soil_type[0]         | {soil_type_0}       | string            | Closest standard soil type [-] {sand; loamy_sand; sandy_loam; silty_loam; loam; sandy_clay_loam; silty_clay_loam; clay_loam; sandy_clay; silty_clay; clay}
 #===============================================================================

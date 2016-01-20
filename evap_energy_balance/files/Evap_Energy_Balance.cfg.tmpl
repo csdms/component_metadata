@@ -9,12 +9,12 @@ site_prefix         | {site_prefix}       | string    | File prefix for the stud
 case_prefix         | {case_prefix}       | string    | File prefix for the model scenario [-]
 n_steps             | {n_steps}           | long      | Number of time steps [-]
 dt                  | {dt}                | float     | Evaporation process timestep [sec]
-K_soil_type         | {K_soil_type}       | string            | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-K_soil              | {K_soil}            | {typeof_K_soil}   | Thermal conductivity of soil [W/m/deg_C]
-soil_x_type         | {soil_x_type}       | string            | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-soil_x              | {soil_x}            | {typeof_soil_x}   | Reference depth in soil [m]
-T_soil_x_type       | {T_soil_x_type}     | string            | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-T_soil_x            | {T_soil_x}          | {typeof_T_soil_x} | Temperature of soil at depth x [degC]
+K_soil_type         | {K_soil_ptype}       | string            | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+K_soil              | {K_soil}            | {K_soil_dtype}   | Thermal conductivity of soil [W/m/deg_C]
+soil_x_type         | {soil_x_ptype}       | string            | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+soil_x              | {soil_x}            | {soil_x_dtype}   | Reference depth in soil [m]
+T_soil_x_type       | {T_soil_x_ptype}     | string            | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+T_soil_x            | {T_soil_x}          | {T_soil_x_dtype} | Temperature of soil at depth x [degC]
 #===============================================================================
 # Output
 save_grid_dt        | {save_grid_dt}      | float     | Time interval between saved grids [sec]
