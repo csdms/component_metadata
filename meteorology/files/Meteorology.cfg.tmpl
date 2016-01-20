@@ -9,43 +9,43 @@ site_prefix         | {site_prefix}       | string    | File prefix for the stud
 case_prefix         | {case_prefix}       | string    | File prefix for the model scenario [-]
 n_steps             | {n_steps}           | long      | Number of time steps [-]
 dt                  | {dt}                | float     | Meteorology time step [sec]
-rho_H2O_type        | {rho_H2O_type}      | string           | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-rho_H2O             | {rho_H2O}           | {typeof_rho_H2O} | Density of water [kg/m^3]
-Cp_air_type         | {Cp_air_type}       | string           | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-Cp_air              | {Cp_air}            | {typeof_Cp_air}  | Heat capacity of air [J/kg/K]
-rho_air_type        | {rho_air_type}      | string           | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-rho_air             | {rho_air}           | {typeof_rho_air} | Density of air [kg/m^3]
-P_type              | {P_type}            | string           | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-P                   | {P}                 | {typeof_P}       | Precipitation rate [mm/hr]
+rho_H2O_type        | {rho_H2O_ptype}      | string           | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+rho_H2O             | {rho_H2O}           | {rho_H2O_dtype} | Density of water [kg/m^3]
+Cp_air_type         | {Cp_air_ptype}       | string           | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+Cp_air              | {Cp_air}            | {Cp_air_dtype}  | Heat capacity of air [J/kg/K]
+rho_air_type        | {rho_air_ptype}      | string           | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+rho_air             | {rho_air}           | {rho_air_dtype} | Density of air [kg/m^3]
+P_type              | {P_ptype}            | string           | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+P                   | {P}                 | {P_dtype}       | Precipitation rate [mm/hr]
 PRECIP_ONLY         | {PRECIP_ONLY}       | string    | Toggle to turn off all variable updates except precip. [-] {Yes; No}
 #===============================================================================
 # Input 2
-T_air_type          | {T_air_type}        | string          | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-T_air               | {T_air}             | {typeof_T_air}  | Temperature of air [degC]
-T_surf_type         | {T_surf_type}       | string          | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-T_surf              | {T_surf}            | {typeof_T_surf} | Temperature of surface [degC]
-RH_type             | {RH_type}           | string          | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-RH                  | {RH}                | {typeof_RH}     | Relative humidity [-]
-p0_type             | {p0_type}           | string          | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-p0                  | {p0}                | {typeof_p0}     | Atmospheric pressure [mbar]
-uz_type             | {uz_type}           | string          | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-uz                  | {uz}                | {typeof_uz}     | Wind velocity at height z [m/s]
-z_type              | {z_type}            | string          | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-z                   | {z}                 | {typeof_z}      | Wind reference height [m]
-z0_air_type         | {z0_air_type}       | string          | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-z0_air              | {z0_air}            | {typeof_z0_air} | Surface roughness length scale for wind [m]
+T_air_type          | {T_air_ptype}        | string          | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+T_air               | {T_air}             | {T_air_dtype}  | Temperature of air [degC]
+T_surf_type         | {T_surf_ptype}       | string          | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+T_surf              | {T_surf}            | {T_surf_dtype} | Temperature of surface [degC]
+RH_type             | {RH_ptype}           | string          | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+RH                  | {RH}                | {RH_dtype}     | Relative humidity [-]
+p0_type             | {p0_ptype}           | string          | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+p0                  | {p0}                | {p0_dtype}     | Atmospheric pressure [mbar]
+uz_type             | {uz_ptype}           | string          | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+uz                  | {uz}                | {uz_dtype}     | Wind velocity at height z [m/s]
+z_type              | {z_ptype}            | string          | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+z                   | {z}                 | {z_dtype}      | Wind reference height [m]
+z0_air_type         | {z0_air_ptype}       | string          | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+z0_air              | {z0_air}            | {z0_air_dtype} | Surface roughness length scale for wind [m]
 #===============================================================================
 # Input 3
-albedo_type         | {albedo_type}       | string                 | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-albedo              | {albedo}            | {typeof_albedo}        | Surface albedo in [unitless]
-em_surf_type        | {em_surf_type}      | string                 | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-em_surf             | {em_surf}           | {typeof_em_surf}       | Surface emissivity in [unitless]
-dust_atten_type     | {dust_atten_type}   | string                 | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-dust_atten          | {dust_atten}        | {typeof_dust_atten}    | Dust attenuation factor in [unitless]
-cloud_factor_type   | {cloud_factor_type} | string                 | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-cloud_factor        | {cloud_factor}      | {typeof_cloud_factor}  | Cloudiness factor, c, in [unitless]
-canopy_factor_type  | {canopy_factor_type}| string                 | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
-canopy_factor       | {canopy_factor}     | {typeof_canopy_factor} | Canopy coverage factor, f, in [unitless]
+albedo_type         | {albedo_ptype}       | string                 | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+albedo              | {albedo}            | {albedo_dtype}        | Surface albedo in [unitless]
+em_surf_type        | {em_surf_ptype}      | string                 | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+em_surf             | {em_surf}           | {em_surf_dtype}       | Surface emissivity in [unitless]
+dust_atten_type     | {dust_atten_ptype}   | string                 | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+dust_atten          | {dust_atten}        | {dust_atten_dtype}    | Dust attenuation factor in [unitless]
+cloud_factor_type   | {cloud_factor_ptype} | string                 | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+cloud_factor        | {cloud_factor}      | {cloud_factor_dtype}  | Cloudiness factor, c, in [unitless]
+canopy_factor_type  | {canopy_factor_ptype}| string                 | Allowed input types [-] {Scalar; Grid; Time_Series; Grid_Sequence}
+canopy_factor       | {canopy_factor}     | {canopy_factor_dtype} | Canopy coverage factor, f, in [unitless]
 slope_grid_file     | {slope_grid_file}   | string    | Flat binary, row-major file with grid of 4-byte slopes [-]
 aspect_grid_file    | {aspect_grid_file}  | string    | Flat binary, row-major file with grid of 4-byte aspects [-]
 GMT_offset          | {GMT_offset}        | string    | Time zone offset from gmt [-] {-12; -11; -10; -9; -8; -7; -6; -5; -4; -3; -2; -1; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10; 11; 12}
