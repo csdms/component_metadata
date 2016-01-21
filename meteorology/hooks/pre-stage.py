@@ -44,9 +44,9 @@ def execute(env):
         env['P_ptype'] = 'Time_Series'
         env['P_dtype'] = 'string'
         file_name = env['case_prefix'] + '_rain_rates.txt'
-        env['P'] = env['P_file'] = file_name
         time_series = np.ones(env['n_steps']) * float(env['P'])
         np.savetxt(file_name, time_series, fmt='%8.3f')
+        env['P'] = env['P_file'] = file_name
 
     # yaml_dump('_env.yaml', env)  # helpful for debugging
 
