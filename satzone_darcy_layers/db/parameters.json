@@ -70,7 +70,7 @@
         }
     },
     {
-        "key": "elev_type",
+        "key": "elev_ptype",
         "name": "elev type",
         "description": "Land surface elevation",
 	"group":{
@@ -134,7 +134,7 @@
 	}
     },
     {
-        "key": "h0_table_type",
+        "key": "h0_table_ptype",
         "name": "h0_table type",
         "description": "Initial water table height",
 	"group":{
@@ -186,7 +186,7 @@
 	}
     },
     {
-        "key": "d_freeze_type",
+        "key": "d_freeze_ptype",
         "name": "d_freeze type",
         "description": "Freeze depth below surface",
 	"group":{
@@ -238,7 +238,7 @@
 	}
     },
     {
-        "key": "d_thaw_type",
+        "key": "d_thaw_ptype",
         "name": "d_thaw type",
         "description": "Thaw depth below surface",
 	"group":{
@@ -299,7 +299,7 @@
         }
     },
     {
-        "key": "th_0_type",
+        "key": "th_0_ptype",
         "name": "th_0 type",
         "description": "Soil layer thickness",
 	"group":{
@@ -351,7 +351,7 @@
 	}
     },
     {
-        "key": "qs_0_type",
+        "key": "qs_0_ptype",
         "name": "qs_0 type",
         "description": "Saturated soil water content",
 	"group":{
@@ -403,7 +403,7 @@
 	}
     },
     {
-        "key": "Ks_0_type",
+        "key": "Ks_0_ptype",
         "name": "Ks_0 type",
         "description": "Saturated hydraulic conductivity",
 	"group":{
@@ -464,7 +464,7 @@
         }
     },
     {
-        "key": "th_1_type",
+        "key": "th_1_ptype",
         "name": "th_1 type",
         "description": "Soil layer thickness",
 	"group":{
@@ -516,7 +516,7 @@
 	}
     },
     {
-        "key": "qs_1_type",
+        "key": "qs_1_ptype",
         "name": "qs_1 type",
         "description": "Saturated soil water content",
 	"group":{
@@ -568,7 +568,7 @@
 	}
     },
     {
-        "key": "Ks_1_type",
+        "key": "Ks_1_ptype",
         "name": "Ks_1 type",
         "description": "Saturated hydraulic conductivity",
 	"group":{
@@ -629,7 +629,7 @@
         }
     },
     {
-        "key": "th_2_type",
+        "key": "th_2_ptype",
         "name": "th_2 type",
         "description": "Soil layer thickness",
 	"group":{
@@ -681,7 +681,7 @@
 	}
     },
     {
-        "key": "qs_2_type",
+        "key": "qs_2_ptype",
         "name": "qs_2 type",
         "description": "Saturated soil water content",
 	"group":{
@@ -733,7 +733,7 @@
 	}
     },
     {
-        "key": "Ks_2_type",
+        "key": "Ks_2_ptype",
         "name": "Ks_2 type",
         "description": "Saturated hydraulic conductivity",
 	"group":{

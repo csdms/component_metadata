@@ -84,7 +84,7 @@
         }
     },
     {
-        "key": "Ks_val_0_type",
+        "key": "Ks_val_0_ptype",
         "name": "Ks_val_0 type",
         "description": "Saturated hydraulic conductivity",
         "group":{
@@ -136,7 +136,7 @@
         }
     },
     {
-        "key": "Ki_val_0_type",
+        "key": "Ki_val_0_ptype",
         "name": "Ki_val_0 type",
         "description": "Initial hydraulic conductivity",
         "group":{
@@ -188,7 +188,7 @@
         }
     },
     {
-        "key": "qs_val_0_type",
+        "key": "qs_val_0_ptype",
         "name": "qs_val_0 type",
         "description": "Saturated soil water content",
         "group":{
@@ -240,7 +240,7 @@
         }
     },
     {
-        "key": "qi_val_0_type",
+        "key": "qi_val_0_ptype",
         "name": "qi_val_0 type",
         "description": "Initial soil water content (< theta_sat)",
         "group":{
@@ -292,7 +292,7 @@
         }
     },
     {
-        "key": "qr_val_0_type",
+        "key": "qr_val_0_ptype",
         "name": "qr_val_0 type",
         "description": "Residual soil water content (< theta_init)",
         "group":{
@@ -344,7 +344,7 @@
         }
     },
     {
-        "key": "pB_val_0_type",
+        "key": "pB_val_0_ptype",
         "name": "pB_val_0 type",
         "description": "Bubbling pressure head",
         "group":{
@@ -396,7 +396,7 @@
         }
     },
     {
-        "key": "pA_val_0_type",
+        "key": "pA_val_0_ptype",
         "name": "pA_val_0 type",
         "description": "Pressure head offset parameter",
         "group":{
@@ -448,7 +448,7 @@
         }
     },
     {
-        "key": "lam_val_0_type",
+        "key": "lam_val_0_ptype",
         "name": "lam_val_0 type",
         "description": "Pore size distribution",
         "group":{
@@ -500,7 +500,7 @@
         }
     },
     {
-        "key": "c_val_0_type",
+        "key": "c_val_0_ptype",
         "name": "c_val_0 type",
         "description": "Trans. brooks-corey curvature",
         "group":{
@@ -615,7 +615,7 @@
         }
     },
     {
-        "key": "Ks_val_1_type",
+        "key": "Ks_val_1_ptype",
         "name": "Ks_val_1 type",
         "description": "Saturated hydraulic conductivity",
         "group":{
@@ -667,7 +667,7 @@
         }
     },
     {
-        "key": "Ki_val_1_type",
+        "key": "Ki_val_1_ptype",
         "name": "Ki_val_1 type",
         "description": "Initial hydraulic conductivity",
         "group":{
@@ -719,7 +719,7 @@
         }
     },
     {
-        "key": "qs_val_1_type",
+        "key": "qs_val_1_ptype",
         "name": "qs_val_1 type",
         "description": "Saturated soil water content",
         "group":{
@@ -771,7 +771,7 @@
         }
     },
     {
-        "key": "qi_val_1_type",
+        "key": "qi_val_1_ptype",
         "name": "qi_val_1 type",
         "description": "Initial soil water content (< theta_sat)",
         "group":{
@@ -823,7 +823,7 @@
         }
     },
     {
-        "key": "qr_val_1_type",
+        "key": "qr_val_1_ptype",
         "name": "qr_val_1 type",
         "description": "Residual soil water content (< theta_init)",
         "group":{
@@ -875,7 +875,7 @@
         }
     },
     {
-        "key": "pB_val_1_type",
+        "key": "pB_val_1_ptype",
         "name": "pB_val_1 type",
         "description": "Bubbling pressure head",
         "group":{
@@ -927,7 +927,7 @@
         }
     },
     {
-        "key": "pA_val_1_type",
+        "key": "pA_val_1_ptype",
         "name": "pA_val_1 type",
         "description": "Pressure head offset parameter",
         "group":{
@@ -979,7 +979,7 @@
         }
     },
     {
-        "key": "lam_val_1_type",
+        "key": "lam_val_1_ptype",
         "name": "lam_val_1 type",
         "description": "Pore size distribution",
         "group":{
@@ -1031,7 +1031,7 @@
         }
     },
     {
-        "key": "c_val_1_type",
+        "key": "c_val_1_ptype",
         "name": "c_val_1 type",
         "description": "Trans. brooks-corey curvature",
         "group":{
@@ -1145,7 +1145,7 @@
         }
     },
     {
-        "key": "Ks_val_2_type",
+        "key": "Ks_val_2_ptype",
         "name": "Ks_val_2 type",
         "description": "Saturated hydraulic conductivity",
         "group":{
@@ -1197,7 +1197,7 @@
         }
     },
     {
-        "key": "Ki_val_2_type",
+        "key": "Ki_val_2_ptype",
         "name": "Ki_val_2 type",
         "description": "Initial hydraulic conductivity",
         "group":{
@@ -1249,7 +1249,7 @@
         }
     },
     {
-        "key": "qs_val_2_type",
+        "key": "qs_val_2_ptype",
         "name": "qs_val_2 type",
         "description": "Saturated soil water content",
         "group":{
@@ -1301,7 +1301,7 @@
         }
     },
     {
-        "key": "qi_val_2_type",
+        "key": "qi_val_2_ptype",
         "name": "qi_val_2 type",
         "description": "Initial soil water content (< theta_sat)",
         "group":{
@@ -1353,7 +1353,7 @@
         }
     },
     {
-        "key": "qr_val_2_type",
+        "key": "qr_val_2_ptype",
         "name": "qr_val_2 type",
         "description": "Residual soil water content (< theta_init)",
         "group":{
@@ -1405,7 +1405,7 @@
         }
     },
     {
-        "key": "pB_val_2_type",
+        "key": "pB_val_2_ptype",
         "name": "pB_val_2 type",
         "description": "Bubbling pressure head",
         "group":{
@@ -1457,7 +1457,7 @@
         }
     },
     {
-        "key": "pA_val_2_type",
+        "key": "pA_val_2_ptype",
         "name": "pA_val_2 type",
         "description": "Pressure head offset parameter",
         "group":{
@@ -1509,7 +1509,7 @@
         }
     },
     {
-        "key": "lam_val_2_type",
+        "key": "lam_val_2_ptype",
         "name": "lam_val_2 type",
         "description": "Pore size distribution",
         "group":{
@@ -1561,7 +1561,7 @@
         }
     },
     {
-        "key": "c_val_2_type",
+        "key": "c_val_2_ptype",
         "name": "c_val_2 type",
         "description": "Trans. brooks-corey curvature",
         "group":{

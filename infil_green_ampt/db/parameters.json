@@ -70,7 +70,7 @@
         }
     },
     {
-        "key": "Ks_0_type",
+        "key": "Ks_0_ptype",
         "name": "Ks_0 type",
         "description": "Saturated hydraulic conductivity",
         "group":{
@@ -122,7 +122,7 @@
         }
     },
     {
-        "key": "Ki_0_type",
+        "key": "Ki_0_ptype",
         "name": "Ki_0 type",
         "description": "Initial hydraulic conductivity",
 	"group":{
@@ -174,7 +174,7 @@
 	}
     },
     {
-        "key": "qs_0_type",
+        "key": "qs_0_ptype",
         "name": "qs_0 type",
         "description": "Saturated soil water content",
         "group":{
@@ -226,7 +226,7 @@
         }
     },
     {
-        "key": "qi_0_type",
+        "key": "qi_0_ptype",
         "name": "qi_0 type",
         "description": "Initial soil water content (< theta_sat)",
         "group":{
@@ -279,7 +279,7 @@
     },
 
     {
-        "key": "G_0_type",
+        "key": "G_0_ptype",
         "name": "G_0 type",
         "description": "Capillary length scale",
         "group":{
@@ -331,7 +331,7 @@
         }
     },
     {
-	"key": "soil_type_0",
+	"key": "soil_ptype_0",
 	"name": "type of soil layer_0",
 	"description": "Closest standard soil type",
 	"value": {

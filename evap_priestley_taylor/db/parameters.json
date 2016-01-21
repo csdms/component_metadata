@@ -70,7 +70,7 @@
         }
     },
     {
-        "key": "alpha_type",
+        "key": "alpha_ptype",
         "name": "alpha type",
         "description": "Priestley-Taylor coefficient",
 	"group":{
@@ -122,7 +122,7 @@
 	}
     },
     {
-        "key": "K_soil_type",
+        "key": "K_soil_ptype",
         "name": "K_soil type",
         "description": "Thermal conductivity of soil",
 	"group":{
@@ -174,7 +174,7 @@
 	}
     },
     {
-        "key": "soil_x_type",
+        "key": "soil_x_ptype",
         "name": "soil_x type",
         "description": "Soil reference depth",
 	"group":{
@@ -226,7 +226,7 @@
 	}
     },
     {
-        "key": "T_soil_x_type",
+        "key": "T_soil_x_ptype",
         "name": "T_soil_x type",
         "description": "Temperature of soil at reference depth",
 	"group":{
