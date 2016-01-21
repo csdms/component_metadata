@@ -84,7 +84,7 @@
         }
     },
     {
-        "key": "rho_H2O_type",
+        "key": "rho_H2O_ptype",
         "name": "rho_H2O type",
         "description": "Density of water",
 	"group":{
@@ -136,7 +136,7 @@
 	}
     },
     {
-        "key": "Cp_air_type",
+        "key": "Cp_air_ptype",
         "name": "Cp_air type",
         "description": "Heat capacity of air",
 	"group":{
@@ -188,7 +188,7 @@
 	}
     },    
     {
-        "key": "rho_air_type",
+        "key": "rho_air_ptype",
         "name": "rho_air type",
         "description": "Density of air",
 	"group":{
@@ -240,7 +240,7 @@
 	}
     },    
     {
-        "key": "P_type",
+        "key": "P_ptype",
         "name": "precip. rates type",
         "description": "Precipitation rate",
 	"group":{
@@ -292,7 +292,7 @@
 	}
     },
     {
-        "key": "T_air_type",
+        "key": "T_air_ptype",
         "name": "T_air type",
         "description": "Temperature of air",
 	"group":{
@@ -344,7 +344,7 @@
 	}
     },
     {
-        "key": "T_surf_type",
+        "key": "T_surf_ptype",
         "name": "T_surf type",
         "description": "Temperature at surface",
 	"group":{
@@ -396,7 +396,7 @@
 	}
     },
     {
-        "key": "RH_type",
+        "key": "RH_ptype",
         "name": "RH type",
         "description": "Relative humidity",
 	"group":{
@@ -448,7 +448,7 @@
 	}
     },
     {
-        "key": "p0_type",
+        "key": "p0_ptype",
         "name": "p0 type",
         "description": "Atmospheric pressure",
 	"group":{
@@ -500,7 +500,7 @@
 	}
     },
     {
-        "key": "z_type",
+        "key": "z_ptype",
         "name": "z type",
         "description": "Wind reference height",
 	"group":{
@@ -552,7 +552,7 @@
 	}
     },
     {
-        "key": "uz_type",
+        "key": "uz_ptype",
         "name": "uz type",
         "description": "Wind velocity at reference height",
 	"group":{
@@ -604,7 +604,7 @@
 	}
     },
     {
-        "key": "z0_air_type",
+        "key": "z0_air_ptype",
         "name": "z0_air type",
         "description": "Surface roughness length scale for wind",
 	"group":{
@@ -656,7 +656,7 @@
 	}
     },
     {
-        "key": "albedo_type",
+        "key": "albedo_ptype",
         "name": "albedo type",
         "description": "Surface albedo",
 	"group":{
@@ -708,7 +708,7 @@
 	}
     },
     {
-        "key": "em_surf_type",
+        "key": "em_surf_ptype",
         "name": "em_surf type",
         "description": "Surface emissivity",
 	"group":{
@@ -760,7 +760,7 @@
 	}
     },
     {
-        "key": "dust_atten_type",
+        "key": "dust_atten_ptype",
         "name": "dust_atten type",
         "description": "Dust attenuation factor",
 	"group":{
@@ -812,7 +812,7 @@
 	}
     },
     {
-        "key": "cloud_factor_type",
+        "key": "cloud_factor_ptype",
         "name": "cloud_factor type",
         "description": "Cloudiness factor, <i>c</i>",
 	"group":{
@@ -864,7 +864,7 @@
 	}
     },
     {
-        "key": "canopy_factor_type",
+        "key": "canopy_factor_ptype",
         "name": "canopy_factor type",
         "description": "Canopy coverage factor, <i>f</i>",
 	"group":{

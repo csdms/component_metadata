@@ -107,7 +107,7 @@
         }
     },
     {
-        "key": "roughness_type",
+        "key": "roughness_ptype",
         "name": "Roughness value",
         "description": "Roughness value (Manning's <em>n</em> or roughness length <em>z<sub>0</sub></em>)",
 	"group":{
@@ -159,7 +159,7 @@
 	}
     },
     {
-        "key": "width_type",
+        "key": "width_ptype",
         "name": "Bed width type",
         "description": "Bed width of trapezoid cross-section",
 	"group":{
@@ -211,7 +211,7 @@
 	}
     },
     {
-        "key": "angle_type",
+        "key": "angle_ptype",
         "name": "Bank angle type",
         "description": "Bank angle of trapezoid cross-section",
 	"group":{
@@ -263,7 +263,7 @@
 	}
     },
     {
-        "key": "d0_type",
+        "key": "d0_ptype",
         "name": "Initial depth type",
         "description": "Initial flow depth",
 	"group":{
@@ -316,7 +316,7 @@
     },    
 
     {
-        "key": "sinu_type",
+        "key": "sinu_ptype",
         "name": "Sinuosity type",
         "description": "Absolute channel sinuosity",
 	"group":{
