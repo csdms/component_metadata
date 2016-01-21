@@ -5,7 +5,7 @@ import numpy as np
 from wmt.config import site
 from wmt.models.submissions import prepend_to_path
 from wmt.utils.hook import find_simulation_input_file, yaml_dump
-from topoflowlib.utils import get_dtype, assign_parameters
+from topoflow_utils.hook import assign_parameters
 
 
 file_list = ['rti_file',
