@@ -38,16 +38,15 @@ def execute(env):
 
     assign_parameters(env, file_list)
 
-    # If P_type is Scalar, replicate the scalar value as a Time_Series.
+    # If P_ptype is Scalar, replicate the scalar value as a Time_Series.
     # This works around the issue described in https://trello.com/c/LaOMPpOa.
     if env['P_ptype'] == 'Scalar':
-        time_series = np.ones(env['n_steps']) * float(env['P'])
-        file_name = env['case_prefix'] + '_rain_rates.txt'
-        np.savetxt(file_name, time_series, fmt='%8.3f')
         env['P_ptype'] = 'Time_Series'
         env['P_dtype'] = 'string'
-        env['P_file'] = file_name
-        env['P'] = file_name
+        file_name = env['case_prefix'] + '_rain_rates.txt'
+        env['P'] = env['P_file'] = file_name
+        time_series = np.ones(env['n_steps']) * float(env['P'])
+        np.savetxt(file_name, time_series, fmt='%8.3f')
 
     # yaml_dump('_env.yaml', env)  # helpful for debugging
 
