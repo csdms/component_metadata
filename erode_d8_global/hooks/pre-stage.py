@@ -4,14 +4,10 @@ import shutil
 from wmt.config import site
 from wmt.models.submissions import prepend_to_path
 from wmt.utils.hook import find_simulation_input_file
+from topoflow_utils.hook import choices_map
 
 
 file_list = ['pixel_file']
-
-choices_map = {
-    'Yes': 1,
-    'No': 0
-}
 
 
 def uppercase_choice(choice):
