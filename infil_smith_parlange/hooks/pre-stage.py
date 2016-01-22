@@ -4,24 +4,11 @@ import shutil
 from wmt.config import site
 from wmt.models.submissions import prepend_to_path
 from wmt.utils.hook import find_simulation_input_file
-from topoflow_utils.hook import assign_parameters
+from topoflow_utils.hook import assign_parameters, lowercase_choice
 
 
 file_list = ['rti_file',
              'pixel_file']
-
-
-def lowercase_choice(choice):
-    """Formats a string for consumption by TopoFlow.
-
-    Parameters
-    ----------
-    choice : str
-      A parameter choice from WMT.
-
-    """
-    import string
-    return string.join(choice.split(), '_').lower()
 
 
 def execute(env):
