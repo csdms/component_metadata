@@ -4,20 +4,12 @@ import shutil
 from wmt.config import site
 from wmt.models.submissions import prepend_to_path
 from wmt.utils.hook import find_simulation_input_file
+from topoflow_utils.hook import choices_map, units_map
 
 
 file_list = ['rti_file',
              'DEM_file',
              'pixel_file']
-
-units_map = {
-    'meters': 'm^2',
-    'kilometers': 'km^2'
-}
-choices_map = {
-    'Yes': 1,
-    'No': 0
-}
 
 
 def execute(env):
