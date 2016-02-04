@@ -662,7 +662,7 @@
       "type":"float",
       "default":62.07,
       "range":{
-        "min":0.0,
+        "min":0.1,
         "max":100.0
       },
       "units":"mm"
@@ -676,7 +676,7 @@
       "type":"float",
       "default":69.9,
       "range":{
-        "min":0.0,
+        "min":0.1,
         "max":100.0
       },
       "units":"mm"
@@ -690,7 +690,7 @@
       "type":"float",
       "default":71.12,
       "range":{
-        "min":0.0,
+        "min":0.1,
         "max":100.0
       },
       "units":"mm"
@@ -704,7 +704,7 @@
       "type":"float",
       "default":56.59,
       "range":{
-        "min":0.0,
+        "min":0.1,
         "max":100.0
       },
       "units":"mm"
@@ -718,7 +718,7 @@
       "type":"float",
       "default":71.91,
       "range":{
-        "min":0.0,
+        "min":0.1,
         "max":100.0
       },
       "units":"mm"
@@ -732,7 +732,7 @@
       "type":"float",
       "default":67.80,
       "range":{
-        "min":0.0,
+        "min":0.1,
         "max":100.0
       },
       "units":"mm"
@@ -746,7 +746,7 @@
       "type":"float",
       "default":63.04,
       "range":{
-        "min":0.0,
+        "min":0.1,
         "max":100.0
       },
       "units":"mm"
@@ -760,7 +760,7 @@
       "type":"float",
       "default":49.38,
       "range":{
-        "min":0.0,
+        "min":0.1,
         "max":100.0
       },
       "units":"mm"
@@ -774,7 +774,7 @@
       "type":"float",
       "default":64.54,
       "range":{
-        "min":0.0,
+        "min":0.1,
         "max":100.0
       },
       "units":"mm"
@@ -788,7 +788,7 @@
       "type":"float",
       "default":60.39,
       "range":{
-        "min":0.0,
+        "min":0.1,
         "max":100.0
       },
       "units":"mm"
@@ -802,7 +802,7 @@
       "type":"float",
       "default":60.34,
       "range":{
-        "min":0.0,
+        "min":0.1,
         "max":100.0
       },
       "units":"mm"
@@ -816,7 +816,7 @@
       "type":"float",
       "default":70.08,
       "range":{
-        "min":0.0,
+        "min":0.1,
         "max":100.0
       },
       "units":"mm"
