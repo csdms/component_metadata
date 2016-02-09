@@ -70,6 +70,58 @@
         }
     },
     {
+        "key": "Cp_snow_ptype",
+        "name": "Cp_snow type",
+        "description": "Heat capacity of snow",
+        "group": {
+            "name": "Cp_snow_group",
+            "leader": true,
+            "members": 2
+        },
+        "value": {
+            "type": "choice",
+            "default": "Scalar",
+            "choices": [
+                "Scalar",
+                "Grid",
+                "Time_Series",
+                "Grid_Sequence"
+            ],
+            "units": "J kg-1 K-1"
+        }
+    },
+    {
+        "key": "Cp_snow_scalar",
+        "name": "Cp_snow",
+        "description": "Scalar value",
+        "group": {
+            "name": "Cp_snow_group"
+        },
+        "value": {
+            "type": "float",
+            "default": 2090.0,
+            "range": {
+                "min": 0.0,
+                "max": 3000.0
+            }
+        }
+    },
+    {
+        "key": "Cp_snow_file",
+        "name": "Cp_snow",
+        "description": "Grid, time series, or grid sequence file",
+        "group": {
+            "name": "Cp_snow_group"
+        },
+        "value": {
+            "type": "file",
+            "default": "off",
+            "files": [
+                "off"
+            ]
+        }
+    },
+    {
         "key": "rho_snow_ptype",
         "name": "rho_snow type",
         "description": "Density of snow",
